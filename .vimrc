@@ -4,11 +4,12 @@
   let s:is_macvim = has('gui_macvim')
 "}}}
 
-"if has("gui_running")
-"  if has("gui_gtk2")
-"    set guifont=FreeMono\ 12
-"  endif
-"endif
+if has("gui_running")
+  if has("gui_gtk2")
+"    set guifont=FreeMono\ 12     " for ubuntu
+    set guifont=DroidSansMono     " for debian
+  endif
+endif
 
 "
 " clipboard
@@ -128,8 +129,9 @@ if s:is_windows != 1
   echom '+linux'
 
   " neobundle
-  call neobundle#rc(expand('~/.vim/bundle/'))
+  call neobundle#begin(expand('~/.vim/bundle/'))
   NeoBundleFetch 'Shougo/neobundle.vim'
+  call neobundle#end()
   filetype plugin indent on     " Required! why? if not, using ohter plugins do not work properly
 
   " vimproc
@@ -255,9 +257,11 @@ if count(s:settings.plugin_groups, 'unite') "{{{
   " And you must clear previous cache in file_rec sources.
   " To clear cache, you must execute |<Plug>(unite_redraw)| in unite buffer(in default it is mapped to <C-l>).
   " See *unite_default_key_mappings*
-  "
-  call unite#custom#source('file_rec,file_rec/async','max_candidates',0)
-  let g:unite_prompt='» '
+  
+
+  " <Q> why error?
+  " call unite#custom#source('file_rec,file_rec/async','max_candidates',0)
+  " let g:unite_prompt='» '
 
   if executable('ag')
     let g:unite_source_grep_max_candidates=5000
