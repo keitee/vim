@@ -88,11 +88,9 @@ alias la='ls -A'
 alias l='ls -CF'
 alias c=clear
 alias h=history
-alias grpm='pushd /home/kit/GBS-ROOT/local/repos/tizentv/armv7l/RPMS'
-# alias gall='gbs build -A armv7l --include-all'
-# alias ginc='gbs build -A armv7l --include-all --incremental'
-# alias gcca='gbs build -A armv7l --include-all --ccache'
-alias gbld='gbs build -A armv7l --clean'
+
+# enable dir expansion
+shopt -s direxpand
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert

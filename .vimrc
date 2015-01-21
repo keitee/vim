@@ -114,6 +114,8 @@ if has('gui_running')
    set background=dark
    colorscheme solarized
    " colorscheme jellybeans
+else
+   colorscheme torte
 endif
 " }}}
    
