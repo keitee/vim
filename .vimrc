@@ -323,7 +323,8 @@ if count(s:settings.plugin_groups, 'unite') "{{{
   nnoremap <silent> [unite]w :<C-u>Unite -quick-match tab<cr>
   " from quick-match, can get usual listing of directories so do not need separate command
   nnoremap <silent> [unite]d :<C-u>Unite -quick-match directory<cr>
-  nnoremap <silent> [unite]t :<C-u>Unite -auto-preview -buffer-name=tag tag<cr>
+  "nnoremap <silent> [unite]t :<C-u>Unite -auto-preview -buffer-name=tag tag<cr>
+  nnoremap <silent> [unite]t :<C-u>Unite -quick-match -buffer-name=tag tag<cr>
   "nnoremap <silent> [unite]c :CtrlPFunky<cr>
   "nnoremap <silent> [unite]g :CtrlPTag<cr>
 
