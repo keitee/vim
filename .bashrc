@@ -80,10 +80,13 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # some more ls aliases
+alias a=alias
 alias grep='grep --color=auto -anH'
 alias fgrep='fgrep --color=auto -anH'
 alias egrep='egrep --color=auto -anH'
-alias gvdiff=gvimdiff
+alias gdiff=gvimdiff
+alias diff='diff -up'
+alias cdiff='colordiff -up'
 
 bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
@@ -97,6 +100,23 @@ alias h=history
 
 # enable dir expansion
 shopt -s direxpand
+
+# humax and com serial
+alias hssh='ssh root@172.20.35.27' 
+alias hlog="sudo grabserial -v -d /dev/ttyS0 | tee 2>&1 ~/logs/`date | awk '{print "log-com-"$1"-"$2"-"$3"-"$4}'`"
+alias hcom='sudo grabserial -v -d /dev/ttyS0'
+alias hcpt='scp libnexusMgr.so root@172.20.35.27:/usr/local/lib'
+alias hcpf='scp root@172.20.35.27:'
+
+# huawei and usb serial
+alias wssh='ssh root@172.20.33.192' 
+alias wlog="sudo grabserial -v -d /dev/ttyUSB0 | tee 2>&1 ~/logs/`date | awk '{print "log-usb-"$1"-"$2"-"$3"-"$4}'`"
+alias wcom='sudo grabserial -v -d /dev/ttyUSB0' 
+alias wcpt='scp libnexusMgr.so root@172.20.33.192:/usr/local/lib'
+alias wcpf='scp root@172.20.33.192:'
+
+#alias chi='sudo screen -a -D -R -fn -l -L /dev/ttyUSB0 115200'
+alias btag='ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
