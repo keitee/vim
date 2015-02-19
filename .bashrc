@@ -2,13 +2,24 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+export PATH=~/kit-bin:~/source/setup-humax:~/source/zinc-git-tools:$PATH
+export ET=~/source/DEVARCH
+
 # If not running interactively, don't do anything
-[ -z "$PS1" ] && return
+case $- in
+    *i*) ;;
+      *) return;;
+esac
+
+# don't put duplicate lines or lines starting with space in the history.
+# See bash(1) for more options
+HISTCONTROL=ignoreboth
 
 # append to the history file, don't overwrite it
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+HISTFILE=~/.bash_history_$(echo $SSH_TTY | cut -f 4 -d'/')
 HISTSIZE=1000
 HISTFILESIZE=2000
 HISTCONTROL=erasedups
@@ -23,10 +34,10 @@ shopt -s checkwinsize
 #shopt -s globstar
 
 # make less more friendly for non-text input files, see lesspipe(1)
-[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+#[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
 # set variable identifying the chroot you work in (used in the prompt below)
-if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
+if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
 fi
 
@@ -74,10 +85,19 @@ if [ -x /usr/bin/dircolors ]; then
     #alias dir='dir --color=auto'
     #alias vdir='vdir --color=auto'
 
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
+    #alias grep='grep --color=auto -anH'
+    #alias fgrep='fgrep --color=auto -anH'
+    #alias egrep='egrep --color=auto -anH'
 fi
+
+# for gtag
+export GTAGSFORCECPP=
+
+# for skype
+export GTK_IM_MODULE=ibus
+export XMODIFIERS=@im=ibus
+export QT_IM_MODULE=ibus
+export XIM_PROGRAM='/usr/bin/ibus-daemon -x -d'
 
 # some more ls aliases
 alias a=alias
@@ -87,10 +107,11 @@ alias egrep='egrep --color=auto -anH'
 alias gdiff=gvimdiff
 alias diff='diff -up'
 alias cdiff='colordiff -up'
+alias gl='global --color'
 
 bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
-set editing-mode vi
+# set editing-mode vi
 
 alias ll='ls -alF'
 alias la='ls -A'
@@ -107,6 +128,9 @@ alias hlog="sudo grabserial -v -d /dev/ttyS0 | tee 2>&1 ~/logs/`date | awk '{pri
 alias hcom='sudo grabserial -v -d /dev/ttyS0'
 alias hcpt='scp libnexusMgr.so root@172.20.35.27:/usr/local/lib'
 alias hcpf='scp root@172.20.35.27:'
+alias hbld='ZB_CFG="humax.1000" zb-make Polonium/Polonium.NexusInspect'
+#alias hscr='sudo screen -a -D -R -fn -l -L /dev/ttyS0 115200,cs8'
+alias hscr='sudo minicom -C=hmax.log -c=on hmax'
 
 # huawei and usb serial
 alias wssh='ssh root@172.20.33.192' 
@@ -114,13 +138,12 @@ alias wlog="sudo grabserial -v -d /dev/ttyUSB0 | tee 2>&1 ~/logs/`date | awk '{p
 alias wcom='sudo grabserial -v -d /dev/ttyUSB0' 
 alias wcpt='scp libnexusMgr.so root@172.20.33.192:/usr/local/lib'
 alias wcpf='scp root@172.20.33.192:'
+alias wscr='sudo screen -a -D -R -fn -l -L /dev/ttyUSB0 115200,cs8'
+
+alias wsk='zinc-send-key-hwei'
 
 #alias chi='sudo screen -a -D -R -fn -l -L /dev/ttyUSB0 115200'
 alias btag='ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .'
-
-# Add an "alert" alias for long running commands.  Use like so:
-#   sleep 10; alert
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -131,11 +154,13 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
-PATH=/usr/local/bin:/home/kit/bin:$PATH:
-
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
-if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
+if ! shopt -oq posix; then
+  if [ -f /usr/share/bash-completion/bash_completion ]; then
+    . /usr/share/bash-completion/bash_completion
+  elif [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
+  fi
 fi

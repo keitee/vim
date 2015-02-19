@@ -57,8 +57,14 @@ set nowrapscan
 set foldenable
 
 " utility mappings {{{
-  " F3 to insert current time
-:map! <F3> a<C-R>=strftime('%c')<CR><Esc>
+  " to wrap a word with ' or " current time
+  map <F5> i'<Esc>ea'<Esc>
+  map <F6> i"<Esc>ea"<Esc>
+" }}}
+
+" gtag mappings {{{
+  " to tag search the word on cursor
+  map g<C-]> :GtagsCursor<CR>
 " }}}
 
 " search for selection {{{
@@ -172,31 +178,31 @@ endif
 "
 " unite {{{
 "
-" :Unite [{options}] {sources}			*:Unite*
+" :Unite [{options}] {sources}            *:Unite*
 " 
 " unite-options
-"		-buffer-name={buffer-name} 
+"   -buffer-name={buffer-name} 
 "     Specify a buffer name. The default buffer name is 'default'.
 "
-"		-default-action={default-action} 
+"   -default-action={default-action} 
 "     Specify a default action.  The default value is 'default'.
 "     -default-action=tabopen
 "
-"		-no-quit 
+"   -no-quit 
 "     Doesn't close unite buffer after firing an action. Unless you specify it, a unite
 "     buffer gets closed when you selected an action which is "is_quit".
 "
-"		-auto-preview
-"		When you selected a candidate, it runs "preview" action automatically.
+"   -auto-preview
+"     When you selected a candidate, it runs "preview" action automatically.
 "
-"		-auto-highlight
-"		When you selected a candidate, it runs "highlight" action automatically.
+"   -auto-highlight
+"     When you selected a candidate, it runs "highlight" action automatically.
 "
-"		-auto-resize
-"		Auto resize unite buffer height by candidates number.  
+"   -auto-resize
+"     Auto resize unite buffer height by candidates number.  
 "
-"		-toggle
-"		Close unite buffer window if one of the same buffer name exists.
+"   -toggle
+"     Close unite buffer window if one of the same buffer name exists.
 "
 " This works as well for normal vi so can use it in console.
 "
@@ -265,6 +271,7 @@ if count(s:settings.plugin_groups, 'unite') "{{{
   " call unite#custom#source('file_rec,file_rec/async','max_candidates',0)
   " let g:unite_prompt='» '
 
+  " :h g:unite_source_grep_command
   if executable('ag')
     let g:unite_source_grep_max_candidates=5000
     let g:unite_source_grep_command='ag'
@@ -304,13 +311,13 @@ if count(s:settings.plugin_groups, 'unite') "{{{
   "    <space>o        select outline(funtion)
   "    <space>h        select help
 
-  if s:is_windows
-    nnoremap <silent> [unite]<space> :<C-u>Unite -toggle -auto-resize -buffer-name=mixed file_rec buffer file_mru bookmark<cr><c-u>
-    nnoremap <silent> [unite]f :<C-u>Unite -toggle -auto-resize -buffer-name=files file_rec<cr><c-u>
-  else
-    nnoremap <silent> [unite]<space> :<C-u>Unite -toggle -auto-resize -buffer-name=mixed file_rec/async buffer file_mru bookmark<cr><c-u>
-    nnoremap <silent> [unite]f :<C-u>Unite -toggle -auto-resize -buffer-name=files file_rec/async<cr><c-u>
-  endif
+  " For windows since no vimproc and no async in windows
+  " if s:is_windows
+  " nnoremap <silent> [unite]<space> :<C-u>Unite -toggle -auto-resize -buffer-name=mixed file_rec buffer file_mru bookmark<cr><c-u>
+  " nnoremap <silent> [unite]f :<C-u>Unite -toggle -auto-resize -buffer-name=files file_rec<cr><c-u>
+  " endif
+  nnoremap <silent> [unite]<space> :<C-u>Unite -toggle -auto-resize -buffer-name=mixed file_rec/async buffer file_mru bookmark<cr><c-u>
+  nnoremap <silent> [unite]f :<C-u>Unite -toggle -auto-resize -auto-highlight -buffer-name=files file_rec/async<cr><c-u>
   nnoremap <silent> [unite]y :<C-u>Unite -buffer-name=yanks history/yank<cr>
   nnoremap <silent> [unite]l :<C-u>Unite -auto-resize -buffer-name=line line<cr>
   " nnoremap <silent> [unite]b :<C-u>Unite -auto-resize -buffer-name=buffers buffer<cr>
@@ -435,29 +442,29 @@ NeoBundle 'scrooloose/syntastic'
 
 
 " 
-" gtag
+" gtag-cscope
 "
-if has('cscope')
-  set cscopetag cscopeverbose
-  
-  if has('quickfix')
-    set cscopequickfix=s+,c+,d+,i+,t+,e+
-  endif
-  
-  " for gtag
-  set csprg=gtags-cscope
-
-  cnoreabbrev csa cs add
-  cnoreabbrev csf cs find
-  cnoreabbrev csk cs kill
-  cnoreabbrev csr cs reset
-  cnoreabbrev css cs show
-  cnoreabbrev csh cs help
-  cnoreabbrev csc call setqflist([])
-  
-  map <c-up> :cp<CR>
-  map <c-down> :cn<CR>
-endif
+"if has('cscope')
+"  set cscopetag cscopeverbose
+"  
+"  if has('quickfix')
+"    set cscopequickfix=s+,c+,d+,i+,t+,e+
+"  endif
+"  
+"  " for gtag
+"  set csprg=gtags-cscope
+"
+"  cnoreabbrev csa cs add
+"  cnoreabbrev csf cs find
+"  cnoreabbrev csk cs kill
+"  cnoreabbrev csr cs reset
+"  cnoreabbrev css cs show
+"  cnoreabbrev csh cs help
+"  cnoreabbrev csc call setqflist([])
+"  
+"  map <c-up> :cp<CR>
+"  map <c-down> :cn<CR>
+"endif
 
 
 "
