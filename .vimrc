@@ -207,7 +207,10 @@ endif
 " This works as well for normal vi so can use it in console.
 "
 if count(s:settings.plugin_groups, 'unite') "{{{
-  NeoBundle 'Shougo/unite.vim' "{{{
+
+  NeoBundle 'Shougo/unite.vim'
+  NeoBundle 'Shougo/neomru.vim'
+  NeoBundle 'hewes/unite-gtags'
 
   " neobundle#get({bundle-name})                         *neobundle#get()*
   " Get the neobundle options dictionary for {bundle-name}. Useful for setting hooks.
@@ -225,7 +228,8 @@ if count(s:settings.plugin_groups, 'unite') "{{{
     call unite#filters#sorter_default#use(['sorter_rank'])
 
     " ?
-    call unite#set_profile('files', 'smartcase', 1)
+    " call unite#set_profile('files', 'smartcase', 1)
+
 
     " unite#custom#source({source-name}, {option-name}, {value})
     "                 Set {source-name} source specialized {option-name} to {value}.
@@ -239,8 +243,15 @@ if count(s:settings.plugin_groups, 'unite') "{{{
      let g:unite_data_directory='~/.vim/.cache/unite'
   endif
 
-  " If this variable is 1, unite buffer will be in Insert Mode immediately. The default value is 0.
-  let g:unite_enable_start_insert=1
+  call unite#custom#profile('default', 'context', {
+    \ 'direction': 'below',
+    \ 'start_insert' : 1,
+    \ 'smartcase' : 1,
+    \ 'prompt' : '>> '
+    \ })
+
+  " ?
+  " call unite#custom#profile('default', 'context', {'prompt_direction': 'below'})
 
   " If defined and not 0, unite enables |unite-source-history/yank|. Note: This value has to be
   " set in .vimrc.  This variable is not defined by default.
@@ -290,27 +301,23 @@ if count(s:settings.plugin_groups, 'unite') "{{{
   "    <space>o        select outline(funtion)
   "    <space>h        select help
 
-  " For windows since no vimproc and no async in windows
-  " if s:is_windows
-  " nnoremap <silent> [unite]<space> :<C-u>Unite -toggle -auto-resize -buffer-name=mixed file_rec buffer file_mru bookmark<cr><c-u>
-  " nnoremap <silent> [unite]f :<C-u>Unite -toggle -auto-resize -buffer-name=files file_rec<cr><c-u>
-  " endif
-  nnoremap <silent> [unite]<space> :<C-u>Unite -toggle -auto-resize -buffer-name=mixed file_rec/async buffer file_mru bookmark<cr><c-u>
-  nnoremap <silent> [unite]f :<C-u>Unite -toggle -auto-resize -auto-highlight -buffer-name=files file_rec/async<cr><c-u>
-  nnoremap <silent> [unite]y :<C-u>Unite -buffer-name=yanks history/yank<cr>
-  nnoremap <silent> [unite]l :<C-u>Unite -auto-resize -buffer-name=line line<cr>
-  " nnoremap <silent> [unite]b :<C-u>Unite -auto-resize -buffer-name=buffers buffer<cr>
-  nnoremap <silent> [unite]b :<C-u>Unite -quick-match buffer<cr>
+  " note: for windows since no vimproc and no async in windows
+
+  nnoremap <silent> [unite]u :Unite -toggle -auto-resize -buffer-name=files buffer file_mru file_rec/async<cr>
+  nnoremap <silent> [unite]l :<C-u>Unite -auto-resize -buffer-name=lines line<cr>
+  nnoremap <silent> [unite]b :<C-u>Unite -auto-resize -buffer-name=marks jump bookmarks<cr>
+
+  " nnoremap <silent> [unite]y :<C-u>Unite -buffer-name=yanks history/yank<cr>
   " nnoremap <silent> [unite]/ :<C-u>Unite -no-quit -no-split -buffer-name=search grep:.<cr>
   nnoremap <silent> [unite]/ :<C-u>Unite -no-quit -buffer-name=search grep:.<cr>
   " see *unite-source-grep* 
   nnoremap <silent> [unite]s :<C-u>Unite -no-quit -buffer-name=search grep:.::<c-r><c-w><cr>
   nnoremap <silent> [unite]m :<C-u>Unite -auto-resize -buffer-name=mappings mapping<cr>
-  nnoremap <silent> [unite]w :<C-u>Unite -quick-match tab<cr>
+  " nnoremap <silent> [unite]w :<C-u>Unite -quick-match tab<cr>
   " from quick-match, can get usual listing of directories so do not need separate command
-  nnoremap <silent> [unite]d :<C-u>Unite -quick-match directory<cr>
+  " nnoremap <silent> [unite]d :<C-u>Unite -quick-match directory<cr>
   "nnoremap <silent> [unite]t :<C-u>Unite -auto-preview -buffer-name=tag tag<cr>
-  nnoremap <silent> [unite]t :<C-u>Unite -quick-match -buffer-name=tag tag<cr>
+  nnoremap <silent> [unite]t :<C-u>Unite -buffer-name=tag tag<cr>
   "nnoremap <silent> [unite]c :CtrlPFunky<cr>
   "nnoremap <silent> [unite]g :CtrlPTag<cr>
 
