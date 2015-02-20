@@ -178,9 +178,9 @@ endif
 "
 " unite {{{
 "
-" :Unite [{options}] {sources}            *:Unite*
+" :Unite [{options}] {sources}                                            *:Unite*
 " 
-" unite-options
+" :h unite-options
 "   -buffer-name={buffer-name} 
 "     Specify a buffer name. The default buffer name is 'default'.
 "
@@ -245,27 +245,6 @@ if count(s:settings.plugin_groups, 'unite') "{{{
   " If defined and not 0, unite enables |unite-source-history/yank|. Note: This value has to be
   " set in .vimrc.  This variable is not defined by default.
   let g:unite_source_history_yank_enable=1
-
-  " Specify the maximum number of files that |unite-source-file_rec| saves the caches. The default
-  " value is 2000.
-  " let g:unite_source_rec_max_cache_files=5000
-  "
-  " Q: file_rec and file_rec/async cannot find all files.
-  " https://github.com/Shougo/unite.vim/issues/356
-  " https://github.com/Shougo/unite.vim/issues/370
-  " 
-  " A: It is feature. cf: |g:unite_source_rec_max_cache_files|.
-  " And the default max candidates are limited. You can custom it by
-  " |unite#custom#source()|. >
-  "         let g:unite_source_rec_max_cache_files = 0
-  "         call unite#custom#source('file_rec,file_rec/async',
-  "         \ 'max_candidates', 0)
-  " 
-  " clear cache:
-  " And you must clear previous cache in file_rec sources.
-  " To clear cache, you must execute |<Plug>(unite_redraw)| in unite buffer(in default it is mapped to <C-l>).
-  " See *unite_default_key_mappings*
-  
 
   " <Q> why error?
   " call unite#custom#source('file_rec,file_rec/async','max_candidates',0)
