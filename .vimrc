@@ -56,6 +56,18 @@ set nowrapscan
 
 set foldenable
 
+" for line wrapping and linebreak
+set wrap linebreak nolist
+
+" for color column
+set colorcolumn=100
+
+" for custom tab and eof char
+set listchars=tab:▸\ ,eol:¬
+
+" for custom display break
+set showbreak=… 
+
 " utility mappings {{{
   " to wrap a word with ' or " current time
   map <F5> i'<Esc>ea'<Esc>
@@ -211,6 +223,7 @@ if count(s:settings.plugin_groups, 'unite') "{{{
   NeoBundle 'Shougo/unite.vim'
   NeoBundle 'Shougo/neomru.vim'
   NeoBundle 'hewes/unite-gtags'
+  NeoBundle 'nathanaelkane/vim-indent-guides'
 
   " neobundle#get({bundle-name})                         *neobundle#get()*
   " Get the neobundle options dictionary for {bundle-name}. Useful for setting hooks.
@@ -306,18 +319,19 @@ if count(s:settings.plugin_groups, 'unite') "{{{
   nnoremap <silent> [unite]u :Unite -toggle -auto-resize -buffer-name=files buffer file_mru file_rec/async<cr>
   nnoremap <silent> [unite]l :<C-u>Unite -auto-resize -buffer-name=lines line<cr>
   nnoremap <silent> [unite]b :<C-u>Unite -auto-resize -buffer-name=marks jump bookmarks<cr>
+  nnoremap <silent> [unite]v :set list!<cr>
+  nnoremap <silent> [unite]m :<C-u>Unite -auto-resize -buffer-name=mappings mapping<cr>
 
   " nnoremap <silent> [unite]y :<C-u>Unite -buffer-name=yanks history/yank<cr>
   " nnoremap <silent> [unite]/ :<C-u>Unite -no-quit -no-split -buffer-name=search grep:.<cr>
   nnoremap <silent> [unite]/ :<C-u>Unite -no-quit -buffer-name=search grep:.<cr>
   " see *unite-source-grep* 
   nnoremap <silent> [unite]s :<C-u>Unite -no-quit -buffer-name=search grep:.::<c-r><c-w><cr>
-  nnoremap <silent> [unite]m :<C-u>Unite -auto-resize -buffer-name=mappings mapping<cr>
   " nnoremap <silent> [unite]w :<C-u>Unite -quick-match tab<cr>
   " from quick-match, can get usual listing of directories so do not need separate command
   " nnoremap <silent> [unite]d :<C-u>Unite -quick-match directory<cr>
   "nnoremap <silent> [unite]t :<C-u>Unite -auto-preview -buffer-name=tag tag<cr>
-  nnoremap <silent> [unite]t :<C-u>Unite -buffer-name=tag tag<cr>
+  "nnoremap <silent> [unite]t :<C-u>Unite -buffer-name=tag tag<cr>
   "nnoremap <silent> [unite]c :CtrlPFunky<cr>
   "nnoremap <silent> [unite]g :CtrlPTag<cr>
 
