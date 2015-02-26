@@ -66,7 +66,8 @@ set colorcolumn=100
 set listchars=tab:▸\ ,eol:¬
 
 " for custom display break
-set showbreak=… 
+set showbreak=«\ 
+" … 
 
 " utility mappings {{{
   " to wrap a word with ' or " current time
