@@ -1,4 +1,4 @@
-" detect OS {{{
+﻿" detect OS {{{
   let s:is_windows = has('win32') || has('win64')
   let s:is_cygwin = has('win32unix')
   let s:is_macvim = has('gui_macvim')
@@ -63,11 +63,14 @@ set wrap linebreak nolist
 set colorcolumn=100
 
 " for custom tab and eof char
-set listchars=tab:▸\ ,eol:¬
+scriptencoding utf-8
+set encoding=utf-8
+set listchars=tab:»\ ,eol:¬
+"set showbreak=«\ 
+set showbreak=<< 
 
-" for custom display break
-set showbreak=«\ 
-" … 
+" for spell
+set spelllang=en_gb
 
 " utility mappings {{{
   " to wrap a word with ' or " current time
@@ -321,13 +324,14 @@ if count(s:settings.plugin_groups, 'unite') "{{{
   nnoremap <silent> [unite]l :<C-u>Unite -auto-resize -buffer-name=lines line<cr>
   nnoremap <silent> [unite]b :<C-u>Unite -auto-resize -buffer-name=marks jump bookmarks<cr>
   nnoremap <silent> [unite]v :set list!<cr>
+  nnoremap <silent> [unite]s :set spell!<cr>
   nnoremap <silent> [unite]m :<C-u>Unite -auto-resize -buffer-name=mappings mapping<cr>
 
   " nnoremap <silent> [unite]y :<C-u>Unite -buffer-name=yanks history/yank<cr>
   " nnoremap <silent> [unite]/ :<C-u>Unite -no-quit -no-split -buffer-name=search grep:.<cr>
   nnoremap <silent> [unite]/ :<C-u>Unite -no-quit -buffer-name=search grep:.<cr>
   " see *unite-source-grep* 
-  nnoremap <silent> [unite]s :<C-u>Unite -no-quit -buffer-name=search grep:.::<c-r><c-w><cr>
+  nnoremap <silent> [unite]f :<C-u>Unite -no-quit -buffer-name=search grep:.::<c-r><c-w><cr>
   " nnoremap <silent> [unite]w :<C-u>Unite -quick-match tab<cr>
   " from quick-match, can get usual listing of directories so do not need separate command
   " nnoremap <silent> [unite]d :<C-u>Unite -quick-match directory<cr>
