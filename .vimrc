@@ -69,6 +69,9 @@ set listchars=tab:▸\ ,eol:¬
 set showbreak=«\ 
 " … 
 
+set spelllang=en_gb
+set spellfile=~/.vim/spell/en.utf-8.add 
+
 " utility mappings {{{
   " to wrap a word with ' or " current time
   map <F5> i'<Esc>ea'<Esc>
