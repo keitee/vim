@@ -1,4 +1,4 @@
-" detect OS {{{
+﻿" detect OS {{{
   let s:is_windows = has('win32') || has('win64')
   let s:is_cygwin = has('win32unix')
   let s:is_macvim = has('gui_macvim')
@@ -10,6 +10,9 @@ if has("gui_running")
     set guifont=DroidSansMono     " for debian
   endif
 endif
+
+" for run a browser on link
+:let g:netrw_browsex_viewer= "iceweasel"
 
 "
 " clipboard
@@ -63,11 +66,14 @@ set wrap linebreak nolist
 set colorcolumn=100
 
 " for custom tab and eof char
-set listchars=tab:▸\ ,eol:¬
+scriptencoding utf-8
+set encoding=utf-8
+set listchars=tab:»\ ,eol:¬
+"set showbreak=«\ 
+set showbreak=<< 
 
-" for custom display break
-set showbreak=«\ 
-" … 
+" for spell
+set spelllang=en_gb
 
 set spelllang=en_gb
 set spellfile=~/.vim/spell/en.utf-8.add 
@@ -76,11 +82,6 @@ set spellfile=~/.vim/spell/en.utf-8.add
   " to wrap a word with ' or " current time
   map <F5> i'<Esc>ea'<Esc>
   map <F6> i"<Esc>ea"<Esc>
-" }}}
-
-" gtag mappings {{{
-  " to tag search the word on cursor
-  map g<C-]> :GtagsCursor<CR>
 " }}}
 
 " search for selection {{{
@@ -215,7 +216,12 @@ endif
 "     When you selected a candidate, it runs "highlight" action automatically.
 "
 "   -auto-resize
-"     Auto resize unite buffer height by candidates number.  
+"     Auto resize unite buffer height by candidates number. However, when use -no-split then no
+"     effect.
+"
+"   Note: from -prompt-direction="top" or "below"
+"   If it is "below", |unite-options-auto-resize| is used automatically. To disable it, 
+"   you must set "-no-auto-resize" option.
 "
 "   -toggle
 "     Close unite buffer window if one of the same buffer name exists.
@@ -261,7 +267,7 @@ if count(s:settings.plugin_groups, 'unite') "{{{
   endif
 
   call unite#custom#profile('default', 'context', {
-    \ 'direction': 'below',
+        \ 'direction': 'top',
     \ 'start_insert' : 1,
     \ 'smartcase' : 1,
     \ 'prompt' : '>> '
@@ -299,39 +305,47 @@ if count(s:settings.plugin_groups, 'unite') "{{{
 
   " Note: with large projects this may cause some performance problems. Normally it is recommended
   " to use |unite-source-file_rec/async| source, which requires |vimproc|. Do not use this for
-  " windows.
+  " windows since no vimproc and no async in windows
 
-  "mappings
-  "    <space><space>  go to anything (files, buffers, MRU, bookmarks)
-  "    <space>f        select from files
-  "    <space>y        select from previous yanks
-  "    <space>l        select line from current buffer. search in a current file
-  "    <space>b        select from current buffers
-  "    <space>/        recursively search all files for matching text (uses ag or ack if found)
-  "    <space>s        recursively search for word under a cursor
-  "    <space>m        show mappings
-  "    <space>w        select tabs
-  "    <space>d        select dirs
-  "    <space>t        select tags
-  "    <space>c        select function
-  "    <space>tt       select tags
-  "    <space>o        select outline(funtion)
-  "    <space>h        select help
+  " Note: do not like -quick-match since need to press other keys to go to input mode.
 
-  " note: for windows since no vimproc and no async in windows
-
-  nnoremap <silent> [unite]u :Unite -toggle -auto-resize -buffer-name=files buffer file_mru file_rec/async<cr>
+  " "unite mappings"
+  "
+  " "o"one   uses 'u' but sometimes recognized as undo so uses 'o'(one) instead
+  nnoremap <silent> [unite]o :Unite -auto-resize -toggle -buffer-name=files buffer file_mru file_rec/async<cr>
   nnoremap <silent> [unite]l :<C-u>Unite -auto-resize -buffer-name=lines line<cr>
   nnoremap <silent> [unite]b :<C-u>Unite -auto-resize -buffer-name=marks jump bookmarks<cr>
   nnoremap <silent> [unite]v :set list!<cr>
+  nnoremap <silent> [unite]s :set spell!<cr>
   nnoremap <silent> [unite]m :<C-u>Unite -auto-resize -buffer-name=mappings mapping<cr>
+
+  " for "search" and see *unite-source-grep* 
+  nnoremap <silent> [unite]// :<C-u>Unite -no-split -buffer-name=search grep:.<cr>
+  nnoremap <silent> [unite]/ :<C-u>Unite -no-split -buffer-name=search grep:.::<c-r><c-w><cr>
+
+  " for "gtags"
+  " Note: prefer to use -no-split since otherwise, will be three windows; one for main, one for
+  " result, and one for preview.
+  nnoremap <silent> [unite]d :Unite -no-split -auto-resize -auto-preview gtags/def<CR>
+  nnoremap <silent> [unite]c :Unite -no-split -auto-resize -auto-preview gtags/context<CR>
+  nnoremap <silent> [unite]r :Unite -no-split -auto-resize -auto-preview gtags/ref<CR>
+  nnoremap <silent> [unite]g :Unite -no-split -auto-resize -auto-preview gtags/grep<CR>
+  vnoremap <silent> [unite]vd <ESC>:Unite gtags/def:.GetVisualSelection()<CR>
+
+  " for "copying filename"
+  nnoremap <silent> [unite]f :let @+ = expand("%")
+
+  " "t"ag
+  " Like ctrlptag. parses the current buffer's content and extracts headings from the buffer
+  NeoBundleLazy 'Shougo/unite-outline', {'autoload':{'unite_sources':'outline'}}
+  nnoremap <silent> [unite]t :<C-u>Unite -auto-resize -buffer-name=outline outline<cr>
+
+  " to tag search the word on cursor. will use quickfix window
+  " Q: why it causes an error saying no tag file?
+  " map g<C-]> :GtagsCursor<CR>
 
   " nnoremap <silent> [unite]y :<C-u>Unite -buffer-name=yanks history/yank<cr>
   " nnoremap <silent> [unite]/ :<C-u>Unite -no-quit -no-split -buffer-name=search grep:.<cr>
-  nnoremap <silent> [unite]/ :<C-u>Unite -no-quit -buffer-name=search grep:.<cr>
-  " see *unite-source-grep* 
-  nnoremap <silent> [unite]s :<C-u>Unite -no-quit -buffer-name=search grep:.::<c-r><c-w><cr>
-  " nnoremap <silent> [unite]w :<C-u>Unite -quick-match tab<cr>
   " from quick-match, can get usual listing of directories so do not need separate command
   " nnoremap <silent> [unite]d :<C-u>Unite -quick-match directory<cr>
   "nnoremap <silent> [unite]t :<C-u>Unite -auto-preview -buffer-name=tag tag<cr>
@@ -339,8 +353,9 @@ if count(s:settings.plugin_groups, 'unite') "{{{
   "nnoremap <silent> [unite]c :CtrlPFunky<cr>
   "nnoremap <silent> [unite]g :CtrlPTag<cr>
 
-  NeoBundle 'majutsushi/tagbar'
-  nnoremap <silent> [unite]tb :TagbarToggle<cr>
+  " for tagbar
+  " NeoBundle 'majutsushi/tagbar'
+  " nnoremap <silent> [unite]tb :TagbarToggle<cr>
 
   "
   NeoBundleLazy 'osyo-manga/unite-airline_themes', {'autoload':{'unite_sources':'airline_themes'}}
@@ -348,9 +363,6 @@ if count(s:settings.plugin_groups, 'unite') "{{{
   "
   NeoBundleLazy 'tsukkee/unite-tag', {'autoload':{'unite_sources':['tag','tag/file']}}
   nnoremap <silent> [unite]tt :<C-u>Unite -auto-resize -buffer-name=tag tag tag/file<cr>
-  " Like ctrlptag. parses the current buffer's content and extracts headings from the buffer
-  NeoBundleLazy 'Shougo/unite-outline', {'autoload':{'unite_sources':'outline'}}
-  nnoremap <silent> [unite]o :<C-u>Unite -auto-resize -buffer-name=outline outline<cr>
   "
   NeoBundleLazy 'Shougo/unite-help', {'autoload':{'unite_sources':'help'}}
   nnoremap <silent> [unite]h :<C-u>Unite -auto-resize -buffer-name=help help<cr>
