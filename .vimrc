@@ -270,8 +270,14 @@ if count(s:settings.plugin_groups, 'unite') "{{{
     \ 'prompt' : '>> '
     \ })
 
-  " ?
-  " call unite#custom#profile('default', 'context', {'prompt_direction': 'below'})
+  " Note: direction and -no-split option
+  " when direction == below and not -no-split, then unite input buffer shrinks downwards when types
+  " chars to narrow down.
+  "
+  " when direction == below and -no-split, then unite input buffer shrinks upwards when types
+  " chars to narrow down.
+  "
+  " Therefore, use top when use both no-split and no no-split, since no-split goes upwards.
 
   " If defined and not 0, unite enables |unite-source-history/yank|. Note: This value has to be
   " set in .vimrc.  This variable is not defined by default.
@@ -310,6 +316,7 @@ if count(s:settings.plugin_groups, 'unite') "{{{
   "
   " "o"one   uses 'u' but sometimes recognized as undo so uses 'o'(one) instead
   nnoremap <silent> [unite]o :Unite -auto-resize -toggle -buffer-name=files buffer file_mru file_rec/async<cr>
+  nnoremap <silent> [unite]on :Unite -no-split -toggle -buffer-name=files buffer file_mru file_rec/async<cr>
   nnoremap <silent> [unite]l :<C-u>Unite -auto-resize -buffer-name=lines line<cr>
   nnoremap <silent> [unite]b :<C-u>Unite -auto-resize -buffer-name=marks jump bookmarks<cr>
   nnoremap <silent> [unite]v :set list!<cr>
