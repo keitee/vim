@@ -267,14 +267,12 @@ if count(s:settings.plugin_groups, 'unite') "{{{
   endif
 
   call unite#custom#profile('default', 'context', {
-        \ 'direction': 'top',
+    \ 'direction': 'below',
     \ 'start_insert' : 1,
     \ 'smartcase' : 1,
+    \ 'auto_resize' : 1,
     \ 'prompt' : '>> '
     \ })
-
-  " ?
-  " call unite#custom#profile('default', 'context', {'prompt_direction': 'below'})
 
   " If defined and not 0, unite enables |unite-source-history/yank|. Note: This value has to be
   " set in .vimrc.  This variable is not defined by default.
@@ -312,7 +310,7 @@ if count(s:settings.plugin_groups, 'unite') "{{{
   " "unite mappings"
   "
   " "o"one   uses 'u' but sometimes recognized as undo so uses 'o'(one) instead
-  nnoremap <silent> [unite]o :Unite -auto-resize -toggle -buffer-name=files buffer file_mru file_rec/async<cr>
+  nnoremap <silent> [unite]o :Unite -toggle -buffer-name=files buffer file_mru file_rec/async<cr>
   nnoremap <silent> [unite]l :<C-u>Unite -auto-resize -buffer-name=lines line<cr>
   nnoremap <silent> [unite]b :<C-u>Unite -auto-resize -buffer-name=marks jump bookmarks<cr>
   nnoremap <silent> [unite]v :set list!<cr>
@@ -320,20 +318,20 @@ if count(s:settings.plugin_groups, 'unite') "{{{
   nnoremap <silent> [unite]m :<C-u>Unite -auto-resize -buffer-name=mappings mapping<cr>
 
   " for "search" and see *unite-source-grep* 
-  nnoremap <silent> [unite]// :<C-u>Unite -no-split -buffer-name=search grep:.<cr>
-  nnoremap <silent> [unite]/ :<C-u>Unite -no-split -buffer-name=search grep:.::<c-r><c-w><cr>
+  nnoremap <silent> [unite]// :<C-u>Unite -buffer-name=search grep:.<cr>
+  nnoremap <silent> [unite]/ :<C-u>Unite -buffer-name=search grep:.::<c-r><c-w><cr>
 
   " for "gtags"
   " Note: prefer to use -no-split since otherwise, will be three windows; one for main, one for
   " result, and one for preview.
-  nnoremap <silent> [unite]d :Unite -no-split -auto-resize -auto-preview gtags/def<CR>
-  nnoremap <silent> [unite]c :Unite -no-split -auto-resize -auto-preview gtags/context<CR>
-  nnoremap <silent> [unite]r :Unite -no-split -auto-resize -auto-preview gtags/ref<CR>
-  nnoremap <silent> [unite]g :Unite -no-split -auto-resize -auto-preview gtags/grep<CR>
+  nnoremap <silent> [unite]d :Unite -auto-resize -auto-preview gtags/def<CR>
+  nnoremap <silent> [unite]c :Unite -auto-resize -auto-preview gtags/context<CR>
+  nnoremap <silent> [unite]r :Unite -auto-resize -auto-preview gtags/ref<CR>
+  nnoremap <silent> [unite]g :Unite -auto-resize -auto-preview gtags/grep<CR>
   vnoremap <silent> [unite]vd <ESC>:Unite gtags/def:.GetVisualSelection()<CR>
 
   " for "copying filename"
-  nnoremap <silent> [unite]f :let @+ = expand("%")
+  nnoremap <silent> [unite]f :let @+ = expand("%")<CR>
 
   " "t"ag
   " Like ctrlptag. parses the current buffer's content and extracts headings from the buffer
