@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/home/kpark/source/DEVARCH'
+let g:netrw_dirhist_2='/home/kpark/source/DEVARCH/Cobalt'
+let g:netrw_dirhist_3='/home/kpark/source/DEVARCH/Cobalt/Cobalt.System.API'
+let g:netrw_dirhist_4='/home/kpark/source/DEVARCH/Cobalt/Cobalt.System.API/test'
+let g:netrw_dirhist_5='/home/kpark/source/DEVARCH/Cobalt/Cobalt.System.API'
+let g:netrw_dirhist_6='/home/kpark/source/DEVARCH/Cobalt/Cobalt.System.API/src'
