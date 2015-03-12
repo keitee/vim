@@ -34,11 +34,6 @@ set nu
 " for editing {{{
 set autoindent
 set cindent
-set smartindent
-set shiftwidth=2
-set tabstop=2
-set expandtab
-set tw=100
 "}}}
 
 
@@ -191,6 +186,36 @@ else
 endif
 " }}}
 
+"
+" {{{ indent
+"
+" https://github.com/nathanaelkane/vim-indent-guides
+"
+" :help indent-guides
+"
+NeoBundle 'nathanaelkane/vim-indent-guides'
+
+set smartindent
+
+" sw(shiftwidth), ts(tabstop), et(expandtab), tw(textwidth) 
+set sw=4 ts=4 et tw=100
+
+" Use this option to customize the size of the indent guide.
+let g:indent_guides_guide_size = 1
+
+" Use this option to control which indent level to start showing guides from.
+let g:indent_guides_start_level = 2
+
+" to define custom colors instead of using the ones the plugin automatically generates for you
+"let g:indent_guides_auto_colors = 0
+"autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
+"autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
+
+" Mapping
+" :nmap <silent> <Leader>ig <Plug>IndentGuidesToggle
+
+" }}}
+
 
 "
 " unite {{{
@@ -233,7 +258,6 @@ if count(s:settings.plugin_groups, 'unite') "{{{
   NeoBundle 'Shougo/unite.vim'
   NeoBundle 'Shougo/neomru.vim'
   NeoBundle 'hewes/unite-gtags'
-  NeoBundle 'nathanaelkane/vim-indent-guides'
 
   " neobundle#get({bundle-name})                         *neobundle#get()*
   " Get the neobundle options dictionary for {bundle-name}. Useful for setting hooks.
@@ -529,18 +553,6 @@ if count(s:settings.plugin_groups, 'ctrlp') "{{{
   nnoremap [ctrlp]d :CtrlPDir<cr>
   nnoremap [ctrlp]t :CtrlPTag<cr>
   nnoremap [ctrlp]c :CtrlPFunky<cr>
-endif "}}}
-
-
-" 
-" editing groups
-"
-if count(s:settings.plugin_groups, 'editing') "{{{
-	" [KT] tried but too slow to use so dropped.
-	" vim-multiple-cursors
-	" mapped to <C-N>, this will select all matching words and lets you concurrently change all
-	" matches at the same time
-	" NeoBundle 'terryma/vim-multiple-cursors' 
 endif "}}}
 
 
