@@ -285,10 +285,16 @@ if count(s:settings.plugin_groups, 'unite') "{{{
     call unite#custom#source('line,outline','matchers','matcher_fuzzy')
   endfunction
 
+  " "unite-configs"
+  "
+  " cache directory. use absolute path.
   if s:is_windows != 1
-     " The Default value is expand('~/.unite'); the absolute path of it.
-     let g:unite_data_directory='~/.vim/.cache/unite'
+     let g:unite_data_directory='~/.cache/unite'
   endif
+
+  " If defined and not 0, unite enables |unite-source-history/yank|. Note: This value has to be
+  " set in .vimrc. This variable is not defined by default.
+  let g:unite_source_history_yank_enable=1
 
   call unite#custom#profile('default', 'context', {
     \ 'direction': 'below',
@@ -307,9 +313,6 @@ if count(s:settings.plugin_groups, 'unite') "{{{
   "
   " Therefore, use top when use both no-split and no no-split, since no-split goes upwards.
 
-  " If defined and not 0, unite enables |unite-source-history/yank|. Note: This value has to be
-  " set in .vimrc.  This variable is not defined by default.
-  let g:unite_source_history_yank_enable=1
 
   " <Q> why error?
   " call unite#custom#source('file_rec,file_rec/async','max_candidates',0)
@@ -334,18 +337,14 @@ if count(s:settings.plugin_groups, 'unite') "{{{
   nnoremap [unite] <nop>
   nmap <space> [unite]
 
-  " Note: with large projects this may cause some performance problems. Normally it is recommended
-  " to use |unite-source-file_rec/async| source, which requires |vimproc|. Do not use this for
-  " windows since no vimproc and no async in windows
-
+  " "unite-mappings"
+  " Note: vimproc and source with bang(!) Not for windows since no vimproc in windows
   " Note: do not like -quick-match since need to press other keys to go to input mode.
-
-  " "unite mappings"
   "
   " "o"one   uses 'u' but sometimes recognized as undo so uses 'o'(one) instead
-  nnoremap <silent> [unite]o :Unite -toggle -buffer-name=files buffer file_mru file_rec/async<cr>
+  nnoremap <silent> [unite]o :Unite -toggle -unique -buffer-name=files buffer file_mru file file_rec/async:!<cr>
   nnoremap <silent> [unite]l :<C-u>Unite -auto-resize -buffer-name=lines line<cr>
-  nnoremap <silent> [unite]b :<C-u>Unite -auto-resize -buffer-name=marks jump bookmarks<cr>
+  nnoremap <silent> [unite]b :<C-u>Unite -auto-resize -buffer-name=marks bookmark:_<cr>
   nnoremap <silent> [unite]v :set list!<cr>
   nnoremap <silent> [unite]s :set spell!<cr>
   nnoremap <silent> [unite]m :<C-u>Unite -auto-resize -buffer-name=mappings mapping<cr>
