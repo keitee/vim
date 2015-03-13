@@ -1,0 +1,15 @@
+neobundle.vim
+neocomplete.vim
+neomru.vim
+neosnippet.vim
+syntastic
+unite-airline_themes
+unite-gtags
+unite-help
+unite-outline
+unite-tag
+unite.vim
+vim-airline
+vim-indent-guides
+vim-snippets
+vimproc
