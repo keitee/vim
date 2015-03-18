@@ -198,7 +198,10 @@ NeoBundle 'nathanaelkane/vim-indent-guides'
 set smartindent
 
 " sw(shiftwidth), ts(tabstop), et(expandtab), tw(textwidth) 
-set sw=4 ts=4 et tw=100
+set sw=4 
+set ts=4 
+set et 
+set tw=100
 
 " Use this option to customize the size of the indent guide.
 let g:indent_guides_guide_size = 1
