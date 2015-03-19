@@ -19,7 +19,7 @@ HISTCONTROL=ignoreboth
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTFILE=~/.bash_history_$(echo $SSH_TTY | cut -f 4 -d'/')
+# HISTFILE=~/.bash_history_$(echo $SSH_TTY | cut -f 4 -d'/')
 HISTSIZE=1000
 HISTFILESIZE=2000
 HISTCONTROL=erasedups
@@ -92,6 +92,7 @@ fi
 
 # for gtag
 export GTAGSFORCECPP=
+export GTAGSLIBPATH=.:~/source:/home/kpark/gtags/toolchain:/home/kpark/gtags/master-oss:/home/kpark/gtags/cpp-pc
 
 # for skype
 export GTK_IM_MODULE=ibus
@@ -101,13 +102,17 @@ export XIM_PROGRAM='/usr/bin/ibus-daemon -x -d'
 
 # some more ls aliases
 alias a=alias
-alias grep='grep --color=auto -anH'
-alias fgrep='fgrep --color=auto -anH'
-alias egrep='egrep --color=auto -anH'
+alias s='source ~/.bashrc'
+alias grep='grep --color -anH'
+alias fgrep='fgrep --color -anH'
+alias egrep='egrep -anH --color'
 alias gdiff=gvimdiff
 alias diff='diff -up'
 alias cdiff='colordiff -up'
-alias gl='global --color'
+alias gl='global --color -x'
+alias ag='ag -C 4 -S --color-path="1;31" --color-match="0;32" --pager "less -r"'
+alias gu='gtags ~/source ~/source/DEVARCH'
+alias sl='echo $SHLVL'
 
 bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
@@ -139,6 +144,7 @@ alias wcom='sudo grabserial -v -d /dev/ttyUSB0'
 alias wcpt='scp libnexusMgr.so root@172.20.33.192:/usr/local/lib'
 alias wcpf='scp root@172.20.33.192:'
 alias wscr='sudo screen -a -D -R -fn -l -L /dev/ttyUSB0 115200,cs8'
+alias wtag='export GTAGSLIBPATH=~/gtags/oem-hwei:$GTAGSLIBPATH'
 
 alias wsk='zinc-send-key-hwei'
 

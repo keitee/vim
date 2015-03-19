@@ -299,13 +299,17 @@ if count(s:settings.plugin_groups, 'unite') "{{{
   " set in .vimrc. This variable is not defined by default.
   let g:unite_source_history_yank_enable=1
 
-  call unite#custom#profile('default', 'context', {
-    \ 'direction': 'below',
-    \ 'start_insert' : 1,
-    \ 'smartcase' : 1,
-    \ 'auto_resize' : 1,
-    \ 'prompt' : '>> '
-    \ })
+    call unite#custom#profile('default', 'context', {
+      \ 'direction': 'below',
+      \ 'start_insert' : 1,
+      \ 'smartcase' : 1,
+      \ 'auto_resize' : 1,
+      \ 'prompt' : '>> '
+      \ })
+
+    " When use file_mru and file_rec both, file_rec shows relative path but mur shows absolute path.
+    " Is there any way to make them use the same way?
+    call unite#custom#source('file, file_mru', 'converters', 'converter_relative_word')
 
   " Note: direction and -no-split option
   " when direction == below and not -no-split, then unite input buffer shrinks downwards when types
@@ -346,6 +350,9 @@ if count(s:settings.plugin_groups, 'unite') "{{{
   "
   " "o"one   uses 'u' but sometimes recognized as undo so uses 'o'(one) instead
   nnoremap <silent> [unite]o :Unite -toggle -unique -buffer-name=files buffer file_mru file file_rec/async:!<cr>
+  nnoremap <silent> [unite]oc :UniteWithCurrentDir -toggle -unique -buffer-name=files file_rec/async:!<cr>
+  nnoremap <silent> [unite]op :UniteWithProjectDir -toggle -unique -buffer-name=files file_rec/async:!<cr>
+  nnoremap <silent> [unite]q :Unite -toggle -unique -buffer-name=quick buffer file_mru file<cr>
   nnoremap <silent> [unite]l :<C-u>Unite -auto-resize -buffer-name=lines line<cr>
   nnoremap <silent> [unite]b :<C-u>Unite -auto-resize -buffer-name=marks bookmark:_<cr>
   nnoremap <silent> [unite]v :set list!<cr>
@@ -359,10 +366,10 @@ if count(s:settings.plugin_groups, 'unite') "{{{
   " for "gtags"
   " Note: prefer to use -no-split since otherwise, will be three windows; one for main, one for
   " result, and one for preview.
-  nnoremap <silent> [unite]d :Unite -auto-resize -auto-preview gtags/def<CR>
-  nnoremap <silent> [unite]c :Unite -auto-resize -auto-preview gtags/context<CR>
-  nnoremap <silent> [unite]r :Unite -auto-resize -auto-preview gtags/ref<CR>
-  nnoremap <silent> [unite]g :Unite -auto-resize -auto-preview gtags/grep<CR>
+  nnoremap <silent> [unite]d :Unite -auto-resize gtags/def<CR>
+  nnoremap <silent> [unite]c :Unite -auto-resize gtags/context<CR>
+  nnoremap <silent> [unite]r :Unite -auto-resize gtags/ref<CR>
+  nnoremap <silent> [unite]g :Unite -auto-resize gtags/grep<CR>
   vnoremap <silent> [unite]vd <ESC>:Unite gtags/def:.GetVisualSelection()<CR>
 
   " for "copying filename"
