@@ -135,7 +135,7 @@ alias hcpt='scp libnexusMgr.so root@172.20.35.27:/usr/local/lib'
 alias hcpf='scp root@172.20.35.27:'
 alias hbld='ZB_CFG="humax.1000" zb-make Polonium/Polonium.NexusInspect'
 #alias hscr='sudo screen -a -D -R -fn -l -L /dev/ttyS0 115200,cs8'
-alias hscr='sudo minicom -C=hmax.log -c=on hmax'
+alias hscr='sudo minicom -C=hmax.log -c on hmax'
 
 # huawei and usb serial
 alias wssh='ssh root@172.20.33.192' 

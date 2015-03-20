@@ -299,8 +299,13 @@ if count(s:settings.plugin_groups, 'unite') "{{{
   " set in .vimrc. This variable is not defined by default.
   let g:unite_source_history_yank_enable=1
 
+    " option: direction {*topleft, below, botright}
+    "
+    " To use full width unite window even when use vsplits. 
+    "    'direction': 'botright',
+    
     call unite#custom#profile('default', 'context', {
-      \ 'direction': 'below',
+      \ 'direction': 'botright',
       \ 'start_insert' : 1,
       \ 'smartcase' : 1,
       \ 'auto_resize' : 1,
