@@ -186,15 +186,9 @@ else
 endif
 " }}}
 
-"
+
 " {{{ indent
 "
-" https://github.com/nathanaelkane/vim-indent-guides
-"
-" :help indent-guides
-"
-NeoBundle 'nathanaelkane/vim-indent-guides'
-
 set smartindent
 
 " sw(shiftwidth), ts(tabstop), et(expandtab), tw(textwidth) 
@@ -202,20 +196,40 @@ set sw=4
 set ts=4 
 set et 
 set tw=100
+" }}}
 
-" Use this option to customize the size of the indent guide.
-let g:indent_guides_guide_size = 1
 
-" Use this option to control which indent level to start showing guides from.
-let g:indent_guides_start_level = 2
+"" {{{ indent-guides
+""
+"" https://github.com/nathanaelkane/vim-indent-guides
+""
+"" :help indent-guides
+""
+"NeoBundle 'nathanaelkane/vim-indent-guides'
+"
+"" Use this option to customize the size of the indent guide.
+"let g:indent_guides_guide_size = 1
+"
+"" Use this option to control which indent level to start showing guides from.
+"let g:indent_guides_start_level = 2
+"
+"" to define custom colors instead of using the ones the plugin automatically generates for you
+""let g:indent_guides_auto_colors = 0
+""autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
+""autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
+"
+"" Mapping
+"" :nmap <silent> <Leader>ig <Plug>IndentGuidesToggle
+"
+"" }}}
 
-" to define custom colors instead of using the ones the plugin automatically generates for you
-"let g:indent_guides_auto_colors = 0
-"autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
-"autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
 
-" Mapping
-" :nmap <silent> <Leader>ig <Plug>IndentGuidesToggle
+" {{{ indent-line
+"
+" https://github.com/Yggdroot/indentLine
+"
+"
+NeoBundle 'Yggdroot/indentLine'
 
 " }}}
 
