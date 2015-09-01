@@ -58,7 +58,7 @@ set foldenable
 set wrap linebreak nolist
 
 " for color column
-set colorcolumn=100
+set colorcolumn=80
 
 " for custom tab and eof char
 scriptencoding utf-8
@@ -275,6 +275,11 @@ if count(s:settings.plugin_groups, 'unite') "{{{
   NeoBundle 'Shougo/unite.vim'
   NeoBundle 'Shougo/neomru.vim'
   NeoBundle 'hewes/unite-gtags'
+  " specify your project path as key. '_' in key means default configuration.
+  let g:unite_source_gtags_project_config = {
+  \ '_':                   { 'treelize': 1 }
+  \ }
+  let g:uniteSource__Gtags_Path='File'
 
   " neobundle#get({bundle-name})                         *neobundle#get()*
   " Get the neobundle options dictionary for {bundle-name}. Useful for setting hooks.
