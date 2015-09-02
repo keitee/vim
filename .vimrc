@@ -30,12 +30,16 @@ set incsearch
 " for line number. set number
 set nu
 
-"
+
 " for editing {{{
 set autoindent
 set cindent
 "}}}
 
+" for git {{{
+" Limit line length of git commits to 72 cols
+au FileType gitcommit set tw=72
+"}}}
 
 " show autocomplete menus
 set wildmenu
@@ -113,6 +117,12 @@ endfunction
 " tag completion {{{
    inoremap <c-x> <c-]> <c-]>
 " }}}
+
+
+" {{{ more match chars
+set matchpairs+=<:>
+" }}}
+"
 
 " Neobundle {{{
 if has('vim_starting')
@@ -228,9 +238,7 @@ set tw=100
 "
 " https://github.com/Yggdroot/indentLine
 "
-"
-NeoBundle 'Yggdroot/indentLine'
-
+" NeoBundle 'Yggdroot/indentLine'
 " }}}
 
 
