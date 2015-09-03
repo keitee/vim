@@ -162,7 +162,13 @@ if s:is_windows != 1
   call neobundle#begin(expand('~/.vim/bundle/'))
   NeoBundleFetch 'Shougo/neobundle.vim'
   call neobundle#end()
-  filetype plugin indent on     " Required! why? if not, using ohter plugins do not work properly
+
+  " Required! why? if not, using ohter plugins do not work properly
+  filetype plugin indent on
+
+  " current
+  NeoBundle 'tyru/current-func-info.vim'
+  nnoremap <C-g>f :echo cfi#format("%s", "")<CR>
 
   " vimproc
   NeoBundle 'Shougo/vimproc'
@@ -245,7 +251,7 @@ set tw=100
 "
 " unite {{{
 "
-" :Unite [{options}] {sources}                                            *:Unite*
+" :Unite [{options}] {sources} 
 " 
 " :h unite-options
 "   -buffer-name={buffer-name} 
@@ -255,39 +261,43 @@ set tw=100
 "     Specify a default action.  The default value is 'default'.
 "     -default-action=tabopen
 "
-"   -no-quit 
-"     Doesn't close unite buffer after firing an action. Unless you specify it, a unite
-"     buffer gets closed when you selected an action which is "is_quit".
+"   -no-quit Doesn't close unite buffer after firing an action. Unless you
+"   specify it, a unite buffer gets closed when you selected an action which is
+"   "is_quit".
 "
-"   -auto-preview
-"     When you selected a candidate, it runs "preview" action automatically.
+"   -auto-preview When you selected a candidate, it runs "preview" action
+"   automatically.
 "
-"   -auto-highlight
-"     When you selected a candidate, it runs "highlight" action automatically.
+"   -auto-highlight When you selected a candidate, it runs "highlight" action
+"   automatically.
 "
-"   -auto-resize
-"     Auto resize unite buffer height by candidates number. However, when use -no-split then no
-"     effect.
+"   -auto-resize Auto resize unite buffer height by candidates number. However,
+"   when use -no-split then no effect.
 "
-"   Note: from -prompt-direction="top" or "below"
-"   If it is "below", |unite-options-auto-resize| is used automatically. To disable it, 
-"   you must set "-no-auto-resize" option.
+"   Note: from -prompt-direction="top" or "below" If it is "below",
+"   |unite-options-auto-resize| is used automatically. To disable it, you must
+"   set "-no-auto-resize" option.
 "
-"   -toggle
-"     Close unite buffer window if one of the same buffer name exists.
+"   -toggle Close unite buffer window if one of the same buffer name exists.
 "
 " This works as well for normal vi so can use it in console.
-"
+
 if count(s:settings.plugin_groups, 'unite') "{{{
 
   NeoBundle 'Shougo/unite.vim'
   NeoBundle 'Shougo/neomru.vim'
   NeoBundle 'hewes/unite-gtags'
+
+  " gtags
   " specify your project path as key. '_' in key means default configuration.
   let g:unite_source_gtags_project_config = {
   \ '_':                   { 'treelize': 1 }
   \ }
   let g:uniteSource__Gtags_Path='File'
+
+  " let g:unite_source_gtags_project_config = {
+  " \ 'gtags_libpath': ['/home/kpark/gtags-target/']
+  " \ }
 
   " neobundle#get({bundle-name})                         *neobundle#get()*
   " Get the neobundle options dictionary for {bundle-name}. Useful for setting hooks.
@@ -298,10 +308,11 @@ if count(s:settings.plugin_groups, 'unite') "{{{
     " The popular recursive file search, using fuzzy file matching:
     call unite#filters#matcher_default#use(['matcher_fuzzy'])
 
-    " Changes the default sorter used by |unite-filter-sorter_default| into {sorters}.
-    " sorter_rank. Matched rank order sorter. The higher the matched word is or the longer the
-    " matched length is, the higher the rank is.  This sorter is useful for file candidate source.
-    " Note: This sorter is slow.
+    " Changes the default sorter used by |unite-filter-sorter_default| into
+    " {sorters}.  sorter_rank. Matched rank order sorter. The higher the matched
+    " word is or the longer the matched length is, the higher the rank is.  This
+    " sorter is useful for file candidate source.  Note: This sorter is slow.
+
     call unite#filters#sorter_default#use(['sorter_rank'])
 
     " ?
@@ -309,9 +320,10 @@ if count(s:settings.plugin_groups, 'unite') "{{{
 
 
     " unite#custom#source({source-name}, {option-name}, {value})
-    "                 Set {source-name} source specialized {option-name} to {value}.
-    "                 You may specify multiple sources with separating "," in
-    "                 {source-name}.
+    "
+    " Set {source-name} source specialized {option-name} to {value}.  You may
+    " specify multiple sources with separating "," in {source-name}.
+
     call unite#custom#source('line,outline','matchers','matcher_fuzzy')
   endfunction
 
@@ -322,8 +334,9 @@ if count(s:settings.plugin_groups, 'unite') "{{{
      let g:unite_data_directory='~/.cache/unite'
   endif
 
-  " If defined and not 0, unite enables |unite-source-history/yank|. Note: This value has to be
-  " set in .vimrc. This variable is not defined by default.
+  " If defined and not 0, unite enables |unite-source-history/yank|. Note: This
+  " value has to be set in .vimrc. This variable is not defined by default.
+
   let g:unite_source_history_yank_enable=1
 
     " option: direction {*topleft, below, botright}
@@ -339,23 +352,41 @@ if count(s:settings.plugin_groups, 'unite') "{{{
       \ 'prompt' : '>> '
       \ })
 
-    " When use file_mru and file_rec both, file_rec shows relative path but mur shows absolute path.
-    " Is there any way to make them use the same way?
+    " When use file_mru and file_rec both, file_rec shows relative path but mur
+    " shows absolute path.  Is there any way to make them use the same way?
+
     call unite#custom#source('file, file_mru', 'converters', 'converter_relative_word')
 
   " Note: direction and -no-split option
-  " when direction == below and not -no-split, then unite input buffer shrinks downwards when types
-  " chars to narrow down.
+  " when direction == below and not -no-split, then unite input buffer shrinks
+  " downwards when types chars to narrow down.
   "
-  " when direction == below and -no-split, then unite input buffer shrinks upwards when types
-  " chars to narrow down.
+  " when direction == below and -no-split, then unite input buffer shrinks
+  " upwards when types chars to narrow down.
   "
-  " Therefore, use top when use both no-split and no no-split, since no-split goes upwards.
+  " Therefore, use top when use both no-split and no no-split, since no-split
+  " goes upwards.
 
 
-  " <Q> why error?
-  " call unite#custom#source('file_rec,file_rec/async','max_candidates',0)
-  " let g:unite_prompt='» '
+  " "cache-size"
+  " Q. file_rec and file_rec/async cannot find all files.
+  " Specify the maximum number of files that |unite-source-file_rec| saves the
+  " caches. The default value is 2000.
+  "
+  " https://github.com/Shougo/unite.vim/issues/356
+  " https://github.com/Shougo/unite.vim/issues/370
+  "
+  " A. It is feature. cf: |g:unite_source_rec_max_cache_files|. And the default
+  " max candidates are limited. You can custom it by
+  "
+  " And you must clear previous cache in file_rec sources. To clear cache, you
+  " must execute |<Plug>(unite_redraw)| in unite buffer(in default it is mapped
+  " to <C-l>).
+
+  let g:unite_source_rec_max_cache_files = 0
+  call unite#custom#source('file_rec,file_rec/async','max_candidates',20000)
+
+  let g:unite_prompt='» '
 
   " :h g:unite_source_grep_command
   if executable('ag')
@@ -398,11 +429,13 @@ if count(s:settings.plugin_groups, 'unite') "{{{
   " for "gtags"
   " Note: prefer to use -no-split since otherwise, will be three windows; one for main, one for
   " result, and one for preview.
-  nnoremap <silent> [unite]d :Unite -auto-resize gtags/def<CR>
-  nnoremap <silent> [unite]c :Unite -auto-resize gtags/context<CR>
-  nnoremap <silent> [unite]r :Unite -auto-resize gtags/ref<CR>
-  nnoremap <silent> [unite]g :Unite -auto-resize gtags/grep<CR>
-  vnoremap <silent> [unite]vd <ESC>:Unite gtags/def:.GetVisualSelection()<CR>
+  nnoremap <silent> [unite]td :Unite -auto-resize gtags/def<CR>
+  nnoremap <silent> [unite]tc :Unite -auto-resize gtags/context<CR>
+  nnoremap <silent> [unite]to :Unite -auto-resize gtags/completion<CR>
+  nnoremap <silent> [unite]tf :Unite -auto-resize gtags/file<CR>
+  nnoremap <silent> [unite]tr :Unite -auto-resize gtags/ref<CR>
+  nnoremap <silent> [unite]tg :Unite -auto-resize gtags/grep<CR>
+  vnoremap <silent> [unite]ts <ESC>:Unite gtags/def:.GetVisualSelection()<CR>
 
   " for "copying filename"
   nnoremap <silent> [unite]f :let @+ = expand("%")<CR>
