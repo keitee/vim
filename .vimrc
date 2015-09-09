@@ -6,8 +6,9 @@
 
 if has("gui_running")
   if has("gui_gtk2")
-"    set guifont=FreeMono\ 12     " for ubuntu
-    set guifont=DroidSansMono     " for debian
+    " set guifont=FreeMono\ 12    " for ubuntu
+    " set guifont=DroidSansMono   " for debian
+    set guifont=Hack              " for debian
   endif
 endif
 
@@ -61,15 +62,23 @@ set foldenable
 " for line wrapping and linebreak
 set wrap linebreak nolist
 
-" for color column
-set colorcolumn=80
+" {{{ indent, custom tab and eof char
+set smartindent
 
-" for custom tab and eof char
+" sw(shiftwidth), ts(tabstop), sts(softtabstop), et(expandtab), tw(textwidth) 
+set sw=2 
+set ts=2 
+set sts=2
+set et 
+set tw=80
+set colorcolumn=80      " for color column
+
 scriptencoding utf-8
 set encoding=utf-8
 set listchars=tab:»\ ,eol:¬
 "set showbreak=«\ 
 set showbreak=<< 
+" }}}
 
 " for spell
 set spelllang=en_gb
@@ -200,18 +209,6 @@ else
   call add(s:settings.plugin_groups, 'ctrlp')
   " }}}
 endif
-" }}}
-
-
-" {{{ indent
-"
-set smartindent
-
-" sw(shiftwidth), ts(tabstop), et(expandtab), tw(textwidth) 
-set sw=4 
-set ts=4 
-set et 
-set tw=100
 " }}}
 
 
@@ -431,7 +428,11 @@ if count(s:settings.plugin_groups, 'unite') "{{{
   " result, and one for preview.
   nnoremap <silent> [unite]td :Unite -auto-resize gtags/def<CR>
   nnoremap <silent> [unite]tc :Unite -auto-resize gtags/context<CR>
-  nnoremap <silent> [unite]to :Unite -auto-resize gtags/completion<CR>
+
+  " note: this seems to be so slow and causes vim to hang sometimes
+  " nnoremap <silent> [unite]to :Unite -auto-resize gtags/completion<CR>
+  nnoremap <silent> [unite]to :Gtags<CR>
+
   nnoremap <silent> [unite]tf :Unite -auto-resize gtags/file<CR>
   nnoremap <silent> [unite]tr :Unite -auto-resize gtags/ref<CR>
   nnoremap <silent> [unite]tg :Unite -auto-resize gtags/grep<CR>
