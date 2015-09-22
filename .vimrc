@@ -412,7 +412,8 @@ if count(s:settings.plugin_groups, 'unite') "{{{
   nnoremap <silent> [unite]o :Unite -toggle -unique -buffer-name=files buffer file_mru file file_rec/async:!<cr>
   nnoremap <silent> [unite]oc :UniteWithCurrentDir -toggle -unique -buffer-name=files file_rec/async:!<cr>
   nnoremap <silent> [unite]op :UniteWithProjectDir -toggle -unique -buffer-name=files file_rec/async:!<cr>
-  nnoremap <silent> [unite]q :Unite -toggle -unique -buffer-name=quick buffer file_mru file<cr>
+  nnoremap <silent> [unite]q :Unite -toggle -unique -buffer-name=quick buffer<cr>
+  nnoremap <silent> [unite]r :Unite -toggle -unique -buffer-name=recent file_mru<cr>
   nnoremap <silent> [unite]l :<C-u>Unite -auto-resize -buffer-name=lines line<cr>
   nnoremap <silent> [unite]b :<C-u>Unite -auto-resize -buffer-name=marks bookmark:_<cr>
   nnoremap <silent> [unite]v :set list!<cr>
