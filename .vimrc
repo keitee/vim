@@ -409,7 +409,7 @@ if count(s:settings.plugin_groups, 'unite') "{{{
   " Note: do not like -quick-match since need to press other keys to go to input mode.
   "
   " "o"one   uses 'u' but sometimes recognized as undo so uses 'o'(one) instead
-  nnoremap <silent> [unite]o :Unite -toggle -unique -buffer-name=files buffer file_mru file file_rec/async:!<cr>
+  nnoremap <silent> [unite]o :Unite -toggle -unique -buffer-name=files file file_rec/async:!<cr>
   nnoremap <silent> [unite]oc :UniteWithCurrentDir -toggle -unique -buffer-name=files file_rec/async:!<cr>
   nnoremap <silent> [unite]op :UniteWithProjectDir -toggle -unique -buffer-name=files file_rec/async:!<cr>
   nnoremap <silent> [unite]q :Unite -toggle -unique -buffer-name=quick buffer<cr>
