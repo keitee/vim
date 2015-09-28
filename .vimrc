@@ -176,8 +176,23 @@ if s:is_windows != 1
   filetype plugin indent on
 
   " current
-  NeoBundle 'tyru/current-func-info.vim'
-  nnoremap <C-g>f :echo cfi#format("%s", "")<CR>
+  " note: not sure since it do not work for me.
+  " NeoBundle 'tyru/current-func-info.vim'
+  " nnoremap <C-g>f :echo cfi#format("%s", "")<CR>
+
+  " vim-fugitive
+  " https://github.com/tpope/vim-fugitive
+  NeoBundle 'tpope/vim-fugitive'
+
+  " vim-gitgutter
+  " https://github.com/airblade/vim-gitgutter
+  NeoBundle 'airblade/vim-gitgutter'
+
+  " note: this emits an error saying that GitGutterAddLine is not recognized?
+  " GitGutterAddLine          " default: links to DiffAdd
+  " GitGutterChangeLine       " default: links to DiffChange
+  " GitGutterDeleteLine       " default: links to DiffDelete
+  " GitGutterChangeDeleteLine " default: links to GitGutterChangeLineDefault, i.e. DiffChange
 
   " vimproc
   NeoBundle 'Shougo/vimproc'
