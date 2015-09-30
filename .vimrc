@@ -12,6 +12,23 @@ if has("gui_running")
   endif
 endif
 
+
+" for neobundle {{{
+if has('vim_starting')
+   set nocompatible               " Be iMproved
+   if s:is_windows
+      set runtimepath+=$VIM/vimfiles/bundle/neobundle.vim/
+   else
+      set runtimepath+=~/.vim/bundle/neobundle.vim/
+   endif
+endif
+
+call neobundle#begin(expand('~/.vim/bundle/'))
+NeoBundleFetch 'Shougo/neobundle.vim'
+call neobundle#end()
+"}}}
+
+
 " for run a browser on link
 :let g:netrw_browsex_viewer= "iceweasel"
 
@@ -36,6 +53,7 @@ set nu
 set autoindent
 set cindent
 "}}}
+
 
 " for git {{{
 " Limit line length of git commits to 72 cols
@@ -148,17 +166,6 @@ set matchpairs+=<:>
 " }}}
 "
 
-" Neobundle {{{
-if has('vim_starting')
-   set nocompatible               " Be iMproved
-   if s:is_windows
-      set runtimepath+=$VIM/vimfiles/bundle/neobundle.vim/
-   else
-      set runtimepath+=~/.vim/bundle/neobundle.vim/
-   endif
-endif
-" }}}
-
 "
 " solarized colorscheme {{{
 "NeoBundleLazy 'altercation/vim-colors-solarized', {'autoload':{'insert':1}}
@@ -181,11 +188,6 @@ if s:is_windows != 1
   " linux {{{
   " echom prints mesg on a console for linux and shows a diaglog for windows
   echom '+linux'
-
-  " neobundle
-  call neobundle#begin(expand('~/.vim/bundle/'))
-  NeoBundleFetch 'Shougo/neobundle.vim'
-  call neobundle#end()
 
   " Required! why? if not, using ohter plugins do not work properly
   filetype plugin indent on
