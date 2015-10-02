@@ -1,0 +1,27 @@
+[user]
+	name = Kit Park
+	email = kit.park@youview.com
+[alias]
+	co = checkout
+	ci = commit
+	st = status
+	br = branch
+	l = log -1 HEAD
+	ll = log --oneline --decorate --graph
+	g = grep --break --heading --line-number
+[merge]
+	tool = diffconflicts
+[core]
+	editor = gvim -f
+	excludesfile = /home/kpark/github/keitee/vim/.gitignore
+[diff]
+	guitool = gvimdiff
+[mergetool "diffconflicts"]
+	cmd = diffconflicts gvim $BASE $LOCAL $REMOTE $MERGED
+	trustExitCode = true
+	keepBackup = false
+[pull]
+	rebase = true
+[grep]
+	extendRegexp = true
+	lineNumber = true
