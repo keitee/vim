@@ -1,0 +1,44 @@
+#!/bin/bash
+
+remote="$1"
+url="$2"
+
+z40=0000000000000000000000000000000000000000
+
+IFS=' '
+
+validate_subject() {
+    local commit=$1
+    local subject=$(git log -n 1 --pretty=format:%s $commit)
+
+    [[ $subject =~ ^DEVARCH-[0-9]+:\ .+ ]] || {
+        echo -e "\E[1;31mThe commit subject does not match \"DEVARCH-xxxx: <subject>\"";
+        echo -e "\E[1;31m $commit $subject"
+        tput sgr0
+        exit 1;
+    }
+}
+
+echo -e "\E[1;31mThe git hook pre-push runs\E[m";
+
+while read local_ref local_sha remote_ref remote_sha
+do
+    if [[ "$local_sha" != $z40 && "$remote_ref" = "refs/heads/master" ]]; then
+        # We only care about validating commits to master
+        if [ "$remote_sha" = $z40 ]
+        then
+            # New branch, examine all commits
+            range="$local_sha"
+        else
+            # Update to existing branch, examine new commits
+            range="$remote_sha..$local_sha"
+        fi
+
+        for revision in $(git rev-list $range);
+        do
+            validate_subject $revision
+        done
+    fi
+done
+
+exit 0
