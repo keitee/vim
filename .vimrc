@@ -411,6 +411,7 @@ if count(s:settings.plugin_groups, 'unite') "{{{
     let g:unite_source_grep_recursive_opt=''
 
     " Using ag as recursive command. *g:unite_source_rec_async_command*
+    " Use .agignore
     let g:unite_source_rec_async_command =
       \ ['ag', '--follow', '--nocolor', '--nogroup', '-g', '']
   endif
