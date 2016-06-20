@@ -42,7 +42,6 @@ syntax enable
 " for showmatch
 set showmatch
 
-set incsearch
 
 " set ignorecase
 " for line number. set number
@@ -87,13 +86,21 @@ set showmode
 set cursorline
 
 set autoread
-set hlsearch
 set nowrapscan
 
 set foldenable
 
 " for line wrapping and linebreak
 set wrap linebreak nolist
+
+
+" {{{ search
+set incsearch
+set hlsearch
+" <C-u> is scroll up. <C-l> clears and redraws the screen (see :h CTRL-L). This
+" mapping builds on top of the usual behavior by muting search highlighting.
+nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
+" }}}
 
 " {{{ indent, custom tab and eof char
 set smartindent
@@ -460,7 +467,8 @@ if count(s:settings.plugin_groups, 'unite') "{{{
   " for "search" and see *unite-source-grep* 
   " can set a pattern but runs on all files under current working directory.
   nnoremap <silent> [unite]// :<C-u>Unite -buffer-name=search grep:.<cr>
-  " set a pattern from the current cursor and runs on currently opened file.
+  " set a pattern from the current cursor and runs on all files under current
+  " working directory.
   nnoremap <silent> [unite]/ :<C-u>Unite -buffer-name=search grep:.::<c-r><c-w><cr>
 
   " for "gtags"
