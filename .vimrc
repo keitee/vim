@@ -405,15 +405,29 @@ if count(s:settings.plugin_groups, 'unite') "{{{
 
   " :h g:unite_source_grep_command
   if executable('ag')
-    let g:unite_source_grep_max_candidates=5000
-    let g:unite_source_grep_command='ag'
-    let g:unite_source_grep_default_opts='--nocolor --nogroup -S -C4'
-    let g:unite_source_grep_recursive_opt=''
+    " Use ag (the silver searcher)
+    " https://github.com/ggreer/the_silver_searcher
+    let g:unite_source_grep_max_candidates=50000
+    let g:unite_source_grep_command = 'ag'
+    " " let g:unite_source_grep_default_opts =
+    " "   \ '-U -i --vimgrep --hidden --ignore ' .
+    " "   \ '''.hg'' --ignore ''.svn'' --ignore ''.git'' --ignore ''.bzr'''
+    let g:unite_source_grep_default_opts =
+       \ '-U -S --vimgrep --hidden --ignore ' .
+       \ '''.hg'' --ignore ''.svn'' --ignore ''.git'' --ignore ''.bzr'''
+    
+    " let g:unite_source_grep_default_opts='-U --nocolor --nogroup -S'
+    " note: DO NOT WORK due to C4 option
+    " let g:unite_source_grep_default_opts='-U --vimgrep --nocolor --nogroup -S -C4'
+
+    let g:unite_source_grep_recursive_opt = ''
+
 
     " Using ag as recursive command. *g:unite_source_rec_async_command*
-    " Use .agignore
+    " Use -U to make sure it uses .agignore otherwise may get no result since it
+    " uses .gitignore which it can find it in search directories.
     let g:unite_source_rec_async_command =
-      \ ['ag', '--follow', '--nocolor', '--nogroup', '-g', '']
+      \ ['ag', '-U', '--follow', '--nocolor', '--nogroup', '-g', '']
   endif
 
   " to change default key mappings. see unite-key-mappings
@@ -444,7 +458,9 @@ if count(s:settings.plugin_groups, 'unite') "{{{
   nnoremap <silent> [unite]m :<C-u>Unite -auto-resize -buffer-name=mappings mapping<cr>
 
   " for "search" and see *unite-source-grep* 
+  " can set a pattern but runs on all files under current working directory.
   nnoremap <silent> [unite]// :<C-u>Unite -buffer-name=search grep:.<cr>
+  " set a pattern from the current cursor and runs on currently opened file.
   nnoremap <silent> [unite]/ :<C-u>Unite -buffer-name=search grep:.::<c-r><c-w><cr>
 
   " for "gtags"
