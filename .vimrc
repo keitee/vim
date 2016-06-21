@@ -44,6 +44,8 @@ set showmatch
 
 
 " set ignorecase
+set smartcase
+
 " for line number. set number
 set nu
 
@@ -158,9 +160,11 @@ endfunction
    nnoremap <silent> <C-u> <C-u>zz
 "}}}
 
-" qfix {{{
-   nnoremap <C-n> :cn<CR>
-   nnoremap <C-p> :cp<CR>
+" quickfix {{{
+  :nmap <F2> :copen<CR>
+  :nmap <F4> :cclose<CR>
+  nnoremap <C-n> :cn<CR>
+  nnoremap <C-p> :cp<CR>
 "}}}
 
 " tag completion {{{
@@ -420,7 +424,7 @@ if count(s:settings.plugin_groups, 'unite') "{{{
     " "   \ '-U -i --vimgrep --hidden --ignore ' .
     " "   \ '''.hg'' --ignore ''.svn'' --ignore ''.git'' --ignore ''.bzr'''
     let g:unite_source_grep_default_opts =
-       \ '-U -S --vimgrep --hidden --ignore ' .
+       \ '-m 1000000 -U -S --vimgrep --hidden --ignore ' .
        \ '''.hg'' --ignore ''.svn'' --ignore ''.git'' --ignore ''.bzr'''
     
     " let g:unite_source_grep_default_opts='-U --nocolor --nogroup -S'
@@ -448,7 +452,7 @@ if count(s:settings.plugin_groups, 'unite') "{{{
   nnoremap [unite] <nop>
   nmap <space> [unite]
 
-  " "unite-mappings"
+  " *unite-mappings*
   " Note: vimproc and source with bang(!) Not for windows since no vimproc in windows
   " Note: do not like -quick-match since need to press other keys to go to input mode.
   "
@@ -471,20 +475,51 @@ if count(s:settings.plugin_groups, 'unite') "{{{
   " working directory.
   nnoremap <silent> [unite]/ :<C-u>Unite -buffer-name=search grep:.::<c-r><c-w><cr>
 
-  " for "gtags"
-  " Note: prefer to use -no-split since otherwise, will be three windows; one for main, one for
-  " result, and one for preview.
-  nnoremap <silent> [unite]td :Unite -auto-resize gtags/def<CR>
-  nnoremap <silent> [unite]tc :Unite -auto-resize gtags/context<CR>
+  " " *unite-gtags*
+  " 
+  " NeoBundleLazy 'tsukkee/unite-tag', {'autoload':{'unite_sources':['tag','tag/file']}}
+  " nnoremap <silent> [unite]tt :<C-u>Unite -auto-resize -buffer-name=tag tag tag/file<cr>
 
-  " note: this seems to be so slow and causes vim to hang sometimes
-  " nnoremap <silent> [unite]to :Unite -auto-resize gtags/completion<CR>
-  nnoremap <silent> [unite]to :Gtags<CR>
+  " " note: prefer to use -no-split since otherwise, will be three windows; one
+  " " for main, one for result, and one for preview.
 
-  nnoremap <silent> [unite]tf :Unite -auto-resize gtags/file<CR>
-  nnoremap <silent> [unite]tr :Unite -auto-resize gtags/ref<CR>
-  nnoremap <silent> [unite]tg :Unite -auto-resize gtags/grep<CR>
-  vnoremap <silent> [unite]ts <ESC>:Unite gtags/def:.GetVisualSelection()<CR>
+  " " - tag definitions on `cword`
+  " nnoremap <silent> [unite]td :Unite -auto-resize gtags/def<CR>
+  " vnoremap <silent> [unite]tds <ESC>:Unite gtags/def:.GetVisualSelection()<CR>
+
+  " " - tag references/definitions on `cword` 
+  " nnoremap <silent> [unite]tc :Unite -auto-resize gtags/context<CR>
+  " vnoremap <silent> [unite]tcs <ESC>:Unite gtags/context:.GetVisualSelection()<CR>
+
+  " " - tag grep which shows input prompt for a pattern
+  " nnoremap <silent> [unite]tg :Unite -auto-resize gtags/grep<CR>
+
+  " " - tag list
+  " " note: this may be too slow when tag db is huge.
+  " " nnoremap <silent> [unite]to :Unite -auto-resize gtags/completion<CR>
+
+  " " - tag file
+  " nnoremap <silent> [unite]tf :Unite -auto-resize gtags/file<CR>
+
+  " " - tag reference on `cword`
+  " nnoremap <silent> [unite]tr :Unite -auto-resize gtags/ref<CR>
+  " vnoremap <silent> [unite]trs <ESC>:Unite gtags/ref:.GetVisualSelection()<CR>
+
+  " *gtags*
+  
+  " tag search. picks up the cword and shows a prompt for a pattern
+  nnoremap <silent> [unite]gt :Gtags<CR>
+
+  " tag current file
+  nnoremap <silent> [unite]gf :Gtags -f %<CR>
+
+  " tag cword. no prompt
+  " nnoremap <silent> [unite]gc :Gtags <c-r><c-w><CR>
+  nnoremap <silent> [unite]gc :GtagsCursor<CR>
+
+  " tag selection. do NOT work?
+  vnoremap <silent> [unite]gs <ESC>:Gtags .GetVisualSelection()<CR>
+
 
   " for "copying filename"
   nnoremap <silent> [unite]f :let @+ = expand("%")<CR>
@@ -515,8 +550,6 @@ if count(s:settings.plugin_groups, 'unite') "{{{
   NeoBundleLazy 'osyo-manga/unite-airline_themes', {'autoload':{'unite_sources':'airline_themes'}}
   " nnoremap <silent> [unite]a :<C-u>Unite -winheight=10 -auto-preview -buffer-name=airline_themes airline_themes<cr>
   "
-  NeoBundleLazy 'tsukkee/unite-tag', {'autoload':{'unite_sources':['tag','tag/file']}}
-  nnoremap <silent> [unite]tt :<C-u>Unite -auto-resize -buffer-name=tag tag tag/file<cr>
   "
   NeoBundleLazy 'Shougo/unite-help', {'autoload':{'unite_sources':'help'}}
   nnoremap <silent> [unite]h :<C-u>Unite -auto-resize -buffer-name=help help<cr>
@@ -547,33 +580,32 @@ if s:settings.autocomplete_method == 'neocomplete'
      echom '+neocomplete'
   endif
 
-  " neocomplete {{{
   " NeoBundleLazy 'Shougo/neocomplete.vim', {'autoload':{'insert':1}, 'vim_version':'7'} 
   NeoBundle 'Shougo/neocomplete.vim', {'autoload':{'insert':1}, 'vim_version':'7'} 
   let g:neocomplete#enable_at_startup=1
   let g:neocomplete#data_directory='~/.vim/.cache/neocomplete'
   " }}}
   
-  " neosnippet {{{
-  " .vim/bundle/neosnippet.vim/autoload/neosnippet/snippets
-  NeoBundle 'Shougo/neosnippet.vim' 
+  "" neosnippet {{{
+  "" .vim/bundle/neosnippet.vim/autoload/neosnippet/snippets
+  "NeoBundle 'Shougo/neosnippet.vim' 
 
-  " If you want to use a different collection of snippets than the built-in ones, 
-  " then you can set a path to the snippets with the g:neosnippet#snippets_directory variable (e.g Honza's Snippets)
-  " See .vim/bundle/vim-snippets/snippets/cpp.snippets for cpp example.
-  NeoBundle 'honza/vim-snippets'
+  "" If you want to use a different collection of snippets than the built-in ones, 
+  "" then you can set a path to the snippets with the g:neosnippet#snippets_directory variable (e.g Honza's Snippets)
+  "" See .vim/bundle/vim-snippets/snippets/cpp.snippets for cpp example.
+  "NeoBundle 'honza/vim-snippets'
 
-  " Tell Neosnippet about the other snippets
-  let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets,~/.vim/snippets'
-  " Enable snipMate compatibility feature.
-  let g:neosnippet#enable_snipmate_compatibility=1
-  " Use C-n and C-p to select it in the popup
-  imap <expr><TAB> neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : (pumvisible() ? "\<C-n>" : "\<TAB>")
-  smap <expr><TAB> neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-  " use shift-tab to lotate snippets as C-p
-  imap <expr><S-TAB> pumvisible() ? "\<C-p>" : ""
-  smap <expr><S-TAB> pumvisible() ? "\<C-p>" : ""
-  " }}}
+  "" Tell Neosnippet about the other snippets
+  "let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets,~/.vim/snippets'
+  "" Enable snipMate compatibility feature.
+  "let g:neosnippet#enable_snipmate_compatibility=1
+  "" Use C-n and C-p to select it in the popup
+  "imap <expr><TAB> neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : (pumvisible() ? "\<C-n>" : "\<TAB>")
+  "smap <expr><TAB> neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+  "" use shift-tab to lotate snippets as C-p
+  "imap <expr><S-TAB> pumvisible() ? "\<C-p>" : ""
+  "smap <expr><S-TAB> pumvisible() ? "\<C-p>" : ""
+  "" }}}
   
   " delimate {{{
   " Vim plugin, provides insert mode auto-completion for quotes, parens, brackets, etc.
