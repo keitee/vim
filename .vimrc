@@ -102,6 +102,17 @@ set hlsearch
 " <C-u> is scroll up. <C-l> clears and redraws the screen (see :h CTRL-L). This
 " mapping builds on top of the usual behavior by muting search highlighting.
 nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
+
+" search for visual selection
+xnoremap * :<C-u>call <SID>VSetSearch()<CR>/<C-R>=@/<CR><CR>
+xnoremap # :<C-u>call <SID>VSetSearch()<CR>?<C-R>=@/<CR><CR>
+
+function! s:VSetSearch()
+  let temp = @s
+  norm! gv"sy
+  let @/ = '\V' . substitute(escape(@s, '/\'), '\n', '\\n', 'g')
+  let @s = temp
+endfunction
 " }}}
 
 " {{{ indent, custom tab and eof char
@@ -134,17 +145,6 @@ set spellfile=~/.vim/spell/en.utf-8.add
   map <F6> i"<Esc>ea"<Esc>
 " }}}
 
-" search for selection {{{
-xnoremap * :<C-u>call <SID>VSetSearch()<CR>/<C-R>=@/<CR><CR>
-xnoremap # :<C-u>call <SID>VSetSearch()<CR>?<C-R>=@/<CR><CR>
-
-function! s:VSetSearch()
-  let temp = @s
-  norm! gv"sy
-  let @/ = '\V' . substitute(escape(@s, '/\'), '\n', '\\n', 'g')
-  let @s = temp
-endfunction
-" }}}
 
 "
 " auto center {{{
