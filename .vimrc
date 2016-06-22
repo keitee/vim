@@ -31,6 +31,7 @@ call neobundle#end()
 
 " for run a browser on link
 :let g:netrw_browsex_viewer= "iceweasel"
+:let g:netrw_liststyle=3
 
 "
 " clipboard
@@ -93,7 +94,7 @@ set nowrapscan
 set foldenable
 
 " for line wrapping and linebreak
-set wrap linebreak nolist
+set nowrap linebreak nolist
 
 
 " {{{ search
