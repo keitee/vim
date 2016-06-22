@@ -29,10 +29,6 @@ call neobundle#end()
 "}}}
 
 
-" for run a browser on link
-:let g:netrw_browsex_viewer= "iceweasel"
-:let g:netrw_liststyle=3
-
 "
 " clipboard
 set clipboard=unnamed
@@ -54,26 +50,6 @@ set nu
 " for editing {{{
 set autoindent
 set cindent
-"}}}
-
-
-" for git {{{
-" Limit line length of git commits to 72 cols
-au FileType gitcommit set tw=72
-
-" vim-fugitive
-" https://github.com/tpope/vim-fugitive
-NeoBundle 'tpope/vim-fugitive'
-
-" vim-gitgutter
-" https://github.com/airblade/vim-gitgutter
-NeoBundle 'airblade/vim-gitgutter'
-
-" note: this emits an error saying that GitGutterAddLine is not recognized?
-" GitGutterAddLine          " default: links to DiffAdd
-" GitGutterChangeLine       " default: links to DiffChange
-" GitGutterDeleteLine       " default: links to DiffDelete
-" GitGutterChangeDeleteLine " default: links to GitGutterChangeLineDefault, i.e. DiffChange
 "}}}
 
 
@@ -521,6 +497,37 @@ if count(s:settings.plugin_groups, 'unite') "{{{
   " tag selection. do NOT work?
   vnoremap <silent> [unite]gs <ESC>:Gtags .GetVisualSelection()<CR>
 
+  " *netrw*
+  " for run a browser on link
+  let g:netrw_browsex_viewer= "iceweasel"
+  " tree list style
+  let g:netrw_liststyle=3
+
+  nnoremap <silent> [unite]e :Explore<CR>
+
+  " *git* {{{
+  " Limit line length of git commits to 72 cols
+  au FileType gitcommit set tw=72
+  
+  " vim-fugitive
+  " https://github.com/tpope/vim-fugitive
+  NeoBundle 'tpope/vim-fugitive'
+  
+  " vim-gitgutter
+  " https://github.com/airblade/vim-gitgutter
+  NeoBundle 'airblade/vim-gitgutter'
+  
+  nnoremap <silent> [unite]gge :GitGutterEnable<CR>
+  nnoremap <silent> [unite]ggd :GitGutterDisable<CR>
+
+  " note: this emits an error saying that GitGutterAddLine is not recognized?
+  " GitGutterAddLine          " default: links to DiffAdd
+  " GitGutterChangeLine       " default: links to DiffChange
+  " GitGutterDeleteLine       " default: links to DiffDelete
+  " GitGutterChangeDeleteLine " default: links to GitGutterChangeLineDefault, i.e. DiffChange
+  "}}}
+
+
 
   " for "copying filename"
   nnoremap <silent> [unite]f :let @+ = expand("%")<CR>
@@ -529,10 +536,6 @@ if count(s:settings.plugin_groups, 'unite') "{{{
   " Like ctrlptag. parses the current buffer's content and extracts headings from the buffer
   NeoBundleLazy 'Shougo/unite-outline', {'autoload':{'unite_sources':'outline'}}
   nnoremap <silent> [unite]t :<C-u>Unite -auto-resize -buffer-name=outline outline<cr>
-
-  " to tag search the word on cursor. will use quickfix window
-  " Q: why it causes an error saying no tag file?
-  " map g<C-]> :GtagsCursor<CR>
 
   " nnoremap <silent> [unite]y :<C-u>Unite -buffer-name=yanks history/yank<cr>
   " nnoremap <silent> [unite]/ :<C-u>Unite -no-quit -no-split -buffer-name=search grep:.<cr>
