@@ -2,7 +2,7 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
-export PATH=~/viminst/bin:~/inst/bin:$PATH
+export PATH=~/inst/bin:~/viminst/bin:~/github-bin:$PATH
 
 # If not running interactively, don't do anything
 case $- in
@@ -95,16 +95,15 @@ export GTAGSLIBPATH=.:~/source:
 
 # some more ls aliases
 alias a=alias
+alias g=git
 alias s='source ~/.bashrc'
 alias grep='grep --color -anH'
-alias fgrep='fgrep --color -anH'
-alias egrep='egrep -anH --color'
-alias gdiff=gvimdiff
+alias vdiff=gvimdiff
 alias diff='diff -up'
 alias cdiff='colordiff -up'
 alias gl='global --color -x'
-alias cag='ag -m 1000000 -C 4 -S --color-path="1;31" --color-match="0;32" --pager "less -r"'
-alias ag='ag -m 1000000 -S --color-path="1;31" --color-match="0;32" --pager "less -r"'
+alias cag='ag -m 1000000 -C 4 -S --color-path="1;31" --color-match="0;32"'
+alias ag='ag -m 1000000 -S --color-path="1;31" --color-match="0;32"'
 alias sl='echo $SHLVL'
 
 bind '"\e[A": history-search-backward'
@@ -120,8 +119,11 @@ alias h=history
 # enable dir expansion
 shopt -s direxpand
 
+alias btel='telnet 10.209.60.101' 
+alias shbld='ssh ukstbuild2'
+alias shyrd='ssh theyard'
+
 # humax and com serial
-#alias hssh='ssh root@172.20.35.27' 
 #alias hlog="sudo grabserial -v -d /dev/ttyS0 | tee 2>&1 ~/logs/`date | awk '{print "log-com-"$1"-"$2"-"$3"-"$4}'`"
 #alias hcom='sudo grabserial -v -d /dev/ttyS0'
 #alias hcpt='scp libnexusMgr.so root@172.20.35.27:/usr/local/lib'
@@ -138,9 +140,6 @@ shopt -s direxpand
 #alias wcpf='scp root@172.20.33.192:'
 #alias wscr='sudo screen -a -D -R -fn -l -L /dev/ttyUSB0 115200,cs8'
 #alias wtag='export GTAGSLIBPATH=~/gtags/oem-hwei:$GTAGSLIBPATH'
-
-alias shbld='ssh ukstbuild2'
-alias shyrd='ssh theyard'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
