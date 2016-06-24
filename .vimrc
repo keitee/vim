@@ -440,7 +440,11 @@ if count(s:settings.plugin_groups, 'unite') "{{{
   nnoremap <silent> [unite]q :Unite -toggle -unique -buffer-name=quick buffer<cr>
   nnoremap <silent> [unite]r :Unite -toggle -unique -buffer-name=recent file_mru<cr>
   nnoremap <silent> [unite]l :<C-u>Unite -auto-resize -buffer-name=lines line<cr>
-  nnoremap <silent> [unite]b :<C-u>Unite -auto-resize -buffer-name=marks bookmark:_<cr>
+
+  " bookmarks open, add,
+  nnoremap <silent> [unite]bo :<C-u>Unite -auto-resize -buffer-name=marks bookmark:_<cr>
+  nnoremap <silent> [unite]ba :UniteBookmarkAdd<cr>
+
   nnoremap <silent> [unite]v :set list!<cr>
   nnoremap <silent> [unite]s :set spell!<cr>
   nnoremap <silent> [unite]m :<C-u>Unite -auto-resize -buffer-name=mappings mapping<cr>
@@ -547,8 +551,8 @@ if count(s:settings.plugin_groups, 'unite') "{{{
   "nnoremap <silent> [unite]g :CtrlPTag<cr>
 
   " for tagbar
-  " NeoBundle 'majutsushi/tagbar'
-  " nnoremap <silent> [unite]tb :TagbarToggle<cr>
+  NeoBundle 'majutsushi/tagbar'
+  nnoremap <silent> [unite]tb :TagbarToggle<cr>
 
   "
   NeoBundleLazy 'osyo-manga/unite-airline_themes', {'autoload':{'unite_sources':'airline_themes'}}
