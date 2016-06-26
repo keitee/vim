@@ -29,51 +29,36 @@ call neobundle#end()
 "}}}
 
 
-"
-" clipboard
-set clipboard=unnamed
-
-" for user syntax
-syntax enable
-
-" for showmatch
-set showmatch
-
-
-" set ignorecase
-set smartcase
-
-" for line number. set number
-set nu
-
-
-" for editing {{{
-set autoindent
-set cindent
+"{{{ edit
+"===
+   " clipboard
+   set clipboard=unnamed
+   " for user syntax
+   syntax enable
+   " for showmatch
+   set showmatch
+   " set ignorecase
+   set smartcase
+   " line number. set number
+   set nu
+   set autoindent
+   set cindent
+   " show editing mode
+   set showmode
+   " show autocomplete menus
+   set wildmenu
+   set cursorline
+   set autoread
+   set autowrite
+   set nowrapscan
+   set foldenable
+   " for line wrapping and linebreak
+   set nowrap linebreak nolist
 "}}}
 
 
-" show autocomplete menus
-set wildmenu
-
-" show editing mode
-set showmode
-
-" help: auto-format
-" set formatoptions+=a
-
-set cursorline
-
-set autoread
-set nowrapscan
-
-set foldenable
-
-" for line wrapping and linebreak
-set nowrap linebreak nolist
-
-
-" {{{ search
+"{{{ search
+"===
 set incsearch
 set hlsearch
 " <C-u> is scroll up. <C-l> clears and redraws the screen (see :h CTRL-L). This
@@ -90,41 +75,43 @@ function! s:VSetSearch()
   let @/ = '\V' . substitute(escape(@s, '/\'), '\n', '\\n', 'g')
   let @s = temp
 endfunction
-" }}}
-
-" {{{ indent, custom tab and eof char
-set smartindent
-
-" sw(shiftwidth), ts(tabstop), sts(softtabstop), et(expandtab), tw(textwidth) 
-set sw=2 
-set ts=2 
-set sts=2
-set et 
-set tw=80
-set colorcolumn=80      " for color column
-
-scriptencoding utf-8
-set encoding=utf-8
-set listchars=tab:»\ ,eol:¬
-"set showbreak=«\ 
-set showbreak=<< 
-" }}}
-
-" for spell
-set spelllang=en_gb
-
-set spelllang=en_gb
-set spellfile=~/.vim/spell/en.utf-8.add 
-
-" utility mappings {{{
-  " to wrap a word with ' or " current time
-  map <F5> i'<Esc>ea'<Esc>
-  map <F6> i"<Esc>ea"<Esc>
-" }}}
+"}}}
 
 
-"
-" auto center {{{
+"{{{ indent, custom tab and eof char
+"===
+   set smartindent
+   set shiftwidth=2 
+   set tabstop=2 
+   set softtabstop=2
+   set expandtab
+   set textwidth=80
+   set colorcolumn=80
+   
+   scriptencoding utf-8
+   set encoding=utf-8
+   set listchars=tab:»\ ,eol:¬
+   "set showbreak=«\ 
+   set showbreak=<< 
+"}}}
+
+
+"{{{ spell
+"===
+   set spelllang=en_gb
+   set spellfile=~/.vim/spell/en.utf-8.add 
+   
+   " utility mappings {{{
+   " to wrap a word with ' or " current time
+   map <F5> i'<Esc>ea'<Esc>
+   map <F6> i"<Esc>ea"<Esc>
+"}}}
+
+
+"{{{ scroll
+"===
+   set nostartofline
+   set ve=all
    nnoremap <silent> n nzz
    nnoremap <silent> N Nzz
    nnoremap <silent> * *zz
@@ -137,9 +124,10 @@ set spellfile=~/.vim/spell/en.utf-8.add
    nnoremap <silent> <C-u> <C-u>zz
 "}}}
 
-" quickfix {{{
-  :nmap <F2> :copen<CR>
-  :nmap <F4> :cclose<CR>
+"{{{ quickfix
+"===
+  nmap <F2> :copen<CR>
+  nmap <F4> :cclose<CR>
   nnoremap <C-n> :cn<CR>
   nnoremap <C-p> :cp<CR>
 "}}}
@@ -520,9 +508,10 @@ if count(s:settings.plugin_groups, 'unite') "{{{
   " vim-gitgutter
   " https://github.com/airblade/vim-gitgutter
   NeoBundle 'airblade/vim-gitgutter'
-  
-  nnoremap <silent> [unite]gge :GitGutterEnable<CR>
-  nnoremap <silent> [unite]ggd :GitGutterDisable<CR>
+
+  " to turn off vim-gitgutter by default
+  let g:gitgutter_enabled = 0
+  nnoremap <silent> [unite]gg :GitGutterToggle<CR>
 
   " note: this emits an error saying that GitGutterAddLine is not recognized?
   " GitGutterAddLine          " default: links to DiffAdd
