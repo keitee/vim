@@ -1,27 +1,18 @@
-[user]
-	name = Kit Park
-	email = kit.park@youview.com
 [alias]
+	add = 'add -u'
+	conf = config --global -l
 	co = checkout
+	br = branch
 	ci = commit
 	st = status
-	br = branch
-	l = log -1 HEAD
-	ll = log --oneline --decorate --graph
-	g = grep --break --heading --line-number
-[merge]
-	tool = diffconflicts
-[core]
-	editor = gvim -f
-	excludesfile = /home/kpark/github/keitee/vim/.gitignore
-[diff]
-	guitool = gvimdiff
-[mergetool "diffconflicts"]
-	cmd = diffconflicts gvim $BASE $LOCAL $REMOTE $MERGED
-	trustExitCode = true
-	keepBackup = false
-[pull]
-	rebase = true
+	cl = reset --hard HEAD
+	ls = log --oneline --decorate
+	ll = log --decorate --graph --pretty=format:'%C(auto)%h%Creset :%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+[user]
+	name = Kit Park
+	email = kyoupark@cisco.com
+[push]
+	default = simple
 [grep]
 	extendRegexp = true
 	lineNumber = true

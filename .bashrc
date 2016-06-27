@@ -102,7 +102,7 @@ alias vdiff=gvimdiff
 alias diff='diff -up'
 alias cdiff='colordiff -up'
 alias gl='global --color -x'
-alias cag='ag -m 1000000 -C 4 -S --color-path="1;31" --color-match="0;32"'
+alias agc='ag -m 1000000 -C 4 -S --color-path="1;31" --color-match="0;32"'
 alias ag='ag -m 1000000 -S --color-path="1;31" --color-match="0;32"'
 alias agl='ag -m 1000000 -S --color-path="1;31" --color-match="0;32" --pager "less -r"'
 alias sl='echo $SHLVL'
