@@ -110,8 +110,6 @@ endfunction
 
 "{{{ scroll
 "===
-   set nostartofline
-   set ve=all
    nnoremap <silent> n nzz
    nnoremap <silent> N Nzz
    nnoremap <silent> * *zz
