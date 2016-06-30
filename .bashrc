@@ -91,7 +91,8 @@ fi
 
 # for gtag
 export GTAGSFORCECPP=
-export GTAGSLIBPATH=.:~/source:
+export GTAGSROOT=~/STB_SW
+export GTAGSLIBPATH=.:~/STB_SW:
 
 # some more ls aliases
 alias a=alias
@@ -106,6 +107,10 @@ alias agc='ag -m 1000000 -C 4 -S --color-path="1;31" --color-match="0;32"'
 alias ag='ag -m 1000000 -S --color-path="1;31" --color-match="0;32"'
 alias agl='ag -m 1000000 -S --color-path="1;31" --color-match="0;32" --pager "less -r"'
 alias sl='echo $SHLVL'
+
+# for build
+alias bldcd='pushd FUSION_SYSTEM_INTEGRATION/BSKYB_INTEGRATION/build/'
+
 
 bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
