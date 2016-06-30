@@ -2,7 +2,7 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
-export PATH=~/inst/bin:~/viminst/bin:~/github-bin:$PATH
+export PATH=~/bin:~/viminst/bin:$PATH
 
 # If not running interactively, don't do anything
 case $- in
@@ -96,10 +96,11 @@ export GTAGSLIBPATH=.:~/STB_SW:
 
 # some more ls aliases
 alias a=alias
-alias g=git
 alias s='source ~/.bashrc'
+alias g=git
+alias gconf='git config --global --list'
 alias grep='grep --color -anH'
-alias vdiff=gvimdiff
+alias gdiff=gvimdiff
 alias diff='diff -up'
 alias cdiff='colordiff -up'
 alias gl='global --color -x'
@@ -109,8 +110,8 @@ alias agl='ag -m 1000000 -S --color-path="1;31" --color-match="0;32" --pager "le
 alias sl='echo $SHLVL'
 
 # for build
-alias bldcd='pushd FUSION_SYSTEM_INTEGRATION/BSKYB_INTEGRATION/build/'
-
+alias sicdbld='pushd FUSION_SYSTEM_INTEGRATION/BSKYB_INTEGRATION/build/'
+alias siltags="git tag -l '*BLD_83*"
 
 bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
