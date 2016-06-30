@@ -96,11 +96,10 @@ export GTAGSLIBPATH=.:~/STB_SW:
 
 # some more ls aliases
 alias a=alias
-alias s='source ~/.bashrc'
 alias g=git
-alias gconf='git config --global --list'
+alias s='source ~/.bashrc'
 alias grep='grep --color -anH'
-alias gdiff=gvimdiff
+alias vdiff=gvimdiff
 alias diff='diff -up'
 alias cdiff='colordiff -up'
 alias gl='global --color -x'

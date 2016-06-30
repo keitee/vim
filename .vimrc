@@ -158,8 +158,8 @@ endif
 let s:settings = {}
 let s:settings.plugin_groups = []
 
+"{{{ linux
 if s:is_windows != 1
-  " linux {{{
   " echom prints mesg on a console for linux and shows a diaglog for windows
   echom '+linux'
 
@@ -170,6 +170,15 @@ if s:is_windows != 1
   " note: not sure since it do not work for me.
   " NeoBundle 'tyru/current-func-info.vim'
   " nnoremap <C-g>f :echo cfi#format("%s", "")<CR>
+
+  " commentary
+  " https://github.com/tpope/vim-commentary/issues/30
+  " to use '//' instead of '/* */'
+  "
+  " You can have // by default if you 
+  " setlocal commentstring=//\ %s in after/ftplugin/c.vim. 
+  " There is no support for a multiline mode.
+  NeoBundle 'tpope/vim-commentary'
 
   " vimproc
   NeoBundle 'Shougo/vimproc'
@@ -357,23 +366,58 @@ if count(s:settings.plugin_groups, 'unite') "{{{
   " goes upwards.
 
 
-  " "cache-size"
-  " Q. file_rec and file_rec/async cannot find all files.
-  " Specify the maximum number of files that |unite-source-file_rec| saves the
-  " caches. The default value is 2000.
+  " CACHE: 
+  "
+  " Q: file_rec and file_rec/async cannot find all files.
   "
   " https://github.com/Shougo/unite.vim/issues/356
   " https://github.com/Shougo/unite.vim/issues/370
+  " https://github.com/Shougo/unite.vim/issues/459
+
+  " A: It is a feature.
   "
-  " A. It is feature. cf: |g:unite_source_rec_max_cache_files|. And the default
-  " max candidates are limited. You can custom it by
+  " g:unite_source_rec_max_cache_files
+  "   Specify the maximum number of files that `unite-source-file_rec` saves the
+  "   caches. The default value is 20000.
   "
-  " And you must clear previous cache in file_rec sources. To clear cache, you
-  " must execute |<Plug>(unite_redraw)| in unite buffer(in default it is mapped
-  " to <C-l>).
+  " Also, the default max candidates are limited. You can customize it by
+  "
+  " |unite#custom#source()|
+  "
+  "   let g:unite_source_rec_max_cache_files = 0
+  "   call unite#custom#source('file_rec,file_rec/async',
+  "   \ 'max_candidates', 0)
+  "
+  " |unite#custom#source({source-name}, {option-name}, {value})|
+  "
+  "   max_candidates (Number)
+  "   Changes the max candidates into {value}.  If {value} is 0, which means no
+  "   limit.
+  "
+  " Also, you must clear previous cache in file_rec sources and wait until the
+  " cache is completed.
+  "
+  " In a directory including large file, making the cache is slow. Thus, I don't
+  " recommend it.
+  "
+  " To clear cache, you must execute |<Plug>(unite_redraw)| in unite buffer(in
+  " default it is mapped to <C-l>).
+  "
+  " 
+  " note: |unite-options-sync| may be useful. It blocks Vim until the cache is
+  " completed.
+  "
+  " IGNORE:
+  "
+  " Q: file_rec/async source does not look .gitignore using ag.
+  " https://github.com/Shougo/unite.vim/issues/398
+  " 
+  " A: It is a feature. file_rec/async does not ignore .gitignore files by
+  " default.  You must change |g:unite_source_rec_async_command| value and
+  " re-create cache by |<Plug>(unite_redraw)| mapping.
 
   let g:unite_source_rec_max_cache_files = 0
-  call unite#custom#source('file_rec,file_rec/async','max_candidates',20000)
+  call unite#custom#source('file_rec,file_rec/async','max_candidates',0)
 
   let g:unite_prompt='» '
 
@@ -420,9 +464,9 @@ if count(s:settings.plugin_groups, 'unite') "{{{
   " Note: do not like -quick-match since need to press other keys to go to input mode.
   "
   " "o"one   uses 'u' but sometimes recognized as undo so uses 'o'(one) instead
-  nnoremap <silent> [unite]os :Unite file_list:/home/kit/STB_SW/flist.out -toggle -unique -buffer-name=files<cr>
-  "nnoremap <silent> [unite]o :Unite -toggle -unique -buffer-name=files file file_rec/async:!<cr>
-  "nnoremap <silent> [unite]op :UniteWithProjectDir -toggle -unique -buffer-name=files file_rec/async:!<cr>
+  nnoremap <silent> [unite]o :Unite -toggle -unique -buffer-name=files file file_rec/async:!<cr>
+  nnoremap <silent> [unite]oc :UniteWithCurrentDir -toggle -unique -buffer-name=files file_rec/async:!<cr>
+  nnoremap <silent> [unite]op :UniteWithProjectDir -toggle -unique -buffer-name=files file_rec/async:!<cr>
   nnoremap <silent> [unite]q :Unite -toggle -unique -buffer-name=quick buffer<cr>
   nnoremap <silent> [unite]r :Unite -toggle -unique -buffer-name=recent file_mru<cr>
   nnoremap <silent> [unite]l :<C-u>Unite -auto-resize -buffer-name=lines line<cr>
@@ -664,46 +708,45 @@ NeoBundle 'scrooloose/syntastic'
 "endif
 
 
+"" {{{ ctrlp for windows
+"" 
+"" Press <c-f> and <c-b> to cycle between modes.
+"" Use <c-j>, <c-k> or the arrow keys to navigate the result list.
+"" Use <c-t> or <c-v>, <c-x> to open the selected entry in a new tab or in a new ver/hor split.
+"" 
+"" help ctrlp-commands
+""
+"if count(s:settings.plugin_groups, 'ctrlp') "{{{
+"  echom '+ctrlp'
+"  NeoBundle 'kien/ctrlp.vim', { 'depends': 'tacahiroy/ctrlp-funky' } 
+"  let g:ctrlp_clear_cache_on_exit=1
+"  let g:ctrlp_max_height=40
+"  let g:ctrlp_show_hidden=0
+"  let g:ctrlp_follow_symlinks=1
+"  let g:ctrlp_working_path_mode=0
+"  let g:ctrlp_max_files=20000
+"  "let g:ctrlp_cache_dir='~/.vim/.cache/ctrlp'
+"  let g:ctrlp_reuse_window='startify'
+"  let g:ctrlp_extensions=['funky']
 "
-" ctrlp {{{ for windows
-" 
-" Press <c-f> and <c-b> to cycle between modes.
-" Use <c-j>, <c-k> or the arrow keys to navigate the result list.
-" Use <c-t> or <c-v>, <c-x> to open the selected entry in a new tab or in a new ver/hor split.
-" 
-" help ctrlp-commands
+"  nnoremap [ctrlp] <nop>
+"  nmap <space> [ctrlp]
 "
-if count(s:settings.plugin_groups, 'ctrlp') "{{{
-  echom '+ctrlp'
-  NeoBundle 'kien/ctrlp.vim', { 'depends': 'tacahiroy/ctrlp-funky' } 
-  let g:ctrlp_clear_cache_on_exit=1
-  let g:ctrlp_max_height=40
-  let g:ctrlp_show_hidden=0
-  let g:ctrlp_follow_symlinks=1
-  let g:ctrlp_working_path_mode=0
-  let g:ctrlp_max_files=20000
-  "let g:ctrlp_cache_dir='~/.vim/.cache/ctrlp'
-  let g:ctrlp_reuse_window='startify'
-  let g:ctrlp_extensions=['funky']
-
-  nnoremap [ctrlp] <nop>
-  nmap <space> [ctrlp]
-
-  "mappings
-  "    <space><space>  go to anything (files, buffers, MRU, bookmarks)
-  "    <space>f        select from files
-  "    <space>b        select from current buffers
-  "    <space>m        select mru
-  "    <space>d        select dirs
-  "    <space>t        select tags
-  "    <space>c        select function
-  nnoremap [ctrlp]f :CtrlP<cr>
-  nnoremap [ctrlp]b :CtrlPBuffer<cr>
-  nnoremap [ctrlp]m :CtrlPMRU<cr>
-  nnoremap [ctrlp]d :CtrlPDir<cr>
-  nnoremap [ctrlp]t :CtrlPTag<cr>
-  nnoremap [ctrlp]c :CtrlPFunky<cr>
-endif "}}}
+"  "mappings
+"  "    <space><space>  go to anything (files, buffers, MRU, bookmarks)
+"  "    <space>f        select from files
+"  "    <space>b        select from current buffers
+"  "    <space>m        select mru
+"  "    <space>d        select dirs
+"  "    <space>t        select tags
+"  "    <space>c        select function
+"  nnoremap [ctrlp]f :CtrlP<cr>
+"  nnoremap [ctrlp]b :CtrlPBuffer<cr>
+"  nnoremap [ctrlp]m :CtrlPMRU<cr>
+"  nnoremap [ctrlp]d :CtrlPDir<cr>
+"  nnoremap [ctrlp]t :CtrlPTag<cr>
+"  nnoremap [ctrlp]c :CtrlPFunky<cr>
+"endif "}}}
 
 
 " {{{
