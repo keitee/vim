@@ -93,6 +93,28 @@ endfunction
    set listchars=tab:»\ ,eol:¬
    "set showbreak=«\ 
    set showbreak=<< 
+
+   " note: this is slow so plan not to use it
+   " https://github.com/Yggdroot/indentLine
+   " NeoBundle 'Yggdroot/indentLine'
+
+   " https://github.com/nathanaelkane/vim-indent-guides
+   " :help indent-guides
+   NeoBundle 'nathanaelkane/vim-indent-guides'
+  
+   " Use this option to customize the size of the indent guide.
+   let g:indent_guides_guide_size = 1
+   
+   " Use this option to control which indent level to start showing guides from.
+   let g:indent_guides_start_level = 2
+   
+   " to define custom colors instead of using the ones the plugin automatically
+   " generates for you
+   " let g:indent_guides_auto_colors = 0
+   "autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
+   "autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
+   
+   " Mapping :nmap <silent> <Leader>ig <Plug>IndentGuidesToggle
 "}}}
 
 
@@ -171,7 +193,7 @@ if s:is_windows != 1
   " NeoBundle 'tyru/current-func-info.vim'
   " nnoremap <C-g>f :echo cfi#format("%s", "")<CR>
 
-  " commentary
+  " pulgin-commentary
   " https://github.com/tpope/vim-commentary/issues/30
   " to use '//' instead of '/* */'
   "
@@ -180,7 +202,7 @@ if s:is_windows != 1
   " There is no support for a multiline mode.
   NeoBundle 'tpope/vim-commentary'
 
-  " vimproc
+  " plugin-vimproc
   NeoBundle 'Shougo/vimproc'
 
   set clipboard=unnamedplus
@@ -198,7 +220,7 @@ if s:is_windows != 1
   let g:airline_left_sep='>'
   " }}}
 else 
-  " windows {{{
+  "{{{ windows
   " neobundle
   call neobundle#rc(expand('$VIM/vimfiles/bundle/'))
   NeoBundleFetch 'Shougo/neobundle.vim'
@@ -208,42 +230,11 @@ else
 
   let s:settings.autocomplete_method = ''
   call add(s:settings.plugin_groups, 'ctrlp')
-  " }}}
+  "}}}
 endif
-" }}}
+"}}}
 
 
-"" {{{ indent-guides
-""
-"" https://github.com/nathanaelkane/vim-indent-guides
-""
-"" :help indent-guides
-""
-"NeoBundle 'nathanaelkane/vim-indent-guides'
-"
-"" Use this option to customize the size of the indent guide.
-"let g:indent_guides_guide_size = 1
-"
-"" Use this option to control which indent level to start showing guides from.
-"let g:indent_guides_start_level = 2
-"
-"" to define custom colors instead of using the ones the plugin automatically generates for you
-""let g:indent_guides_auto_colors = 0
-""autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
-""autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
-"
-"" Mapping
-"" :nmap <silent> <Leader>ig <Plug>IndentGuidesToggle
-"
-"" }}}
-
-
-" {{{ indent-line
-"
-" https://github.com/Yggdroot/indentLine
-"
-" NeoBundle 'Yggdroot/indentLine'
-" }}}
 
 
 "
@@ -459,14 +450,15 @@ if count(s:settings.plugin_groups, 'unite') "{{{
   nnoremap [unite] <nop>
   nmap <space> [unite]
 
-  " *unite-mappings*
-  " Note: vimproc and source with bang(!) Not for windows since no vimproc in windows
-  " Note: do not like -quick-match since need to press other keys to go to input mode.
+  " MAPPING: 
+  " note: vimproc and source with bang(!) Not for windows since no vimproc in windows
+  " note: do not like -quick-match since need to press other keys to go to input mode.
   "
-  " "o"one   uses 'u' but sometimes recognized as undo so uses 'o'(one) instead
-  nnoremap <silent> [unite]o :Unite -toggle -unique -buffer-name=files file file_rec/async:!<cr>
-  nnoremap <silent> [unite]oc :UniteWithCurrentDir -toggle -unique -buffer-name=files file_rec/async:!<cr>
-  nnoremap <silent> [unite]op :UniteWithProjectDir -toggle -unique -buffer-name=files file_rec/async:!<cr>
+  " "open search"
+  nnoremap <silent> [unite]os :Unite file_list:/home/kit/STB_SW/flist.out -toggle -unique -buffer-name=files<cr>
+  "nnoremap <silent> [unite]o :Unite -toggle -unique -buffer-name=files file file_rec/async:!<cr>
+  "nnoremap <silent> [unite]oc :UniteWithCurrentDir -toggle -unique -buffer-name=files file_rec/async:!<cr>
+  "nnoremap <silent> [unite]op :UniteWithProjectDir -toggle -unique -buffer-name=files file_rec/async:!<cr>
   nnoremap <silent> [unite]q :Unite -toggle -unique -buffer-name=quick buffer<cr>
   nnoremap <silent> [unite]r :Unite -toggle -unique -buffer-name=recent file_mru<cr>
   nnoremap <silent> [unite]l :<C-u>Unite -auto-resize -buffer-name=lines line<cr>

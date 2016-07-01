@@ -2,7 +2,7 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
-export PATH=~/bin:~/viminst/bin:$PATH
+export PATH=~/bin:~/inst/bin/:~/viminst/bin:$PATH
 
 # If not running interactively, don't do anything
 case $- in
