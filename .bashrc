@@ -98,13 +98,14 @@ export GTAGSLIBPATH=.:~/STB_SW:
 alias a=alias
 alias g=git
 alias s='source ~/.bashrc'
-alias grep='grep --color -anH'
+alias grep='grep --color -an'
 alias vdiff=gvimdiff
 alias diff='diff -up'
 alias cdiff='colordiff -up'
 alias gl='global --color -x'
 alias agc='ag -m 1000000 -C 4 -S --color-path="1;31" --color-match="0;32"'
 alias ag='ag -m 1000000 -S --color-path="1;31" --color-match="0;32"'
+alias agn='ag --no-numbers -m 1000000 -S --color-path="1;31" --color-match="0;32"'
 alias agl='ag -m 1000000 -S --color-path="1;31" --color-match="0;32" --pager "less -r"'
 alias sl='echo $SHLVL'
 
