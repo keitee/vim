@@ -455,6 +455,7 @@ if count(s:settings.plugin_groups, 'unite') "{{{
   " note: do not like -quick-match since need to press other keys to go to input mode.
   "
   " "open search"
+  " let cwd=getcwd()
   nnoremap <silent> [unite]os :Unite file_list:/home/kit/STB_SW/flist.out -toggle -unique -buffer-name=files<cr>
   "nnoremap <silent> [unite]o :Unite -toggle -unique -buffer-name=files file file_rec/async:!<cr>
   "nnoremap <silent> [unite]oc :UniteWithCurrentDir -toggle -unique -buffer-name=files file_rec/async:!<cr>

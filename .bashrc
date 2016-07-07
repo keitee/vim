@@ -130,6 +130,8 @@ alias btel='telnet 10.209.60.101'
 alias shbld='ssh ukstbuild2'
 alias shyrd='ssh theyard'
 
+source ~/git-completion.bash
+
 # humax and com serial
 #alias hlog="sudo grabserial -v -d /dev/ttyS0 | tee 2>&1 ~/logs/`date | awk '{print "log-com-"$1"-"$2"-"$3"-"$4}'`"
 #alias hcom='sudo grabserial -v -d /dev/ttyS0'
@@ -277,17 +279,17 @@ Jobs="\j"
 # Red Curly Brackets means something's changed! You have a dirty branch. Either
 # finish & commit or cleanup. ;-) 
 
-export PS1=$IBlack$Time12h$Color_Off'$(git branch &>/dev/null;\
-if [ $? -eq 0 ]; then \
-  echo "$(echo `git status` | grep "nothing to commit" > /dev/null 2>&1; \
-  if [ "$?" -eq "0" ]; then \
-    # @4 - Clean repository - nothing to commit
-    echo "'$Green'"$(__git_ps1 " (%s)"); \
-  else \
-    # @5 - Changes to working tree
-    echo "'$IRed'"$(__git_ps1 " {%s}"); \
-  fi) '$BYellow$PathShort$Color_Off'\$ "; \
-else \
-  # @2 - Prompt when not in GIT repo
-  echo " '$Yellow$PathShort$Color_Off'\$ "; \
-fi)'
+# export PS1=$IBlack$Time12h$Color_Off'$(git branch &>/dev/null;\
+# if [ $? -eq 0 ]; then \
+#   echo "$(echo `git status` | grep "nothing to commit" > /dev/null 2>&1; \
+#   if [ "$?" -eq "0" ]; then \
+#     # @4 - Clean repository - nothing to commit
+#     echo "'$Green'"$(__git_ps1 " (%s)"); \
+#   else \
+#     # @5 - Changes to working tree
+#     echo "'$IRed'"$(__git_ps1 " {%s}"); \
+#   fi) '$BYellow$PathShort$Color_Off'\$ "; \
+# else \
+#   # @2 - Prompt when not in GIT repo
+#   echo " '$Yellow$PathShort$Color_Off'\$ "; \
+# fi)'
