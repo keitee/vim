@@ -212,11 +212,23 @@ if s:is_windows != 1
   call add(s:settings.plugin_groups, 'editing')
 
   " vim-airline
-  NeoBundle 'bling/vim-airline'
+  NeoBundle 'vim-airline/vim-airline'
+  NeoBundle 'vim-airline/vim-airline-themes'
+  " NeoBundle 'bling/vim-airline'
+  
+  " The default setting of 'laststatus' is for the statusline to not appear
+  " until a split is created. If you want it to appear all the time, add the
+  " following to your vimrc: set laststatus=2
+  set laststatus=2
   let g:airline#extensions#tabline#enabled = 1
   let g:airline#extensions#tabline#left_sep=' '
   let g:airline#extensions#tabline#left_alt_sep='¦'
-  let g:airline_theme='serene'
+
+  " Finally, you can add the convenience variable let g:airline_powerline_fonts
+  " = 1 to your vimrc which will automatically populate the g:airline_symbols
+  " dictionary with the powerline symbols.
+  let g:airline_powerline_fonts = 1
+  let g:airline_theme='dark'
   let g:airline_left_sep='>'
   " }}}
 else 
@@ -578,7 +590,7 @@ if count(s:settings.plugin_groups, 'unite') "{{{
   nnoremap <silent> [unite]tb :TagbarToggle<cr>
 
   "
-  NeoBundleLazy 'osyo-manga/unite-airline_themes', {'autoload':{'unite_sources':'airline_themes'}}
+  " NeoBundleLazy 'osyo-manga/unite-airline_themes', {'autoload':{'unite_sources':'airline_themes'}}
   " nnoremap <silent> [unite]a :<C-u>Unite -winheight=10 -auto-preview -buffer-name=airline_themes airline_themes<cr>
   "
   "
