@@ -11,7 +11,7 @@
 " au BufNewFile,BufRead *.nds setf nds
 au BufNewFile,BufRead *.nds set filetype=nds
 
-" NDS:                      " ndsFieldHeader
+" 123456:NDS:               " ndsFieldHeader
 " ^[2016:06:10 15:52:53] 
 " 0946701324.837014         " ndsFieldTime
 " !MIL    -EPG_TVG      	
@@ -26,7 +26,9 @@ au BufNewFile,BufRead *.nds set filetype=nds
 "   Bang Theory Start Time \
 "   [2016:06:10 23:10:00]1465600200 Duration 1800
 " 
-syn match ndsFieldHeader '^[0-9:]*NDS: ' conceal
+"syn match ndsFieldHeader '^[0-9:]*NDS: ' conceal
+syn match ndsFieldHeader '[a-zA-Z:_]*NDS: ' conceal
+syn match ndsFieldDate '\^\[[0-9: ]*\]' conceal
 syn match ndsFieldTime '[0-9]\{10\}.[0-9]\{6\}' conceal
 syn match ndsFieldTab '\t\{1,\}' conceal
 " syn match ndsFieldSpace '\s\{1,\}' conceal
@@ -35,9 +37,8 @@ syn match ndsFieldProcessName '\<P:\w\+\>' conceal
 syn match ndsFieldThread '\<t:0x\w\+\>' conceal
 syn match ndsFieldThreadName '\<T:\w\+\>' conceal
 
-set concealcursor=nc
-set conceallevel=3
+setlocal concealcursor=nc
+setlocal conceallevel=3
 
-set nostartofline
-set virtualedit=
-
+" setlocal nostartofline
+" setlocal  virtualedit=all
