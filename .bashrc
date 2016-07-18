@@ -108,9 +108,12 @@ alias ag='ag -m 1000000 -S --color-path="1;31" --color-match="0;32"'
 alias agn='ag --no-numbers -m 1000000 -S --color-path="1;31" --color-match="0;32"'
 alias agl='ag -m 1000000 -S --color-path="1;31" --color-match="0;32" --pager "less -r"'
 alias sl='echo $SHLVL'
+alias tn='tmux new -s si'
+alias ta='tmux a'
 
 # for build
 alias sicdbld='pushd FUSION_SYSTEM_INTEGRATION/BSKYB_INTEGRATION/build/'
+alias sibld='./build_mw_epg.sh -p "ams-drx890" --project "picasso"  --profile "Sky_Trials" --variant "debug" --mw_only'
 alias siltags="git tag -l '*BLD_83*"
 
 bind '"\e[A": history-search-backward'
