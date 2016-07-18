@@ -32,9 +32,9 @@ syn match ndsFieldDate '\^\[[0-9: ]*\]' conceal
 syn match ndsFieldTime '[0-9]\{10\}.[0-9]\{6\}' conceal
 syn match ndsFieldTab '\t\{1,\}' conceal
 " syn match ndsFieldSpace '\s\{1,\}' conceal
-syn match ndsFieldProcess '\<p:0x\w\+\>' conceal
+syn match ndsFieldProcess '\<p:[0x]\?\w\+\>' conceal
 syn match ndsFieldProcessName '\<P:\w\+\>' conceal
-syn match ndsFieldThread '\<t:0x\w\+\>' conceal
+syn match ndsFieldThread '\<t:[0x]\?\w\+\>' conceal
 syn match ndsFieldThreadName '\<T:\w\+\>' conceal
 
 setlocal concealcursor=nc

@@ -521,20 +521,43 @@ if count(s:settings.plugin_groups, 'unite') "{{{
   " nnoremap <silent> [unite]tr :Unite -auto-resize gtags/ref<CR>
   " vnoremap <silent> [unite]trs <ESC>:Unite gtags/ref:.GetVisualSelection()<CR>
 
-  " *gtags*
-  
+  " mapping-gtags
+  " 
   " tag search. picks up the cword and shows a prompt for a pattern
-  nnoremap <silent> [unite]gt :Gtags<CR>
-
-  " tag current file
-  nnoremap <silent> [unite]gf :Gtags -f %<CR>
-
+  nnoremap <silent> [unite]tp :Gtags<CR>
   " tag cword. no prompt
   " nnoremap <silent> [unite]gc :Gtags <c-r><c-w><CR>
-  nnoremap <silent> [unite]gc :GtagsCursor<CR>
-
+  nnoremap <silent> [unite]tc :GtagsCursor<CR>
+  " tag reference
+  nnoremap <silent> [unite]tr :Gtags -r <c-r><c-w><CR>
+  " tag grep search
+  nnoremap <silent> [unite]tg :Gtags -g <c-r><c-w><CR>
   " tag selection. do NOT work?
-  vnoremap <silent> [unite]gs <ESC>:Gtags .GetVisualSelection()<CR>
+  " vnoremap <silent> [unite]gs <ESC>:Gtags .GetVisualSelection()<CR>
+
+  " mapping-gtags-current-file
+  "
+  " Like ctrlptag. parses the current buffer's content and extracts headings from the buffer
+  NeoBundle 'Shougo/unite-outline', {'autoload':{'unite_sources':'outline'}}
+  nnoremap <silent> [unite]to :<C-u>Unite -auto-resize -buffer-name=outline outline<CR>
+
+  " note: outline is better since do not use hotfix windows and do not move to
+  " the windows to search a tag
+  " tag current file
+  " nnoremap <silent> [unite]tf :Gtags -f %<CR>
+
+  " for tagbar
+  NeoBundle 'majutsushi/tagbar'
+  nnoremap <silent> [unite]tb :TagbarToggle<cr>
+
+  " nnoremap <silent> [unite]y :<C-u>Unite -buffer-name=yanks history/yank<cr>
+  " nnoremap <silent> [unite]/ :<C-u>Unite -no-quit -no-split -buffer-name=search grep:.<cr>
+  " from quick-match, can get usual listing of directories so do not need separate command
+  " nnoremap <silent> [unite]d :<C-u>Unite -quick-match directory<cr>
+  "nnoremap <silent> [unite]t :<C-u>Unite -auto-preview -buffer-name=tag tag<cr>
+  "nnoremap <silent> [unite]t :<C-u>Unite -buffer-name=tag tag<cr>
+  "nnoremap <silent> [unite]c :CtrlPFunky<cr>
+  "nnoremap <silent> [unite]g :CtrlPTag<cr>
 
   " *netrw*
   " for run a browser on link
@@ -567,31 +590,11 @@ if count(s:settings.plugin_groups, 'unite') "{{{
   " GitGutterChangeDeleteLine " default: links to GitGutterChangeLineDefault, i.e. DiffChange
   "}}}
 
-
-
   " for "copying filename"
   nnoremap <silent> [unite]f :let @+ = expand("%")<CR>
 
-  " "t"ag
-  " Like ctrlptag. parses the current buffer's content and extracts headings from the buffer
-  NeoBundleLazy 'Shougo/unite-outline', {'autoload':{'unite_sources':'outline'}}
-  nnoremap <silent> [unite]t :<C-u>Unite -auto-resize -buffer-name=outline outline<cr>
-
-  " nnoremap <silent> [unite]y :<C-u>Unite -buffer-name=yanks history/yank<cr>
-  " nnoremap <silent> [unite]/ :<C-u>Unite -no-quit -no-split -buffer-name=search grep:.<cr>
-  " from quick-match, can get usual listing of directories so do not need separate command
-  " nnoremap <silent> [unite]d :<C-u>Unite -quick-match directory<cr>
-  "nnoremap <silent> [unite]t :<C-u>Unite -auto-preview -buffer-name=tag tag<cr>
-  "nnoremap <silent> [unite]t :<C-u>Unite -buffer-name=tag tag<cr>
-  "nnoremap <silent> [unite]c :CtrlPFunky<cr>
-  "nnoremap <silent> [unite]g :CtrlPTag<cr>
-
-  " for tagbar
-  NeoBundle 'majutsushi/tagbar'
-  nnoremap <silent> [unite]tb :TagbarToggle<cr>
-
   "
-  " NeoBundleLazy 'osyo-manga/unite-airline_themes', {'autoload':{'unite_sources':'airline_themes'}}
+  NeoBundleLazy 'osyo-manga/unite-airline_themes', {'autoload':{'unite_sources':'airline_themes'}}
   " nnoremap <silent> [unite]a :<C-u>Unite -winheight=10 -auto-preview -buffer-name=airline_themes airline_themes<cr>
   "
   "
