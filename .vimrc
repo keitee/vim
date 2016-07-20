@@ -201,6 +201,7 @@ if s:is_windows != 1
   " setlocal commentstring=//\ %s in after/ftplugin/c.vim. 
   " There is no support for a multiline mode.
   NeoBundle 'tpope/vim-commentary'
+  set commentstring=//\ %s
 
   " plugin-vimproc
   NeoBundle 'Shougo/vimproc'
