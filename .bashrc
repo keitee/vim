@@ -110,6 +110,7 @@ alias agl='ag -m 1000000 -S --color-path="1;31" --color-match="0;32" --pager "le
 alias sl='echo $SHLVL'
 alias tn='tmux new -s si'
 alias ta='tmux a'
+alias addr2line='/home/kyoupark/STB_SW/FUSIONOS_2/BLD_AMS_BCM_MIPS4K_LNUX_DARWIN_01/platform_cfg/linux/compiler/mips4k_gcc_x86_linux_hound_2/bin/mips-uclibc-addr2line'
 
 # for build
 alias sicdbld='pushd FUSION_SYSTEM_INTEGRATION/BSKYB_INTEGRATION/build/'
@@ -296,3 +297,7 @@ Jobs="\j"
 #   # @2 - Prompt when not in GIT repo
 #   echo " '$Yellow$PathShort$Color_Off'\$ "; \
 # fi)'
+
+# Added by Canopy installer on 2016-08-09
+# VIRTUAL_ENV_DISABLE_PROMPT can be set to '' to make bashprompt show that Canopy is active, otherwise 1
+VIRTUAL_ENV_DISABLE_PROMPT=1 source '/home/kyoupark/Enthought/Canopy_32bit/User/bin/activate'

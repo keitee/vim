@@ -188,20 +188,19 @@ if s:is_windows != 1
   " Required! why? if not, using ohter plugins do not work properly
   filetype plugin indent on
 
-  " current
-  " note: not sure since it do not work for me.
-  " NeoBundle 'tyru/current-func-info.vim'
-  " nnoremap <C-g>f :echo cfi#format("%s", "")<CR>
-
-  " pulgin-commentary
-  " https://github.com/tpope/vim-commentary/issues/30
-  " to use '//' instead of '/* */'
-  "
-  " You can have // by default if you 
-  " setlocal commentstring=//\ %s in after/ftplugin/c.vim. 
-  " There is no support for a multiline mode.
+  " "pulgin-comment"
+  "" commentary
+  "" https://github.com/tpope/vim-commentary/issues/30
+  "" to use '//' instead of '/* */'
+  ""
+  "" You can have // by default if you 
+  "" setlocal commentstring=//\ %s in after/ftplugin/c.vim. 
+  "" There is no support for a multiline mode.
   NeoBundle 'tpope/vim-commentary'
   set commentstring=//\ %s
+
+  " nerd commenter
+  NeoBundle 'scrooloose/nerdcommenter'
 
   " plugin-vimproc
   NeoBundle 'Shougo/vimproc'
@@ -246,7 +245,6 @@ else
   "}}}
 endif
 "}}}
-
 
 
 
