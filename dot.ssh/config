@@ -1,0 +1,18 @@
+Host *
+ServerAliveInterval 120
+
+Host wwwin-git-gpk-2.cisco.com
+  Hostname wwwin-git-gpk-2.cisco.com
+  User kyoupark
+  Compression yes
+
+Host ukstbuild2
+  Hostname ukstbuild2
+  User kyoupark
+  Compression yes
+  ForwardX11 yes
+
+Host theyard
+  Hostname theyard
+  User si_logs
+  Compression yes

@@ -112,6 +112,11 @@ alias tn='tmux new -s si'
 alias ta='tmux a'
 alias addr2line='/home/kyoupark/STB_SW/FUSIONOS_2/BLD_AMS_BCM_MIPS4K_LNUX_DARWIN_01/platform_cfg/linux/compiler/mips4k_gcc_x86_linux_hound_2/bin/mips-uclibc-addr2line'
 
+
+# nfs
+# 10.209.62.232:/home/NDS-UK/kyoupark/STB_SW      /home/kyoupark/bld_STB_SW       nfs     rw,sync,hard,intr   0 0
+# 10.209.62.232:/home/NDS-UK/kyoupark/si_logs     /home/kyoupark/bld_si_logs      nfs     rw,sync,hard,intr   0 0
+
 # for build
 alias sicdbld='pushd FUSION_SYSTEM_INTEGRATION/BSKYB_INTEGRATION/build/'
 alias sibld='./build_mw_epg.sh -p "ams-drx890" --project "picasso"  --profile "Sky_Trials" --variant "debug" --mw_only'
