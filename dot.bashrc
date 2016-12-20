@@ -303,7 +303,3 @@ Jobs="\j"
 #   # @2 - Prompt when not in GIT repo
 #   echo " '$Yellow$PathShort$Color_Off'\$ "; \
 # fi)'
-
-# Added by Canopy installer on 2016-08-09
-# VIRTUAL_ENV_DISABLE_PROMPT can be set to '' to make bashprompt show that Canopy is active, otherwise 1
-VIRTUAL_ENV_DISABLE_PROMPT=1 source '/home/kyoupark/Enthought/Canopy_32bit/User/bin/activate'
