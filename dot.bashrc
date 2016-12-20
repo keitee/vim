@@ -92,7 +92,7 @@ fi
 # for gtag
 export GTAGSFORCECPP=
 #export GTAGSROOT=~/STB_SW
-#export GTAGSLIBPATH=.:~/STB_SW:
+export GTAGSLIBPATH=.:~/STB_SW:
 
 # some more ls aliases
 alias a=alias
