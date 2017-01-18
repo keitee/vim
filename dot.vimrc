@@ -461,7 +461,7 @@ if count(s:settings.plugin_groups, 'unite') "{{{
   nnoremap [unite] <nop>
   nmap <space> [unite]
 
-  " MAPPING: 
+  " MAPPING:
   " note: vimproc and source with bang(!) Not for windows since no vimproc in windows
   " note: do not like -quick-match since need to press other keys to go to input mode.
   "
@@ -489,6 +489,9 @@ if count(s:settings.plugin_groups, 'unite') "{{{
   " set a pattern from the current cursor and runs on all files under current
   " working directory.
   nnoremap <silent> [unite]/ :<C-u>Unite -buffer-name=search grep:.::<c-r><c-w><cr>
+
+  nnoremap <silent> [unite]n :set ft=nds<cr>
+  nnoremap <silent> [unite]nn :set ft=<cr>
 
   " " *unite-gtags*
   " 
