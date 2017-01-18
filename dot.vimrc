@@ -483,6 +483,8 @@ if count(s:settings.plugin_groups, 'unite') "{{{
   nnoremap <silent> [unite]v :set list!<cr>
   nnoremap <silent> [unite]s :set spell!<cr>
   nnoremap <silent> [unite]m :<C-u>Unite -auto-resize -buffer-name=mappings mapping<cr>
+  nnoremap <silent> [unite]n :set ft=nds<cr>
+  nnoremap <silent> [unite]nn :set ft=<cr>
 
   " for "search" and see *unite-source-grep* 
   " can set a pattern but runs on all files under current working directory.
