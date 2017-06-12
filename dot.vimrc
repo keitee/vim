@@ -8,7 +8,8 @@ if has("gui_running")
   if has("gui_gtk2")
     " set guifont=FreeMono\ 12    " for ubuntu
     " set guifont=DroidSansMono   " for debian
-    set guifont=Hack              " for debian
+    " set guifont=Hack              " for debian
+    set guifont=D2Coding              " for debian
   endif
 endif
 
