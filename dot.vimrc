@@ -468,7 +468,7 @@ if count(s:settings.plugin_groups, 'unite') "{{{
   "
   " "open search"
   " let cwd=getcwd()
-  nnoremap <silent> [unite]os :Unite file_list:/home/NDS-UK/kyoupark/STB_SW/flist.out -toggle -unique -buffer-name=files<cr>
+  nnoremap <silent> [unite]os :Unite file_list:/home/nds-uk/kyoupark/github-kb/si/flist.out -toggle -unique -buffer-name=files<cr>
   "nnoremap <silent> [unite]o :Unite -toggle -unique -buffer-name=files file file_rec/async:!<cr>
   "nnoremap <silent> [unite]oc :UniteWithCurrentDir -toggle -unique -buffer-name=files file_rec/async:!<cr>
   "nnoremap <silent> [unite]op :UniteWithProjectDir -toggle -unique -buffer-name=files file_rec/async:!<cr>
@@ -485,6 +485,8 @@ if count(s:settings.plugin_groups, 'unite') "{{{
   nnoremap <silent> [unite]m :<C-u>Unite -auto-resize -buffer-name=mappings mapping<cr>
   nnoremap <silent> [unite]n :set ft=nds<cr>
   nnoremap <silent> [unite]nn :set ft=<cr>
+  " show date 
+  nnoremap <silent> [unite]nd :syn clear ndsFieldDate<cr>
 
   " for "search" and see *unite-source-grep* 
   " can set a pattern but runs on all files under current working directory.
