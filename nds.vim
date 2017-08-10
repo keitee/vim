@@ -37,6 +37,7 @@ syn match ndsFieldProcessName '\<P:\w\+\>' conceal
 syn match ndsFieldThread '\<t:[0x]\?\w\+\>' conceal
 syn match ndsFieldThreadName '\<T:\w\+\>' conceal
 
+setlocal commentstring===\ %s
 setlocal concealcursor=nc
 setlocal conceallevel=3
 
