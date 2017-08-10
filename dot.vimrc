@@ -477,7 +477,7 @@ if count(s:settings.plugin_groups, 'unite') "{{{
   "
   " "open search"
   " let cwd=getcwd()
-  nnoremap <silent> [unite]os :Unite file_list:/home/nds-uk/kyoupark/github-kb/si/flist.out -toggle -unique -buffer-name=files<cr>
+  nnoremap <silent> [unite]os :Unite file_list:/home/kyoupark/git/kb/si/flist.out -toggle -unique -buffer-name=files<cr>
   "nnoremap <silent> [unite]o :Unite -toggle -unique -buffer-name=files file file_rec/async:!<cr>
   "nnoremap <silent> [unite]oc :UniteWithCurrentDir -toggle -unique -buffer-name=files file_rec/async:!<cr>
   "nnoremap <silent> [unite]op :UniteWithProjectDir -toggle -unique -buffer-name=files file_rec/async:!<cr>
