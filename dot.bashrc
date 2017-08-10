@@ -2,7 +2,7 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
-export PATH=~/si-logs/broot/buildroot-2016.08.1/output/host/usr/bin:~/bin:~/inst/bin/:~/viminst/bin:$PATH
+export PATH=~/si-logs/broot/buildroot-2016.08.1/output/host/usr/bin:~/bin/bin:~/git/kb/bin:$PATH
 
 # If not running interactively, don't do anything
 case $- in
@@ -137,7 +137,7 @@ shopt -s direxpand
 
 alias btel='telnet 10.209.60.101' 
 alias sh2='ssh uk2'
-alias sh3='ssh uk3'
+alias shb='ssh castor-03'
 alias shy='ssh yard'
 
 source ~/git-completion.bash

@@ -12,8 +12,8 @@ Host uk2
   Compression yes
   ForwardX11 yes
 
-Host castor-03
-  Hostname st-castor-03.cisco.com
+Host uk3
+  Hostname ukstbuild3
   User kyoupark
   Compression yes
   ForwardX11 yes
@@ -22,4 +22,3 @@ Host yard
   Hostname theyard
   User si_logs
   Compression yes
-  ForwardX11 yes

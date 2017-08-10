@@ -6,20 +6,13 @@ Host wwwin-git-gpk-2.cisco.com
   User kyoupark
   Compression yes
 
-Host uk2
+Host ukstbuild2
   Hostname ukstbuild2
   User kyoupark
   Compression yes
   ForwardX11 yes
 
-Host castor-03
-  Hostname st-castor-03.cisco.com
-  User kyoupark
-  Compression yes
-  ForwardX11 yes
-
-Host yard
+Host theyard
   Hostname theyard
   User si_logs
   Compression yes
-  ForwardX11 yes
