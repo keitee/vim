@@ -506,6 +506,10 @@ if count(s:settings.plugin_groups, 'unite') "{{{
 
   nnoremap <silent> [unite]n :set ft=nds<cr>
   nnoremap <silent> [unite]nn :set ft=<cr>
+  
+  " tab
+  nnoremap <silent> [unite]nt :tabnew<cr>
+  nnoremap <silent> [unite]ct :tabclose<cr>
 
   " " *unite-gtags*
   " 

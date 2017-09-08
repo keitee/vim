@@ -112,15 +112,15 @@ alias tn='tmux new -s si'
 alias ta='tmux a'
 alias addr2line='/home/kyoupark/STB_SW/FUSIONOS_2/BLD_AMS_BCM_MIPS4K_LNUX_DARWIN_01/platform_cfg/linux/compiler/mips4k_gcc_x86_linux_hound_2/bin/mips-uclibc-addr2line'
 
-
 # nfs
 # 10.209.62.232:/home/NDS-UK/kyoupark/STB_SW      /home/kyoupark/bld_STB_SW       nfs     rw,sync,hard,intr   0 0
 # 10.209.62.232:/home/NDS-UK/kyoupark/si_logs     /home/kyoupark/bld_si_logs      nfs     rw,sync,hard,intr   0 0
 
 # for build
-alias sicdbld='pushd FUSION_SYSTEM_INTEGRATION/BSKYB_INTEGRATION/build/'
-alias sibld='./build_mw_epg.sh -p "ams-drx890" --project "picasso"  --profile "Sky_Trials" --variant "debug" --mw_only'
-alias siltags="git tag -l '*BLD_83*"
+alias blres='Resolve_Deps/scripts/resolve_deps.sh FUSIONOS_2/BLD_AMS_BCM_MIPS4K_LNUX_DARWIN_01'
+alias blcd='pushd FUSION_SYSTEM_INTEGRATION/BSKYB_INTEGRATION/build/'
+alias blmw='./build_mw_epg.sh -p "ams-drx890" --project "picasso"  --profile "Sky_Trials" --variant "debug" --mw_only'
+alias bllt="git tag -l '*BLD_83*"
 
 bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
@@ -150,15 +150,6 @@ source ~/git-completion.bash
 #alias hbld='ZB_CFG="humax.1000" zb-make Polonium/Polonium.NexusInspect'
 #alias hscr='sudo screen -a -D -R -fn -l -L /dev/ttyS0 115200,cs8'
 #alias hscr='sudo minicom -C=hmax.log -c on hmax'
-
-# huawei and usb serial
-#alias wssh='ssh root@172.20.33.192' 
-#alias wlog="sudo grabserial -v -d /dev/ttyUSB0 | tee 2>&1 ~/logs/`date | awk '{print "log-usb-"$1"-"$2"-"$3"-"$4}'`"
-#alias wcom='sudo grabserial -v -d /dev/ttyUSB0' 
-#alias wcpt='scp libnexusMgr.so root@172.20.33.192:/usr/local/lib'
-#alias wcpf='scp root@172.20.33.192:'
-#alias wscr='sudo screen -a -D -R -fn -l -L /dev/ttyUSB0 115200,cs8'
-#alias wtag='export GTAGSLIBPATH=~/gtags/oem-hwei:$GTAGSLIBPATH'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
