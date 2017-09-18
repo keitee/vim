@@ -16,3 +16,5 @@
 [grep]
 	extendRegexp = true
 	lineNumber = true
+[core]
+	editor = gvim -f

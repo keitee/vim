@@ -135,10 +135,10 @@ alias h=history
 # enable dir expansion
 shopt -s direxpand
 
-alias btel='telnet 10.209.60.101' 
 alias sh2='ssh uk2'
 alias shb='ssh castor-03'
 alias shy='ssh yard'
+alias tpi='telnet 10.209.60.87'
 
 source ~/git-completion.bash
 
