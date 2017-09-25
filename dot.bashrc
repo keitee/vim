@@ -139,6 +139,7 @@ alias sh2='ssh uk2'
 alias shb='ssh castor-03'
 alias shy='ssh yard'
 alias tpi='telnet 10.209.60.87'
+alias tpi2='telnet 10.209.60.149'
 
 source ~/git-completion.bash
 
