@@ -126,7 +126,7 @@ bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
 # set editing-mode vi
 
-alias ll='ls -alF'
+alias ll='ls -alFrt'
 alias la='ls -A'
 alias l='ls -CF'
 alias c=clear
