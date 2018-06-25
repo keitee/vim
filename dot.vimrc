@@ -216,8 +216,10 @@ if s:is_windows != 1
   NeoBundle 'Shougo/vimproc'
 
   set clipboard=unnamedplus
-  let s:settings.autocomplete_method = 'neocomplete'
-  "let s:settings.autocomplete_method = 'ycm'
+
+  " let s:settings.autocomplete_method = 'neocomplete'
+  " let s:settings.autocomplete_method = 'ycm'
+
   call add(s:settings.plugin_groups, 'unite')
   call add(s:settings.plugin_groups, 'editing')
 
@@ -641,68 +643,80 @@ endif "}}}
 "     tag -> [T]
 "     other sources -> [plugin-name-prefix]
 "     
-if s:settings.autocomplete_method == 'neocomplete' 
+" if s:settings.autocomplete_method == 'neocomplete' 
 
-  if has('lua')
-     echom '+neocomplete'
-  endif
+"   " if has('lua')
+"   "    echom '+neocomplete'
+"   " endif
 
-  " NeoBundleLazy 'Shougo/neocomplete.vim', {'autoload':{'insert':1}, 'vim_version':'7'} 
-  NeoBundle 'Shougo/neocomplete.vim', {'autoload':{'insert':1}, 'vim_version':'7'} 
-  let g:neocomplete#enable_at_startup=1
-  let g:neocomplete#data_directory='~/.vim/.cache/neocomplete'
-  " }}}
+"   " " NeoBundleLazy 'Shougo/neocomplete.vim', {'autoload':{'insert':1}, 'vim_version':'7'} 
+"   " NeoBundle 'Shougo/neocomplete.vim', {'autoload':{'insert':1}, 'vim_version':'7'} 
+"   " let g:neocomplete#enable_at_startup=1
+"   " let g:neocomplete#data_directory='~/.vim/.cache/neocomplete'
+"   " " }}}
   
-  "" neosnippet {{{
-  "" .vim/bundle/neosnippet.vim/autoload/neosnippet/snippets
-  "NeoBundle 'Shougo/neosnippet.vim' 
+"   " "" neosnippet {{{
+"   " "" .vim/bundle/neosnippet.vim/autoload/neosnippet/snippets
+"   " "NeoBundle 'Shougo/neosnippet.vim' 
 
-  "" If you want to use a different collection of snippets than the built-in ones, 
-  "" then you can set a path to the snippets with the g:neosnippet#snippets_directory variable (e.g Honza's Snippets)
-  "" See .vim/bundle/vim-snippets/snippets/cpp.snippets for cpp example.
-  "NeoBundle 'honza/vim-snippets'
+"   " "" If you want to use a different collection of snippets than the built-in ones, 
+"   " "" then you can set a path to the snippets with the g:neosnippet#snippets_directory variable (e.g Honza's Snippets)
+"   " "" See .vim/bundle/vim-snippets/snippets/cpp.snippets for cpp example.
+"   " "NeoBundle 'honza/vim-snippets'
 
-  "" Tell Neosnippet about the other snippets
-  "let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets,~/.vim/snippets'
-  "" Enable snipMate compatibility feature.
-  "let g:neosnippet#enable_snipmate_compatibility=1
-  "" Use C-n and C-p to select it in the popup
-  "imap <expr><TAB> neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : (pumvisible() ? "\<C-n>" : "\<TAB>")
-  "smap <expr><TAB> neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-  "" use shift-tab to lotate snippets as C-p
-  "imap <expr><S-TAB> pumvisible() ? "\<C-p>" : ""
-  "smap <expr><S-TAB> pumvisible() ? "\<C-p>" : ""
-  "" }}}
+"   " "" Tell Neosnippet about the other snippets
+"   " "let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets,~/.vim/snippets'
+"   " "" Enable snipMate compatibility feature.
+"   " "let g:neosnippet#enable_snipmate_compatibility=1
+"   " "" Use C-n and C-p to select it in the popup
+"   " "imap <expr><TAB> neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : (pumvisible() ? "\<C-n>" : "\<TAB>")
+"   " "smap <expr><TAB> neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+"   " "" use shift-tab to lotate snippets as C-p
+"   " "imap <expr><S-TAB> pumvisible() ? "\<C-p>" : ""
+"   " "smap <expr><S-TAB> pumvisible() ? "\<C-p>" : ""
+"   " "" }}}
   
-  " delimate {{{
-  " Vim plugin, provides insert mode auto-completion for quotes, parens, brackets, etc.
-  " NeoBundle 'Raimondi/delimitMate' 
-  " }}}
-" }}}
-elseif s:settings.autocomplete_method == 'ycm' 
-"
-" youcompleteme/ultisnips {{{
-"
-  echom '+ycm'
+"   " " delimate {{{
+"   " " Vim plugin, provides insert mode auto-completion for quotes, parens, brackets, etc.
+"   " " NeoBundle 'Raimondi/delimitMate' 
+"   " " }}}
+" " " }}}
+" elseif s:settings.autocomplete_method == 'ycm' 
+" "
+" " youcompleteme/ultisnips {{{
+" "
+"   echom '+ycm'
 
-  NeoBundle 'Valloric/YouCompleteMe', {'vim_version':'7.3.584'} 
-  let g:ycm_complete_in_comments_and_strings=1
-  "let g:ycm_key_list_select_completion=['<C-n>', '<Down>']
-  "let g:ycm_key_list_previous_completion=['<C-p>', '<Up>']
-  let g:ycm_filetype_blacklist={'unite': 1}
+"   " NeoBundle 'Valloric/YouCompleteMe', {'vim_version':'7.3.584'} 
+"   NeoBundle 'Valloric/YouCompleteMe'
+"   let g:ycm_complete_in_comments_and_strings=1
+"   "let g:ycm_key_list_select_completion=['<C-n>', '<Down>']
+"   "let g:ycm_key_list_previous_completion=['<C-p>', '<Up>']
+"   let g:ycm_filetype_blacklist={'unite': 1}
 
-  NeoBundle 'SirVer/ultisnips' 
-  let g:UltiSnipsExpandTrigger="<tab>"
-  let g:UltiSnipsJumpForwardTrigger="<tab>"
-  let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
-  let g:UltiSnipsSnippetsDir='~/.vim/snippets'
-" }}}
-endif 
+"   " NeoBundle 'SirVer/ultisnips' 
+"   " let g:UltiSnipsExpandTrigger="<tab>"
+"   " let g:UltiSnipsJumpForwardTrigger="<tab>"
+"   " let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+"   " let g:UltiSnipsSnippetsDir='~/.vim/snippets'
+" " " }}}
+" endif 
 
-" 
-" syntastic: syntax checking for a variaty of language {{{
-"
-NeoBundle 'scrooloose/syntastic' 
+" " " 
+" " " syntastic: syntax checking for a variaty of language {{{
+" " " https://github.com/vim-syntastic/syntastic
+" " "
+" NeoBundle 'scrooloose/syntastic' 
+"   let g:syntastic_error_symbol = '?'
+"   let g:syntastic_style_error_symbol = '?'
+"   let g:syntastic_warning_symbol = '?'
+"   let g:syntastic_style_warning_symbol = '$'
+" " " }}}
+
+" vim-cpp-modern: Enhanced C and C++ syntax highlighting {{{
+" https://github.com/bfrg/vim-cpp-modern
+
+NeoBundle 'bfrg/vim-cpp-modern' 
   let g:syntastic_error_symbol = '?'
   let g:syntastic_style_error_symbol = '?'
   let g:syntastic_warning_symbol = '?'

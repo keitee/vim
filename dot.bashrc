@@ -2,7 +2,7 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
-export PATH=~/si-logs/broot/buildroot-2016.08.1/output/host/usr/bin:~/vim/bin:~/git/kb/bin:$PATH
+export PATH=~/Downloads/clang+llvm-6.0.0-x86_64-linux-gnu-debian8/bin:~/bin/bin:~/git/kb/bin:$PATH
 
 # If not running interactively, don't do anything
 case $- in
