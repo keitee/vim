@@ -2,7 +2,7 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
-export PATH=~/Downloads/clang+llvm-6.0.0-x86_64-linux-gnu-debian8/bin:~/bin/bin:~/git/kb/bin:$PATH
+export PATH=~/Downloads/clang+llvm-6.0.0-x86_64-linux-gnu-debian8/bin:~/vim/bin:~/git/kb/bin:$PATH
 
 # If not running interactively, don't do anything
 case $- in
@@ -111,6 +111,7 @@ alias sl='echo $SHLVL'
 alias tn='tmux new -s si'
 alias ta='tmux a'
 alias addr2line='/home/kyoupark/STB_SW/FUSIONOS_2/BLD_AMS_BCM_MIPS4K_LNUX_DARWIN_01/platform_cfg/linux/compiler/mips4k_gcc_x86_linux_hound_2/bin/mips-uclibc-addr2line'
+alias gc='git commit -am "`date` `hostname`"'
 
 # nfs
 # 10.209.62.232:/home/NDS-UK/kyoupark/STB_SW      /home/kyoupark/bld_STB_SW       nfs     rw,sync,hard,intr   0 0
