@@ -138,6 +138,7 @@ shopt -s direxpand
 alias sh2='ssh uk2'
 alias shb='ssh castor-03'
 alias shy='ssh yard'
+alias sho='ssh -X 10.209.60.101'
 alias tpi='telnet 10.209.60.87'
 alias tpi2='telnet 10.209.60.149'
 
