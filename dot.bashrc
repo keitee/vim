@@ -139,6 +139,8 @@ alias sh2='ssh uk2'
 alias shb='ssh castor-03'
 alias shy='ssh yard'
 alias sho='ssh -X 10.209.60.101'
+alias mmo='sudo mount -o nfsvers=4 10.209.60.101:/home/kyoupark/ /mnt/'
+alias umo='sudo umount /mnt/'
 alias tpi='telnet 10.209.60.87'
 alias tpi2='telnet 10.209.60.149'
 
