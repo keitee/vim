@@ -121,6 +121,7 @@ alias blres='Resolve_Deps/scripts/resolve_deps.sh FUSIONOS_2/BLD_AMS_BCM_MIPS4K_
 alias blcd='pushd FUSION_SYSTEM_INTEGRATION/BSKYB_INTEGRATION/build/'
 alias blmw='./build_mw_epg.sh -p "ams-drx890" --project "picasso"  --profile "Sky_Trials" --variant "debug" --mw_only'
 alias bllt="git tag -l '*BLD_83*"
+alias gco='git commit -am "`date` `hostname`"'
 
 bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
