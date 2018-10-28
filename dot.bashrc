@@ -1,8 +1,7 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
-
-export PATH=~/Downloads/clang+llvm-6.0.0-x86_64-linux-gnu-debian8/bin:~/vim/bin:~/git/kb/bin:$PATH
+export PATH=~/Qt/5.11.1/gcc_64/bin:~/Downloads/clang+llvm-6.0.0-x86_64-linux-gnu-debian8/bin:~/vim/bin:~/git/kb/bin:$PATH
 
 # If not running interactively, don't do anything
 case $- in
@@ -142,8 +141,6 @@ alias shy='ssh yard'
 alias tpi='telnet 10.209.60.87'
 alias tpi2='telnet 10.209.60.149'
 
-source ~/git-completion.bash
-
 # humax and com serial
 #alias hlog="sudo grabserial -v -d /dev/ttyS0 | tee 2>&1 ~/logs/`date | awk '{print "log-com-"$1"-"$2"-"$3"-"$4}'`"
 #alias hcom='sudo grabserial -v -d /dev/ttyS0'
@@ -152,6 +149,9 @@ source ~/git-completion.bash
 #alias hbld='ZB_CFG="humax.1000" zb-make Polonium/Polonium.NexusInspect'
 #alias hscr='sudo screen -a -D -R -fn -l -L /dev/ttyS0 115200,cs8'
 #alias hscr='sudo minicom -C=hmax.log -c on hmax'
+
+echo "set xmodmap from bashrc"
+xmodmap ~/.xmodmap
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
