@@ -23,3 +23,6 @@ Host yard
   User si_logs
   Compression yes
   ForwardX11 yes
+
+# Host github.com
+#   LogLevel DEBUG3
