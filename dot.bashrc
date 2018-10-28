@@ -1,8 +1,7 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
-
-export PATH=~/Downloads/clang+llvm-6.0.0-x86_64-linux-gnu-debian8/bin:~/bin/bin:~/git/kb/bin:$PATH
+export PATH=~/Qt/5.11.1/gcc_64/bin:~/Downloads/clang+llvm-6.0.0-x86_64-linux-gnu-debian8/bin:~/vim/bin:~/git/kb/bin:$PATH
 
 # If not running interactively, don't do anything
 case $- in
@@ -98,7 +97,11 @@ export GTAGSLIBPATH=.:~/STB_SW:
 alias a=alias
 alias g=git
 alias s='source ~/.bashrc'
-alias grep='grep --color -an'
+
+alias cgrep='grep --color'
+alias phgrep='cat ~/.persistent_history|grep --color'
+alias hgrep='history|grep --color'
+
 alias vdiff=gvimdiff
 alias diff='diff -up'
 alias cdiff='colordiff -up'
@@ -111,6 +114,7 @@ alias sl='echo $SHLVL'
 alias tn='tmux new -s si'
 alias ta='tmux a'
 alias addr2line='/home/kyoupark/STB_SW/FUSIONOS_2/BLD_AMS_BCM_MIPS4K_LNUX_DARWIN_01/platform_cfg/linux/compiler/mips4k_gcc_x86_linux_hound_2/bin/mips-uclibc-addr2line'
+alias gc='git commit -am "`date` `hostname`"'
 
 # nfs
 # 10.209.62.232:/home/NDS-UK/kyoupark/STB_SW      /home/kyoupark/bld_STB_SW       nfs     rw,sync,hard,intr   0 0
@@ -145,8 +149,6 @@ alias umo='sudo umount /mnt/'
 alias tpi='telnet 10.209.60.87'
 alias tpi2='telnet 10.209.60.149'
 
-source ~/git-completion.bash
-
 # humax and com serial
 #alias hlog="sudo grabserial -v -d /dev/ttyS0 | tee 2>&1 ~/logs/`date | awk '{print "log-com-"$1"-"$2"-"$3"-"$4}'`"
 #alias hcom='sudo grabserial -v -d /dev/ttyS0'
@@ -155,6 +157,9 @@ source ~/git-completion.bash
 #alias hbld='ZB_CFG="humax.1000" zb-make Polonium/Polonium.NexusInspect'
 #alias hscr='sudo screen -a -D -R -fn -l -L /dev/ttyS0 115200,cs8'
 #alias hscr='sudo minicom -C=hmax.log -c on hmax'
+
+echo "set xmodmap from bashrc"
+xmodmap ~/.xmodmap
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -175,6 +180,32 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# Keeping persistent history in bash
+# https://eli.thegreenplace.net/2013/06/11/keeping-persistent-history-in-bash
+# https://eli.thegreenplace.net/2016/persistent-history-in-bash-redux/
+log_bash_persistent_history()
+{
+  [[
+    $(history 1) =~ ^\ *[0-9]+\ +([^\ ]+\ [^\ ]+)\ +(.*)$
+  ]]
+  local date_part="${BASH_REMATCH[1]}"
+  local command_part="${BASH_REMATCH[2]}"
+  if [ "$command_part" != "$PERSISTENT_HISTORY_LAST" ]
+  then
+    echo $date_part "|" "$command_part" >> ~/.persistent_history
+    export PERSISTENT_HISTORY_LAST="$command_part"
+  fi
+}
+
+# Stuff to do on PROMPT_COMMAND
+run_on_prompt_command()
+{
+    log_bash_persistent_history
+}
+
+PROMPT_COMMAND="run_on_prompt_command"
+
 
 #  Customize BASH PS1 prompt to show current GIT repository and branch.
 #  by Mike Stewart - http://MediaDoneRight.com
