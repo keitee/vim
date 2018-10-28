@@ -97,7 +97,11 @@ export GTAGSLIBPATH=.:~/STB_SW:
 alias a=alias
 alias g=git
 alias s='source ~/.bashrc'
-alias grep='grep --color -an'
+
+alias cgrep='grep --color'
+alias phgrep='cat ~/.persistent_history|grep --color'
+alias hgrep='history|grep --color'
+
 alias vdiff=gvimdiff
 alias diff='diff -up'
 alias cdiff='colordiff -up'
@@ -175,6 +179,32 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# Keeping persistent history in bash
+# https://eli.thegreenplace.net/2013/06/11/keeping-persistent-history-in-bash
+# https://eli.thegreenplace.net/2016/persistent-history-in-bash-redux/
+log_bash_persistent_history()
+{
+  [[
+    $(history 1) =~ ^\ *[0-9]+\ +([^\ ]+\ [^\ ]+)\ +(.*)$
+  ]]
+  local date_part="${BASH_REMATCH[1]}"
+  local command_part="${BASH_REMATCH[2]}"
+  if [ "$command_part" != "$PERSISTENT_HISTORY_LAST" ]
+  then
+    echo $date_part "|" "$command_part" >> ~/.persistent_history
+    export PERSISTENT_HISTORY_LAST="$command_part"
+  fi
+}
+
+# Stuff to do on PROMPT_COMMAND
+run_on_prompt_command()
+{
+    log_bash_persistent_history
+}
+
+PROMPT_COMMAND="run_on_prompt_command"
+
 
 #  Customize BASH PS1 prompt to show current GIT repository and branch.
 #  by Mike Stewart - http://MediaDoneRight.com
