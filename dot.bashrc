@@ -158,8 +158,8 @@ alias tpi2='telnet 10.209.60.149'
 #alias hscr='sudo screen -a -D -R -fn -l -L /dev/ttyS0 115200,cs8'
 #alias hscr='sudo minicom -C=hmax.log -c on hmax'
 
-echo "set xmodmap from bashrc"
-xmodmap ~/.xmodmap
+# only for linux hosts but not vm on windows host
+alias xmap="xmodmap ~/.xmodmap"
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
