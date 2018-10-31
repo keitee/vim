@@ -95,8 +95,12 @@ export GTAGSLIBPATH=.:~/STB_SW:
 
 # some more ls aliases
 alias a=alias
-alias g=git
 alias s='source ~/.bashrc'
+alias ll='ls -alFrt'
+alias la='ls -A'
+alias l='ls -CF'
+alias c=clear
+alias h=history
 
 alias cgrep='grep --color'
 alias phgrep='cat ~/.persistent_history|grep --color'
@@ -114,6 +118,9 @@ alias sl='echo $SHLVL'
 alias tn='tmux new -s si'
 alias ta='tmux a'
 alias addr2line='/home/kyoupark/STB_SW/FUSIONOS_2/BLD_AMS_BCM_MIPS4K_LNUX_DARWIN_01/platform_cfg/linux/compiler/mips4k_gcc_x86_linux_hound_2/bin/mips-uclibc-addr2line'
+
+# git
+alias g=git
 alias gc='git commit -am "`date` `hostname`"'
 
 # nfs
@@ -125,17 +132,11 @@ alias blres='Resolve_Deps/scripts/resolve_deps.sh FUSIONOS_2/BLD_AMS_BCM_MIPS4K_
 alias blcd='pushd FUSION_SYSTEM_INTEGRATION/BSKYB_INTEGRATION/build/'
 alias blmw='./build_mw_epg.sh -p "ams-drx890" --project "picasso"  --profile "Sky_Trials" --variant "debug" --mw_only'
 alias bllt="git tag -l '*BLD_83*"
-alias gco='git commit -am "`date` `hostname`"'
 
 bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
 # set editing-mode vi
 
-alias ll='ls -alFrt'
-alias la='ls -A'
-alias l='ls -CF'
-alias c=clear
-alias h=history
 
 # enable dir expansion
 shopt -s direxpand
