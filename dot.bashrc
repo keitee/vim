@@ -1,7 +1,7 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
-export PATH=~/Qt/5.11.1/gcc_64/bin:~/Downloads/clang+llvm-6.0.0-x86_64-linux-gnu-debian8/bin:~/vim/bin:~/git/kb/bin:$PATH
+export PATH=~/bin:~/vim/bin:~/git/kb/bin:$PATH
 
 # If not running interactively, don't do anything
 case $- in
@@ -78,7 +78,7 @@ esac
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    # test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
     #alias dir='dir --color=auto'
     #alias vdir='vdir --color=auto'
@@ -115,7 +115,7 @@ alias ag='ag -m 1000000 -S --color-path="1;31" --color-match="0;32"'
 alias agn='ag --no-numbers -m 1000000 -S --color-path="1;31" --color-match="0;32"'
 alias agl='ag -m 1000000 -S --color-path="1;31" --color-match="0;32" --pager "less -r"'
 alias sl='echo $SHLVL'
-alias tn='tmux new -s si'
+alias tn='tmux new -s mw'
 alias ta='tmux a'
 alias addr2line='/home/kyoupark/STB_SW/FUSIONOS_2/BLD_AMS_BCM_MIPS4K_LNUX_DARWIN_01/platform_cfg/linux/compiler/mips4k_gcc_x86_linux_hound_2/bin/mips-uclibc-addr2line'
 
@@ -161,6 +161,7 @@ alias tpi2='telnet 10.209.60.149'
 
 # only for linux hosts but not vm on windows host
 alias xmap="xmodmap ~/.xmodmap"
+xmodmap ~/.xmodmap
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
