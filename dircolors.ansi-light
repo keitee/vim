@@ -172,6 +172,10 @@ DOOR 35;44 # Solaris 2.5 and later
 BLK  33;44
 CHR  37;44
 
+STICKY_OTHER_WRITABLE 30;45 # dir that is sticky and other-writable (+t,o+w)
+OTHER_WRITABLE 34;45 # dir that is other-writable (o+w) and not sticky
+STICKY 37;44 # dir with the sticky bit set (+t) and not other-writable
+
 
 #############################################################################
 ### By file attributes
