@@ -240,6 +240,8 @@ if s:is_windows != 1
   
   " {{{
   " "plugin-tagbar"
+  " http://majutsushi.github.io/tagbar/
+  " https://vimawesome.com/plugin/tagbar
   " use ctag
   Plug 'majutsushi/tagbar'
   " nnoremap <silent> [unite]tb :TagbarToggle<cr>
@@ -269,6 +271,18 @@ if s:is_windows != 1
   let g:airline_theme='dark'
   let g:airline_left_sep='>'
   " }}}
+  
+  " " {{{
+  " " "plugin-lightline" status line
+  " " https://github.com/itchyny/lightline.vim
+  " Plug 'itchyny/lightline.vim'
+  " let g:lightline = {
+  "   \     'active': {
+  "   \         'left': [['mode', 'paste' ], ['readonly', 'filename', 'modified']],
+  "   \         'right': [['lineinfo'], ['percent'], ['fileformat', 'fileencoding']]
+  "   \     }
+  "   \ }
+  " " }}}
   
   " {{{
   " "plugin-cxx" 
@@ -378,10 +392,14 @@ if s:is_windows != 1
   nnoremap <silent> [unite]tg :Gtags -g <c-r><c-w><CR>
   " tag selection. do NOT work?
   " vnoremap <silent> [unite]gs <ESC>:Gtags .GetVisualSelection()<CR>
+  " (tag bar) 
+  nnoremap <silent> [unite]tb :TagbarToggle<CR>
 
   " "mappings-fzf"
   " (fz files) Lines in the current buffer
-  nnoremap <silent> [unite]ff :Files<CR>
+  " nnoremap <silent> [unite]ff :Files<CR>
+  " but I use this so often that I’ve mapped it to a single key.
+  map ; :Files<CR>
 
   " BLines [QUERY]
   " (fz lines) Lines in the current buffer
