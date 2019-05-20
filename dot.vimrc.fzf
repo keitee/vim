@@ -317,8 +317,8 @@ if s:is_windows != 1
   " https://github.com/airblade/vim-gitgutter
   Plug 'airblade/vim-gitgutter'
 
-  " to turn off vim-gitgutter by default
-  let g:gitgutter_enabled = 0
+  " to turn on vim-gitgutter by default
+  let g:gitgutter_enabled = 1
   " nnoremap <silent> [unite]gg :GitGutterToggle<CR>
 
   " note: this emits an error saying that GitGutterAddLine is not recognized?
