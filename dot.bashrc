@@ -96,15 +96,15 @@ export GTAGSLIBPATH=.:~/STB_SW:
 # some more ls aliases
 alias a=alias
 alias s='source ~/.bashrc'
-alias ll='ls -alFrt'
+alias ll='ls -alFrth'
 alias la='ls -A'
-alias l='ls -CF'
+alias l='ls -CFh'
 alias c=clear
 alias h=history
 
 alias cgrep='grep --color'
-alias phgrep='cat ~/.persistent_history|grep --color'
-alias hgrep='history|grep --color'
+alias hgrep='cat ~/.persistent_history | grep --color'
+# alias hgrep='history | grep --color'
 
 alias vdiff=gvimdiff
 alias diff='diff -up'
@@ -115,7 +115,7 @@ alias ag='ag -m 1000000 -S --color-path="1;31" --color-match="0;32"'
 alias agn='ag --no-numbers -m 1000000 -S --color-path="1;31" --color-match="0;32"'
 alias agl='ag -m 1000000 -S --color-path="1;31" --color-match="0;32" --pager "less -r"'
 alias sl='echo $SHLVL'
-alias tn='tmux new -s mw'
+alias tn='tmux new -s kit'
 alias ta='tmux a'
 alias addr2line='/home/kyoupark/STB_SW/FUSIONOS_2/BLD_AMS_BCM_MIPS4K_LNUX_DARWIN_01/platform_cfg/linux/compiler/mips4k_gcc_x86_linux_hound_2/bin/mips-uclibc-addr2line'
 
