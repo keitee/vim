@@ -332,3 +332,5 @@ Jobs="\j"
 #   # @2 - Prompt when not in GIT repo
 #   echo " '$Yellow$PathShort$Color_Off'\$ "; \
 # fi)'
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
