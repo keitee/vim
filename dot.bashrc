@@ -96,7 +96,7 @@ export GTAGSLIBPATH=.:~/STB_SW:
 # some more ls aliases
 alias a=alias
 alias s='source ~/.bashrc'
-alias ll='ls -alFrt'
+alias ll='ls -alFrth'
 alias la='ls -A'
 alias l='ls -CF'
 alias c=clear
