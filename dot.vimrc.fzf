@@ -333,13 +333,24 @@ if s:is_windows != 1
 
   " to turn on vim-gitgutter by default
   let g:gitgutter_enabled = 1
-  " nnoremap <silent> [unite]gg :GitGutterToggle<CR>
 
-  " note: this emits an error saying that GitGutterAddLine is not recognized?
-  " GitGutterAddLine          " default: links to DiffAdd
-  " GitGutterChangeLine       " default: links to DiffChange
-  " GitGutterDeleteLine       " default: links to DiffDelete
-  " GitGutterChangeDeleteLine " default: links to GitGutterChangeLineDefault, i.e. DiffChange
+  " to turn on line highlighting by default
+  let g:gitgutter_highlight_lines = 1
+
+  " When you make a change to a file tracked by git, the diff markers should
+  " appear automatically. The delay is governed by vim's updatetime option; the
+  " default value is 4000, i.e. 4 seconds, but I suggest reducing it to around
+  " 100ms
+  set updatetime=100
+  
+  " You can jump between hunks (by default):
+  " jump to next hunk (change)    : ]c
+  " jump to previous hunk (change): [c.
+  
+  " Folding
+  " Use the GitGutterFold command to fold all unchanged lines, leaving just the
+  " hunks visible. Use zr to unfold 3 lines of context above and below a hunk.
+  " Execute GitGutterFold a second time to restore the previous view.
   " }}}
 
   " List ends here. Plugins become visible to Vim after this call.
@@ -417,17 +428,17 @@ if s:is_windows != 1
   nnoremap <silent> [unite]fw :Windows<CR>
 
   " (fz history) Search history
-  nnoremap <silent> [unite]fh: History/<CR>
+  nnoremap <silent> [unite]fh :History/<CR>
 
   " (fz command) Command history (not work. ??)
-  nnoremap <silent> [unite]fc: History:<CR>
+  nnoremap <silent> [unite]fc :History:<CR>
 
   " (fz marks) Marks
-  nnoremap <silent> [unite]fm: Marks<CR>
+  nnoremap <silent> [unite]fm :Marks<CR>
 
   " (fz grep) Ag grep
-  nnoremap <silent> [unite]fg: Ag <CR>
-  nnoremap <silent> [unite]fgc: Ag <c-r><c-w><CR>
+  nnoremap <silent> [unite]fg :Ag <CR>
+  nnoremap <silent> [unite]fgc :Ag <c-r><c-w><CR>
 
   " "mappings-edit"
   " (show invisibles) toggle set list/nolist
