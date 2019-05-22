@@ -11,7 +11,7 @@
   di = diff --ignore-space-at-eol
 [user]
 	name = Kit Park
-	email = keiteepark@gmail.com
+	email = kit.park@sky.uk
 [push]
 	default = simple
 [grep]
