@@ -335,7 +335,7 @@ if s:is_windows != 1
   let g:gitgutter_enabled = 1
 
   " to turn on line highlighting by default
-  let g:gitgutter_highlight_lines = 1
+  " let g:gitgutter_highlight_lines = 1
 
   " When you make a change to a file tracked by git, the diff markers should
   " appear automatically. The delay is governed by vim's updatetime option; the
