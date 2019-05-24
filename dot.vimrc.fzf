@@ -243,7 +243,14 @@ if s:is_windows != 1
   " http://majutsushi.github.io/tagbar/
   " https://vimawesome.com/plugin/tagbar
   " use ctag
+
   Plug 'majutsushi/tagbar'
+
+  " <Space>
+  " Display the prototype of the current tag (i.e. the line defining it) 
+  " in the command line.
+  " Map option: tagbar_map_showproto
+  "
   " nnoremap <silent> [unite]tb :TagbarToggle<cr>
   " note: outline is better since do not use hotfix windows and do not move to
   " the windows to search a tag
