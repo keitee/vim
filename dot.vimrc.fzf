@@ -102,6 +102,21 @@ set showbreak=<<
 
 
 " {===========================================================================
+" window settings
+" https://thoughtbot.com/blog/seamlessly-navigate-vim-and-tmux-splits
+" Easier split navigations
+" We can use different key mappings for easy navigation between splits to save a
+" keystroke. So instead of ctrl-w then j, it’s just ctrl-j:
+
+nnoremap <C-j> <C-W><C-j>
+nnoremap <C-k> <C-W><C-k>
+
+" these do not work. why?
+nnoremap <C-l> <C-W><C-l>
+nnoremap <C-h> <C-W><C-h>
+
+
+" {===========================================================================
 " search settings
 
 set incsearch

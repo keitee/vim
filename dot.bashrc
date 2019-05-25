@@ -93,6 +93,9 @@ export GTAGSFORCECPP=
 #export GTAGSROOT=~/STB_SW
 export GTAGSLIBPATH=.:~/STB_SW:
 
+# for tools that use this variable
+export EDITOR='gvim'
+
 # some more ls aliases
 alias a=alias
 alias s='source ~/.bashrc'
