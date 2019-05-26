@@ -106,8 +106,6 @@ alias c=clear
 alias h=history
 
 alias cgrep='grep --color'
-alias hgrep='cat ~/.persistent_history | grep --color'
-# alias hgrep='history | grep --color'
 
 alias vdiff=gvimdiff
 alias diff='diff -up'
@@ -186,9 +184,32 @@ if ! shopt -oq posix; then
   fi
 fi
 
+
+#={===========================================================================
 # Keeping persistent history in bash
 # https://eli.thegreenplace.net/2013/06/11/keeping-persistent-history-in-bash
 # https://eli.thegreenplace.net/2016/persistent-history-in-bash-redux/
+#
+# There are many approaches to improve the situation; here I want to discuss one
+# I've been using very successfully in the past few months - a simple
+# "persistent history" that keeps track of history across terminal instances,
+# saving it into a dot-file in my home directory (~/.persistent_history). All
+# commands, from all terminal instances, are saved there, forever. I found this
+# tremendously useful in my work - it saves me time almost every day.
+#
+# o Note that an environment variable is used to avoid useless duplication (i.e.
+# if I run ls twenty times in a row, it will only be recorded once).
+#
+# o being kept in a Git repository for safekeeping,
+#
+# But trimming is easy:
+#
+# tail -20000 ~/.persistent_history | tee ~/.persistent_history
+# 
+# 'PROMPT_COMMAND'
+#      If set, the value is interpreted as a command to execute before the
+#      printing of each primary prompt ('$PS1').
+
 log_bash_persistent_history()
 {
   [[
@@ -211,7 +232,11 @@ run_on_prompt_command()
 
 PROMPT_COMMAND="run_on_prompt_command"
 
+alias hgrep='cat ~/.persistent_history | grep --color'
+alias hlist='less -N +G ~/.persistent_history'
 
+
+#={===========================================================================
 #  Customize BASH PS1 prompt to show current GIT repository and branch.
 #  by Mike Stewart - http://MediaDoneRight.com
 
