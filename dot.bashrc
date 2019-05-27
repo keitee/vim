@@ -219,7 +219,7 @@ log_bash_persistent_history()
   local command_part="${BASH_REMATCH[2]}"
   if [ "$command_part" != "$PERSISTENT_HISTORY_LAST" ]
   then
-    echo $date_part "|" "$command_part" >> ~/.persistent_history
+    echo $date_part "|" "$command_part" >> ~/.`hostname`_persistent_history
     export PERSISTENT_HISTORY_LAST="$command_part"
   fi
 }
@@ -232,8 +232,8 @@ run_on_prompt_command()
 
 PROMPT_COMMAND="run_on_prompt_command"
 
-alias hgrep='cat ~/.persistent_history | grep --color'
-alias hlist='less -N +G ~/.persistent_history'
+alias hgrep='cat ~/.`hostname`_persistent_history | grep --color'
+alias hlist='less -N +G ~/.`hostname`_persistent_history'
 
 
 #={===========================================================================
