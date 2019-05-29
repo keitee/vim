@@ -174,3 +174,317 @@
 2019-05-28 17:50:43 | g st
 2019-05-28 17:50:50 | git add keitee-mint_persistent_history 
 2019-05-28 17:50:52 | g st
+2019-05-28 17:51:00 | gc
+2019-05-28 17:51:02 | git push
+2019-05-28 17:51:12 | cd ..
+2019-05-28 17:51:12 | ls
+2019-05-28 17:51:14 | cd kb/
+2019-05-28 17:51:14 | ls
+2019-05-28 17:51:15 | g st
+2019-05-29 06:56:49 | git pull
+2019-05-29 06:56:54 | cd ..
+2019-05-29 06:56:56 | cd vim/
+2019-05-29 06:56:59 | git pull
+2019-05-29 07:28:52 | cd
+2019-05-29 07:28:53 | ls
+2019-05-29 07:29:29 | which gem
+2019-05-29 07:30:48 | sudo apt-get install gem
+2019-05-29 07:31:20 | gem install tmuxinator
+2019-05-29 07:31:38 | sudo apt install ruby
+2019-05-29 07:32:53 | gem install tmuxinator
+2019-05-29 07:33:00 | sudo gem install tmuxinator
+2019-05-29 07:33:16 | ls
+2019-05-29 07:33:17 | ll
+2019-05-29 07:33:40 | set | grep EDIT
+2019-05-29 07:34:29 | mkdir ~/.tmuxinator/
+2019-05-29 07:35:01 | ln -s ~/git/vim/tmuxniator.airplay.yml .tmuxinator/airplay.yml
+2019-05-29 07:35:17 | gvim .tmuxinator/airplay.yml 
+2019-05-29 07:35:43 | ls
+2019-05-29 07:35:45 | cd git/kb/
+2019-05-29 07:35:46 | ls
+2019-05-29 07:36:24 | ls
+2019-05-29 07:36:28 | pwd
+2019-05-29 07:38:34 | pwd
+2019-05-29 07:38:58 | ls
+2019-05-29 07:39:07 | ls
+2019-05-29 07:39:54 | ls
+2019-05-29 07:39:57 | cd mw
+2019-05-29 07:39:57 | ls
+2019-05-29 07:40:02 | cd ethan-as-source
+2019-05-29 07:40:02 | ls
+2019-05-29 07:40:04 | cd Components/
+2019-05-29 07:40:05 | ls
+2019-05-29 07:40:07 | pwd
+2019-05-28 08:05:09 | exit
+2019-05-29 07:40:29 | ls
+2019-05-28 08:05:09 | exit
+2019-05-29 07:41:21 | cd /home/keitee
+2019-05-29 07:41:21 | cd ~/git/kb
+2019-05-28 08:05:09 | exit
+2019-05-28 08:05:09 | exit
+2019-05-29 07:41:21 | cd /home/keitee/mw/ethan-as-source/Components
+2019-05-29 07:41:49 | pwd
+2019-05-29 07:41:20 | tmuxinator start airplay
+2019-05-29 07:42:29 | tmuxinator doctor
+2019-05-29 07:41:21 | cd ~/git/kb
+2019-05-29 07:44:16 | cd /home/keitee
+2019-05-29 07:44:16 | cd ~/git/kb
+2019-05-29 07:41:21 | cd ~/git/kb
+2019-05-29 07:44:16 | cd /home/keitee/mw/ethan-as-source/Components
+2019-05-29 07:41:21 | cd ~/git/kb
+2019-05-29 07:44:23 | pwd
+2019-05-29 07:44:16 | tmuxinator start airplay
+2019-05-29 07:44:16 | tmuxinator start airplay
+2019-05-29 07:44:16 | tmuxinator start airplay
+2019-05-29 07:46:03 | cd /home/keitee
+2019-05-29 07:46:03 | cd ~/git/kb
+2019-05-29 07:44:16 | tmuxinator start airplay
+2019-05-29 07:44:16 | tmuxinator start airplay
+2019-05-29 07:46:03 | cd /home/keitee/mw/ethan-as-source/Components
+2019-05-29 07:46:16 | ls
+2019-05-29 07:46:17 | pwd
+2019-05-29 07:46:03 | tmuxinator start airplay
+2019-05-29 07:46:03 | tmuxinator start airplay
+2019-05-29 07:46:46 | cd /home/keitee
+2019-05-29 07:46:46 | cd ~/git/kb
+2019-05-29 07:46:03 | tmuxinator start airplay
+2019-05-29 07:46:46 | cd /home/keitee/mw/ethan-as-source/Components
+2019-05-29 07:46:03 | tmuxinator start airplay
+2019-05-29 07:48:34 | make clean; make libraries platform=Titan
+2019-05-29 07:49:23 | ./compile_sdkv2.0.sh eu-q-titan-uk /home/keitee/mw/ethan-as-source/
+2019-05-29 07:51:01 | cp /home/keitee/mw/ethan-as-source/xSubmoduleDarwinSDK/eu-q-titan-uk/SDK/flash0/fs/NDS/bin/APP_Process ./fs/NDS/bin/
+2019-05-29 07:54:13 | ls
+2019-05-29 07:54:16 | cd AudioStreamer/
+2019-05-29 07:54:16 | ls
+2019-05-29 07:54:18 | ll
+2019-05-29 07:54:21 | cd AirplaySdk2/
+2019-05-29 07:54:21 | ll
+2019-05-29 07:54:28 | cd AirPlaySDK_2/
+2019-05-29 07:54:28 | ls
+2019-05-29 07:54:29 | ll
+2019-05-29 07:54:32 | cd Sources/
+2019-05-29 07:54:32 | ll
+2019-05-29 07:58:36 | gvim
+2019-05-29 08:09:04 | ll /home/keitee/mw/ethan-as-source/xSubmoduleDarwinSDK/eu-q-titan-uk/SDK/flash0/fs/NDS/bin/APP_Process
+2019-05-29 08:09:08 | cp /home/keitee/mw/ethan-as-source/xSubmoduleDarwinSDK/eu-q-titan-uk/SDK/flash0/fs/NDS/bin/APP_Process ./fs/NDS/bin/
+2019-05-29 07:46:45 | tmuxinator start airplay
+2019-05-29 08:15:29 | ls
+2019-05-29 08:15:32 | gvim LOG
+2019-05-29 08:23:24 | cd
+2019-05-29 08:23:25 | ls
+2019-05-29 08:23:54 | audacity &
+2019-05-29 08:29:17 | cp /home/keitee/mw/ethan-as-source/xSubmoduleDarwinSDK/eu-q-titan-uk/SDK/flash0/fs/NDS/bin/APP_Process ./fs/NDS/bin/
+2019-05-29 08:14:05 | telnet 192.168.0.102
+2019-05-29 09:28:36 | ls
+2019-05-29 09:28:41 | gl AUD_LOG_MIL
+2019-05-29 09:31:47 | gl AS_LOG_ENTRY
+2019-05-29 09:31:55 | gl -x AS_LOG_ENTRY
+2019-05-29 09:49:44 | cd ..
+2019-05-29 09:49:46 | ls
+2019-05-29 09:49:51 | ag AirPlayReceiverServerCreate
+2019-05-29 09:50:21 | gvim 
+2019-05-29 09:52:34 | gvim AirPlaySDK_2/Sources/AirPlayReceiverServer.c
+2019-05-29 09:54:45 | gl AirPlayReceiverServerCreate
+2019-05-29 10:53:54 | cd ..
+2019-05-29 10:53:54 | ls
+2019-05-29 10:53:58 | ag AudioStreamSetAudioCallback
+2019-05-29 13:26:46 | g st
+2019-05-29 13:26:57 | git diff
+2019-05-29 13:46:46 | gl AUD_LOG_ENTRY
+2019-05-29 13:46:50 | gl -r AUD_LOG_ENTRY
+2019-05-29 13:49:47 | gl -r AUD_LOG_ENTRY | less
+2019-05-29 13:49:53 | gl -r AUD_LOG_ENTRY | less --color
+2019-05-29 13:49:57 | gl -r AUD_LOG_ENTRY | less --colour
+2019-05-29 13:50:02 | gl -r AUD_LOG_ENTRY | less
+2019-05-29 13:50:22 | ag AUD_LOG_ENTRY
+2019-05-29 13:50:28 | ag AUD_LOG_ENTRY | less
+2019-05-29 13:51:16 | ag AUD_LOG_ENTRY | less -R
+2019-05-29 13:51:18 | ag AUD_LOG_ENTRY | less -r
+2019-05-29 13:51:41 | a
+2019-05-29 13:52:03 | ag AUD_LOG_ENTRY | less -r
+2019-05-29 13:52:07 | ag AUD_LOG_ENTRY | less -R
+2019-05-29 13:52:19 | ag AUD_LOG_ENTRY | more -R
+2019-05-29 13:52:22 | ag AUD_LOG_ENTRY | more
+2019-05-29 13:52:24 | ag AUD_LOG_ENTRY | less -R
+2019-05-29 13:52:57 | ls
+2019-05-29 13:53:19 | gl AUD_LOG_ENTRY
+2019-05-29 13:53:32 | gl AS_LOG_ENTRY
+2019-05-29 13:53:37 | gl -x AS_LOG_ENTRY
+2019-05-29 13:53:42 | ag AS_LOG_ENTRY
+2019-05-29 13:54:54 | cd ..
+2019-05-29 13:54:55 | ls
+2019-05-29 13:54:59 | ag AS_LOG_ENTRY
+2019-05-29 13:55:18 | gvim ~/.agignore
+2019-05-29 13:55:24 | ag AS_LOG_ENTRY
+2019-05-29 13:55:45 | ag AS_LOG_ENTRY | less -R
+2019-05-29 13:55:47 | ag AS_LOG_ENTRY | less -r
+2019-05-29 14:01:18 | ls
+2019-05-29 14:01:24 | cd ..
+2019-05-29 14:01:25 | ls
+2019-05-29 14:01:29 | cd Components/
+2019-05-29 14:01:30 | ls
+2019-05-29 14:01:53 | gl -x AS_LOG_MIL
+2019-05-29 14:04:23 | cd ..
+2019-05-29 14:04:24 | ls
+2019-05-29 14:04:32 | gtags 
+2019-05-29 14:09:08 | gl -x AS_LOG_MIL
+2019-05-29 14:10:21 | gvim Components/AS/Diag/include/AS_DIAG_Macros.h
+2019-05-29 14:10:48 | ls -al Components/AS/Diag/include/AS_DIAG_Macros.h
+2019-05-29 14:11:00 | readlink -f Components/AS/Diag/include/AS_DIAG_Macros.h
+2019-05-29 14:11:35 | cd Components/
+2019-05-29 14:11:36 | ls
+2019-05-29 14:11:52 | which bldtag.py 
+2019-05-29 14:11:59 | gvim /home/keitee/git/kb/bin/bldtag.py
+2019-05-29 14:12:31 | readlink -f Components/AS/Diag/include/AS_DIAG_Macros.h
+2019-05-29 14:13:38 | ls /home/keitee/mw/ethan-as-source/Components/AS
+2019-05-29 14:14:17 | ls
+2019-05-29 14:14:21 | cd ..
+2019-05-29 14:14:21 | ls
+2019-05-29 14:14:24 | cd Components/
+2019-05-29 14:14:24 | ls
+2019-05-29 14:14:37 | bldtag.py 
+2019-05-29 14:15:40 | gl -x AS_LOG_MIL
+2019-05-29 14:15:46 | cd ..
+2019-05-29 14:15:46 | ls
+2019-05-29 14:15:49 | rm G*
+2019-05-29 14:15:51 | ls
+2019-05-29 14:15:53 | cd Components/
+2019-05-29 14:15:54 | l
+2019-05-29 15:09:12 | cd ..
+2019-05-29 15:09:12 | ls
+2019-05-29 15:09:13 | cd
+2019-05-29 15:09:14 | ls
+2019-05-29 15:09:15 | cd .tmuxinator/
+2019-05-29 15:09:16 | ls
+2019-05-29 15:09:17 | cd ..
+2019-05-29 15:09:18 | ls
+2019-05-29 15:09:22 | gvim .tmuxinator/airplay.yml 
+2019-05-29 07:46:45 | tmuxinator start airplay
+2019-05-29 15:14:03 | ls
+2019-05-29 07:46:45 | tmuxinator start airplay
+2019-05-29 07:46:45 | tmuxinator start airplay
+2019-05-29 15:14:15 | cd /home/keitee/mw/ethan-as-source/Components
+2019-05-29 07:46:45 | tmuxinator start airplay
+2019-05-29 15:14:15 | cd /home/keitee
+2019-05-29 15:14:15 | cd ~/git/kb; git pull
+2019-05-29 15:14:17 | pushd ~/git/vim; git pull; popd
+2019-05-29 15:14:15 | tmuxinator start airplay
+2019-05-29 15:14:17 | pushd ~/git/vim; git pull; popd
+2019-05-29 15:14:54 | cd /home/keitee
+2019-05-29 15:14:17 | pushd ~/git/vim; git pull; popd
+2019-05-29 15:14:17 | pushd ~/git/vim; git pull; popd
+2019-05-29 15:14:54 | cd /home/keitee/mw/ethan-as-source/Components
+2019-05-29 15:14:54 | cd ~/git/kb; git pull
+2019-05-29 15:14:56 | pushd ~/git/vim; git pull; popd
+2019-05-29 15:14:54 | tmuxinator start airplay
+2019-05-29 15:14:54 | tmuxinator start airplay
+2019-05-29 15:16:02 | cd /home/keitee
+2019-05-29 15:14:54 | tmuxinator start airplay
+2019-05-29 15:14:54 | tmuxinator start airplay
+2019-05-29 15:16:03 | cd /home/keitee/mw/ethan-as-source/Components
+2019-05-29 15:14:54 | tmuxinator start airplay
+2019-05-29 15:14:54 | tmuxinator start airplay
+2019-05-29 15:14:54 | tmuxinator start airplay
+2019-05-29 15:14:54 | tmuxinator start airplay
+2019-05-29 15:16:03 | echo "I get run in each pane, before each pane command!" &&  ssh server
+2019-05-29 15:16:03 | echo "Hello"
+2019-05-29 15:16:02 | cd ~/git/kb; git pull
+2019-05-29 15:16:06 | pushd ~/git/vim; git pull; popd
+2019-05-29 15:16:03 | echo "I get run in each pane, before each pane command!" &&  vim
+2019-05-29 15:16:03 | echo "I get run in each pane, before each pane command!" &&  top
+2019-05-29 15:16:03 | echo "I get run in each pane, before each pane command!" && 
+2019-05-29 15:16:03 | cd /home/keitee/mw/ethan-as-source/Components
+2019-05-29 15:19:27 | cd /home/keitee
+2019-05-29 15:16:03 | cd /home/keitee/mw/ethan-as-source/Components
+2019-05-29 15:16:03 | cd /home/keitee/mw/ethan-as-source/Components
+2019-05-29 15:16:03 | cd /home/keitee/mw/ethan-as-source/Components
+2019-05-29 15:16:03 | cd /home/keitee/mw/ethan-as-source/Components
+2019-05-29 15:16:03 | cd /home/keitee/mw/ethan-as-source/Components
+2019-05-29 15:16:03 | cd /home/keitee/mw/ethan-as-source/Components
+2019-05-29 15:19:28 | echo "I get run in each pane, before each pane command!" &&  ssh server
+2019-05-29 15:19:28 | echo "Hello"
+2019-05-29 15:16:03 | cd /home/keitee/mw/ethan-as-source/Components
+2019-05-29 15:16:03 | cd /home/keitee/mw/ethan-as-source/Components
+2019-05-29 15:19:27 | cd ~/git/kb; git pull
+2019-05-29 15:19:28 | pushd ~/git/vim; git pull; popd
+2019-05-29 15:19:27 | vim
+2019-05-29 15:19:28 | top
+2019-05-29 15:22:53 | q
+2019-05-29 15:19:27 | echo "I get run in each pane, before each pane command!" &&  vim
+2019-05-29 15:19:28 | echo "I get run in each pane, before each pane command!" &&  top
+2019-05-29 15:19:28 | echo "I get run in each pane, before each pane command!" && 
+2019-05-29 15:27:47 | sudo screen -S name -a -D -R -fn -l -L /dev/ttyUSB0 115200,cs8
+2019-05-24 12:14:28 | sudo screen -S name -a -D -R -fn -l /dev/ttyUSB0 115200,cs8
+2019-05-29 15:29:49 | #
+2019-05-29 15:30:01 | pwd
+2019-05-29 15:34:09 | s
+2019-05-29 15:34:23 | hlist
+2019-05-29 15:34:32 | hgrep tmux
+2019-05-29 15:19:27 | tmuxinator start airplay
+2019-05-29 15:34:45 | cd /home/keitee
+2019-05-29 15:19:27 | tmuxinator start airplay
+2019-05-29 15:19:27 | tmuxinator start airplay
+2019-05-29 15:34:46 | cd /home/keitee/mw/exports/titan/flash0
+2019-05-29 15:34:46 | cd /home/keitee/mw/ethan-as-source/xSubmoduleDarwinSDK
+2019-05-29 15:19:27 | tmuxinator start airplay
+2019-05-29 15:19:27 | tmuxinator start airplay
+2019-05-29 15:19:27 | tmuxinator start airplay
+2019-05-29 15:34:46 | cd /home/keitee/mw/exports/titan/flash0
+2019-05-29 15:34:46 | cd /home/keitee/mw/ethan-as-source/Components
+2019-05-29 15:19:27 | tmuxinator start airplay
+2019-05-29 15:19:27 | tmuxinator start airplay
+2019-05-29 15:19:27 | tmuxinator start airplay
+2019-05-29 15:34:46 | cd /home/keitee/mw/ethan-as-source/Components/AudioStreamer/AirplaySdk2
+2019-05-29 15:34:45 | cd ~/git/kb; git pull
+2019-05-29 15:34:46 | pushd ~/git/vim; git pull; popd
+2019-05-29 15:34:46 | echo "I get run in each pane, before each pane command!" && top
+2019-05-29 15:34:46 | telnet 192.168.0.102
+2019-05-29 15:34:45 | tmuxinator start airplay
+2019-05-29 15:37:15 | c
+2019-05-29 15:34:46 | pushd ~/git/vim; git pull; popd
+2019-05-29 15:37:18 | cd /home/keitee
+2019-05-29 15:34:46 | pushd ~/git/vim; git pull; popd
+2019-05-29 15:37:18 | cd /home/keitee/mw/ethan-as-source/Components
+2019-05-29 15:34:46 | pushd ~/git/vim; git pull; popd
+2019-05-29 15:34:46 | pushd ~/git/vim; git pull; popd
+2019-05-29 15:34:46 | pushd ~/git/vim; git pull; popd
+2019-05-29 15:37:19 | cd /home/keitee/mw/ethan-as-source/Components/AudioStreamer/AirplaySdk2
+2019-05-29 15:34:46 | pushd ~/git/vim; git pull; popd
+2019-05-29 15:34:46 | pushd ~/git/vim; git pull; popd
+2019-05-29 15:34:46 | pushd ~/git/vim; git pull; popd
+2019-05-29 15:37:19 | cd /home/keitee/mw/exports/titan/flash0
+2019-05-29 15:34:46 | pushd ~/git/vim; git pull; popd
+2019-05-29 15:37:19 | cd /home/keitee/mw/exports/titan/flash0
+2019-05-29 15:34:46 | pushd ~/git/vim; git pull; popd
+2019-05-29 15:37:19 | cd /home/keitee/mw/ethan-as-source/xSubmoduleDarwinSDK
+2019-05-29 15:37:18 | cd ~/git/kb; git pull
+2019-05-29 15:37:19 | pushd ~/git/vim; git pull; popd
+2019-05-29 15:37:55 | ls
+2019-05-29 15:37:19 | telnet 192.168.0.102
+2019-05-29 15:46:19 | ls
+2019-05-29 15:46:26 | ls
+2019-05-29 15:46:27 | cd ..
+2019-05-29 15:46:28 | ls
+2019-05-29 15:46:28 | cd ..
+2019-05-29 15:46:29 | ls
+2019-05-29 15:46:31 | cd titan/
+2019-05-29 15:46:31 | ls
+2019-05-29 15:46:32 | cd flash0/
+2019-05-29 15:46:33 | ls
+2019-05-29 15:46:34 | ll
+2019-05-29 15:46:38 | gvim LOG
+2019-05-29 16:11:26 | ls -al
+2019-05-29 16:11:33 | gvim LOG_29 
+2019-05-29 16:14:53 | glogg 
+2019-05-29 15:34:46 | pushd ~/git/vim; git pull; popd
+2019-05-29 16:15:08 | sudo apt-get install gglog
+2019-05-29 16:15:15 | sudo apt-get install glog
+2019-05-29 16:15:22 | sudo apt-get install glogg
+2019-05-29 16:15:35 | which glogg
+2019-05-29 16:28:02 | g st
+2019-05-29 16:28:07 | gc
+2019-05-29 16:28:08 | g st
+2019-05-29 16:28:10 | git push
+2019-05-29 16:28:15 | ls
+2019-05-29 16:28:23 | pushd ../vim/
+2019-05-29 16:28:24 | git st

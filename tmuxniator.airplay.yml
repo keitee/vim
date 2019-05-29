@@ -30,10 +30,48 @@ root: ~/
 # Runs after everything. Use it to attach to tmux with custom options etc.
 # post: tmux -CC attach -t airplay
 
+# (from tmux man)
+#      - cd /home/keitee/mw/ethan-as-source/Components/AudioStreamer/AirplaySdk2
+#      The following layouts are supported:
+# 
+#      even-horizontal
+#              Panes are spread out evenly from left to right across the window.
+# 
+#      even-vertical
+#              Panes are spread evenly from top to bottom.
+# 
+#      main-horizontal
+#              A large (main) pane is shown at the top of the window and the remaining panes are
+#              spread from left to right in the leftover space at the bottom.  Use the
+#              main-pane-height window option to specify the height of the top pane.
+# 
+#      main-vertical
+#              Similar to main-horizontal but the large pane is placed on the left and the others
+#              spread from top to bottom along the right.  See the main-pane-width window option.
+# 
+#      tiled   Panes are spread out as evenly as possible over the window in both rows and columns.
+
 windows:
-  - editor: 
-    - ehco "this is editor"
-  - server: 
-    - ehco "this is server"
-  - logs: 
-    - ehco "this is logs"
+  - home:
+      layout: main-vertical
+      panes:
+        - #empty, will just run plain bash
+        - top
+  - kb: 
+    - cd ~/git/kb; git pull
+    - pushd ~/git/vim; git pull; popd
+  - ap build:
+      layout: even-vertical
+      panes:
+        - cd /home/keitee/mw/ethan-as-source/xSubmoduleDarwinSDK
+        - cd /home/keitee/mw/ethan-as-source/Components/AudioStreamer/AirplaySdk2
+  - ap src: 
+    - cd /home/keitee/mw/ethan-as-source/Components
+  - exports: 
+    - cd /home/keitee/mw/exports/titan/flash0
+  - ngdev: 
+    - cd /home/keitee/mw/exports/titan/flash0
+  - serial:
+    - sudo screen -S name -a -D -R -fn -l -L /dev/ttyUSB0 115200,cs8
+  - box:
+    - telnet 192.168.0.102
