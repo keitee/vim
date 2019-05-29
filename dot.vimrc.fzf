@@ -441,9 +441,36 @@ if s:is_windows != 1
   nnoremap <silent> [unite]tb :TagbarToggle<CR>
 
   " "mappings-fzf"
-  " (fz files) Lines in the current buffer
-  " nnoremap <silent> [unite]ff :Files<CR>
-  " but I use this so often that I’ve mapped it to a single key.
+  "
+  " Search syntax
+  "
+  " Unless otherwise specified, fzf starts in "extended-search mode" where you
+  " can type in multiple search terms delimited by spaces. e.g. ^music .mp3$
+  " sbtrkt !fire
+  "
+  " Token     Match type                  Description
+  "
+  " sbtrkt  fuzzy-match                   Items that match sbtrkt
+  " 'wild   exact-match (quoted)          Items that include wild
+  " ^music  prefix-exact-match            Items that start with music
+  " .mp3$   suffix-exact-match            Items that end with .mp3
+  " !fire   inverse-exact-match           Items that do not include fire
+  " !^music   inverse-prefix-exact-match  Items that do not start with music
+  " !.mp3$    inverse-suffix-exact-match  Items that do not end with .mp3
+  "
+  " If you don't prefer fuzzy matching and do not wish to "quote" every word,
+  " start fzf with -e or --exact option. Note that when --exact is set, '-prefix
+  " "unquotes" the term.
+  " 
+  " A single bar character term acts as an "OR operator". For example, the
+  " following query matches entries that start with core and end with either go,
+  " rb, or py.
+  " 
+  " ^core go$ | rb$ | py$
+  
+
+  " (fz files) Lines in the current buffer nnoremap <silent> [unite]ff
+  " :Files<CR> but I use this so often that I’ve mapped it to a single key.
   map ; :Files<CR>
 
   " BLines [QUERY]
@@ -453,10 +480,10 @@ if s:is_windows != 1
   nnoremap <silent> [unite]flw :BLines <c-r><c-w><CR>
 
   " (fz recent files) v:oldfiles and open buffers
-  nnoremap <silent> [unite]fr :History<CR>
+  nnoremap <silent> [unite]r :History<CR>
 
   " (fz buffers) Buffers
-  nnoremap <silent> [unite]fb :Buffers<CR>
+  nnoremap <silent> [unite]b :Buffers<CR>
 
   " (fz windows) Windows
   nnoremap <silent> [unite]fw :Windows<CR>
