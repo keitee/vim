@@ -58,8 +58,10 @@ windows:
         - #empty, will just run plain bash
         - top
   - kb: 
-    - cd ~/git/kb; git pull
-    - pushd ~/git/vim; git pull; popd
+      layout: even-vertical
+      panes:
+        - cd ~/git/kb; git pull;
+        - cd ~/git/vim; git pull;
   - ap build:
       layout: even-vertical
       panes:
@@ -67,6 +69,8 @@ windows:
         - cd /home/keitee/mw/ethan-as-source/Components/AudioStreamer/AirplaySdk2
   - ap src: 
     - cd /home/keitee/mw/ethan-as-source/Components
+  - mw src: 
+    - cd /home/keitee/fsi/Q000.021.45.00
   - exports: 
     - cd /home/keitee/mw/exports/titan/flash0
   - ngdev: 

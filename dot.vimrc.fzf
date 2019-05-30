@@ -475,9 +475,9 @@ if s:is_windows != 1
 
   " BLines [QUERY]
   " (fz lines) Lines in the current buffer
-  nnoremap <silent> [unite]fl :BLines<CR>
+  nnoremap <silent> [unite]l :BLines<CR>
   " (fz lines word) Lines in the current buffer for current word
-  nnoremap <silent> [unite]flw :BLines <c-r><c-w><CR>
+  nnoremap <silent> [unite]lw :BLines <c-r><c-w><CR>
 
   " (fz recent files) v:oldfiles and open buffers
   nnoremap <silent> [unite]r :History<CR>
@@ -486,10 +486,10 @@ if s:is_windows != 1
   nnoremap <silent> [unite]b :Buffers<CR>
 
   " (fz windows) Windows
-  nnoremap <silent> [unite]fw :Windows<CR>
+  nnoremap <silent> [unite]w :Windows<CR>
 
   " (fz history) Search history
-  nnoremap <silent> [unite]fh :History/<CR>
+  nnoremap <silent> [unite]h :History/<CR>
 
   " (fz command) Command history (not work. ??)
   nnoremap <silent> [unite]fc :History:<CR>
@@ -521,6 +521,7 @@ if s:is_windows != 1
   nnoremap <silent> [unite]nn :set ft=<cr>
   " (nds date) show date 
   nnoremap <silent> [unite]nd :syn clear ndsFieldDate<cr>
+  nnoremap <silent> [unite]nt :syn clear ndsFieldTime<cr>
 
   imap <c-x><c-f> <plug>(fzf-complete-path)
   imap <c-x><c-j> <plug>(fzf-complete-file-ag)
