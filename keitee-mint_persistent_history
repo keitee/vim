@@ -584,3 +584,156 @@
 2019-05-30 16:12:43 | g st
 2019-05-30 16:12:46 | gc
 2019-05-30 16:12:47 | g st
+2019-05-30 16:12:53 | gc
+2019-05-30 16:12:55 | git push
+2019-05-30 16:13:00 | cd ..
+2019-05-30 16:13:01 | cd kb/
+2019-05-30 16:13:01 | ls
+2019-05-30 16:13:02 | g st
+2019-05-30 16:13:03 | gc
+2019-05-30 16:13:04 | g st
+2019-05-30 16:13:06 | git push
+2019-05-31 07:05:05 | git pull
+2019-05-31 07:05:35 | pushd ../vim/;git pull;popd
+2019-05-31 07:33:37 | man strcmp
+2019-05-31 07:33:45 | man strcmp_s
+2019-05-31 07:33:54 | man -k strcmp_s
+2019-05-29 15:37:19 | top
+2019-05-29 15:37:18 | tmuxinator start airplay
+2019-05-29 15:37:18 | tmuxinator start airplay
+2019-05-31 10:53:38 | tmux -V
+2019-05-29 15:37:18 | tmuxinator start airplay
+2019-05-31 10:53:59 | cd /home/keitee/mw/ethan-as-source/xSubmoduleDarwinSDK
+2019-05-29 15:37:18 | tmuxinator start airplay
+2019-05-31 10:53:59 | cd /home/keitee
+2019-05-29 15:37:18 | tmuxinator start airplay
+2019-05-29 15:37:18 | tmuxinator start airplay
+2019-05-29 15:37:18 | tmuxinator start airplay
+2019-05-31 10:53:59 | cd /home/keitee/fsi/Q000.021.45.00
+2019-05-31 10:53:59 | cd /home/keitee/mw/exports/titan/flash0
+2019-05-29 15:37:18 | tmuxinator start airplay
+2019-05-31 10:53:59 | cd /home/keitee/mw/ethan-as-source/Components
+2019-05-29 15:37:18 | tmuxinator start airplay
+2019-05-29 15:37:18 | tmuxinator start airplay
+2019-05-29 15:37:18 | tmuxinator start airplay
+2019-05-29 15:37:18 | tmuxinator start airplay
+2019-05-31 10:54:00 | cd /home/keitee/mw/exports/titan/flash0
+2019-05-29 15:37:18 | tmuxinator start airplay
+2019-05-31 10:54:00 | cd /home/keitee/mw/ethan-as-source/Components/AudioStreamer/AirplaySdk2
+2019-05-29 15:37:18 | tmuxinator start airplay
+2019-05-31 10:54:25 | which htop
+2019-05-31 10:54:31 | sudo apt-get install htop
+2019-05-31 10:54:41 | which htop
+2019-05-31 10:54:44 | htop
+2019-05-31 10:54:00 | telnet 192.168.0.102
+2019-05-31 10:53:59 | top
+2019-05-31 10:54:00 | sudo screen -S name -a -D -R -fn -l -L /dev/ttyUSB0 115200,cs8
+2019-05-31 10:53:59 | tmuxinator start airplay
+2019-05-31 10:53:59 | tmuxinator start airplay
+2019-05-31 10:56:17 | cd /home/keitee
+2019-05-31 10:56:17 | cd /home/keitee/mw/ethan-as-source/xSubmoduleDarwinSDK
+2019-05-31 10:56:17 | cd /home/keitee/mw/ethan-as-source/Components
+2019-05-31 10:56:18 | cd /home/keitee/mw/exports/titan/flash0
+2019-05-31 10:56:18 | cd /home/keitee/mw/exports/titan/flash0
+2019-05-31 10:56:18 | cd /home/keitee/fsi/Q000.021.45.00
+2019-05-31 10:56:18 | cd /home/keitee/mw/ethan-as-source/Components/AudioStreamer/AirplaySdk2
+2019-05-31 10:56:18 | telnet 192.168.0.102
+2019-05-31 10:56:17 | tmuxinator start airplay
+2019-05-31 10:58:03 | tmuxinator start airplay
+2019-05-31 10:59:12 | tmuxinator start airplay
+2019-05-31 10:59:47 | tmuxinator start airplay
+2019-05-31 11:00:32 | :q
+2019-05-31 11:00:27 | tmuxinator start airplay
+2019-05-31 11:01:21 | tmuxinator start airplay
+2019-05-31 11:01:56 | tmuxinator start airplay
+2019-05-31 11:02:24 | ls
+2019-05-31 11:02:25 | ll
+2019-05-31 11:02:34 | more .tmuxinator/airplay.yml 
+2019-05-31 11:02:47 | tmuxinator start airplay
+2019-05-31 11:03:07 | ll
+2019-05-31 11:03:16 | cd .tmuxinator/
+2019-05-31 11:03:17 | ls
+2019-05-31 11:03:18 | ll
+2019-05-31 11:03:23 | more airplay.yml 
+2019-05-31 11:03:55 | tmuxinator debug airplay
+2019-05-31 11:04:41 | tmuxinator list
+2019-05-31 11:06:24 | pwd
+2019-05-31 11:06:29 | pwd
+2019-05-31 11:06:49 | gvim .tmuxinator/airplay.yml 
+2019-05-31 11:07:52 | ls
+2019-05-31 11:07:55 | cd git/kb/
+2019-05-31 11:07:55 | ls
+2019-05-31 11:07:56 | ll
+2019-05-31 11:08:12 | gvim
+2019-05-31 11:11:49 | ls
+2019-05-31 11:11:52 | bldtag.py 
+2019-05-31 11:11:56 | ls
+2019-05-31 11:19:03 | cat AudioStreamer/config/audiostreamer.xml 
+2019-05-31 11:19:23 | less AudioStreamer/config/audiostreamer.xml 
+2019-05-31 11:20:39 | sudo apt-get install bat
+2019-05-31 11:22:01 | uname -a
+2019-05-31 11:25:47 | cd Downloads/
+2019-05-31 11:25:48 | ls
+2019-05-31 11:25:56 | rm zImage.sky_trials 
+2019-05-31 11:25:57 | ls
+2019-05-31 11:26:51 | sudo dpkg --install bat_0.11.0_amd64.deb 
+2019-05-31 11:27:06 | which bat
+2019-05-31 11:27:19 | bat AudioStreamer/config/audiostreamer.xml 
+2019-05-31 11:31:27 | ls
+2019-05-31 12:06:33 | ag sampleTimeOffset
+2019-05-31 13:36:05 | ls
+2019-05-31 13:36:06 | cd
+2019-05-31 13:36:07 | ls
+2019-05-31 13:36:12 | cd .vim/
+2019-05-31 13:36:12 | ls
+2019-05-31 13:36:16 | cd plugged/
+2019-05-31 13:36:17 | ls
+2019-05-31 13:36:20 | cd YouCompleteMe/
+2019-05-31 13:36:20 | ls
+2019-05-31 13:36:23 | ./install.py 
+2019-05-31 13:36:35 | sugo apt-get install cmake
+2019-05-31 13:36:41 | sudo apt-get install cmake
+2019-05-31 13:36:52 | ./install.py 
+2019-05-31 13:37:02 | which python
+2019-05-31 13:37:05 | python -V
+2019-05-31 13:39:46 | sudo apt-get install python2.7-dev
+2019-05-31 13:39:57 | ./install.py 
+2019-05-31 13:40:56 | cd
+2019-05-31 13:40:57 | ls
+2019-05-31 14:07:19 | make clean; make libraries platform=Titan#
+2019-05-31 14:14:00 | export LC_ALL=C
+2019-05-31 14:14:02 | make clean; make libraries platform=Titan#
+2019-05-31 14:14:12 | g st
+2019-05-31 14:15:15 | git diff -- ../AirplaySdk/AirPlayAudioPOSIXReceiver211.1.p8/Sources/AirPlayReceiverSession.c
+2019-05-31 14:15:29 | git co -- ../AirplaySdk/AirPlayAudioPOSIXReceiver211.1.p8/Sources/AirPlayReceiverSession.c
+2019-05-31 14:15:32 | g st
+2019-05-31 14:15:44 | make clean; make libraries platform=Titan
+2019-05-31 14:16:36 | export LC_ALL=C
+2019-05-31 14:16:41 | ./compile_sdkv2.0.sh eu-q-titan-uk /home/keitee/mw/ethan-as-source/
+2019-05-31 14:21:42 | cp /home/keitee/mw/ethan-as-source/xSubmoduleDarwinSDK/eu-q-titan-uk/SDK/flash0/fs/NDS/bin/APP_Process fs/NDS/bin/
+2019-05-31 14:29:45 | sudo apt-get install klipper
+2019-05-31 14:53:25 | ll
+2019-05-31 14:53:32 | gvim LOG_31 
+2019-05-31 14:56:15 | gvim
+2019-05-31 15:21:19 | ls
+2019-05-31 15:21:32 | gvim LOG_29_01.nds 
+2019-05-31 15:24:52 | ks
+2019-05-31 15:24:53 | ll
+2019-05-31 15:25:02 | gvim LOG_31 
+2019-05-31 15:26:36 | egrep "audioGetData|pktTS=|Concealed" LOG_31 > LOG_31_01.nds
+2019-05-31 15:40:21 | root
+2019-05-31 15:40:22 | ls
+2019-05-31 15:44:45 | ll
+2019-05-31 15:47:03 | egrep "audioGetData|pktTS=|Concealed" LOG_31 > LOG_31_01.nds
+2019-05-31 15:47:13 | gvim LOG_31_01.nds 
+2019-05-31 15:49:12 | ll
+2019-05-31 15:49:19 | gvim LOG_29_01.nds 
+2019-05-31 15:51:28 | python
+2019-05-31 16:01:23 | egrep -an "audioGetData|pktTS=|Concealed" LOG_31 > LOG_31_01.nds
+2019-05-31 16:04:22 | egrep -an "audioGetData|pktTS=|Concealed|[Ff]lush" LOG_31 > LOG_31_01.nds
+2019-05-31 15:40:24 | telnet 192.168.0.102
+2019-05-31 16:25:34 | cp /home/keitee/mw/ethan-as-source/xSubmoduleDarwinSDK/eu-q-titan-uk/SDK/flash0/fs/NDS/bin/APP_Process fs/NDS/bin/
+2019-05-31 17:43:18 | ls
+2019-05-31 17:43:24 | cd git/vim/
+2019-05-31 17:43:24 | ls
+2019-05-31 17:43:25 | g st

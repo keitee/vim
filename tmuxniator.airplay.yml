@@ -55,8 +55,8 @@ windows:
   - home:
       layout: main-vertical
       panes:
-        - #empty, will just run plain bash
         - top
+        - #empty, will just run plain bash
   - kb: 
       layout: even-vertical
       panes:

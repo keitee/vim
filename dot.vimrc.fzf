@@ -492,10 +492,10 @@ if s:is_windows != 1
   nnoremap <silent> [unite]h :History/<CR>
 
   " (fz command) Command history (not work. ??)
-  nnoremap <silent> [unite]fc :History:<CR>
+  nnoremap <silent> [unite]c :History:<CR>
 
   " (fz marks) Marks
-  nnoremap <silent> [unite]fm :Marks<CR>
+  nnoremap <silent> [unite]m :Marks<CR>
 
   " (fz grep) Ag grep
   " nnoremap <silent> [unite]fg :Ag <CR>
@@ -513,7 +513,7 @@ if s:is_windows != 1
 
   " "mappings-indent-guide"
   " (fz files) Lines in the current buffer
-  nnoremap <silent> [unite]ig :IndentGuidesToggle<CR>
+  nnoremap <silent> [unite]<TAB> :IndentGuidesToggle<CR>
   
   " "mappings-nds-log"
   " (nds file type) toggle
