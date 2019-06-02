@@ -499,7 +499,7 @@ if s:is_windows != 1
 
   " (fz grep) Ag grep
   " nnoremap <silent> [unite]fg :Ag <CR>
-  nnoremap <silent> [unite]fg :Ag <c-r><c-w><CR>
+  nnoremap <silent> [unite]s :Ag <c-r><c-w><CR>
 
   " "mappings-edit"
   " (show invisibles) toggle set list/nolist

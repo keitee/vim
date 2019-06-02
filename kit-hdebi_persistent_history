@@ -314,3 +314,199 @@
 2019-05-30 23:49:50 | g st
 2019-05-30 23:49:53 | git add tmuxniator.home.yml 
 2019-05-30 23:49:54 | g st
+2019-05-30 23:49:56 | gc
+2019-05-30 23:49:59 | git push
+2019-05-30 22:36:47 | ls
+2019-06-01 08:51:26 | cd /home/keitee
+2019-06-01 08:51:31 | ls
+2019-06-01 08:51:34 | cd git/kb/
+2019-06-01 08:51:34 | ls
+2019-06-01 08:51:36 | git pull
+2019-06-01 08:51:42 | cd ..
+2019-06-01 08:51:43 | ls
+2019-06-01 08:51:50 | cd vim/
+2019-06-01 08:51:51 | ls
+2019-06-01 08:51:52 | git pull
+2019-06-01 11:11:54 | tmux -V
+2019-06-01 11:12:02 | /usr/bin/tmux -V
+2019-06-01 11:27:01 | which vifm
+2019-06-01 11:27:04 | vifm
+2019-06-01 11:28:13 | df
+2019-06-01 16:02:09 | cd mw/
+2019-06-01 16:02:09 | ls
+2019-06-01 16:02:12 | cd ethan-as-source/
+2019-06-01 16:02:13 | ls
+2019-06-01 16:02:15 | cd Components/
+2019-06-01 16:02:15 | ls
+2019-06-01 16:02:20 | bldtag.py 
+2019-06-01 16:02:35 | cd
+2019-06-01 16:02:35 | ls
+2019-06-01 16:02:37 | cd Downloads/
+2019-06-01 16:02:37 | ls
+2019-06-01 16:02:40 | cd tmux/
+2019-06-01 16:02:41 | ls
+2019-06-01 16:02:42 | g st
+2019-06-01 16:02:44 | git ll
+2019-06-01 19:25:58 | cd git/kb/
+2019-06-01 19:25:59 | ls
+2019-06-01 19:26:02 | gvim kt_dev_env.txt 
+2019-06-01 19:26:23 | git tag
+2019-06-01 19:26:33 | git con 2.6
+2019-06-01 19:26:39 | git checkout 2.6
+2019-06-01 19:27:03 | ./configure && make
+2019-06-01 19:27:28 | sh autogen.sh 
+2019-06-01 19:27:34 | ./configure && make
+2019-06-01 19:54:32 | sudo make install
+2019-06-01 08:51:25 | tmuxinator start home
+2019-06-01 19:54:55 | which tmux
+2019-06-01 19:55:04 | tmux -V
+2019-06-01 16:02:20 | bldtag.py 
+2019-06-01 16:02:20 | bldtag.py 
+2019-06-01 19:55:11 | cd ~/git/kb/code-linux
+2019-06-01 16:02:20 | bldtag.py 
+2019-06-01 16:02:20 | bldtag.py 
+2019-06-01 16:02:20 | bldtag.py 
+2019-06-01 19:55:11 | cd ~/git/kb/code-cxx
+2019-06-01 16:02:20 | bldtag.py 
+2019-06-01 19:55:11 | cd /home/keitee
+2019-06-01 19:55:11 | top
+2019-06-01 19:55:24 | q
+2019-06-01 19:55:09 | tmuxinator start home
+2019-06-01 19:55:29 | x
+2019-06-01 19:55:30 | ls
+2019-06-01 23:29:29 | gvim .tmuxinator/home.yml 
+2019-06-01 19:55:11 | cd ~/git/kb/code-linux
+2019-06-01 23:29:51 | cd ~/git/kb
+2019-06-01 19:55:11 | cd ~/git/kb/code-linux
+2019-06-01 19:55:11 | cd ~/git/kb/code-linux
+2019-06-01 23:29:51 | cd ~/git/kb/code-cxx
+2019-06-01 23:29:51 | cd /home/keitee
+2019-06-01 19:55:11 | cd ~/git/kb/code-linux
+2019-06-01 19:55:11 | cd ~/git/kb/code-linux
+2019-06-01 19:55:11 | cd ~/git/kb/code-linux
+2019-06-01 23:29:51 | cd ~/git/vim
+2019-06-01 19:55:11 | cd ~/git/kb/code-linux
+2019-06-01 23:30:41 | ls
+2019-06-01 23:30:44 | cd me
+2019-06-01 23:30:46 | cd mw/
+2019-06-01 23:30:46 | ls
+2019-06-01 23:30:49 | cd ethan-as-source/
+2019-06-01 23:30:49 | ls
+2019-06-01 23:30:51 | cd Components/
+2019-06-01 23:30:51 | ls
+2019-06-01 23:30:52 | ll
+2019-06-01 23:31:01 | gvim
+2019-06-01 23:48:40 | bldtag.py 
+2019-06-01 23:49:38 | ag audioLatencyOffset
+2019-06-01 23:53:13 | python
+2019-06-02 01:58:24 | c
+2019-06-02 01:58:24 | ls
+2019-06-02 01:58:34 | gvim ~/.agignore 
+2019-06-02 01:58:37 | ls
+2019-06-02 01:58:53 | which bldtag.py 
+2019-06-02 01:59:01 | more `which bldtag.py`
+2019-06-02 01:59:49 | ls -al ~/.agignore
+2019-06-02 01:59:53 | h
+2019-06-02 01:59:57 | ag audioLatencyOffset
+2019-06-02 02:04:09 | c
+2019-06-02 02:04:11 | ag audioLatencyOffset
+2019-06-02 02:04:21 | pwd
+2019-06-02 02:04:41 | c
+2019-06-02 02:04:42 | ag audioLatencyOffset
+2019-06-02 02:05:00 | c
+2019-06-02 02:05:01 | ag audioLatencyOffset
+2019-06-02 02:05:44 | readlink -f 
+2019-06-02 02:05:46 | readlink -f AudioStreamer/AirplaySdk/AirPlayAudioPOSIXReceiver211.1.p8/Sources/AirPlayReceiverSession.c
+2019-06-02 02:06:58 | ll
+2019-06-02 02:07:07 | cd ..
+2019-06-02 02:07:08 | ls
+2019-06-02 02:07:10 | cd ..
+2019-06-02 02:07:10 | ls
+2019-06-02 02:08:00 | find . -name .gitignore
+2019-06-02 02:10:03 | bat ./ethan-as-source/Components/AudioStreamer/.gitignore
+2019-06-02 02:10:11 | cat ./ethan-as-source/Components/AudioStreamer/.gitignore
+2019-06-02 02:10:29 | mv ./ethan-as-source/Components/AudioStreamer/.gitignore ./ethan-as-source/Components/AudioStreamer/gitignore
+2019-06-02 02:10:37 | ag audioLatencyOffset
+2019-06-02 02:10:43 | find . -name .gitignore
+2019-06-02 02:11:20 | find . -name .gitignore -exec rm { }\;
+2019-06-02 02:11:29 | find . -name .gitignore -exec rm {}\;
+2019-06-02 02:12:45 | find . -name .gitignore -delete
+2019-06-02 02:12:49 | find . -name .gitignore
+2019-06-02 02:12:50 | c
+2019-06-02 02:12:53 | ag audioLatencyOffset
+2019-06-02 02:13:33 | c
+2019-06-02 02:13:35 | ag audioLatencyOffset
+2019-06-02 02:14:33 | c
+2019-06-02 02:14:34 | ag audioLatencyOffset
+2019-06-02 02:18:30 | ag --h
+2019-06-02 02:19:43 | c
+2019-06-02 02:19:48 | ag -D audioLatencyOffset
+2019-06-02 02:20:36 | ag -D audioLatencyOffset > x.x
+2019-06-02 02:20:39 | gvim x.x 
+2019-06-02 02:22:26 | ll
+2019-06-02 02:22:30 | cd ethan-as-source/
+2019-06-02 02:22:31 | ls
+2019-06-02 02:22:36 | find . -name .hgignore
+2019-06-02 02:22:44 | more ./Components/.hgignore
+2019-06-02 02:23:04 | ls -al ./Components/.hgignore
+2019-06-02 02:23:35 | find . -name .hgignore -delete
+2019-06-02 02:23:40 | find . -name .hgignore
+2019-06-02 02:23:49 | c
+2019-06-02 02:23:59 | ag audioLatencyOffset
+2019-06-02 02:24:04 | find . -name .hgignore
+2019-06-02 02:24:14 | find . -name .gitignore
+2019-06-02 02:24:35 | ag -D audioLatencyOffset > x.x
+2019-06-02 02:24:36 | ls
+2019-06-02 02:24:39 | gvim x.x 
+2019-06-02 02:26:01 | ag audioLatencyOffset
+2019-06-02 02:27:00 | c
+2019-06-02 02:27:02 | ag audioLatencyOffset
+2019-06-02 02:27:05 | ls
+2019-06-02 02:27:06 | rm x.x 
+2019-06-02 02:27:07 | ls
+2019-06-02 02:27:08 | c
+2019-06-02 02:27:10 | ag audioLatencyOffset
+2019-06-02 02:29:03 | c
+2019-06-02 02:29:04 | ag audioLatencyOffset
+2019-06-02 02:30:05 | ls
+2019-06-02 02:30:07 | cd Components/
+2019-06-02 02:30:08 | ls
+2019-06-02 02:30:21 | gvim LOG_31
+2019-06-01 23:29:51 | top
+2019-06-01 23:29:51 | tmuxinator start home
+2019-06-01 23:29:51 | tmuxinator start home
+2019-06-02 19:01:04 | gvim .tmuxinator/home.yml 
+2019-06-01 23:29:51 | tmuxinator start home
+2019-06-02 19:03:23 | cd ~/git/kb/code-cxx
+2019-06-01 23:29:51 | tmuxinator start home
+2019-06-02 19:03:23 | cd ~/git/kb
+2019-06-01 23:29:51 | tmuxinator start home
+2019-06-01 23:29:51 | tmuxinator start home
+2019-06-02 19:03:23 | cd ~/git/vim
+2019-06-01 23:29:51 | tmuxinator start home
+2019-06-01 23:29:51 | tmuxinator start home
+2019-06-02 19:03:23 | cd ~/git/kb/code-linux
+2019-06-02 19:03:23 | cd /home/keitee
+2019-06-02 19:03:23 | git pull
+2019-06-02 19:03:23 | top
+2019-06-02 19:03:22 | tmuxinator start home
+2019-06-02 19:03:22 | tmuxinator start home
+2019-06-02 19:12:46 | cd ~/git/kb
+2019-06-02 19:12:46 | cd ~/git/kb/code-cxx
+2019-06-02 19:12:47 | cd ~/git/vim
+2019-06-02 19:12:47 | cd /home/keitee
+2019-06-02 19:12:47 | cd ~/git/kb/code-linux
+2019-06-02 19:12:47 | git pull
+2019-06-02 19:12:46 | git pull
+2019-06-02 19:13:05 | l
+2019-06-02 19:13:13 | gvim kt_dev_cxx.txt 
+2019-06-02 19:12:47 | top
+2019-06-03 00:22:20 | cd
+2019-06-03 00:22:24 | cd git/kb/
+2019-06-03 00:22:27 | g st
+2019-06-03 00:22:28 | gc
+2019-06-03 00:22:32 | git push
+2019-06-03 00:22:38 | cd ..
+2019-06-03 00:22:38 | ls
+2019-06-03 00:22:40 | cd vim/
+2019-06-03 00:22:42 | g st

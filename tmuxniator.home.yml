@@ -60,8 +60,12 @@ windows:
   - kb: 
       layout: even-vertical
       panes:
-        - cd ~/git/kb; git pull;
-        - cd ~/git/vim; git pull;
+        - pane_with_multiple_commands:
+          - cd ~/git/kb
+          - git pull
+        - pane_with_multiple_commands:
+          - cd ~/git/vim
+          - git pull
   - cxx:
       layout: even-vertical
       panes:
