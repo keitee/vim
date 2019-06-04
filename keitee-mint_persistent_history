@@ -737,3 +737,96 @@
 2019-05-31 17:43:24 | cd git/vim/
 2019-05-31 17:43:24 | ls
 2019-05-31 17:43:25 | g st
+2019-05-31 17:43:26 | gc
+2019-05-31 17:43:27 | g st
+2019-05-31 17:43:30 | git push
+2019-05-31 17:43:34 | g st
+2019-05-31 17:43:35 | gc
+2019-05-31 17:43:36 | g st
+2019-05-31 17:43:39 | git push
+2019-05-31 17:44:10 | g st
+2019-05-31 17:50:43 | g
+2019-05-31 17:50:46 | g st
+2019-05-31 17:50:55 | g st
+2019-05-31 11:05:21 | tmuxinator start airplay
+2019-05-31 17:51:18 | tmux attach
+2019-05-31 11:02:47 | tmuxinator start airplay
+2019-06-04 07:04:20 | gvim .tmuxinator/airplay.yml 
+2019-06-04 07:04:56 | gvim ~/git/vim/tmuxniator.home.yml 
+2019-05-31 11:02:47 | tmuxinator start airplay
+2019-06-04 07:09:06 | cd /home/keitee
+2019-05-31 11:02:47 | tmuxinator start airplay
+2019-06-04 07:09:06 | cd ~/git/kb
+2019-05-31 11:02:47 | tmuxinator start airplay
+2019-05-31 11:02:47 | tmuxinator start airplay
+2019-06-04 07:09:06 | cd /home/keitee/fsi/Q000.021.45.00
+2019-06-04 07:09:06 | cd /home/keitee/mw/ethan-as-source/Components
+2019-05-31 11:02:47 | tmuxinator start airplay
+2019-06-04 07:09:06 | cd /home/keitee/mw/exports/titan/flash0
+2019-05-31 11:02:47 | tmuxinator start airplay
+2019-06-04 07:09:06 | cd /home/keitee/mw/ethan-as-source/xSubmoduleDarwinSDK
+2019-05-31 11:02:47 | tmuxinator start airplay
+2019-05-31 11:02:47 | tmuxinator start airplay
+2019-05-31 11:02:47 | tmuxinator start airplay
+2019-05-31 11:02:47 | tmuxinator start airplay
+2019-06-04 07:09:06 | cd /home/keitee/mw/exports/titan/flash0
+2019-05-31 11:02:47 | tmuxinator start airplay
+2019-05-31 11:02:47 | tmuxinator start airplay
+2019-06-04 07:09:06 | cd /home/keitee/mw/ethan-as-source/Components/AudioStreamer/AirplaySdk2
+2019-06-04 07:09:06 | cd ~/git/vim
+2019-06-04 07:09:06 | git pull
+2019-06-04 07:09:06 | git pull
+2019-06-04 07:09:06 | telnet 192.168.0.102
+2019-06-04 07:09:06 | top
+2019-06-04 07:09:06 | sudo screen -S name -a -D -R -fn -l -L /dev/ttyUSB0 115200,cs8
+2019-06-04 07:09:05 | tmuxinator start airplay
+2019-06-04 07:09:05 | tmuxinator start airplay
+2019-06-04 07:09:55 | cd /home/keitee
+2019-06-04 07:09:55 | cd /home/keitee/mw/exports/titan/flash0
+2019-06-04 07:09:55 | cd /home/keitee/mw/exports/titan/flash0
+2019-06-04 07:09:55 | cd /home/keitee/fsi/Q000.021.45.00
+2019-06-04 07:09:55 | cd ~/git/kb
+2019-06-04 07:09:55 | cd /home/keitee/mw/ethan-as-source/xSubmoduleDarwinSDK
+2019-06-04 07:09:55 | cd ~/git/vim
+2019-06-04 07:09:55 | cd /home/keitee/mw/ethan-as-source/Components
+2019-06-04 07:09:55 | cd /home/keitee/mw/ethan-as-source/Components/AudioStreamer/AirplaySdk2
+2019-06-04 07:09:55 | git pull
+2019-06-04 07:09:55 | git pull
+2019-06-04 07:09:55 | telnet 192.168.0.102
+2019-06-04 07:32:43 | ls
+2019-06-04 07:32:54 | gvim kt_dev_sky_mw.txt 
+2019-06-04 07:33:26 | ls
+2019-06-04 07:33:56 | pushd AudioStreamer/AirplaySdk2/AirPlaySDK_2/Sources/
+2019-06-04 07:33:57 | ls
+2019-06-04 07:34:27 | cp /media/keitee/6C8E-7C33/AirPlayReceiverSession.c AirPlayReceiverSession_kt.c
+2019-06-04 07:34:28 | ls
+2019-06-04 07:34:29 | ll
+2019-06-04 07:34:32 | popd
+2019-06-04 07:34:33 | ls
+2019-06-04 07:34:37 | gvim 
+2019-06-04 08:30:21 | make clean; make libraries platform=Titan
+2019-06-04 08:30:41 | export LC_ALL=C
+2019-06-04 08:30:43 | make clean; make libraries platform=Titan
+2019-06-04 08:31:28 | export LC_ALL=C
+2019-06-04 08:31:35 | ./compile_sdkv2.0.sh eu-q-titan-uk /home/keitee/mw/ethan-as-source/
+2019-06-04 08:33:04 | cp /home/keitee/mw/ethan-as-source/xSubmoduleDarwinSDK/eu-q-titan-uk/SDK/flash0/fs/NDS/bin/APP_Process fs/NDS/bin/
+2019-06-04 08:33:25 | ll fs/NDS/bin/APP_Process 
+2019-06-04 08:47:28 | ls
+2019-06-04 08:47:29 | ll
+2019-06-04 08:47:37 | gvim LOG_04 
+2019-06-04 08:50:25 | #egrep -an "audioGetData|[cC]onceal" LOG_29 > LOG_29_01.nds
+2019-06-04 08:51:01 | #egrep -an "audioGetData|[cC]onceal|[Ff]lush|KT" LOG_04 > LOG_04_01.nds
+2019-06-04 08:51:04 | egrep -an "audioGetData|[cC]onceal|[Ff]lush|KT" LOG_04 > LOG_04_01.nds
+2019-06-04 08:51:05 | ll
+2019-06-04 10:07:07 | cp /home/keitee/mw/ethan-as-source/xSubmoduleDarwinSDK/eu-q-titan-uk/SDK/flash0/fs/NDS/bin/APP_Process fs/NDS/bin/
+2019-06-04 10:12:16 | ll
+2019-06-04 10:12:22 | egrep -an "audioGetData|[cC]onceal|[Ff]lush|KT" LOG_04 > LOG_04_01.nds
+2019-06-04 11:29:21 | g ls
+2019-06-04 11:29:25 | g st
+2019-06-04 11:29:26 | gc
+2019-06-04 11:29:29 | g ls
+2019-06-04 11:29:31 | ls
+2019-06-04 11:29:32 | ls -al
+2019-06-04 11:29:35 | g st
+2019-06-04 11:29:41 | g st
+2019-06-04 11:29:37 | git push

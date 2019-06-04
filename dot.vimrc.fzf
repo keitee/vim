@@ -498,7 +498,7 @@ if s:is_windows != 1
   nnoremap <silent> [unite]m :Marks<CR>
 
   " (fz grep) Ag grep
-  " nnoremap <silent> [unite]fg :Ag <CR>
+  nnoremap <silent> [unite]sp :Ag <CR>
   nnoremap <silent> [unite]s :Ag <c-r><c-w><CR>
 
   " "mappings-edit"

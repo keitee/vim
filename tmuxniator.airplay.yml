@@ -55,13 +55,17 @@ windows:
   - home:
       layout: main-vertical
       panes:
-        - top
         - #empty, will just run plain bash
+        - top
   - kb: 
       layout: even-vertical
       panes:
-        - cd ~/git/kb; git pull;
-        - cd ~/git/vim; git pull;
+        - pane_with_multiple_commands:
+          - cd ~/git/kb
+          - git pull
+        - pane_with_multiple_commands:
+          - cd ~/git/vim
+          - git pull
   - ap build:
       layout: even-vertical
       panes:
