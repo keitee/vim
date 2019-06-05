@@ -96,7 +96,12 @@ export GTAGSLIBPATH=.:~/STB_SW:
 # for tools that use this variable
 export EDITOR='gvim'
 
-# some more ls aliases
+
+#={===========================================================================
+# bash-alias
+alias th='tmuxinator start home'
+alias td='tmuxinator start airplay'
+alias ta='tmux a'
 alias a=alias
 alias s='source ~/.bashrc'
 alias ll='ls -alFrth'
@@ -116,8 +121,6 @@ alias ag='ag -m 1000000 -S --color-path="1;31" --color-match="0;32"'
 alias agn='ag --no-numbers -m 1000000 -S --color-path="1;31" --color-match="0;32"'
 alias agl='ag -m 1000000 -S --color-path="1;31" --color-match="0;32" --pager "less -r"'
 alias sl='echo $SHLVL'
-alias tn='tmux new -s kit'
-alias ta='tmux a'
 alias addr2line='/home/kyoupark/STB_SW/FUSIONOS_2/BLD_AMS_BCM_MIPS4K_LNUX_DARWIN_01/platform_cfg/linux/compiler/mips4k_gcc_x86_linux_hound_2/bin/mips-uclibc-addr2line'
 
 # git
@@ -148,8 +151,6 @@ alias shy='ssh yard'
 alias sho='ssh -X 10.209.60.101'
 alias mmo='sudo mount -o nfsvers=4 10.209.60.101:/home/kyoupark/ /mnt/'
 alias umo='sudo umount /mnt/'
-alias tpi='telnet 10.209.60.87'
-alias tpi2='telnet 10.209.60.149'
 
 # humax and com serial
 #alias hlog="sudo grabserial -v -d /dev/ttyS0 | tee 2>&1 ~/logs/`date | awk '{print "log-com-"$1"-"$2"-"$3"-"$4}'`"
