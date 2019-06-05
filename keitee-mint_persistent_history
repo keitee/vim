@@ -830,3 +830,124 @@
 2019-06-04 11:29:35 | g st
 2019-06-04 11:29:41 | g st
 2019-06-04 11:29:37 | git push
+2019-06-04 11:29:43 | gc
+2019-06-04 11:29:44 | g st
+2019-06-04 11:29:47 | git push
+2019-06-05 07:13:44 | git pull
+2019-06-05 07:13:47 | git pull
+2019-06-05 08:25:50 | cp /home/keitee/mw/ethan-as-source/xSubmoduleDarwinSDK/eu-q-titan-uk/SDK/flash0/fs/NDS/bin/APP_Process fs/NDS/bin/
+2019-06-05 09:03:50 | git branch
+2019-06-05 09:04:23 | git fetch
+2019-06-05 09:04:34 | git branch --vv
+2019-06-05 09:04:37 | git branch -vv
+2019-06-05 09:06:19 | git pull --rebase
+2019-06-05 09:06:23 | g st
+2019-06-05 09:07:14 | git show AudioStreamer/AirplaySdk2/AirPlaySDK_2/PlatformEthan/AudioConverterStub.c
+2019-06-05 09:07:20 | git diff AudioStreamer/AirplaySdk2/AirPlaySDK_2/PlatformEthan/AudioConverterStub.c
+2019-06-05 09:07:25 | ls
+2019-06-05 09:07:29 | g st
+2019-06-05 09:07:34 | git stash list
+2019-06-05 09:09:00 | git stash save "NGDEV-141670: glitch on i5c"
+2019-06-05 09:09:02 | g st
+2019-06-05 09:09:10 | git pull
+2019-06-05 09:09:16 | git pull --rebase
+2019-06-05 09:09:24 | git branch --vv
+2019-06-05 09:09:27 | git branch -vv
+2019-06-05 09:25:35 | ls
+2019-06-05 09:25:39 | ll
+2019-06-05 09:25:41 | ls
+2019-06-05 09:27:24 | git branch -vv
+2019-06-05 09:31:49 | git ll develop..kit-NGDEV-141186 
+2019-06-05 09:32:20 | git ll kit-NGDEV-141186..develop 
+2019-06-05 10:52:31 | git config --list
+2019-06-05 10:53:15 | git config --global pull.rebase true.
+2019-06-05 10:53:18 | git config --list
+2019-06-05 10:53:33 | git config --global pull.rebase true
+2019-06-05 10:53:35 | git config --list
+2019-06-05 10:53:46 | #
+2019-06-05 10:55:55 | git branch
+2019-06-05 10:56:03 | git pull
+2019-06-05 10:56:13 | git ll
+2019-06-05 10:56:37 | git branch -vv
+2019-06-05 10:57:50 | more ../.git/config 
+2019-06-05 11:00:01 | git branch --set-upstream-to=origin/develop
+2019-06-05 11:00:08 | more ../.git/config 
+2019-06-05 11:00:44 | git branch -vv
+2019-06-05 11:00:50 | git pull
+2019-06-05 11:00:58 | git branch -vv
+2019-06-05 11:01:07 | git ll
+2019-06-05 11:01:28 | ls
+2019-06-05 11:01:36 | git branch -vv
+2019-06-05 11:04:11 | git branch --set-upstream-to=kit-NGDEV-141186
+2019-06-05 11:05:16 | git branch
+2019-06-05 11:05:20 | git branch -vv
+2019-06-05 11:06:07 | git branch --set-upstream-to=kit-NGDEV-141186
+2019-06-05 11:08:06 | git push -n --set-upstream origin kit-NGDEV-141186
+2019-06-05 11:09:04 | git push -n --set-upstream origin review/kit-NGDEV-141186
+2019-06-05 11:10:00 | $ git push origin :review/DEVARCH-10262
+2019-06-05 11:10:13 | $ git push origin :kit-NGDEV-141186
+2019-06-05 11:10:16 | git push origin :kit-NGDEV-141186
+2019-06-05 11:10:28 | git push -n --set-upstream origin review/kit-NGDEV-141186
+2019-06-05 11:10:38 | git push -n --set-upstream origin kit-NGDEV-141186
+2019-06-05 11:11:07 | git push --set-upstream origin kit-NGDEV-141186
+2019-06-05 11:11:31 | git ../.git/config
+2019-06-05 11:11:35 | more git ../.git/config
+2019-06-05 11:11:56 | git branch -vv
+2019-06-05 11:12:29 | git log origin/master..HEAD
+2019-06-05 11:12:36 | g st
+2019-06-05 11:12:42 | git branch
+2019-06-05 11:12:46 | git co develop
+2019-06-05 11:12:50 | git pull
+2019-06-05 11:12:57 | git branch
+2019-06-05 11:13:09 | git co kit-NGDEV-141186
+2019-06-05 11:13:15 | git branch -vv
+2019-06-05 11:13:23 | git ll develop..HEAD
+2019-06-05 11:13:48 | gitk --all &
+2019-06-05 11:16:58 | git branch -vv
+2019-06-05 12:28:32 | ls
+2019-06-05 12:28:33 | ll
+2019-06-05 12:56:18 | git branch
+2019-06-05 12:56:53 | git push -n origin :review/kit-NGDEV-141186
+2019-06-05 12:57:18 | git push -n origin kit-NGDEV-141186:review/kit-NGDEV-141186
+2019-06-05 13:41:06 | ls
+2019-06-05 13:41:06 | ll
+2019-06-05 13:41:22 | egrep -an "audioGetData|[cC]onceal|[Ff]lush|KT" LOG_05 > LOG_05_01.nds
+2019-06-05 13:41:24 | ll
+2019-06-05 13:41:33 | gvim LOG_05_01.nds 
+2019-06-05 13:59:58 | git st
+2019-06-05 14:01:25 | git branch
+2019-06-05 14:01:55 | git co -b kit-NGDEV-141670
+2019-06-05 14:01:58 | git branch
+2019-06-05 14:02:04 | git stash apply
+2019-06-05 14:02:06 | g st
+2019-06-05 14:02:13 | git branch
+2019-06-05 14:02:23 | git branch -d kit-ngdev-141186
+2019-06-05 14:02:32 | git branch -D kit-ngdev-141186
+2019-06-05 14:02:35 | git branch
+2019-06-05 14:29:14 | h
+2019-06-05 14:29:32 | h
+2019-06-05 14:29:42 | cp /home/keitee/mw/ethan-as-source/xSubmoduleDarwinSDK/eu-q-titan-uk/SDK/flash0/fs/NDS/bin/APP_Process fs/NDS/bin/
+2019-06-05 14:48:54 | root
+2019-06-05 14:54:31 | egrep -an "audioGetData|[cC]onceal|[Ff]lush|KT|KEY_PRESS" LOG_05 > LOG_05_01.nds
+2019-06-05 14:59:53 | egrep -an "audioGetData|[cC]onceal|[Ff]lush|KT|KEY_PRESS|Progress" LOG_05 > LOG_05_01.nds
+2019-06-05 14:48:58 | telnet 192.168.0.102
+2019-06-05 15:14:03 | ll
+2019-06-05 15:15:27 | egrep -an "audioGetData|[cC]onceal|[Ff]lush|KT|KEY_PRESS|Progress" LOG_05 > LOG_05_01.nds
+2019-06-05 15:47:40 | ls
+2019-06-05 15:47:43 | ls
+2019-06-05 15:47:52 | pushd AudioStreamer/
+2019-06-05 15:47:52 | ls
+2019-06-05 15:47:57 | cd AirplaySdk2/AirPlaySDK_2/
+2019-06-05 15:47:58 | ls
+2019-06-05 15:48:02 | cd Sources/
+2019-06-05 15:48:02 | ls
+2019-06-05 15:48:03 | ll
+2019-06-05 15:48:16 | gvim AirPlayReceiverSession_kt.c 
+2019-06-05 15:56:25 | make clean; make libraries platform=Titan
+2019-06-05 15:57:49 | cp /home/keitee/mw/ethan-as-source/xSubmoduleDarwinSDK/eu-q-titan-uk/SDK/flash0/fs/NDS/bin/APP_Process fs/NDS/bin/
+2019-06-05 15:57:19 | ./compile_sdkv2.0.sh eu-q-titan-uk /home/keitee/mw/ethan-as-source/
+2019-06-05 16:02:44 | egrep -an "audioGetData|[cC]onceal|[Ff]lush|KT|KEY_PRESS|Progress" LOG_05 > LOG_05_01.nds
+2019-06-05 16:04:33 | gvim LOG_05_01.nds 
+2019-06-05 16:04:49 | egrep -an "audioGetData|[cC]onceal|[Ff]lush|KT|KEY_PRESS|Progress" LOG_05 > LOG_05_01.nds
+2019-06-05 17:33:17 | egrep "^==" LOG_05_01.nds 
+2019-06-05 17:34:43 | g st

@@ -19,3 +19,5 @@
 	lineNumber = true
 [core]
 	editor = gvim -f
+[pull]
+	rebase = true
