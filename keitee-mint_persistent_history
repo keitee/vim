@@ -970,3 +970,230 @@
 2019-06-06 08:10:19 | g st
 2019-06-06 08:10:23 | git pull
 2019-06-06 08:10:36 | g st
+2019-06-06 08:11:02 | gc
+2019-06-06 08:11:06 | git pull
+2019-06-06 08:11:08 | g st
+2019-06-06 08:11:15 | git pull
+2019-06-06 08:11:18 | g st
+2019-06-06 08:11:29 | ls
+2019-06-05 17:06:14 | telnet 192.168.0.110
+2019-06-06 08:29:22 | cp /home/keitee/mw/ethan-as-source/xSubmoduleDarwinSDK/eu-q-titan-uk/SDK/flash0/fs/NDS/bin/APP_Process fs/NDS/bin/
+2019-06-06 08:32:53 | telnet 192.168.0.110
+2019-06-06 08:45:44 | ll
+2019-06-06 08:45:49 | gvim LOG_06 
+2019-06-06 08:56:44 | ls
+2019-06-06 08:56:45 | cd git/kb/
+2019-06-06 08:56:46 | ls
+2019-06-06 08:56:49 | cd code-cxx/
+2019-06-06 08:56:50 | ls
+2019-06-06 08:56:52 | cd cxx
+2019-06-06 08:56:53 | ls
+2019-06-06 08:56:54 | make
+2019-06-06 08:57:06 | ls
+2019-06-06 08:57:22 | ./cxx_out --gtest_filter=*Printf*
+2019-06-06 08:58:31 | man printf
+2019-06-06 08:58:35 | man -k printf
+2019-06-06 08:58:43 | man 3 printf
+2019-06-06 09:02:23 | make
+2019-06-06 09:02:34 | ./cxx_out --gtest_filter=*Printf*
+2019-06-06 09:03:35 | make
+2019-06-06 09:03:45 | ./cxx_out --gtest_filter=*Printf*
+2019-06-06 09:04:36 | make
+2019-06-06 09:04:46 | ./cxx_out --gtest_filter=*Printf*
+2019-06-06 09:10:32 | cp /home/keitee/mw/ethan-as-source/xSubmoduleDarwinSDK/eu-q-titan-uk/SDK/flash0/fs/NDS/bin/APP_Process fs/NDS/bin/
+2019-06-06 08:43:18 | telnet 192.168.0.102
+2019-06-06 09:34:18 | telnet 192.168.0.102
+2019-06-06 09:51:52 | telnet 192.168.0.100
+2019-06-06 12:16:12 | g st
+2019-06-06 12:16:16 | cd ..
+2019-06-06 12:16:19 | ls
+2019-06-06 12:16:19 | g st
+2019-06-06 12:16:23 | git branch
+2019-06-06 12:17:10 | git stash list
+2019-06-06 12:17:46 | git stash "NGDEV-141670: glitch on i5c"
+2019-06-06 12:17:51 | git stash save "NGDEV-141670: glitch on i5c"
+2019-06-06 12:17:53 | g st
+2019-06-06 12:18:01 | git branch
+2019-06-06 12:18:08 | git stash list
+2019-06-06 12:18:23 | git co kit-NGDEV-141186
+2019-06-06 12:18:27 | git branch
+2019-06-06 12:18:30 | git ll
+2019-06-06 12:18:49 | git diff origin/develop..HEAD
+2019-06-06 12:19:56 | #git diff origin/develop..HEAD
+2019-06-06 12:20:01 | git config list
+2019-06-06 12:20:09 | git config --list
+2019-06-06 12:20:57 | #git diff --ignore-space-at-eol origin/develop..HEAD
+2019-06-06 12:20:59 | git diff --ignore-space-at-eol origin/develop..HEAD
+2019-06-06 12:21:11 | g st
+2019-06-06 12:21:15 | git diff --ignore-space-at-eol origin/develop..HEAD
+2019-06-06 12:21:40 | git diff --ignore-space-at-eol --stat origin/develop..HEAD
+2019-06-06 12:24:20 | git ll
+2019-06-06 12:28:03 | git reset --soft HEAD~
+2019-06-06 12:28:04 | g st
+2019-06-06 12:30:59 | git reset HEAD~
+2019-06-06 12:31:01 | gst
+2019-06-06 12:31:03 | g st
+2019-06-06 12:32:33 | git diff --ignore-space-at-eol 
+2019-06-06 12:32:56 | g st
+2019-06-06 12:33:21 | git co -- Components/AudioStreamer/AirplaySdk/include/AirPlayPlayer.h
+2019-06-06 12:33:29 | git co -- AudioStreamer/AirplaySdk/include/AirPlayPlayer.h
+2019-06-06 12:33:30 | g st
+2019-06-06 12:33:34 | git diff --ignore-space-at-eol 
+2019-06-06 12:35:55 | git diff --ignore-space-at-eol AudioStreamer/AirplaySdk2/include/AirPlayPlayer.h
+2019-06-06 12:38:52 | git diff --ignore-space-at-eol AudioStreamer/AirplaySdk2/AirPlaySDK_2/PlatformEthan/AirPlayDelegate.c
+2019-06-06 12:39:59 | git diff --ignore-space-at-eol AudioStreamer/AirplaySdk2/AirPlaySDK_2/PlatformEthan/integration.cpp
+2019-06-06 12:51:03 | c
+2019-06-06 12:51:05 | git diff --ignore-space-at-eol AudioStreamer/AirplaySdk2/AirPlaySDK_2/PlatformEthan/integration.cpp
+2019-06-06 12:51:54 | git diff --ignore-space-at-eol AudioStreamer/AirplaySdk2/AirPlaySDK_2/PlatformEthan/integration.h
+2019-06-06 12:56:15 | git diff --ignore-space-at-eol AudioStreamer/AirplaySdk2/AirPlaySDK_2/Sources/AirPlayReceiverServer.c
+2019-06-06 12:58:41 | git diff --ignore-space-at-eol AudioStreamer/source/AirPlayProtocol.cpp
+2019-06-06 12:59:00 | git diff --ignore-space-at-eol AudioStreamer/source/AirPlayProtocol.h
+2019-06-06 13:00:59 | git diff --ignore-space-at-eol Components/AudioStreamer/source/AudioStreamerPlayer.cpp
+2019-06-06 13:01:18 | git diff --ignore-space-at-eol AudioStreamer/source/AudioStreamerPlayer.cpp
+2019-06-06 13:02:47 | git diff --ignore-space-at-eol AudioStreamer/source/AudioStreamerPlayer.h
+2019-06-06 13:04:12 | git diff --ignore-space-at-eol AudioStreamer/source/AudioStreamerProxy.cpp
+2019-06-06 13:05:15 | git diff --ignore-space-at-eol AudioStreamer/source/MwServices.cpp
+2019-06-06 13:06:43 | h
+2019-06-06 13:06:55 | git diff --ignore-space-at-eol 
+2019-06-06 13:09:42 | git config --list
+2019-06-06 13:10:42 | git config --global diff.tool vimdiff
+2019-06-06 13:10:43 | git config --list
+2019-06-06 13:10:50 | h
+2019-06-06 13:10:59 | git difftool
+2019-06-06 13:11:11 | gvimdiff
+2019-06-06 13:11:21 | git config --global diff.tool gvimdiff
+2019-06-06 13:11:24 | git difftool
+2019-06-06 13:16:08 | git config --global difftool.prompt false
+2019-06-06 13:16:10 | git difftool
+2019-06-06 13:20:39 | git diff --ignore-space-at-eol 
+2019-06-06 13:24:14 | h
+2019-06-06 13:24:20 | h
+2019-06-06 13:24:35 | pushd ~
+2019-06-06 13:24:36 | ls
+2019-06-06 13:24:46 | cd mw/
+2019-06-06 13:24:47 | ls
+2019-06-06 13:24:48 | ll
+2019-06-06 13:25:01 | cd ethan-as-source
+2019-06-06 13:25:02 | ls
+2019-06-06 13:25:04 | ll
+2019-06-06 13:25:08 | more .git/config 
+2019-06-06 13:25:16 | cd ..
+2019-06-06 13:25:17 | ls
+2019-06-06 13:25:18 | ll
+2019-06-06 13:25:20 | cd ..
+2019-06-06 13:25:20 | ls
+2019-06-06 13:25:21 | ll
+2019-06-06 13:24:23 | ./compile_sdkv2.0.sh eu-q-titan-uk /home/keitee/mw/ethan-as-source/
+2019-06-06 13:25:43 | cd git/
+2019-06-06 13:25:43 | ls
+2019-06-06 13:25:45 | cd ..
+2019-06-06 13:25:47 | ls
+2019-06-06 13:25:53 | ls .gitconfig 
+2019-06-06 13:25:56 | more .gitconfig 
+2019-06-06 13:26:07 | ls -al .gitconfig 
+2019-06-06 13:26:46 | g st
+2019-06-06 13:26:56 | git ll
+2019-06-06 13:27:28 | #git co -- Components/AudioStreamer/AirplaySdk/include/AirPlayPlayer.h
+2019-06-06 13:27:47 | gitk --all &
+2019-06-06 13:28:40 | git commit -a
+2019-06-06 13:29:13 | g st
+2019-06-06 13:29:28 | git ll
+2019-06-06 13:29:39 | git branch -vv
+2019-06-06 13:30:21 | cat ../.git/config 
+2019-06-06 13:32:48 | git rebase -n --onto origin/develop
+2019-06-06 13:33:11 | git ll
+2019-06-06 13:33:23 | git rebase --onto origin/develop
+2019-06-06 13:33:34 | git ll
+2019-06-06 13:34:33 | gitk --all &
+2019-06-06 13:34:05 | make clean; make libraries platform=Titan
+2019-06-06 13:35:12 | g st
+2019-06-06 13:36:10 | gc
+2019-06-06 13:36:12 | g st
+2019-06-06 13:36:18 | git ll
+2019-06-06 13:36:29 | git amend
+2019-06-06 13:36:55 | git alias
+2019-06-06 13:37:03 | git config --list
+2019-06-06 13:37:08 | a
+2019-06-06 13:37:41 | g st
+2019-06-06 13:37:44 | git reflog 
+2019-06-06 13:38:01 | git reset --hard 3e668adb4f
+2019-06-06 13:38:03 | g st
+2019-06-06 13:38:18 | git reflog 
+2019-06-06 13:38:52 | git reset --hard e5d02ecfc8
+2019-06-06 13:38:55 | git ll
+2019-06-06 13:39:37 | git rebase -i HEAD~2
+2019-06-06 13:40:22 | g st
+2019-06-06 13:40:24 | git ll
+2019-06-06 13:40:39 | h
+2019-06-06 13:40:50 | git show HEAD
+2019-06-06 13:42:13 | h
+2019-06-06 13:42:24 | git show --ignore-space-at-eol HEAD
+2019-06-06 13:43:33 | h
+2019-06-06 13:43:59 | git fetch origin 
+2019-06-06 13:44:24 | git rebase --onto origin/develop
+2019-06-06 13:46:47 | git am --show-current-patch 
+2019-06-06 13:47:09 | git rebase --continue 
+2019-06-06 13:47:21 | git st
+2019-06-06 13:47:29 | git add AudioStreamer/source/AudioStreamerPlayer.cpp 
+2019-06-06 13:47:31 | g st
+2019-06-06 13:47:37 | git rebase --continue 
+2019-06-06 13:47:39 | g st
+2019-06-06 13:47:42 | git ll
+2019-06-06 13:48:29 | git difftool develop 
+2019-06-06 13:49:47 | git diff origin/develop..HEAD
+2019-06-06 13:50:05 | git diff --ignore-space-at-eol origin/develop..HEAD
+2019-06-06 13:50:20 | git difftool --ignore-space-at-eol origin/develop..HEAD
+2019-06-06 13:57:18 | git tag --list
+2019-06-06 13:57:46 | git ll
+2019-06-06 13:58:14 | git branch
+2019-06-06 13:58:17 | git branch -vv
+2019-06-06 13:59:13 | git branch --set-upstream-to=origin/develop
+2019-06-06 13:59:18 | git branch -vv
+2019-06-06 13:59:25 | git fetch
+2019-06-06 13:59:30 | git branch -vv
+2019-06-06 14:00:24 | git -n push kit-NGDEV-141186:NGDEV-141186-STB firmware version is not updated
+2019-06-06 14:00:40 | git push -n kit-NGDEV-141186:NGDEV-141186-STB firmware version is not updated
+2019-06-06 14:01:06 | git push -n kit-NGDEV-141186:NGDEV-141186-STB_firmware_version_is_not_updated
+2019-06-06 14:01:42 | g st
+2019-06-06 14:02:19 | git push -n origin kit-NGDEV-141186:NGDEV-141186-STB_firmware_version_is_not_updated
+2019-06-06 14:04:11 | git push origin kit-NGDEV-141186:NGDEV-141186-STB_firmware_version_is_not_updated
+2019-06-06 14:05:59 | git branch --vv
+2019-06-06 14:06:02 | git branch -vv
+2019-06-06 14:08:11 | g st
+2019-06-06 14:08:15 | git branch
+2019-06-06 14:08:21 | git co kit-NGDEV-141670
+2019-06-06 14:08:23 | git st
+2019-06-06 14:08:28 | git stash apply
+2019-06-06 14:08:30 | g st
+2019-06-06 14:14:11 | ls
+2019-06-06 14:14:12 | ll
+2019-06-06 14:14:42 | egrep "^==" LOG_05_01.nds LOG_05_02.nds
+2019-06-06 14:14:46 | egrep "^==" LOG_05_01.nds > LOG_05_02.nds
+2019-06-06 14:14:53 | gvim LOG_05_02.nds 
+2019-06-06 15:15:08 | git branch
+2019-06-06 15:15:16 | git ll
+2019-06-06 15:18:10 | dirs
+2019-06-06 15:18:12 | popd
+2019-06-06 15:18:16 | make
+2019-06-06 15:18:20 | ./cxx_out --gtest_filter=*Printf*
+2019-06-06 15:22:32 | ls
+2019-06-06 15:22:40 | ls
+2019-06-06 15:22:45 | gvim sample.c
+2019-06-06 15:23:30 | ~/mw/ethan-as-source/xSubmoduleDarwinSDK/eu-q-titan-uk/SDK/deps/SYSTEM_BIN_4/brcm_gcc_arm_x86_linux_01/bin/arm-linux-gcc
+2019-06-06 15:23:32 | ~/mw/ethan-as-source/xSubmoduleDarwinSDK/eu-q-titan-uk/SDK/deps/SYSTEM_BIN_4/brcm_gcc_arm_x86_linux_01/bin/arm-linux-gcc sample.c 
+2019-06-06 15:23:54 | export LC_ALL=C
+2019-06-06 15:23:55 | ~/mw/ethan-as-source/xSubmoduleDarwinSDK/eu-q-titan-uk/SDK/deps/SYSTEM_BIN_4/brcm_gcc_arm_x86_linux_01/bin/arm-linux-gcc sample.c 
+2019-06-06 15:23:56 | ls
+2019-06-06 15:24:05 | chmod 777 a.out 
+2019-06-06 15:24:06 | ll
+2019-06-06 15:24:24 | cp /home/keitee/mw/ethan-as-source/xSubmoduleDarwinSDK/eu-q-titan-uk/SDK/flash0/fs/NDS/bin/APP_Process fs/NDS/bin/
+2019-06-06 15:19:27 | ./compile_sdkv2.0.sh eu-q-titan-uk /home/keitee/mw/ethan-as-source/
+2019-06-06 11:01:21 | telnet 192.168.0.102
+2019-06-06 15:41:03 | sudo ifconfig
+2019-06-06 15:41:12 | ifconfig
+2019-06-06 15:42:47 | ssh 10.184.133.48
+2019-06-06 15:42:58 | ssh keitee@10.184.133.48
+2019-06-06 15:43:38 | ping 10.184.133.48
+2019-06-06 15:51:59 | g st
+2019-06-06 15:52:00 | gc
+2019-06-06 15:52:01 | g st
