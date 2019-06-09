@@ -353,6 +353,9 @@ if s:is_windows != 1
 
   " {{{
   " "plugin-git" 
+  "
+  " The row length should be limited to 72 columns. It can be automated by
+  " adding this line to .vimrc:
   " Limit line length of git commits to 72 cols
   au FileType gitcommit set tw=80
   
@@ -360,8 +363,8 @@ if s:is_windows != 1
   Plug 'tpope/vim-fugitive'
   
   " A Vim plugin which shows a git diff in the 'gutter' (sign column). It shows
-  " whether each line has been added, modified, and where lines have been removed.
-  " You can also stage and revert individual hunks.
+  " whether each line has been added, modified, and where lines have been
+  " removed.  You can also stage and revert individual hunks.
   " https://github.com/airblade/vim-gitgutter
   Plug 'airblade/vim-gitgutter'
 
