@@ -1,0 +1,75 @@
+# ~/.tmuxinator/airplay.yml
+
+name: bluetooth
+root: ~/
+
+# Optional tmux socket
+# socket_name: foo
+
+# Runs before everything. Use it to start daemons etc.
+# pre: sudo /etc/rc.d/mysqld start
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+# pre_window: rbenv shell 2.0.0-p247
+
+# Pass command line options to tmux. Useful for specifying a different tmux.conf.
+# tmux_options: -f ~/.tmux.mac.conf
+
+# Change the command to call tmux.  This can be used by derivatives/wrappers like byobu.
+# tmux_command: byobu
+
+# Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
+# startup_window: editor
+
+# Specitifes (by index) which pane of the specified window will be selected on project startup. If not set, the first pane is used.
+# startup_pane: 1
+
+# Controls whether the tmux session should be attached to automatically. Defaults to true.
+# attach: false
+
+# Runs after everything. Use it to attach to tmux with custom options etc.
+# post: tmux -CC attach -t airplay
+
+# (from tmux man)
+#      - cd /home/keitee/mw/ethan-as-source/Components/AudioStreamer/AirplaySdk2
+#      The following layouts are supported:
+# 
+#      even-horizontal
+#              Panes are spread out evenly from left to right across the window.
+# 
+#      even-vertical
+#              Panes are spread evenly from top to bottom.
+# 
+#      main-horizontal
+#              A large (main) pane is shown at the top of the window and the remaining panes are
+#              spread from left to right in the leftover space at the bottom.  Use the
+#              main-pane-height window option to specify the height of the top pane.
+# 
+#      main-vertical
+#              Similar to main-horizontal but the large pane is placed on the left and the others
+#              spread from top to bottom along the right.  See the main-pane-width window option.
+# 
+#      tiled   Panes are spread out as evenly as possible over the window in both rows and columns.
+
+windows:
+  - home:
+      layout: main-vertical
+      panes:
+        - #empty, will just run plain bash
+        - top
+  - kb: 
+      layout: even-vertical
+      panes:
+        - pane_with_multiple_commands:
+          - cd ~/git/kb
+          - git pull
+        - pane_with_multiple_commands:
+          - cd ~/git/vim
+          - git pull
+  - serial:
+      layout: even-vertical
+      panes:
+        - sudo screen -S name -a -D -R -fn -l -L /dev/ttyUSB0 115200,cs8
+        - #empty, will just run plain bash
+  - box:
+    - telnet 192.168.0.102
