@@ -8,6 +8,7 @@
 	cl = reset --hard HEAD
 	ls = log --oneline --decorate
 	ll = log --decorate --graph --pretty=format:'%C(auto)%h%Creset :%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	lll = log --decorate --graph --pretty=format:'%C(auto)%h%Creset :%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --all
   di = diff --ignore-space-at-eol
 [user]
 	name = Kit Park
@@ -25,3 +26,9 @@
 	tool = gvimdiff
 [difftool]
 	prompt = false
+[merge]
+	tool = diffconflicts
+[mergetool "diffconflicts"]
+	cmd = diffconflicts gvim $BASE $LOCAL $REMOTE $MERGED
+	trustExitCode = true
+	keepBackup = false

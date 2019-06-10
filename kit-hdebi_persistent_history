@@ -1062,3 +1062,202 @@
 2019-06-09 21:47:44 | gc
 2019-06-09 21:47:48 | git add diffconflicts 
 2019-06-09 21:47:50 | g st
+2019-06-09 21:47:51 | gc
+2019-06-09 21:47:52 | g st
+2019-06-09 21:47:55 | git push
+2019-06-09 21:48:00 | cd ..
+2019-06-09 21:48:01 | ls
+2019-06-09 21:48:02 | cd kb/
+2019-06-09 21:48:05 | git push
+2019-06-09 21:48:12 | g st
+2019-06-09 20:29:58 | gitg 
+2019-06-10 21:39:04 | cd ~/git/kb/code-cxx
+2019-06-10 21:39:04 | cd ~/git/kb
+2019-06-10 21:39:04 | cd /home/keitee
+2019-06-10 21:39:04 | cd ~/git/vim
+2019-06-10 21:39:04 | cd ~/git/kb/code-linux
+2019-06-10 21:39:04 | git pull
+2019-06-10 21:39:04 | git pull
+2019-06-10 21:39:19 | ls
+2019-06-10 21:39:23 | ll
+2019-06-10 21:39:27 | pushd 
+2019-06-10 21:39:31 | pushd ~
+2019-06-10 21:39:32 | ls
+2019-06-10 21:39:33 | ll
+2019-06-10 21:39:56 | diff .gitconfig ~/git/vim/dot.gitconfig 
+2019-06-10 21:40:18 | colordiff .gitconfig ~/git/vim/dot.gitconfig 
+2019-06-10 21:40:52 | diff .gitconfig ~/git/vim/dot.gitconfig 
+2019-06-10 21:41:10 | gvimdiff .gitconfig ~/git/vim/dot.gitconfig 
+2019-06-10 21:42:28 | ls
+2019-06-10 21:42:30 | ll
+2019-06-10 21:42:43 | mv .gitconfig gitconfig
+2019-06-10 21:42:58 | ln -s git/vim/dot.gitconfig .gitconfig
+2019-06-10 21:42:59 | ll
+2019-06-10 21:43:05 | popd
+2019-06-10 21:43:05 | ls
+2019-06-10 21:43:10 | ll
+2019-06-10 21:43:20 | gvim kt_dev_w3.txt 
+2019-06-10 21:45:12 | which nginx
+2019-06-10 21:45:46 | $ sudo apt-get install nginx
+2019-06-10 21:45:48 | sudo apt-get install nginx
+2019-06-10 21:47:55 | sudo apt-get install nginx-full
+2019-06-10 21:49:27 | sudo apt autoremove'
+2019-06-10 21:49:37 | sudo apt autoremove
+2019-06-10 21:50:53 | systemctl status nginx.service"
+2019-06-10 21:50:57 | systemctl status nginx.service
+2019-06-10 21:53:00 | more /etc/nginx/sites-available/default
+2019-06-10 21:55:47 | nginx -t -c /etc/nginx/sites-available/default
+2019-06-10 21:56:01 | sudo apt-get install nginx
+2019-06-10 21:58:13 | sudo service --status-all
+2019-06-10 21:59:42 | sudo service apache2 stop
+2019-06-10 21:59:49 | sudo apt-get install nginx
+2019-06-10 22:00:15 | which nginx
+2019-06-10 22:05:16 | service nginx status
+2019-06-10 22:05:21 | sudo service nginx status
+2019-06-10 22:07:44 | ifconfig
+2019-06-10 22:07:48 | sudo ifconfig
+2019-06-10 22:08:32 | ls
+2019-06-10 22:08:42 | more /etc/nginx/sites-available/default
+2019-06-10 22:09:04 | more /var/www/html/index.html 
+2019-06-10 22:09:20 | more /var/www/html/index.nginx-debian.html 
+2019-06-10 22:10:11 | more /etc/nginx/sites-available/default
+2019-06-10 22:10:26 | gvim /etc/nginx/sites-available/default
+2019-06-10 22:11:13 | ll /var/www/html/
+2019-06-10 22:12:06 | ls
+2019-06-10 22:12:19 | cd /var/www/html/
+2019-06-10 22:12:20 | ls
+2019-06-10 22:12:21 | ll
+2019-06-10 22:12:32 | mv index.html index.apache.html
+2019-06-10 22:12:38 | sudo mv index.html index.apache.html
+2019-06-10 22:12:41 | ll
+2019-06-10 22:23:54 | https://pypi.python.org/pypi/virtualenv
+2019-06-10 22:24:08 | sudo pip install virtualenv
+2019-06-10 22:24:22 | sudo apt-get install pip
+2019-06-10 22:25:21 | sudo apt-get install python-pip
+2019-06-10 22:25:43 | sudo apt-get install pip
+2019-06-10 22:25:49 | sudo pip install virtualenv
+2019-06-10 22:26:33 | virtualenv flask
+2019-06-10 22:27:09 | sudo virtualenv flask
+2019-06-10 22:29:15 | flask/bin/pip install flask
+2019-06-10 22:29:32 | ls
+2019-06-10 22:29:35 | cd ..
+2019-06-10 22:29:35 | ls
+2019-06-10 22:29:36 | ll
+2019-06-10 22:29:47 | chmod -R html/
+2019-06-10 22:29:51 | chmod -R html
+2019-06-10 22:30:10 | chmod 777 -R html
+2019-06-10 22:30:16 | sudo chmod 777 -R html
+2019-06-10 22:30:17 | ll
+2019-06-10 22:30:22 | flask/bin/pip install flask
+2019-06-10 22:30:31 | ls
+2019-06-10 22:30:32 | cd html/
+2019-06-10 22:30:33 | ls
+2019-06-10 22:30:36 | flask/bin/pip install flask
+2019-06-10 22:32:17 | flask/bin/pip install flask-login
+2019-06-10 22:32:18 | flask/bin/pip install flask-openid
+2019-06-10 22:32:21 | flask/bin/pip install flask-mail
+2019-06-10 22:32:23 | flask/bin/pip install flask-sqlalchemy
+2019-06-10 22:32:30 | flask/bin/pip install sqlalchemy-migrate
+2019-06-10 22:32:32 | flask/bin/pip install flask-whooshalchemy
+2019-06-10 22:32:35 | flask/bin/pip install flask-wtf
+2019-06-10 22:32:36 | flask/bin/pip install flask-babel
+2019-06-10 22:32:42 | flask/bin/pip install guess_language
+2019-06-10 22:32:43 | flask/bin/pip install flipflop
+2019-06-10 22:32:45 | flask/bin/pip install coverage
+2019-06-10 22:32:59 | ls
+2019-06-10 22:33:00 | ll
+2019-06-10 22:33:07 | mkdir app
+2019-06-10 22:33:19 | mkdir app/static
+2019-06-10 22:33:19 | mkdir app/templates
+2019-06-10 22:33:19 | mkdir tmp
+2019-06-10 22:33:21 | ll
+2019-06-10 22:37:37 | python
+2019-06-10 22:37:42 | python3
+2019-06-10 22:42:10 | python3 -m venv venv
+2019-06-10 22:42:35 | apt-get install python3-venv
+2019-06-10 22:42:38 | sudo apt-get install python3-venv
+2019-06-10 22:43:12 | ls
+2019-06-10 22:43:35 | rm -rf app/
+2019-06-10 22:43:38 | rm -rf m
+2019-06-10 22:43:40 | rm -rf tmp
+2019-06-10 22:43:41 | ls
+2019-06-10 22:43:45 | cd venv/
+2019-06-10 22:43:45 | ls
+2019-06-10 22:43:47 | cd ..
+2019-06-10 22:43:48 | ls
+2019-06-10 22:43:56 | $ mkdir microblog
+2019-06-10 22:43:56 | $ cd microblog
+2019-06-10 22:43:58 | cd microblog
+2019-06-10 22:44:03 | mkdir microblog
+2019-06-10 22:44:04 | cd microblog
+2019-06-10 22:44:13 | python3 -m venv venv
+2019-06-10 22:44:17 | ll
+2019-06-10 22:46:22 | python3
+2019-06-10 22:47:16 | source venv/bin/activate
+2019-06-10 22:49:29 | pip install flask
+2019-06-10 22:49:37 | ll
+2019-06-10 22:50:02 | python
+2019-06-10 22:52:28 | ls
+2019-06-10 22:53:45 | mkdir app
+2019-06-10 22:54:23 | ls
+2019-06-10 22:54:35 | gvim app/__init__.py
+2019-06-10 23:30:51 | ls
+2019-06-10 23:30:57 | mv routes.py app/
+2019-06-10 23:30:57 | ls
+2019-06-10 23:38:13 | export FLASK_APP=microblog.py
+2019-06-10 23:39:54 | flash run
+2019-06-10 23:49:22 | localhost:5000/index
+2019-06-10 23:49:26 | curl -v http://localhost:5000/index
+2019-06-10 23:50:29 | c
+2019-06-10 23:50:31 | curl -v http://localhost:5000/index
+2019-06-10 23:39:59 | flask run
+2019-06-10 23:54:51 | ls
+2019-06-10 23:54:56 | ls
+2019-06-10 23:54:58 | cd ..
+2019-06-10 23:54:59 | ls
+2019-06-10 23:55:03 | cd code-py
+2019-06-10 23:55:03 | ls
+2019-06-10 23:55:05 | ll
+2019-06-10 23:57:37 | mkdir flask
+2019-06-10 23:57:38 | ls
+2019-06-10 23:57:41 | cd flask
+2019-06-10 23:57:41 | ls
+2019-06-10 23:57:50 | mkdir microblog
+2019-06-10 23:57:52 | cd microblog/
+2019-06-10 23:57:53 | ls
+2019-06-10 23:58:08 | cp /var/www/html/microblog/app/ .
+2019-06-10 23:58:17 | cp -r /var/www/html/microblog/app/ .
+2019-06-10 23:58:18 | ls
+2019-06-10 23:58:26 | cp -r /var/www/html/microblog/microblog.py .
+2019-06-10 23:58:26 | ls
+2019-06-10 23:58:28 | ll
+2019-06-10 23:58:35 | cd ..
+2019-06-10 23:58:35 | ls
+2019-06-10 23:58:49 | mkdir app
+2019-06-10 23:58:50 | cd app/
+2019-06-10 23:58:51 | ls
+2019-06-10 23:59:00 | gvim app.py
+2019-06-11 00:01:50 | ls
+2019-06-11 00:01:54 | python app.py 
+2019-06-11 00:02:28 | ls
+2019-06-11 00:02:32 | cd ..
+2019-06-11 00:02:33 | ls
+2019-06-11 00:02:42 | cp -r /var/www/html/app/ .
+2019-06-11 00:02:43 | ls
+2019-06-11 00:02:45 | cd app/
+2019-06-11 00:02:46 | ls
+2019-06-11 00:02:48 | cd ..
+2019-06-11 00:02:49 | ls
+2019-06-11 00:03:27 | cp -r /var/www/html/app/ .
+2019-06-11 00:08:45 | g st
+2019-06-11 00:08:47 | gc
+2019-06-11 00:08:50 | git push
+2019-06-11 00:08:55 | g st
+2019-06-11 00:09:01 | git add code-py/flask/
+2019-06-11 00:09:02 | g st
+2019-06-11 00:09:28 | git reset HEAD code-py/flask/microblog/app/__pycache__/__init__.cpython-35.pyc
+2019-06-11 00:09:37 | git reset HEAD code-py/flask/microblog/app/__pycache__/routes.cpython-35.pyc
+2019-06-11 00:09:39 | g st
+2019-06-11 00:09:44 | gc
+2019-06-11 00:09:47 | git push
+2019-06-11 00:09:51 | g st
