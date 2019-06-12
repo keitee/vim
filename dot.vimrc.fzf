@@ -509,6 +509,20 @@ if s:is_windows != 1
   nnoremap <silent> [unite]sv :set list!<cr>
   " (tab open)
   nnoremap <silent> [unite]to :tabnew<cr>
+
+  " (tab split)
+  " Maximize window and return to previous split structure
+  " https://vim.fandom.com/wiki/Maximize_window_and_return_to_previous_split_structure
+  " No code is needed. To open the current window in a new tab with the cursor
+  " in the same place, enter :tab sp which splits the current window into a new
+  " tab. To close the current window, press Ctrl-W then c. That will close the
+  " newly opened tab. JohnBeckett (talk) 08:14, August 19, 2015 (UTC)
+  "
+  " (KT) so the point is that makes a new tab for a windows to max and once
+  " finishes it, close it. by doing that, no changes to split setting of the
+  " parent tab window
+  nnoremap <silent> [unite]ts :tab sp<cr>
+
   " (tab close)
   nnoremap <silent> [unite]tc :tabclose<cr>
   " (copy filename) 
