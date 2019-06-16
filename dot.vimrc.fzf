@@ -209,6 +209,13 @@ if s:is_windows != 1
   " Declare the list of plugins.
   
   " {{{
+  " "plugin-cmake"
+  " Vim syntax highlighting for cmake’s CMakeLists.txt files
+  " http://www.alecjacobson.com/weblog/?p=1320
+  au BufNewFile,BufRead CMakeLists.txt set filetype=cmake
+  " }}}
+
+  " {{{
   " "plugin-indent-guide"
   "
   " note: this is slow so plan not to use it
