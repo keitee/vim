@@ -207,7 +207,16 @@ if s:is_windows != 1
   " plugins
 
   " Declare the list of plugins.
+  "
   
+  " {{{
+  " "plugin-qt"
+  " https://github.com/fedorenchik/qt-support.vim
+  " Qt support for vim
+  " Simple Qt support for Qt-based projects.
+  Plug 'fedorenchik/qt-support.vim'
+  " }}}
+
   " {{{
   " "plugin-cmake"
   " Vim syntax highlighting for cmake’s CMakeLists.txt files

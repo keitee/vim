@@ -66,12 +66,10 @@ windows:
         - pane_with_multiple_commands:
           - cd ~/git/vim
           - git pull
-  - source:
-      layout: even-vertical
-      panes:
-        - cd /home/keitee/ip/iwedia
-        - cd /home/keitee/ip/SkyBluetoothRcu
-        - cd /home/keitee/ip/BlueRcuExample
+  - SkyBluetoothRcu:
+    - cd /home/keitee/ip/SkyBluetoothRcu
+  - BlueRcuExample:
+    - cd /home/keitee/ip/BlueRcuExample
   - serial:
     - sudo screen -S name -a -D -R -fn -l -L /dev/ttyUSB0 115200,cs8
   - bluez:
