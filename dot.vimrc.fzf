@@ -207,7 +207,12 @@ if s:is_windows != 1
   " plugins
 
   " Declare the list of plugins.
-  "
+
+  " {{{
+  " "plugin-nerdtree"
+  " https://github.com/scrooloose/nerdtree
+  Plug 'scrooloose/nerdtree'
+  " }}}
   
   " {{{
   " "plugin-qt"
