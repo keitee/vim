@@ -528,8 +528,13 @@ if s:is_windows != 1
   " "mappings-edit"
   " (show invisibles) toggle set list/nolist
   nnoremap <silent> [unite]sv :set list!<cr>
+
+  " (copy filename) 
+  nnoremap <silent> [unite]cf :let @+ = expand("%")<CR>
+
+  " "mappings-tab"
   " (tab open)
-  nnoremap <silent> [unite]to :tabnew<cr>
+  nnoremap <silent> [unite]o :tabnew<cr>
 
   " (tab split)
   " Maximize window and return to previous split structure
@@ -542,12 +547,10 @@ if s:is_windows != 1
   " (KT) so the point is that makes a new tab for a windows to max and once
   " finishes it, close it. by doing that, no changes to split setting of the
   " parent tab window
-  nnoremap <silent> [unite]ts :tab sp<cr>
+  nnoremap <silent> [unite]s :tab sp<cr>
 
   " (tab close)
-  nnoremap <silent> [unite]tc :tabclose<cr>
-  " (copy filename) 
-  nnoremap <silent> [unite]cf :let @+ = expand("%")<CR>
+  nnoremap <silent> [unite]c :tabclose<cr>
 
   " "mappings-indent-guide"
   " (fz files) Lines in the current buffer
