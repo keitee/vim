@@ -449,6 +449,10 @@ if s:is_windows != 1
   nnoremap [unite] <nop>
   nmap <space> [unite]
 
+  " "mappings-clang-format"
+  map <C-K> :pyf clang-format.py<cr>
+  imap <C-K> <c-o>:pyf clang-format.py<cr>
+
   " "mappings-gtag"
   " (tag pattern) picks up the cword and shows a prompt for a pattern
   nnoremap <silent> [unite]tp :Gtags<CR>
@@ -522,8 +526,8 @@ if s:is_windows != 1
   nnoremap <silent> [unite]m :Marks<CR>
 
   " (fz grep) Ag grep
-  nnoremap <silent> [unite]sp :Ag <CR>
-  nnoremap <silent> [unite]s :Ag <c-r><c-w><CR>
+  nnoremap <silent> [unite]gp :Ag <CR>
+  nnoremap <silent> [unite]g :Ag <c-r><c-w><CR>
 
   " "mappings-edit"
   " (show invisibles) toggle set list/nolist

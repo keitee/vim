@@ -69,11 +69,12 @@ windows:
   - SkyBluetoothRcu:
     - cd /home/keitee/ip/SkyBluetoothRcu
   - BlueRcuExample:
-    - cd /home/keitee/ip/BlueRcuExample
+    - cd /home/keitee/ip/BluRcuExample
   - serial:
     - sudo screen -S name -a -D -R -fn -l -L /dev/ttyUSB0 115200,cs8
   - bluez:
     - telnet 192.168.0.100 8123
   - adb:
+    - cd /home/keitee/ip
     - adb connect 192.168.0.100
 
