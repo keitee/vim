@@ -97,6 +97,9 @@ set encoding=utf-8
 " change this:
 set listchars=tab:»\ ,eol:¬
 
+" set list to show invisibles by default
+set list
+
 "set showbreak=«\ 
 set showbreak=<< 
 
@@ -450,8 +453,8 @@ if s:is_windows != 1
   nmap <space> [unite]
 
   " "mappings-clang-format"
-  map <C-K> :pyf clang-format.py<cr>
-  imap <C-K> <c-o>:pyf clang-format.py<cr>
+  map <C-K> :pyf ~/bin/clang-format.py<cr>
+  imap <C-K> <c-o>:pyf ~/bin/clang-format.py<cr>
 
   " "mappings-gtag"
   " (tag pattern) picks up the cword and shows a prompt for a pattern
@@ -496,7 +499,6 @@ if s:is_windows != 1
   " 
   " ^core go$ | rb$ | py$
   
-
   " (fz files) Lines in the current buffer nnoremap <silent> [unite]ff
   " :Files<CR> but I use this so often that I’ve mapped it to a single key.
   map ; :Files<CR>
@@ -511,7 +513,7 @@ if s:is_windows != 1
   nnoremap <silent> [unite]r :History<CR>
 
   " (fz buffers) Buffers
-  nnoremap <silent> [unite]b :Buffers<CR>
+  nnoremap <silent> [unite]<TAB> :Buffers<CR>
 
   " (fz windows) Windows
   nnoremap <silent> [unite]w :Windows<CR>
@@ -529,9 +531,15 @@ if s:is_windows != 1
   nnoremap <silent> [unite]gp :Ag <CR>
   nnoremap <silent> [unite]g :Ag <c-r><c-w><CR>
 
-  " "mappings-edit"
-  " (show invisibles) toggle set list/nolist
-  nnoremap <silent> [unite]sv :set list!<cr>
+  " "mappings-nerdtree"
+  " (explore)
+  nnoremap <silent> [unite]e :NERDTreeToggle<CR>
+
+  " "mappings-vim" "mappings-edit"
+  " (vim show invisibles) toggle set list/nolist
+  nnoremap <silent> [unite]vs :set list!<cr>
+  " (vim source)
+  nnoremap <silent> [unite]vr :source ~/.vimrc<CR>
 
   " (copy filename) 
   nnoremap <silent> [unite]cf :let @+ = expand("%")<CR>
@@ -558,7 +566,7 @@ if s:is_windows != 1
 
   " "mappings-indent-guide"
   " (fz files) Lines in the current buffer
-  nnoremap <silent> [unite]<TAB> :IndentGuidesToggle<CR>
+  " nnoremap <silent> [unite]<TAB> :IndentGuidesToggle<CR>
   
   " "mappings-nds-log"
   " (nds file type) toggle
