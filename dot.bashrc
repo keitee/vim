@@ -132,10 +132,8 @@ alias gc='git commit -am "`date` `hostname`"'
 # 10.209.62.232:/home/NDS-UK/kyoupark/si_logs     /home/kyoupark/bld_si_logs      nfs     rw,sync,hard,intr   0 0
 
 # for build
-alias blres='Resolve_Deps/scripts/resolve_deps.sh FUSIONOS_2/BLD_AMS_BCM_MIPS4K_LNUX_DARWIN_01'
-alias blcd='pushd FUSION_SYSTEM_INTEGRATION/BSKYB_INTEGRATION/build/'
-alias blmw='./build_mw_epg.sh -p "ams-drx890" --project "picasso"  --profile "Sky_Trials" --variant "debug" --mw_only'
 alias bllt="git tag -l '*BLD_83*"
+alias con='sudo screen -S name -a -D -R -fn -l -L /dev/ttyUSB0 115200,cs8'
 
 bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
@@ -146,8 +144,6 @@ bind '"\e[B": history-search-forward'
 shopt -s direxpand
 
 alias sh2='ssh uk2'
-alias shb='ssh castor-03'
-alias shy='ssh yard'
 alias sho='ssh -X 10.209.60.101'
 alias mmo='sudo mount -o nfsvers=4 10.209.60.101:/home/kyoupark/ /mnt/'
 alias umo='sudo umount /mnt/'
