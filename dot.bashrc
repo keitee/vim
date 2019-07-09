@@ -1,7 +1,7 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
-export PATH=~/Downloads/llvm/clang+llvm-8.0.0-x86_64-linux-gnu-ubuntu-18.04/bin:~/bin:~/vim/bin:~/git/kb/bin:$PATH
+export PATH=~/Downloads/llvm/clang+llvm-8.0.0-x86_64-linux-gnu-ubuntu-18.04/bin:~/bin:~/vim/bin:~/git/kb/bin:~/.cargo/bin:$PATH
 
 # If not running interactively, don't do anything
 case $- in
@@ -91,18 +91,21 @@ fi
 # for gtag
 export GTAGSFORCECPP=
 #export GTAGSROOT=~/STB_SW
-export GTAGSLIBPATH=.:~/STB_SW:
+export GTAGSLIBPATH=.:~/mw:
 
 # for tools that use this variable
 export EDITOR='gvim'
 
+#={===========================================================================
+# fzf
+export FZF_DEFAULT_COMMAND='cat /home/keitee/mw/flist.out'
 
 #={===========================================================================
 # bash-alias
+alias a=alias
 alias th='tmuxinator start home'
 alias td='tmuxinator start airplay'
 alias ta='tmux a'
-alias a=alias
 alias s='source ~/.bashrc'
 alias ll='ls -alFrth'
 alias la='ls -A'

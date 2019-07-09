@@ -21,7 +21,7 @@
 [core]
 	editor = gvim -f
 [pull]
-	rebase = true
+	rebase = false
 [diff]
 	tool = gvimdiff
 [difftool]
