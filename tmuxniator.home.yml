@@ -67,7 +67,6 @@ windows:
           - cd ~/git/vim
           - git pull
   - cxx:
-      layout: even-vertical
-      panes:
-        - cd ~/git/kb/code-cxx
-        - cd ~/git/kb/code-linux
+    - cd ~/git/kb/code-cxx
+  - cxx:
+    - cd ~/git/kb
