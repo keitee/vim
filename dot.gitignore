@@ -1,4 +1,13 @@
+*.a
+*.o
+*.swp
+*.swo
+*_test
+*_out
+*.class
+*-Debug/
+*-Default/
 tags
-GTAGS
 GPATH
 GRTAGS
+GTAGS

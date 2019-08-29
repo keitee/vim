@@ -1,6 +1,6 @@
 # ~/.tmuxinator/airplay.yml
 
-name: bluetooth
+name: blue-android
 root: ~/
 
 # Optional tmux socket

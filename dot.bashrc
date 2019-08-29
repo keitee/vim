@@ -96,15 +96,20 @@ export GTAGSLIBPATH=.:~/mw:
 # for tools that use this variable
 export EDITOR='gvim'
 
+
 #={===========================================================================
 # fzf
-export FZF_DEFAULT_COMMAND='cat /home/keitee/mw/flist.out'
+# alias fmw="export FZF_DEFAULT_COMMAND='cat /home/keitee/mw/flist.out'"
+alias fcu="export FZF_DEFAULT_COMMAND='cat ./flist.out'"
+export FZF_DEFAULT_COMMAND='cat ./flist.out'
+
 
 #={===========================================================================
 # bash-alias
 alias a=alias
 alias th='tmuxinator start home'
-alias td='tmuxinator start airplay'
+alias ta='tmuxinator start airplay'
+alias tb='tmuxinator start blue-titan'
 alias ta='tmux a'
 alias s='source ~/.bashrc'
 alias ll='ls -alFrth'
