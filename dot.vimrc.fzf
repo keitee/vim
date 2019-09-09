@@ -68,7 +68,7 @@ set showmode
 set wildmenu
 set cursorline
 set autoread
-set autowrite
+set autowriteall
 set nowrapscan
 set foldenable
 " for line wrapping and linebreak
