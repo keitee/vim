@@ -35,10 +35,10 @@ syn match ndsFieldTab '\t\{1,\}' conceal
 syn match ndsFieldProcess '\<p:[0x]\?\w\+\>' conceal
 syn match ndsFieldProcessName '\<P:\w\+\>' conceal
 syn match ndsFieldThread '\<t:[0x]\?\w\+\>' conceal
-syn match ndsFieldThreadName '\<T:[\w ]\+\w\+\>' conceal
-syn match ndsFieldModule '\<M:\w\+\.\w\+\>' conceal
-syn match ndsFieldFunction '\<F:\w\+\> \<L:[0-9]*' conceal
-syn match ndsFieldEtc '@ctx:\w\+\>' conceal
+"syn match ndsFieldThreadName '\<T:[\w ]\+\w\+\>' conceal
+"syn match ndsFieldModule '\<M:\w\+\.\w\+\>' conceal
+"syn match ndsFieldFunction '\<F:\w\+\> \<L:[0-9]*' conceal
+"syn match ndsFieldEtc '@ctx:\w\+\>' conceal
 
 setlocal commentstring===\ %s
 setlocal concealcursor=nc

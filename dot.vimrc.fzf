@@ -74,8 +74,8 @@ set foldenable
 " for line wrapping and linebreak
 set nowrap linebreak nolist
 
-" remove _ from keyword set
-" set iskeyword-=_ 
+" remove _ from word sepeartor which enables to stop at _ as word boundary
+set iskeyword-=_ 
 
 
 " {===========================================================================
@@ -491,6 +491,12 @@ if s:is_windows != 1
   " vnoremap <silent> [unite]gs <ESC>:Gtags .GetVisualSelection()<CR>
   " (tag bar) 
   nnoremap <silent> [unite]tb :TagbarToggle<CR>
+
+  " "mappings-git"
+  nmap ]h <Plug>GitGutterNextHunk
+  nmap [h <Plug>GitGutterPrevHunk
+  nnoremap <silent> [unite]gv :GitGutterPreviewHunk<CR>
+  nnoremap <silent> [unite]gu :GitGutterUndoHunk<CR>
 
   " "mappings-fzf"
   "
