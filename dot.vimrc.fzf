@@ -74,8 +74,9 @@ set foldenable
 " for line wrapping and linebreak
 set nowrap linebreak nolist
 
-" remove _ from word sepeartor which enables to stop at _ as word boundary
-set iskeyword-=_ 
+" *vim-word*
+" " remove _ from word sepeartor which enables to stop at _ as word boundary
+" set iskeyword-=_ 
 
 
 " {===========================================================================
@@ -500,9 +501,9 @@ if s:is_windows != 1
   " "mappings-gtag"
   " (tag pattern) picks up the cword and shows a prompt for a pattern
   nnoremap <silent> [unite]tp :Gtags<CR>
-  " (tag (current) word) no prompt
-  " nnoremap <silent> [unite]tw :Gtags <c-r><c-w><CR>
+  " (tag (current) word) no prompt *vim-word*
   nnoremap <silent> [unite]tw :GtagsCursor<CR>
+  " nnoremap <silent> [unite]tw :Gtags <c-r><c-a><CR>
   " (tag reference) 
   nnoremap <silent> [unite]tr :Gtags -r <c-r><c-w><CR>
   " (tag grep) 
