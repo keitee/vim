@@ -508,6 +508,30 @@ if s:is_windows != 1
   " following to your vimrc file or switching to a plugin like Supertab or
   " YouCompleteMe. >
   "    inoremap <c-x><c-k> <c-x><c-k>
+  "
+  " https://stackoverflow.com/questions/14896327/ultisnips-and-youcompleteme
+  "
+  " I have bundles ultisnips and youcompleteme installed on my macvim. The
+  " problem is that ultisnips doesn't work because tab is bound by ycm. I tried
+  " putting let g:UltiSnipsExpandTrigger = "<s-tab>" so that I can trigger the
+  " snippet completion with shift-tab, but it doesn't work for some unknown
+  " reason. I could use caps as the trigger, but so far I've found no way to do
+  " that.
+  "
+  " Do any of you use those two add-ons together? What can I do to make
+  " shift-tab work? Can you recommend another key to trigger snippets?
+  "
+  " Try this suggestion on a page from the YouCompleteMe issue tracker. In your
+  " .vimrc:
+  "
+  " let g:UltiSnipsExpandTrigger="<c-j>"
+  "
+  " While this setting will make expanding a snippet share the default mapping
+  " for jumping forward within a snippet, it simulates TextMates' behavior as
+  " mentioned in the UltiSnips help tags.
+  " 
+  " Since I've mapped my Caps Lock key to Ctrl, this mapping works pretty
+  " smoothly.
 
   let g:UltiSnipsExpandTrigger="<c-j>"
 

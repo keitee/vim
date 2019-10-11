@@ -140,6 +140,9 @@ endsnippet
 #              that simplify indentation handling and owns the string that
 #              should be inserted for the snippet.
 
+#    snip.fn:
+#        The current filename.
+#
 #  4.1.3 Snippet Options:                           *UltiSnips-snippet-options*
 # 
 # The 'options' control the behavior of the snippet. Options are indicated by
@@ -167,24 +170,34 @@ endsnippet
 # ${1:Insert a title}
 # 
 
+snippet head "file header" b
+/*
+ File    : `!p snip.rv = fn`
+ Created : `date +%m/%d/%Y` 
+
+ Copyright © 2019 Sky UK. All rights reserved.
+*/
+${0}
+endsnippet
+
 snippet fni "function internal" b
 /* ={--------------------------------------------------------------------------
- * @brief  :
- * ${1:...}
- *
- * @note  :
- * ${2}
- */
+ @brief :
+  ${1:...}
+
+ @note  :
+  ${2}
+*/
 endsnippet
 
 snippet fne "function external" b
 /* ={==========================================================================
- * @brief  :
- * ${1:...}
- *
- * @note  :
- * ${2}
- */
+ @brief :
+  ${1:...}
+
+ @note  :
+  ${2}
+*/
 endsnippet
 
 # vim:ft=snippets:
