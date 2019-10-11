@@ -379,7 +379,7 @@ if s:is_windows != 1
   " }}}
  
   " {{{
-  " "plugin-cxx-comment" 
+  " "plugin-cxx-comment" *mapping* 
   " commentary.vim
   "
   " Comment stuff out. Use gcc to comment out a line (takes a count), gc to
@@ -456,6 +456,65 @@ if s:is_windows != 1
   " Plug 'terryma/vim-multiple-cursors'
   " }}}
 
+  " {{{
+  " "plugin-snippet" 
+  " https://github.com/SirVer/ultisnips
+  " https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt
+  Plug 'SirVer/ultisnips'
+
+  " Snippets library
+  " Honza Pokorny maintains the vim-snippets repository, which contains a
+  " library of snippets for many common languages. Installing this plugin will
+  " give you access to hundreds of snippets. Personally, I prefer to treat that
+  " repository as a reference. I cherry-pick the snippets that look useful to
+  " me, and add them to my personal snippet library.
+  "
+  " NOTE:
+  " To maintain personal library, install it using Plug and then delete snippets
+  " from ~/.vim/plugged/vim-snippets/UltiSnips. Then place snippets to use in
+  " ~/.vim/UltiSnips 
+  "
+  " Or comment out it from Plug so will not be updated. NO. If do, will not LOAD
+  " plugins. 
+  " 
+  " https://github.com/honza/vim-snippets
+  Plug 'honza/vim-snippets'
+  "
+  " NOTE:
+  " when edit .cpp, it uses c.snippet and cpp.snippet as well. so merge them
+  " into one to maintain.
+
+  "
+  "                            *g:UltiSnipsExpandTrigger* *g:UltiSnipsListSnippets*
+  "                *g:UltiSnipsJumpForwardTrigger* *g:UltiSnipsJumpBackwardTrigger*
+  " 
+  " You can define the keys used to trigger UltiSnips actions by setting global
+  " variables. Variables define the keys used to expand a snippet, jump forward
+  " and jump backwards within a snippet, and list all available snippets in the
+  " current expand context. Be advised, that some terminal emulators don't send
+  " <c-tab> (and others, like <c-h>) to the running program. The variables with
+  " their default values are: >
+  "
+  "    g:UltiSnipsExpandTrigger               <tab>
+  "    g:UltiSnipsListSnippets                <c-tab>
+  "    g:UltiSnipsJumpForwardTrigger          <c-j>
+  "    g:UltiSnipsJumpBackwardTrigger         <c-k>
+  " 
+  " UltiSnips will only map the jump triggers while a snippet is active to
+  " interfere as little as possible with other mappings.
+  " 
+  " The default value for g:UltiSnipsJumpBackwardTrigger interferes with the
+  " built-in complete function: |i_CTRL-X_CTRL-K|. A workaround is to add the
+  " following to your vimrc file or switching to a plugin like Supertab or
+  " YouCompleteMe. >
+  "    inoremap <c-x><c-k> <c-x><c-k>
+
+  let g:UltiSnipsExpandTrigger="<c-j>"
+
+  " NOTE:
+  " while in insert mode, press <c-j> to move to next snippet stop
+  " }}}
+
   " List ends here. Plugins become visible to Vim after this call.
   call plug#end()
 
@@ -494,9 +553,42 @@ if s:is_windows != 1
   nnoremap [unite] <nop>
   nmap <space> [unite]
 
+
   " "mappings-clang-format"
+  " https://clang.llvm.org/docs/ClangFormat.html
+  " Vim Integration
+  " There is an integration for vim which lets you run the clang-format
+  " standalone tool on your current buffer, optionally selecting regions to
+  " reformat. The integration has the form of a python-file which can be found
+  " under clang/tools/clang-format/clang-format.py.
+  "
+  " This can be integrated by adding the following to your .vimrc:
+  "
+  " The first line enables clang-format for NORMAL and VISUAL mode, the second
+  " line adds support for INSERT mode. Change “C-K” to another binding if you
+  " need clang-format on a different key (C-K stands for Ctrl+k).
+  "
+  " With this integration you can press the bound key and clang-format will
+  " format the current line in NORMAL and INSERT mode or the selected region in
+  " VISUAL mode. The line or region is extended to the next bigger syntactic
+  " entity.
+  "
+  " It operates on the current, potentially unsaved buffer and does not create
+  " or save any files. To revert a formatting, just undo.
+
   map <C-K> :pyf ~/bin/clang-format.py<cr>
   imap <C-K> <c-o>:pyf ~/bin/clang-format.py<cr>
+
+  " An alternative option is to format changes when saving a file and thus to
+  " have a zero-effort integration into the coding workflow. To do this, add
+  " this to your .vimrc:
+
+  function! Formatonsave()
+    let l:formatdiff = 1
+    pyf ~/bin/clang-format.py
+  endfunction
+  autocmd BufWritePre *.h,*.cc,*.cpp call Formatonsave()
+
 
   " "mappings-gtag"
   " (tag pattern) picks up the cword and shows a prompt for a pattern
