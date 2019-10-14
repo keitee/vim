@@ -101,6 +101,7 @@ export EDITOR='gvim'
 # fzf
 # alias fmw="export FZF_DEFAULT_COMMAND='cat /home/keitee/mw/flist.out'"
 alias fcu="export FZF_DEFAULT_COMMAND='cat ./flist.out'"
+alias fcr="export FZF_DEFAULT_COMMAND="
 export FZF_DEFAULT_COMMAND='cat ./flist.out'
 
 

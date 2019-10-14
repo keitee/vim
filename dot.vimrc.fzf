@@ -211,12 +211,106 @@ if s:is_windows != 1
   " plugins
 
   " Declare the list of plugins.
+  "
 
   " {{{
-  " "plugin-nerdtree"
-  " https://github.com/scrooloose/nerdtree
-  Plug 'scrooloose/nerdtree'
+  " "plugin-netrw"
+  " describe why netrw is a better fit to vim than nerdtree
+  "
+  " http://vimcasts.org/blog/2013/01/oil-and-vinegar-split-windows-and-project-drawer/
+  "
+  " Like oil and vinegar, the project drawer and split windows don’t mix
+  "
+  " The project drawer works well in an interface where you can only view one
+  " file at a time, but the concept does not translate to the split-window
+  " interface. When working with multiple files in split windows, the split
+  " explorer is a better fit.
+  "
+  " The illustrations in this blog post are adapted from Practical Vim. For more
+  " discussion, please refer to Tip 43 Explore the file system with netrw and
+  " Tip 39: Divide your workspace into split windows.
+  "
+  " http://vimcasts.org/episodes/the-file-explorer/
+  "
+  " Exploring the filesystem
+  "
+  " The file explorer is just another Vim buffer, so you can navigate up and
+  " down with k and j keys, or jump to the bottom with G, etc. If it is a large
+  " file listing, you may be quicker finding your target by searching for it.
+  " There are a handful of useful commands for opening the file explorer -
+  " either in the current window or a split, focussing on the project root, or
+  " the directory of the most recent file edited. This table summarizes:
+  "
+  " :e.   :edit .     at *current working directory*
+  " :sp.  :split .    in split at current working directory
+  " :vs.  :vsplit .   in vertical split at current working directory
+  "
+  " :E    :Explore    at *directory of current file*
+  " :Se   :Sexplore   in split at directory of current file
+  " :Vex  :Vexplore   in vertical split at directory of current file
+  "
+  "
+  " Manipulating the filesystem
+  "
+  " The file explorer includes commands for creating new files and directories,
+  " as well as renaming or deleting existing ones. This table summarizes these:
+  "
+  " %     create a new file
+  " d     create a new directory
+  " R     rename the file/directory under the cursor
+  " D     Delete the file/directory under the cursor
+  "
+  "
+  " Press i to toggle the appearance of the file tree. By default, explorer mode
+  " will only show the contents of the current directory.
+  "
+  " http://vimdoc.sourceforge.net/htmldoc/pi_netrw.html
+  "
+  " GOING UP *netrw--* {{{2
+  "
+  " To go up a directory, press "-" or press the <cr> when atop the ../ directory
+  " entry in the listing.
+  "
+  "
+  " ~/.vimrc
+  " let g:netrw_liststyle=3
+  "
+  " vim 80 has an issue to use netrw
+  " https://github.com/vim/vim/issues/1069
+  "
+  " to run browser
+  " :let g:netrw_browsex_viewer= "iceweasel"
+  "
+  " Use `gx` on a link in vim and vim gets blocked.
+  "
+  "
+  " Bookmark
+  " ========
+  "
+  " One may easily "bookmark" a directory by using
+  "
+  " "mb"
+  " 
+  " Bookmarks are retained in between sessions in a $HOME/.netrwbook file, and
+  " are kept in sorted order.
+  "
+  " Pressing "qb" (query bookmarks) will list both the bookmarked directories
+  " and directory traversal history.
+  " 
+  " To change directory back to a bookmarked directory, use
+  "
+  " "{cnt}gb"
+  "
+  " Any count may be used to reference any of the bookmarks.
+  "
   " }}}
+
+
+  "" {{{
+  "" "plugin-nerdtree"
+  "" https://github.com/scrooloose/nerdtree
+  "" Plug 'scrooloose/nerdtree'
+  "" }}}
   
   " {{{
   " "plugin-qt"
@@ -580,7 +674,9 @@ if s:is_windows != 1
 
   " "mappings-clang-format"
   " https://clang.llvm.org/docs/ClangFormat.html
+  "
   " Vim Integration
+  "
   " There is an integration for vim which lets you run the clang-format
   " standalone tool on your current buffer, optionally selecting regions to
   " reformat. The integration has the form of a python-file which can be found
@@ -612,6 +708,10 @@ if s:is_windows != 1
     pyf ~/bin/clang-format.py
   endfunction
   autocmd BufWritePre *.h,*.cc,*.cpp call Formatonsave()
+
+  " pyf only works for py2 and to use py3, see:
+  " https://stackoverflow.com/questions/45217522/difference-between-pyf-and-python-for-running-python-code
+  " https://gist.github.com/fasiha/8af2a4f719812319934947124bb63afd
 
 
   " "mappings-gtag"
