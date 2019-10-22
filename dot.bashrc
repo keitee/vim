@@ -1,7 +1,7 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
-export PATH=~/Downloads/llvm/clang+llvm-8.0.0-x86_64-linux-gnu-ubuntu-18.04/bin:~/bin:~/vim/bin:~/git/kb/bin:~/.cargo/bin:$PATH
+export PATH=~/Downloads/llvm/clang+llvm-8.0.0-x86_64-linux-gnu-ubuntu-18.04/bin:~/bin:~/vim/bin:~/git/kb/bin:~/.cargo/bin:~/Downloads/git-repo:$PATH
 
 # If not running interactively, don't do anything
 case $- in
@@ -144,9 +144,12 @@ alias gc='git commit -am "`date` `hostname`"'
 alias bllt="git tag -l '*BLD_83*"
 alias con='sudo screen -S name -a -D -R -fn -l -L /dev/ttyUSB0 115200,cs8'
 
+
+#={===========================================================================
+# readline 
+# To set binding to up/down key to history search:
 bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
-# set editing-mode vi
 
 
 # enable dir expansion
