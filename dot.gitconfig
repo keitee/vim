@@ -32,3 +32,5 @@
 	cmd = diffconflicts gvim $BASE $LOCAL $REMOTE $MERGED
 	trustExitCode = true
 	keepBackup = false
+[color]
+	ui = auto

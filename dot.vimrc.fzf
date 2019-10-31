@@ -565,8 +565,13 @@ if s:is_windows != 1
   "
   " NOTE:
   " To maintain personal library, install it using Plug and then delete snippets
-  " from ~/.vim/plugged/vim-snippets/UltiSnips. Then place snippets to use in
-  " ~/.vim/UltiSnips 
+  " from ~/.vim/plugged/vim-snippets/UltiSnips and make sym links: 
+  "
+  " keitee@keitee-mint:~/.vim/plugged/vim-snippets/UltiSnips$ ll
+  " -rw-r--r-- 1 keitee keitee 7.9K Oct 11 08:53 java.snippets
+  " -rw-r--r-- 1 keitee keitee 5.1K Oct 11 10:45 cpp.x
+  " lrwxrwxrwx 1 keitee keitee   41 Oct 11 10:45 cpp.snippets -> /home/keitee/git/vim/snippet/cpp.snippets
+  " lrwxrwxrwx 1 keitee keitee   39 Oct 11 11:22 c.snippets -> /home/keitee/git/vim/snippet/c.snippets
   "
   " Or comment out it from Plug so will not be updated. NO. If do, will not LOAD
   " plugins. 

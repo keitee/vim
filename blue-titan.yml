@@ -56,23 +56,21 @@ windows:
       layout: main-vertical
       panes:
         - #empty, will just run plain bash
-        - top
+          #        - top
   - kb: 
       layout: even-vertical
       panes:
         - pane_with_multiple_commands:
           - cd ~/git/kb
           - git pull
-        - pane_with_multiple_commands:
-          - cd ~/git/vim
-          - git pull
+            #        - pane_with_multiple_commands:
+            #          - cd ~/git/vim
+            #          - git pull
   - build:
       - cd /home/keitee/mw/appinfrastructure/Tools/Jenkins
   - src:
       - cd /home/keitee/mw/appinfrastructure/AppInfrastructure/BluetoothRcu
   - exports: 
-    - cd /home/keitee/mw/exports/titan/flash0
-  - tftp: 
     - cd /home/keitee/mw/exports/titan/flash0
   - serial:
     - sudo screen -S name -a -D -R -fn -l -L /dev/ttyUSB0 115200,cs8
