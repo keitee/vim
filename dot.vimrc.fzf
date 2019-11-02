@@ -701,8 +701,8 @@ if s:is_windows != 1
   " It operates on the current, potentially unsaved buffer and does not create
   " or save any files. To revert a formatting, just undo.
 
-  map <C-K> :pyf ~/bin/clang-format.py<cr>
-  imap <C-K> <c-o>:pyf ~/bin/clang-format.py<cr>
+  map <C-K> :pyf ~/git/kb/bin/clang-format.py<cr>
+  imap <C-K> <c-o>:pyf ~/git/kb/bin/clang-format.py<cr>
 
   " An alternative option is to format changes when saving a file and thus to
   " have a zero-effort integration into the coding workflow. To do this, add
@@ -710,11 +710,11 @@ if s:is_windows != 1
 
   function! Formatonsave()
     let l:formatdiff = 1
-    pyf ~/bin/clang-format.py
+    pyf ~/git/kb/bin/clang-format.py
   endfunction
   autocmd BufWritePre *.h,*.cc,*.cpp call Formatonsave()
 
-  " pyf only works for py2 and to use py3, see:
+  " NOTE: pyf only works for py2 and to use py3, see:
   " https://stackoverflow.com/questions/45217522/difference-between-pyf-and-python-for-running-python-code
   " https://gist.github.com/fasiha/8af2a4f719812319934947124bb63afd
 

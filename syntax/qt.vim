@@ -132,6 +132,7 @@ syn keyword qtClass QByteArray
 syn keyword qtClass QByteArrayData
 syn keyword qtClass QByteArrayDataPtr
 syn keyword qtClass QByteArrayMatcher
+syn keyword qtClass QByteArrayLiteral
 syn keyword qtClass QByteRef
 syn keyword qtClass QCache
 syn keyword qtClass QCalendarWidget
@@ -543,7 +544,6 @@ syn keyword qtClass QLocale
 syn keyword qtClass QLocalServer
 syn keyword qtClass QLocalSocket
 syn keyword qtClass QLockFile
-syn keyword qtClass QLoggingCategory
 syn keyword qtClass QMacCocoaViewContainer
 syn keyword qtClass QMacNativeWidget
 syn keyword qtClass QMagnetometer
