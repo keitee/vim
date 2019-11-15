@@ -700,9 +700,12 @@ if s:is_windows != 1
   "
   " It operates on the current, potentially unsaved buffer and does not create
   " or save any files. To revert a formatting, just undo.
+  " for py2
+  " map <C-K> :pyf ~/git/kb/bin/clang-format.py<cr>
+  " imap <C-K> <c-o>:pyf ~/git/kb/bin/clang-format.py<cr>
 
-  map <C-K> :pyf ~/git/kb/bin/clang-format.py<cr>
-  imap <C-K> <c-o>:pyf ~/git/kb/bin/clang-format.py<cr>
+  map <C-K> :py3f ~/git/kb/bin/clang-format.py<cr>
+  imap <C-K> <c-o>:py3f ~/git/kb/bin/clang-format.py<cr>
 
   " An alternative option is to format changes when saving a file and thus to
   " have a zero-effort integration into the coding workflow. To do this, add
@@ -712,7 +715,10 @@ if s:is_windows != 1
     let l:formatdiff = 1
     pyf ~/git/kb/bin/clang-format.py
   endfunction
-  autocmd BufWritePre *.h,*.cc,*.cpp call Formatonsave()
+
+  " format enable/disable
+  nnoremap <silent> [unite]fe :autocmd BufWritePre *.h,*.cc,*.cpp call Formatonsave()<CR>
+  nnoremap <silent> [unite]fd :autocmd! BufWritePre<CR>
 
   " NOTE: pyf only works for py2 and to use py3, see:
   " https://stackoverflow.com/questions/45217522/difference-between-pyf-and-python-for-running-python-code
@@ -807,8 +813,9 @@ if s:is_windows != 1
   " "mappings-vim" "mappings-edit"
   " (vim show in(v)isibles) toggle set list/nolist
   nnoremap <silent> [unite]v :set list!<cr>
+
   " (vim source)
-  nnoremap <silent> [unite]vr :source ~/.vimrc<CR>
+  nnoremap <silent> [unite]vs :source ~/.vimrc<CR>
 
   " (copy filename) 
   nnoremap <silent> [unite]cf :let @+ = expand("%")<CR>
