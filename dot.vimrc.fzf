@@ -712,7 +712,7 @@ if s:is_windows != 1
     let l:formatdiff = 1
     pyf ~/git/kb/bin/clang-format.py
   endfunction
-  autocmd BufWritePre *.h,*.cc,*.cpp call Formatonsave()
+  " autocmd BufWritePre *.h,*.cc,*.cpp call Formatonsave()
 
   " NOTE: pyf only works for py2 and to use py3, see:
   " https://stackoverflow.com/questions/45217522/difference-between-pyf-and-python-for-running-python-code
