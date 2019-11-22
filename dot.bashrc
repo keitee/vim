@@ -1,7 +1,7 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
-export PATH=~/Downloads/clang+llvm-9.0.0-x86_64-linux-gnu-ubuntu-18.04/bin:~/bin:~/vim/bin:~/git/kb/bin:~/.cargo/bin:~/Downloads/git-repo:$PATH
+export PATH=~/works/bitbake-1.40/bin:~/Downloads/clang+llvm-9.0.0-x86_64-linux-gnu-ubuntu-18.04/bin:~/bin:~/vim/bin:~/git/kb/bin:~/.cargo/bin:~/Downloads/git-repo:$PATH
 
 # If not running interactively, don't do anything
 case $- in
