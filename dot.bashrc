@@ -106,6 +106,12 @@ export FZF_DEFAULT_COMMAND='cat ./flist.out'
 
 
 #={===========================================================================
+# vim
+alias gv="gvim --remote-silent"
+alias gt="gvim --remote-tab-silent"
+
+
+#={===========================================================================
 # bash-alias
 alias a=alias
 alias th='tmuxinator start home'
