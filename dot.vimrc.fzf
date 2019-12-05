@@ -749,6 +749,9 @@ if s:is_windows != 1
   " https://gist.github.com/fasiha/8af2a4f719812319934947124bb63afd
 
 
+  " "mappings-spell" toggle spell
+  nnoremap <silent> [unite]ts :set spell!<CR>
+
   " "mappings-gtag"
   " (tag pattern) picks up the cword and shows a prompt for a pattern
   nnoremap <silent> [unite]tp :Gtags<CR>
