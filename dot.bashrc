@@ -99,10 +99,88 @@ export EDITOR='gvim'
 
 #={===========================================================================
 # fzf
+#
+# Environment variables
+#
+# FZF_DEFAULT_COMMAND
+# Default command to use when input is tty
+# e.g. export FZF_DEFAULT_COMMAND='fd --type f'
+#
+# In fact, "export FZF_DEFAULT_COMMAND=" makes fzf uses the default command in
+# the code which uses `find` command
+#
+# FZF_DEFAULT_OPTS
+# Default options
+# e.g. export FZF_DEFAULT_OPTS="--layout=reverse --inline-info"
+#
+# To use fzf in Vim like `Files`
 # alias fmw="export FZF_DEFAULT_COMMAND='cat /home/keitee/mw/flist.out'"
-alias fcu="export FZF_DEFAULT_COMMAND='cat ./flist.out'"
-alias fcr="export FZF_DEFAULT_COMMAND="
-export FZF_DEFAULT_COMMAND='cat ./flist.out'
+# alias fcu="export FZF_DEFAULT_COMMAND='cat ./flist.out'"
+
+# when use `fd`
+# export FZF_DEFAULT_COMMAND='fd --type f'
+#
+# If you want the command to follow symbolic links, and don't want it to exclude
+# hidden files, use the following command:
+#
+# export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
+
+# when use `ag` to use ignore feature
+export FZF_DEFAULT_COMMAND="ag --follow --nocolor --nogroup -g ''"
+
+# export FZF_DEFAULT_OPTS="-m --layout=reverse --inline-info"
+export FZF_DEFAULT_OPTS="-m --inline-info"
+
+# However, completion for bash do not seem to use above env settings.
+#
+# Fuzzy completion for bash and zsh
+# Files and directories
+#
+# Fuzzy completion for files and directories can be triggered if the word before
+# the cursor ends with the trigger sequence which is by default **.
+# 
+# COMMAND [DIRECTORY/][FUZZY_PATTERN]**<TAB>
+# 
+# Supported commands
+# 
+# On bash, fuzzy completion is enabled only for a predefined set of commands
+# (complete | grep _fzf to see the list). But you can enable it for other
+# commands as well by using _fzf_setup_completion helper function.
+# 
+# # usage: _fzf_setup_completion path|dir COMMANDS...
+# _fzf_setup_completion path ag git kubectl
+# _fzf_setup_completion dir tree
+#
+# Key bindings for command-line
+#
+# The install script will setup the following key bindings for bash, zsh, 
+# and fish.
+# 
+# CTRL-T - Paste the selected files and directories onto the command-line
+#
+# Set FZF_CTRL_T_COMMAND to override the default command
+# Set FZF_CTRL_T_OPTS to pass additional options
+#
+# CTRL-R - Paste the selected command from history onto the command-line
+#
+# If you want to see the commands in chronological order, press CTRL-R again
+# which toggles sorting by relevance
+#
+# Set FZF_CTRL_R_OPTS to pass additional options
+#
+# ALT-C - cd into the selected directory
+# Set FZF_ALT_C_COMMAND to override the default command
+# Set FZF_ALT_C_OPTS to pass additional options
+#
+# If you're on a tmux session, you can start fzf in a split pane by setting
+# FZF_TMUX to 1, and change the height of the pane with FZF_TMUX_HEIGHT (e.g.
+# 20, 50%).
+# 
+# If you use vi mode on bash, you need to add set -o vi before source
+# ~/.fzf.bash in your .bashrc, so that it correctly sets up key bindings for vi
+# mode.
+# 
+# More tips can be found on the wiki page.
 
 
 #={===========================================================================
@@ -247,7 +325,8 @@ run_on_prompt_command()
 
 PROMPT_COMMAND="run_on_prompt_command"
 
-alias hgrep='cat ~/.`hostname`_persistent_history | grep --color'
+# alias hgrep='cat ~/.`hostname`_persistent_history | grep --color'
+alias hgrep='cat ~/.`hostname`_persistent_history | fzf'
 alias hlist='less -N +G ~/.`hostname`_persistent_history'
 
 

@@ -803,6 +803,12 @@ if s:is_windows != 1
   
   " (fz files) Lines in the current buffer nnoremap <silent> [unite]ff
   " :Files<CR> but I use this so often that I’ve mapped it to a single key.
+  "
+  " *g:fzf_command_prefix*
+  "
+  " - Most commands support CTRL-T / CTRL-X / CTRL-V key bindings to open in a
+  "   new tab, a new split, or in a new vertical split
+
   map ; :Files<CR>
 
   " BLines [QUERY]
