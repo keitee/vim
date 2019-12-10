@@ -125,8 +125,18 @@ export EDITOR='gvim'
 #
 # export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 
-# when use `ag` to use ignore feature
-export FZF_DEFAULT_COMMAND="ag --follow --nocolor --nogroup -g ''"
+
+# FILE TYPES
+#
+# It is possible to restrict the types of files searched. For example, passing
+# --html will search only files with the extensions htm, html, shtml or xhtml.
+# For a list of supported types, run ag --list-file-types.
+#
+#
+#  --cpp
+#      .cpp  .cc  .C  .cxx  .m  .hpp  .hh  .h  .H  .hxx  .tpp
+#
+export FZF_DEFAULT_COMMAND="ag --cpp --nocolor --nogroup -g ''"
 
 # export FZF_DEFAULT_OPTS="-m --layout=reverse --inline-info"
 export FZF_DEFAULT_OPTS="-m --inline-info"
@@ -150,7 +160,8 @@ export FZF_DEFAULT_OPTS="-m --inline-info"
 # # usage: _fzf_setup_completion path|dir COMMANDS...
 # _fzf_setup_completion path ag git kubectl
 # _fzf_setup_completion dir tree
-#
+
+
 # Key bindings for command-line
 #
 # The install script will setup the following key bindings for bash, zsh, 
@@ -183,6 +194,14 @@ export FZF_DEFAULT_OPTS="-m --inline-info"
 # More tips can be found on the wiki page.
 
 
+# note: 
+# To apply the command to CTRL-T as well
+# export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+# 
+# However, use the default since CTRL-T do not respect .agignore. So can use
+# ignore feature in vim but see all files in command line.
+
+
 #={===========================================================================
 # vim
 alias gv="gvim --remote-silent"
@@ -190,7 +209,7 @@ alias gt="gvim --remote-tab-silent"
 
 
 #={===========================================================================
-# bash-alias
+# alias
 alias a=alias
 alias th='tmuxinator start home'
 alias ta='tmuxinator start airplay'
@@ -209,10 +228,27 @@ alias vdiff=gvimdiff
 alias diff='diff -up'
 alias cdiff='colordiff -up'
 alias gl='global --color -x'
+
+#={===========================================================================
+# alias-ag
+#
+# -m --max-count NUM: Skip the rest of a file after NUM matches. Default is 0,
+# which never skips.
+#
+# -S --smart-case: Match case-sensitively if there are any uppercase letters in
+# PATTERN, case-insensitively otherwise. Enabled by default.
+#
+# -C --context [LINES]: Print lines before and after matches. Default is 2.
+#
+# --color-match: Color codes for result match numbers. Default is 30;43.
+#
+# --color-path: Color codes for path names. Default is 1;32.
+
 alias agc='ag -m 1000000 -C 4 -S --color-path="1;31" --color-match="0;32"'
 alias ag='ag -m 1000000 -S --color-path="1;31" --color-match="0;32"'
 alias agn='ag --no-numbers -m 1000000 -S --color-path="1;31" --color-match="0;32"'
 alias agl='ag -m 1000000 -S --color-path="1;31" --color-match="0;32" --pager "less -r"'
+
 alias sl='echo $SHLVL'
 alias addr2line='/home/kyoupark/STB_SW/FUSIONOS_2/BLD_AMS_BCM_MIPS4K_LNUX_DARWIN_01/platform_cfg/linux/compiler/mips4k_gcc_x86_linux_hound_2/bin/mips-uclibc-addr2line'
 

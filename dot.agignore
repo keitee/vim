@@ -1,0 +1,32 @@
+#{============================================================================
+# airplay
+airplay/
+
+#{============================================================================
+# ai
+appinfrastructure/AppInfrastructure/3rdParty/
+AirplaySdk2/
+AirplaySdk/
+AudioStreamer/tools/
+CppUnit/cppunit-1.12.1/
+CUnit/CUnit-2.1-2/
+Components/Flex/
+
+#{============================================================================
+# brcm refsw
+astra/
+BSEAV/
+magnum/
+rockford/
+trellis/
+
+#nexus/examples/security/
+#nexus/modules/security/
+security/
+
+#nexus/platforms/97271/
+#nexus/platforms/97278/
+nexus/platforms/9727?/
+nexus/build/
+nexus/modules/
+nexus/extensions/
