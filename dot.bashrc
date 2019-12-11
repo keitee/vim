@@ -126,7 +126,8 @@ export EDITOR='gvim'
 # export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 
 # when use `ag` to use ignore feature
-export FZF_DEFAULT_COMMAND="ag --follow --nocolor --nogroup -g ''"
+# export FZF_DEFAULT_COMMAND="ag --follow --nocolor --nogroup -g ''"
+export FZF_DEFAULT_COMMAND="ag --nocolor --nogroup -g ''"
 
 # export FZF_DEFAULT_OPTS="-m --layout=reverse --inline-info"
 export FZF_DEFAULT_OPTS="-m --inline-info"
@@ -151,6 +152,16 @@ export FZF_DEFAULT_OPTS="-m --inline-info"
 # _fzf_setup_completion path ag git kubectl
 # _fzf_setup_completion dir tree
 #
+#
+# Using the finder
+#
+# CTRL-J / CTRL-K (or CTRL-N / CTRL-P) to move cursor up and down
+#
+# Enter key to select the item, CTRL-C / CTRL-G / ESC to exit
+#
+# On multi-select mode (-m), TAB and Shift-TAB to mark multiple items
+#
+#
 # Key bindings for command-line
 #
 # The install script will setup the following key bindings for bash, zsh, 
@@ -168,6 +179,8 @@ export FZF_DEFAULT_OPTS="-m --inline-info"
 #
 # Set FZF_CTRL_R_OPTS to pass additional options
 #
+# export FZF_CTRL_C_COMMAND='cat ~/.`hostname`_persistent_history'
+
 # ALT-C - cd into the selected directory
 # Set FZF_ALT_C_COMMAND to override the default command
 # Set FZF_ALT_C_OPTS to pass additional options
