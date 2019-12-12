@@ -53,11 +53,11 @@ trellis/
 #nexus/modules/security/
 security/
 
-#nexus/platforms/97271/
-#nexus/platforms/97278/
-nexus/platforms/9727?/
+nexus/platforms/97271/
+nexus/platforms/97278/
+#nexus/platforms/9727?/
 nexus/build/
-nexus/modules/
+# nexus/modules/
 nexus/extensions/
 
 #{============================================================================
@@ -84,7 +84,7 @@ meta-rdk-soc-broadcom-opensource/
 meta-rdk-video/
 meta-rdk-voice-sdk/
 meta-virtualization/
-modules/
+# modules/
 openembedded-core/
 opensource/
 rdkmanifest/
