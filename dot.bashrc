@@ -132,11 +132,15 @@ export EDITOR='gvim'
 # --html will search only files with the extensions htm, html, shtml or xhtml.
 # For a list of supported types, run ag --list-file-types.
 #
-#
+#  --cc
+#      .c  .h  .xs
 #  --cpp
 #      .cpp  .cc  .C  .cxx  .m  .hpp  .hh  .h  .H  .hxx  .tpp
 #
-export FZF_DEFAULT_COMMAND="ag --cpp --nocolor --nogroup -g ''"
+# --depth NUM: Search up to NUM directories deep, -1 for unlimited. Default is
+# 25.
+
+export FZF_DEFAULT_COMMAND="ag --depth -1 --cc --cpp --nocolor --nogroup -g ''"
 
 # export FZF_DEFAULT_OPTS="-m --layout=reverse --inline-info"
 export FZF_DEFAULT_OPTS="-m --inline-info"
