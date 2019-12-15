@@ -98,6 +98,44 @@ export EDITOR='gvim'
 
 
 #={===========================================================================
+# pager
+# 
+# https://leanpub.com/the-tao-of-tmux/read#leanpub-auto-example-powerline
+# Read the tmux manual in style
+# 
+# most(1), a solid PAGER, drastically improves readability of manual pages by
+# acting as a syntax highlighter.
+# 
+# sudo apt install most
+# 
+# To get this working, you need to set your PAGER environmental variable to point
+# to the MOST binary. You can test it like this:
+# 
+# $ PAGER=most man ls
+# 
+# If you found you like most, you’ll probably want to make it your default manpage
+# reader. You can do this by setting an environmental variable in your “rc” (Run
+# Commands) for your shell. The location of the file depends on your shell. You
+# can use $ echo $SHELL to find it on most shells). In Bash and zsh, these are
+# kept in ~/.bashrc or ~/.zshrc, respectively:
+# 
+# export PAGER="most"
+# 
+# I often reuse my configurations across machines, and some of them may not have
+# most installed, so I will have my scripting only set PAGER if most is found:
+# 
+# #!/bin/sh
+# 
+# if command -v most > /dev/null 2>&1; then
+#     export PAGER="most"
+# fi
+
+if command -v most > /dev/null 2>&1; then
+  export PAGER="most"
+fi
+
+
+#={===========================================================================
 # fzf
 #
 # Environment variables
