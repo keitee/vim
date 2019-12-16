@@ -151,7 +151,7 @@ fi
 # Default options
 # e.g. export FZF_DEFAULT_OPTS="--layout=reverse --inline-info"
 #
-# To use fzf in Vim like `Files`
+# To use fzf in Vim like `Files` but limits to files in flist.out
 # alias fmw="export FZF_DEFAULT_COMMAND='cat /home/keitee/mw/flist.out'"
 # alias fcu="export FZF_DEFAULT_COMMAND='cat ./flist.out'"
 
