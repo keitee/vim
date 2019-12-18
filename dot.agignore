@@ -12,9 +12,72 @@ CppUnit/cppunit-1.12.1/
 CUnit/CUnit-2.1-2/
 Components/Flex/
 
+
+#{============================================================================
+# direct_build, $B$
+as-system-service/
+downloads/
+generic/
+hooks/
+meta-browser/
+meta-java/
+meta-linaro/
+meta-openembedded/
+meta-qt5/
+meta-rdk/
+meta-rdk-comcast/
+meta-rdk-comcast-video/
+meta-rdk-ext/
+meta-rdk-gnu/
+meta-rdk-oem-arris-broadcom/
+meta-rdk-restricted/
+# sky
+meta-rdk-sky/
+meta-rdk-soc-broadcom/
+meta-rdk-soc-broadcom-opensource/
+meta-rdk-video/
+meta-rdk-voice-sdk/
+meta-virtualization/
+# modules/
+openembedded-core/
+opensource/
+rdkmanifest/
+.repo/
+sstate-cache/
+thirdparty/
+
+# build-xxx
+tmp/sstate-control/
+tmp/deploy
+buildhistory
+tmp/stamps/
+tmp/buildstats/
+tmp/cache/
+tmp/sysroots/
+tmp/log/
+tmp/work/all-rdk-linux/
+tmp/work-shared
+rootfs-dbg/
+
+
+#{============================================================================
+# $B$/build-arrisxi6-morty/tmp/work/
+#   x86_64-linux
+x86_64-linux/
+
+# $B$/build-arrisxi6-morty/tmp/work/arrisxi6-morty
+# this is wrong since it ignore "build-arrisxi6-morty/" as well
+#
+# arrisxi6-morty/
+
+# kernel-source/
+# kernel-build-artifacts/
+
+
 #{============================================================================
 # brcm refsw
-# build-arrisxi6-morty/tmp/work/arrisxi6_morty-rdk-linux-gnueabi/broadcom-refsw/unified-17.3-r4.2
+# $B$/build-arrisxi6-morty/tmp/work/
+#   arrisxi6_morty-rdk-linux-gnueabi/broadcom-refsw/unified-17.3-r4.2
 3pips/
 astra/
 BSEAV/
@@ -60,52 +123,10 @@ nexus/build/
 # nexus/modules/
 nexus/extensions/
 
+
 #{============================================================================
-# rdk
-as-system-service/
-downloads/
-generic/
-hooks/
-meta-browser/
-meta-java/
-meta-linaro/
-meta-openembedded/
-meta-qt5/
-meta-rdk/
-meta-rdk-comcast/
-meta-rdk-comcast-video/
-meta-rdk-ext/
-meta-rdk-gnu/
-meta-rdk-oem-arris-broadcom/
-meta-rdk-restricted/
-meta-rdk-sky/
-meta-rdk-soc-broadcom/
-meta-rdk-soc-broadcom-opensource/
-meta-rdk-video/
-meta-rdk-voice-sdk/
-meta-virtualization/
-# modules/
-openembedded-core/
-opensource/
-rdkmanifest/
-.repo/
-sstate-cache/
-thirdparty/
-
-# build-xxx
-tmp/sstate-control/
-tmp/deploy
-buildhistory
-tmp/stamps/
-tmp/buildstats/
-tmp/cache/
-tmp/sysroots/
-tmp/log/
-tmp/work/all-rdk-linux/
-rootfs-dbg/
-
-
-# build-arrisxi6-morty/tmp/work/cortexa15t2hf-neon-rdk-linux-gnueabi/
+# build-arrisxi6-morty/tmp/work/
+#   cortexa15t2hf-neon-rdk-linux-gnueabi/
 aamp/
 aampabr/
 acl/
@@ -116,7 +137,10 @@ asmockservice/
 asnetworkserviced/
 asplayerservice/
 asproxy/
-assystemserviced/
+
+# as
+# assystemserviced/
+
 atk/
 attr/
 audiocapturemgr/
@@ -503,10 +527,3 @@ xz/
 yajl/
 zlib/
 
-# build-arrisxi6-morty/tmp/work/x86_64-linux
-x86_64-linux/
-
-# build-arrisxi6-morty/tmp/work-shared/arrisxi6-morty
-arrisxi6-morty/
-# kernel-source/
-# kernel-build-artifacts/

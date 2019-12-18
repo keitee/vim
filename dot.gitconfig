@@ -34,3 +34,5 @@
 	keepBackup = false
 [color]
 	ui = auto
+[gitreview]
+	username = bp-kpark257
