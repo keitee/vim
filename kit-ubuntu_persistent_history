@@ -1,0 +1,364 @@
+2019-12-20 08:19:41 | tail -20000 ~/.kit-ubuntu_persistent_history | tee ~/.kit-ubuntu_persistent_history 
+2019-12-20 08:19:44 | ll
+2019-12-20 08:19:48 | man tee
+2019-12-20 08:20:08 | l
+2019-12-20 08:20:09 | ll
+2019-12-18 14:09:11 | bitbake comcast-mediaclient-vbn-image
+2019-12-20 08:20:24 | l
+2019-12-20 08:20:29 | cd git/vim/
+2019-12-20 08:20:30 | ls
+2019-12-20 08:20:34 | ll
+2019-12-20 08:20:52 | l
+2019-12-20 08:20:57 | ll
+2019-12-20 08:21:03 | l
+2019-12-20 08:23:29 | ln -sf git/vim/kit-ubuntu_persistent_history .kit-ubuntu_persistent_history
+2019-12-20 08:23:30 | ll
+2019-12-20 08:23:38 | l
+2019-12-20 08:23:40 | ll
+2019-12-20 08:25:46 | s
+2019-12-20 08:25:48 | a
+2019-12-20 08:28:07 | a
+2019-12-20 08:28:17 | gs RDK
+2019-12-20 08:35:00 | clang-format -i -style=file *.cpp
+2019-12-20 08:35:02 | clang-format -i -style=file *.h
+2019-12-20 08:35:53 | clang-format -i -style=file *.cpp
+2019-12-20 08:39:31 | ag sd_event
+2019-12-20 08:41:04 | cd ..
+2019-12-20 08:41:06 | l
+2019-12-20 08:41:08 | cd ..
+2019-12-20 08:41:08 | ls
+2019-12-20 08:41:22 | cd ..
+2019-12-20 08:41:22 | ls
+2019-12-20 08:41:29 | cd libs/
+2019-12-20 08:41:30 | ls
+2019-12-20 08:41:35 | gvim test_log.cxx 
+2019-12-20 08:41:50 | cd ..
+2019-12-20 08:41:50 | ls
+2019-12-20 08:41:52 | cd os
+2019-12-20 08:41:53 | l
+2019-12-20 08:42:15 | a
+2019-12-20 08:44:05 | l
+2019-12-20 08:44:11 | gv sdevent.cpp
+2019-12-20 09:09:23 | l
+2019-12-20 09:09:31 | cd ..
+2019-12-20 09:09:32 | ls
+2019-12-20 09:14:12 | l
+2019-12-20 09:14:18 | cd dbus/
+2019-12-20 09:14:18 | l
+2019-12-20 09:14:56 | cd ..
+2019-12-20 09:14:56 | ls
+2019-12-20 09:15:03 | git mv dbus/ os-dbus
+2019-12-20 09:15:04 | ls
+2019-12-20 09:15:23 | cd io
+2019-12-20 09:15:24 | ls
+2019-12-20 09:15:26 | cd ..
+2019-12-20 09:15:27 | l
+2019-12-20 09:16:01 | cd os-dbus/
+2019-12-20 09:16:01 | ls
+2019-12-20 09:16:10 | mkdir sdevent
+2019-12-20 09:16:10 | ls
+2019-12-20 09:16:15 | cd sdevent/
+2019-12-20 09:16:15 | l
+2019-12-20 09:16:20 | cd ..
+2019-12-20 09:16:20 | ls
+2019-12-20 09:16:24 | cd sdevent/
+2019-12-20 09:16:24 | ls
+2019-12-20 09:16:48 | cp ~/git/kb/code-cxx/os/sdevent.cpp .
+2019-12-20 09:16:48 | ls
+2019-12-20 09:16:55 | cd ..
+2019-12-20 09:16:56 | ls
+2019-12-20 09:16:59 | cd sdbus/
+2019-12-20 09:16:59 | ls
+2019-12-20 09:17:08 | cd ..
+2019-12-20 09:17:08 | ls
+2019-12-20 09:17:27 | git mv sdbus/ sdbus-case
+2019-12-20 09:17:27 | ls
+2019-12-20 09:17:36 | mkdir sdbus
+2019-12-20 09:17:37 | ls
+2019-12-20 09:17:43 | cd sdevent/
+2019-12-20 09:17:44 | ls
+2019-12-20 09:18:02 | cp ~/git/kb/code-cxx/os/CMakeLists.txt .
+2019-12-20 09:18:02 | ls
+2019-12-20 09:18:18 | gv CMakeLists.txt
+2019-12-20 09:21:49 | mkdir build
+2019-12-20 09:21:51 | cd build/
+2019-12-20 09:21:52 | ls
+2019-12-20 09:21:54 | CMAKE_PREFIX_PATH=/home/keitee/Qt/5.12.6/gcc_64 cmake ..
+2019-12-20 09:21:57 | make
+2019-12-20 09:23:45 | l
+2019-12-20 09:25:16 | cd ..
+2019-12-20 09:25:16 | ls
+2019-12-20 09:25:18 | cd ..
+2019-12-20 09:25:18 | ls
+2019-12-20 09:25:22 | cd sdbus
+2019-12-20 09:25:22 | ls
+2019-12-20 09:25:54 | mv ~/git/kb/code-cxx/os/sdbus_* .
+2019-12-20 09:25:55 | ls
+2019-12-20 09:26:15 | cp ~/git/kb/code-cxx/os/CMakeLists.txt .
+2019-12-20 09:26:16 | ls
+2019-12-20 09:26:24 | gv CMakeLists.txt
+2019-12-20 09:26:33 | l
+2019-12-20 09:26:36 | mkdir build
+2019-12-20 09:26:37 | cd build/
+2019-12-20 09:26:38 | ls
+2019-12-20 09:28:00 | cd ..
+2019-12-20 09:28:00 | ls
+2019-12-20 09:28:12 | gvimdiff sdbus_client_1.cpp sdbus_client_2.cpp 
+2019-12-20 09:28:27 | diff sdbus_client_1.cpp sdbus_client_2.cpp 
+2019-12-20 09:28:31 | l
+2019-12-20 09:28:36 | gvim sdbus_server_1.c 
+2019-12-20 09:29:02 | l
+2019-12-20 09:29:11 | rm sdbus_client_2.cpp 
+2019-12-20 09:29:11 | ls
+2019-12-20 09:29:16 | gvim sdbus_client_1.cpp 
+2019-12-20 09:29:29 | cd build/
+2019-12-20 09:29:29 | ls
+2019-12-20 09:29:30 | CMAKE_PREFIX_PATH=/home/keitee/Qt/5.12.6/gcc_64 cmake ..
+2019-12-20 09:29:32 | make
+2019-12-20 09:29:48 | l
+2019-12-20 09:55:12 | man nc
+2019-12-20 09:56:57 | s
+2019-12-20 09:57:00 | man nc
+2019-12-20 09:57:28 | which most
+2019-12-20 09:57:42 | sudo apt install most
+2019-12-20 09:57:57 | which most
+2019-12-20 09:58:03 | s
+2019-12-20 09:58:06 | man nc
+2019-12-20 09:58:14 | man most
+2019-12-20 10:09:52 | cd /usr/include/systemd/
+2019-12-20 10:09:53 | ls
+2019-12-20 10:10:29 | cd git/kb/
+2019-12-20 10:10:29 | ls
+2019-12-20 10:10:31 | cd bin/
+2019-12-20 10:10:31 | ls
+2019-12-20 10:10:41 | gv bldtag.py
+2019-12-20 10:10:45 | s
+2019-12-20 10:10:47 | a
+2019-12-20 10:10:50 | gv bldtag.py
+2019-12-20 10:12:04 | ag --depth -1 --cc --cpp --nocolor --nogroup -g ''
+2019-12-20 10:12:07 | cd ..
+2019-12-20 10:12:07 | ag --depth -1 --cc --cpp --nocolor --nogroup -g ''
+2019-12-20 10:12:20 | ag /usr/include/systemd --depth -1 --cc --cpp --nocolor --nogroup -g ''
+2019-12-20 10:13:05 | l
+2019-12-20 10:13:06 | cd ..
+2019-12-20 10:13:06 | ls
+2019-12-20 10:13:17 | cd systemd/
+2019-12-20 10:13:18 | pwd
+2019-12-20 10:13:40 | l
+2019-12-20 10:13:41 | ls
+2019-12-20 10:13:42 | cd ..
+2019-12-20 10:13:43 | ls
+2019-12-20 10:14:28 | ag --depth -1 --cc --cpp --nocolor --nogroup -g '' | wc -l
+2019-12-20 10:17:45 | bldtag.py 
+2019-12-20 10:18:51 | ls
+2019-12-20 10:19:01 | bat bin/bldtag_sky_mw.py 
+2019-12-20 10:19:07 | ls
+2019-12-20 10:19:17 | gvim bin/bldtag_sky_mw.py 
+2019-12-20 10:19:35 | bldtag.py 
+2019-12-20 10:19:47 | ll
+2019-12-20 10:19:53 | gvim flist.out 
+2019-12-20 10:23:28 | ls -al | ag ^d
+2019-12-20 10:23:37 | ls -al | ag ^d > out
+2019-12-20 10:23:47 | sudo ls -al | ag ^d > out
+2019-12-20 10:23:55 | gvim out
+2019-12-20 10:24:03 | sudo gvim out
+2019-12-20 10:24:08 | vim out
+2019-12-20 10:24:18 | sudo vim out
+2019-12-20 10:24:31 | cp out ~
+2019-12-20 10:24:45 | sudo ls -al | ag ^d > ~/out
+2019-12-20 10:24:50 | gvim ~/out 
+2019-12-20 10:26:15 | l
+2019-12-20 10:31:55 | bldtag.py 
+2019-12-20 10:46:49 | ll /usr/include/c++/7/bits/boost_concept_check.h
+2019-12-20 10:47:13 | ll /usr/include/c++/
+2019-12-20 10:47:24 | ll /usr/include/c++/7
+2019-12-20 10:47:31 | ll /usr/include/c++/7/bits/boost_concept_check.h
+2019-12-20 10:48:25 | bldtag.py 
+2019-12-20 10:48:50 | ag /usr/include --depth -1 --cc --cpp --nocolor --nogroup -g ''
+2019-12-20 10:49:11 | bldtag.py 
+2019-12-20 10:50:37 | gtags --skip-unreadable -f flist.out 
+2019-12-20 10:50:43 | gtags -f flist.out 
+2019-12-20 10:50:59 | ll/usr/include/unistd.h
+2019-12-20 10:51:03 | ll /usr/include/unistd.h
+2019-12-20 10:55:25 | ls /usr/include/math.h 
+2019-12-20 10:55:30 | ll /usr/include/math.h 
+2019-12-20 10:55:36 | readlink -f /usr/include/math.h 
+2019-12-20 10:55:51 | cd /usr/
+2019-12-20 10:55:52 | ls
+2019-12-20 10:55:55 | ll
+2019-12-20 10:55:56 | cd include/
+2019-12-20 10:55:57 | ll
+2019-12-20 10:56:31 | ll math.h 
+2019-12-20 10:56:35 | more math.h 
+2019-12-20 10:56:45 | dir
+2019-12-20 10:56:46 | dirs
+2019-12-20 10:57:09 | gl
+2019-12-20 10:57:11 | cd
+2019-12-20 10:57:12 | ls
+2019-12-20 10:57:14 | cd git/kb/
+2019-12-20 10:57:15 | ls
+2019-12-20 11:11:05 | gtags -f flist.out 
+2019-12-20 11:13:00 | gtags
+2019-12-20 11:13:11 | sudo make gtags
+2019-12-20 11:13:24 | sudo gtags
+2019-12-20 11:33:52 | bldtag.py 
+2019-12-18 15:37:14 | bitbake comcast-mediaclient-vbn-image
+2019-12-20 11:39:43 | ls
+2019-12-20 11:39:48 | cd /media/keitee/
+2019-12-20 11:39:49 | l
+2019-12-20 11:39:50 | cd ssd2/
+2019-12-20 11:39:51 | ls
+2019-12-20 11:40:08 | mkdir llama
+2019-12-20 11:40:10 | cd llama/
+2019-12-20 11:40:10 | ls
+2019-12-20 11:41:32 | mv ~/Downloads/FW__Llama%2fAdaptor_porting_to_Soip%2fStable2_branch.zip .
+2019-12-20 11:41:32 | ls
+2019-12-20 11:41:37 | unzip FW__Llama%2fAdaptor_porting_to_Soip%2fStable2_branch.zip 
+2019-12-20 11:41:38 | ll
+2019-12-20 11:41:48 | gv README.txt
+2019-12-18 15:37:14 | bitbake comcast-mediaclient-vbn-image
+2019-12-20 11:44:44 | cd .ssh/
+2019-12-20 11:44:44 | l
+2019-12-20 11:45:08 | unzip 'Amlogic ssh keys.zip' 
+2019-12-20 11:45:10 | l
+2019-12-20 11:45:15 | cd Amlogic\ ssh\ keys/
+2019-12-20 11:45:15 | l
+2019-12-20 11:45:49 | mkdir amlogic_repo_key
+2019-12-20 11:45:49 | ls
+2019-12-20 11:45:51 | cd amlogic_repo_key/
+2019-12-20 11:45:51 | ls
+2019-12-20 11:46:07 | cp * ~/.ssh/amlogic_repo_key/
+2019-12-20 11:46:09 | l
+2019-12-20 11:46:18 | ll
+2019-12-20 11:46:25 | chmod 400 amlogic_repo_access_ssh_key_id_rsa
+2019-12-20 11:46:30 | ll
+2019-12-20 11:46:43 | gvim ../config 
+2019-12-20 11:47:54 | cd ..
+2019-12-20 11:47:55 | ls
+2019-12-20 11:48:20 | mkdir manifest
+2019-12-20 11:48:22 | cd manifest/
+2019-12-20 11:48:22 | ls
+2019-12-20 11:48:26 | git init
+2019-12-20 11:48:32 | cp ../sky-llama-rdk.xml .
+2019-12-20 11:48:35 | git add sky-llama-rdk.xml 
+2019-12-20 11:48:35 | ls
+2019-12-20 11:48:43 | git commit sky-llama-rdk.xml -m “Add manifest”
+2019-12-20 11:48:48 | ls
+2019-12-20 11:48:55 | g st
+2019-12-20 11:49:01 | git add sky-llama-rdk.xml 
+2019-12-20 11:49:03 | git commit sky-llama-rdk.xml -m “Add manifest”
+2019-12-20 11:49:15 | git commit -m “Add manifest”
+2019-12-20 11:49:17 | ls
+2019-12-20 11:49:18 | g st
+2019-12-20 11:49:27 | git add sky-llama-rdk.xml 
+2019-12-20 11:49:29 | git commit -m “Add manifest”
+2019-12-20 11:49:36 | g st
+2019-12-20 11:49:40 | git add sky-llama-rdk.xml 
+2019-12-20 11:49:41 | g st
+2019-12-20 11:49:44 | cd ..
+2019-12-20 11:49:45 | ls
+2019-12-20 11:49:47 | cd manifest/
+2019-12-20 11:49:48 | ls
+2019-12-20 11:49:50 | ll
+2019-12-20 11:50:00 | rm -rf .git/
+2019-12-20 11:50:00 | ls
+2019-12-20 11:50:05 | git init 
+2019-12-20 11:50:07 | g st
+2019-12-20 11:50:10 | git add sky-llama-rdk.xml 
+2019-12-20 11:50:11 | g st
+2019-12-20 11:50:20 | git commit 
+2019-12-20 11:50:32 | g st
+2019-12-20 11:50:41 | cd ..
+2019-12-20 11:50:42 | ls
+2019-12-20 11:50:56 | mkdir workspace
+2019-12-20 11:50:58 | cd workspace/
+2019-12-20 11:50:58 | ls
+2019-12-20 11:51:05 | repo init -u <path to local manifest git > -m sky-llama-rdk.xml  -g all --no-repo-verify --repo-url=ssh://gerrit.teamccp.com:29418/rdk/tools/git-repo
+2019-12-20 11:51:05 | repo sync -j4 --no-tags
+2019-12-20 11:51:41 | #repo init -u  -m sky-llama-rdk.xml  -g all --no-repo-verify --repo-url=ssh://gerrit.teamccp.com:29418/rdk/tools/git-repo
+2019-12-20 11:51:41 | ls
+2019-12-20 11:51:45 | cd ../manifest/
+2019-12-20 11:51:55 | repo init -u ../manifest -m sky-llama-rdk.xml  -g all --no-repo-verify --repo-url=ssh://gerrit.teamccp.com:29418/rdk/tools/git-repo
+2019-12-20 11:52:23 | repo sync -j4 --no-tags
+2019-12-20 12:12:38 | repo init -u ../manifest -m sky-llama-rdk.xml  -g all --no-repo-verify --repo-url=ssh://gerrit.teamccp.com:29418/rdk/tools/git-repo
+2019-12-20 12:12:52 | cd
+2019-12-20 13:18:12 | cd /media/keitee/ssd2/
+2019-12-20 13:18:13 | ls
+2019-12-20 13:18:17 | cd llama/
+2019-12-20 13:18:18 | ls
+2019-12-20 13:18:20 | cd workspace/
+2019-12-20 13:18:21 | ls
+2019-12-20 13:18:47 | #repo sync --no-tags -c --no-clone-bundle --no-verify
+2019-12-20 13:18:49 | hgrep
+2019-12-20 13:19:02 | repo init -u  -m sky-llama-rdk.xml  -g all --no-repo-verify --repo-url=ssh://gerrit.teamccp.com:29418/rdk/tools/git-repo
+2019-12-20 13:19:17 | repo init -u ../manifest -m sky-llama-rdk.xml  -g all --no-repo-verify --repo-url=ssh://gerrit.teamccp.com:29418/rdk/tools/git-repo
+2019-12-20 13:19:34 | hgrep 
+2019-12-20 13:24:24 | sudo apt-get install undistract-me
+2019-12-20 13:25:04 | vi /usr/share/undistract-me/long-running.bash
+2019-12-20 13:25:30 | sudo vi /usr/share/undistract-me/long-running.bash
+2019-12-20 13:26:16 | s
+2019-12-20 13:43:36 | complete -p gvim
+2019-12-20 13:44:51 | l
+2019-12-20 13:44:57 | s
+2019-12-20 13:45:16 | l
+2019-12-20 13:45:17 | s
+2019-12-20 13:46:07 | l
+2019-12-20 14:03:45 | cat /etc/profile.d/bash_completion.sh 
+2019-12-20 14:35:47 | cd
+2019-12-20 14:35:48 | ls
+2019-12-20 14:36:05 | touch ~/bin/myfoo
+2019-12-20 14:36:10 | ls
+2019-12-20 14:36:12 | cd bin/
+2019-12-20 14:36:12 | ls
+2019-12-20 14:36:13 | ll
+2019-12-20 14:36:17 | cd ..
+2019-12-20 14:36:17 | ls
+2019-12-20 14:36:36 | chowm keitee.keitee bin
+2019-12-20 14:36:49 | chmod keitee.keitee bin
+2019-12-20 14:36:54 | chmod -g keitee.keitee bin
+2019-12-20 14:37:00 | chownkeitee.keitee bin
+2019-12-20 14:37:03 | ls
+2019-12-20 14:37:04 | ll
+2019-12-20 14:37:22 | man chmod
+2019-12-20 14:37:31 | man chown
+2019-12-20 14:37:46 | chmod keitee:keitee bin
+2019-12-20 14:37:54 | chown keitee:keitee bin
+2019-12-20 14:37:58 | sudo chown keitee:keitee bin
+2019-12-20 14:38:02 | ls
+2019-12-20 14:38:03 | ll
+2019-12-20 14:38:11 | touch bin/myfoo
+2019-12-20 14:38:24 | chmod +x bin/myfoo
+2019-12-20 14:38:24 | ls
+2019-12-20 14:38:27 | which myfoo
+2019-12-20 14:39:05 | touch a.foo
+2019-12-20 14:39:09 | touch b.foo
+2019-12-20 14:40:01 | complete -f -X '!*.foo' myfoo
+2019-12-20 14:57:13 | g st
+2019-12-20 14:57:14 | gc
+2019-12-20 14:57:15 | g st
+2019-12-20 14:57:28 | cd code-cxx/os-dbus/
+2019-12-20 14:57:28 | ls
+2019-12-20 14:57:31 | cd sdbus
+2019-12-20 14:57:31 | ls
+2019-12-20 14:57:41 | git add CMakeLists.txt sdbus_*
+2019-12-20 14:57:42 | g st
+2019-12-20 14:57:45 | cd ..
+2019-12-20 14:57:45 | ls
+2019-12-20 14:57:48 | cd sdevent/
+2019-12-20 14:57:48 | ls
+2019-12-20 14:57:53 | git add CMakeLists.txt sdevent.cpp 
+2019-12-20 14:57:54 | g st
+2019-12-20 14:57:55 | cd ..
+2019-12-20 14:57:56 | g st
+2019-12-20 14:58:02 | cd ..
+2019-12-20 14:58:04 | g st
+2019-12-20 14:58:05 | gc
+2019-12-20 14:58:06 | g st
+2019-12-20 14:58:08 | git push
+2019-12-20 14:58:14 | g st
+2019-12-20 15:08:37 | cd git/vim/
+2019-12-20 15:08:38 | g st
+2019-12-20 15:08:39 | gc
+2019-12-20 15:08:40 | g st
+2019-12-20 15:08:46 | git add kit-ubuntu_persistent_history 
+2019-12-20 15:08:47 | g st
