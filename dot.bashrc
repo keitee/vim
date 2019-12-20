@@ -9,19 +9,6 @@ case $- in
       *) return;;
 esac
 
-# don't put duplicate lines or lines starting with space in the history.
-# See bash(1) for more options
-HISTCONTROL=ignoreboth
-
-# append to the history file, don't overwrite it
-shopt -s histappend
-
-# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-# HISTFILE=~/.bash_history_$(echo $SSH_TTY | cut -f 4 -d'/')
-HISTSIZE=1000
-HISTFILESIZE=2000
-HISTCONTROL=erasedups
-HISTTIMEFORMAT='%F %T '
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -178,6 +165,8 @@ fi
 # --depth NUM: Search up to NUM directories deep, -1 for unlimited. Default is
 # 25.
 
+# export FZF_DEFAULT_COMMAND="ag --depth -1 --nocolor --nogroup -g ''"
+
 export FZF_DEFAULT_COMMAND="ag --depth -1 --cc --cpp --nocolor --nogroup -g ''"
 
 # export FZF_DEFAULT_OPTS="-m --layout=reverse --inline-info"
@@ -257,8 +246,16 @@ export FZF_DEFAULT_OPTS="-m --inline-info"
 
 #={===========================================================================
 # vim
-alias gv="gvim --remote-silent"
-alias gt="gvim --remote-tab-silent"
+# http://vimdoc.sourceforge.net/htmldoc/remote.html
+# alias gv="gvim --remote-silent"
+alias gv="gvim --remote-tab-silent"
+alias gs="gvim --servername "
+
+
+#={===========================================================================
+# clang
+# clang-format -i -style=file bleaudioreader.cpp
+alias cf="clang-format -i -style=file"
 
 
 #={===========================================================================
@@ -355,6 +352,90 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+
+#={===========================================================================
+# bash-completion
+#
+# https://www.linuxjournal.com/content/more-using-bash-complete-command
+#
+# For more complex cases where you need more control over how things are
+# completed you can tell bash to call a function for doing the completion work.
+# This is a function that you supply, that you would probably source from your
+# .profile file. The function name is then supplied as an argument to the -F
+# option of complete:
+#
+# function _mycomplete_()
+# {
+#     local cmd="${1##*/}"
+#     local word=${COMP_WORDS[COMP_CWORD]}
+#     local line=${COMP_LINE}
+#     local xpat='!*.foo'
+# 
+#     COMPREPLY=($(compgen -f -X "$xpat" -- "${word}"))
+# }
+# 
+# complete -F _mycomplete_ myfoo
+
+# In the first three lines of the function body we create some useful local
+# variables, here mainly for showing what's available since most of them aren't
+# used in the function. 
+
+# The first, cmd, gets the command that's being executed, this can be used if
+# your completion function can handle multiple commands. 
+
+# The second, word, gets the word that is being completed, this can be used if
+# your completion strategy changes based on the word that's being expanded, it's
+# also needed so that only matching values are returned. 
+
+# The third, line, gets the entire command line that is being completed. 
+
+# The fourth variable, xpat, is our exclusion pattern, the same one used in the
+# simple example above. Check the bash man page for other useful COMP_*
+# variables.
+
+# The only real code in the function is the last line that sets the variable
+# COMPREPLY, which is our reply to bash's request to expand something. This line
+# uses compgen to generate the expansion. The compgen command accepts most of
+# the same options that complete does but it generates results rather than just
+# storing the rules for future use. Here we tell compgen to create a list of
+# files with -f. Then we tell it to exclude all the files that match our
+# exclusion pattern with -X "$xpat". And finally, we pass in the word being
+# completed so that only items that match it are returned.
+
+# How do I get bash completion for command aliases?
+# https://unix.stackexchange.com/questions/4219/how-do-i-get-bash-completion-for-command-aliases
+#
+# Wraps a completion function
+# make-completion-wrapper <actual completion function> <name of new func.>
+#                         <command name> <list supplied arguments>
+# eg.
+# 	alias agi='apt-get install'
+# 	make-completion-wrapper _apt_get _apt_get_install apt-get install
+# defines a function called _apt_get_install (that's $2) that will complete
+# the 'agi' alias. (complete -F _apt_get_install agi)
+
+function make-completion-wrapper () 
+{
+  local function_name="$2"
+  local arg_count=$(($#-3))
+  local comp_function_name="$1"
+  shift 2
+
+  local function="
+    function $function_name 
+    {
+    ((COMP_CWORD+=$arg_count))
+    COMP_WORDS=( "$@" \${COMP_WORDS[@]:1} )
+    "$comp_function_name"
+    return 0
+  }"
+
+  eval "$function"
+  echo $function_name
+  echo "$function"
+}
+
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
@@ -413,6 +494,20 @@ run_on_prompt_command()
 }
 
 PROMPT_COMMAND="run_on_prompt_command"
+
+# don't put duplicate lines or lines starting with space in the history.
+# See bash(1) for more options
+HISTCONTROL=ignoreboth
+
+# append to the history file, don't overwrite it
+shopt -s histappend
+
+# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+# HISTFILE=~/.bash_history_$(echo $SSH_TTY | cut -f 4 -d'/')
+HISTSIZE=1000
+HISTFILESIZE=2000
+HISTCONTROL=erasedups
+HISTTIMEFORMAT='%F %T '
 
 # alias hgrep='cat ~/.`hostname`_persistent_history | grep --color'
 alias hgrep='cat ~/.`hostname`_persistent_history | fzf'
