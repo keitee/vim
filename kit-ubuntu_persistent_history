@@ -367,3 +367,512 @@
 2019-12-20 15:08:52 | git ll
 2019-12-20 15:08:57 | ls
 2019-12-20 15:08:58 | ll
+2019-12-20 15:09:20 | gc
+2019-12-20 15:09:23 | git push
+2019-12-20 15:09:33 | g st
+2019-12-23 07:34:00 | git pull
+2019-12-23 07:34:03 | git pull
+2019-12-23 07:44:10 | cd ..
+2019-12-23 07:44:11 | ls
+2019-12-23 07:44:15 | cd kb/
+2019-12-23 07:44:15 | ls
+2019-12-23 07:44:19 | cd code-sh/
+2019-12-23 07:44:20 | l
+2019-12-23 07:44:23 | bash function.sh 
+2019-12-23 07:44:28 | gvim function.sh 
+2019-12-23 07:57:27 | bash function.sh 
+2019-12-23 08:58:10 | man netrc
+2019-12-20 13:19:43 | repo sync -j4 --no-tags
+2019-12-23 09:09:42 | gvim ~/.netrc 
+2019-12-23 09:10:26 | repo sync -j4 --no-tags
+2019-12-23 09:10:26 | repo sync -j4 --no-tags
+2019-12-23 09:15:19 | ls
+2019-12-23 09:15:27 | cd /media/keitee/ssd2/llama/
+2019-12-23 09:15:30 | hgrep
+2019-12-23 09:15:41 | l
+2019-12-23 09:15:44 | cd workspace/
+2019-12-23 09:15:44 | ls
+2019-12-23 09:15:45 | ll
+2019-12-23 09:16:16 | repo sync -j4 --no-tags
+2019-12-23 09:35:05 | L
+2019-12-23 09:35:09 | l
+2019-12-23 09:35:10 | ll
+2019-12-23 09:35:43 | xmodmap ~/.xmodmap 
+2019-12-23 09:35:44 | l
+2019-12-23 09:35:46 | ls
+2019-12-23 09:35:53 | gvim ../manifest/sky-llama-rdk.xml 
+2019-12-23 09:36:30 | repo sync -j4 --no-tags
+2019-12-23 09:10:26 | repo sync -j4 --no-tags
+2019-12-23 09:39:18 | cd .ssh/
+2019-12-23 09:39:18 | l
+2019-12-23 09:39:24 | cd amlogic_repo_key/
+2019-12-23 09:39:24 | l
+2019-12-23 09:39:37 | cd ..
+2019-12-23 09:39:38 | ls
+2019-12-23 09:39:41 | a
+2019-12-23 09:39:49 | v config 
+2019-12-23 09:39:59 | ls
+2019-12-23 09:40:01 | cd amlogic_repo_key/
+2019-12-23 09:40:01 | l
+2019-12-23 09:38:40 | git clone ssh://git@openlinux.amlogic.com/yocto/meta-meson -b rdkv-2019q3
+2019-12-23 09:41:02 | git clone ssh://git@openlinux.amlogic.com/yocto/meta-rdk-bsp-amlogic -b rdkv-2019q3
+2019-12-23 09:41:25 | git clone ssh://git@openlinux.amlogic.com/yocto/meta-customer-sky -b rdkv-2019q3
+2019-12-23 09:41:41 | l
+2019-12-23 09:42:02 | find . -name meta-rdk-oem-sky-amlogic.tar.bz2
+2019-12-23 09:42:16 | cd /media/keitee/ssd2/llama/
+2019-12-23 09:42:16 | l
+2019-12-23 09:42:38 | cp ../meta-rdk-oem-sky-amlogic.tar.bz2 .
+2019-12-23 09:42:39 | ls
+2019-12-23 09:42:48 | tar xvf meta-rdk-oem-sky-amlogic.tar.bz2 
+2019-12-23 09:42:58 | source meta-rdk/setup-environment
+2019-12-23 09:43:12 | l
+2019-12-23 09:43:13 | ll
+2019-12-23 09:43:23 | cd meta-rdk-oem-sky-amlogic/
+2019-12-23 09:43:24 | ls
+2019-12-23 09:43:28 | cd ..
+2019-12-23 09:43:29 | ls
+2019-12-23 09:43:36 | find . -name setup-env*
+2019-12-23 09:44:39 | v ./meta-meson/setup-environment 
+2019-12-23 09:45:12 | ls
+2019-12-23 09:45:15 | cd workspace/
+2019-12-23 09:45:16 | ls
+2019-12-23 09:45:29 | . meta-meson/setup-environment 
+2019-12-23 09:45:40 | source meta-meson/setup-environment 
+2019-12-23 09:45:59 | hgrep
+2019-12-23 09:46:43 | repo init -u ../manifest -m sky-llama-rdk.xml  -g all --no-repo-verify --repo-url=ssh://gerrit.teamccp.com:29418/rdk/tools/git-repo
+2019-12-23 09:47:11 | repo sync -j4 --no-tags
+2019-12-23 09:53:28 | git ll
+2019-12-23 09:53:39 | git pull --rebase
+2019-12-23 09:53:44 | git ll
+2019-12-23 09:54:20 | git diff origin/topic/fr_qtb_upgrade..HEAD
+2019-12-23 09:54:45 | git show HEAD
+2019-12-23 09:56:38 | git commit --amend 
+2019-12-23 09:56:49 | git show
+2019-12-23 09:57:47 | ls
+2019-12-23 09:57:48 | ll
+2019-12-23 09:57:55 | v .gitreview 
+2019-12-23 09:57:57 | a
+2019-12-23 09:57:59 | v .gitreview 
+2019-12-23 09:58:02 | s
+2019-12-23 09:58:03 | v .gitreview 
+2019-12-23 09:59:00 | git-review topic/fr_qtb_upgrade
+2019-12-23 10:07:32 | git ll
+2019-12-23 10:07:48 | gitk &
+2019-12-23 10:09:10 | l
+2019-12-23 10:11:29 | ll
+2019-12-23 10:24:34 | ls
+2019-12-23 10:24:37 | dirs
+2019-12-23 10:24:53 | pushd /usr/share/bash-completion/
+2019-12-23 10:24:53 | ls
+2019-12-23 10:24:55 | cd completions/
+2019-12-23 10:24:55 | ls
+2019-12-23 10:25:07 | gvim apt-get 
+2019-12-23 10:25:47 | ag funtion
+2019-12-23 10:25:51 | ag function
+2019-12-23 10:26:25 | popd
+2019-12-23 10:26:26 | l
+2019-12-23 10:26:28 | cd
+2019-12-23 10:26:38 | v .fzf.bash 
+2019-12-23 10:26:40 | a
+2019-12-23 10:26:41 | s
+2019-12-23 10:26:42 | v .fzf.bash 
+2019-12-23 10:27:01 | v .fzf/shell/completion.bash 
+2019-12-23 10:31:04 | l
+2019-12-23 10:31:06 | cd ..
+2019-12-23 10:31:07 | ls
+2019-12-23 10:31:09 | cd manifest/
+2019-12-23 10:31:10 | ls
+2019-12-23 10:31:17 | mv sky-llama-rdk.xml sky-llama-rdk.xml.old
+2019-12-23 10:31:21 | mv ~/Downloads/sky-llama-rdk.xml .
+2019-12-23 10:31:22 | ls
+2019-12-23 10:31:27 | gvimdiff sky-llama-rdk.xml sky-llama-rdk.xml.old 
+2019-12-23 10:31:47 | cd ..
+2019-12-23 10:31:47 | ls
+2019-12-23 10:31:50 | cd workspace/
+2019-12-23 10:31:50 | ls
+2019-12-23 10:31:56 | repo init -u ../manifest -m sky-llama-rdk.xml  -g all --no-repo-verify --repo-url=ssh://gerrit.teamccp.com:29418/rdk/tools/git-repo
+2019-12-23 10:32:08 | repo sync -j4 --no-tags
+2019-12-23 10:34:47 | ls
+2019-12-23 10:34:53 | ll
+2019-12-23 10:34:59 | rm -rf *
+2019-12-23 10:35:04 | repo init -u ../manifest -m sky-llama-rdk.xml  -g all --no-repo-verify --repo-url=ssh://gerrit.teamccp.com:29418/rdk/tools/git-repo
+2019-12-23 10:35:07 | ls
+2019-12-23 10:35:08 | ll
+2019-12-23 10:35:14 | rm -rf .repo/
+2019-12-23 10:35:17 | ll
+2019-12-23 10:35:17 | ls
+2019-12-23 10:35:19 | repo init -u ../manifest -m sky-llama-rdk.xml  -g all --no-repo-verify --repo-url=ssh://gerrit.teamccp.com:29418/rdk/tools/git-repo
+2019-12-23 10:35:31 | repo sync -j4 --no-tags
+2019-12-23 09:14:30 | man netrc
+2019-12-23 10:52:10 | l
+2019-12-23 10:52:15 | cd /media/keitee/ssd2/
+2019-12-23 10:52:16 | ls
+2019-12-23 10:52:18 | cd llama/
+2019-12-23 10:52:18 | ls
+2019-12-23 10:52:21 | cd manifest/
+2019-12-23 10:52:22 | ls
+2019-12-23 10:52:23 | ll
+2019-12-23 10:52:27 | gvi sky-llama-rdk.xml
+2019-12-23 10:52:31 | v sky-llama-rdk.xml
+2019-12-23 11:01:41 | ls
+2019-12-23 11:01:43 | ll
+2019-12-23 11:01:47 | rm -rf .repo/
+2019-12-23 11:01:56 | repo init -u ../manifest -m sky-llama-rdk.xml  -g all --no-repo-verify --repo-url=ssh://gerrit.teamccp.com:29418/rdk/tools/git-repo
+2019-12-23 11:03:27 | l
+2019-12-23 11:03:29 | cd ..
+2019-12-23 11:03:30 | l
+2019-12-23 11:03:33 | cd workspace/
+2019-12-23 11:03:33 | l
+2019-12-23 11:03:34 | ll
+2019-12-23 11:03:38 | cd .repo/
+2019-12-23 11:03:39 | l
+2019-12-23 11:03:50 | cd manifests
+2019-12-23 11:03:51 | l
+2019-12-23 11:03:53 | cd ..
+2019-12-23 11:03:53 | l
+2019-12-23 11:03:56 | cd manifests.git/
+2019-12-23 11:03:57 | l
+2019-12-23 11:04:04 | cd ..
+2019-12-23 11:04:05 | l
+2019-12-23 11:04:06 | cd ..
+2019-12-23 11:04:07 | l
+2019-12-23 11:05:47 | cd ..
+2019-12-23 11:05:48 | l
+2019-12-23 11:05:49 | cd workspace/
+2019-12-23 11:05:50 | l
+2019-12-23 11:02:09 | repo sync -j4 --no-tags
+2019-12-23 11:08:25 | l
+2019-12-23 11:08:28 | rm -rf .repo/
+2019-12-23 11:08:36 | repo init -u ../manifest -m sky-llama-rdk.xml  -g all --no-repo-verify --repo-url=ssh://gerrit.teamccp.com:29418/rdk/tools/git-repo
+2019-12-23 11:08:42 | repo sync -j4 --no-tags
+2019-12-23 11:27:32 | l
+2019-12-23 11:27:35 | ls
+2019-12-23 11:27:36 | ll
+2019-12-23 11:27:54 | l
+2019-12-23 11:27:57 | ll
+2019-12-23 11:29:28 | cd ..
+2019-12-23 11:29:28 | ls
+2019-12-23 11:29:31 | cd manifest/
+2019-12-23 11:29:31 | ls
+2019-12-23 11:29:43 | cp ~/Downloads/sky-llama-rdk.xml sky-llama-rdk.xml.xx
+2019-12-23 11:30:00 | gvimdiff sky-llama-rdk.xml sky-llama-rdk.xml.xx 
+2019-12-23 11:30:43 | l
+2019-12-23 11:30:44 | ll
+2019-12-23 11:30:48 | rm -rf .repo/
+2019-12-23 11:30:59 | cp ../manifest/sky-llama-rdk.xml .
+2019-12-23 11:31:03 | ls
+2019-12-23 11:31:04 | ll
+2019-12-23 11:31:27 | l
+2019-12-23 11:31:28 | ll
+2019-12-23 11:31:39 | ag hook sky-llama-rdk.xml 
+2019-12-23 11:32:08 | repo init -m sky-llama-rdk.xml  -g all --no-repo-verify --repo-url=ssh://gerrit.teamccp.com:29418/rdk/tools/git-repo
+2019-12-23 11:33:09 | man repo init
+2019-12-23 11:32:44 | repo init -u . -m sky-llama-rdk.xml  -g all --no-repo-verify --repo-url=ssh://gerrit.teamccp.com:29418/rdk/tools/git-repo
+2019-12-23 11:34:04 | repo init -m sky-llama-rdk.xml  -g all --no-repo-verify --repo-url=ssh://gerrit.teamccp.com:29418/rdk/tools/git-repo
+2019-12-23 11:34:15 | ls
+2019-12-23 11:34:15 | ll
+2019-12-23 11:34:20 | rm -rf .repo/
+2019-12-23 11:34:20 | ls
+2019-12-23 11:34:24 | repo init -m sky-llama-rdk.xml  -g all --no-repo-verify --repo-url=ssh://gerrit.teamccp.com:29418/rdk/tools/git-repo
+2019-12-23 11:34:33 | l
+2019-12-23 11:34:35 | ll
+2019-12-23 11:34:38 | cd .repo/
+2019-12-23 11:34:38 | ll
+2019-12-23 11:33:41 | repo help init
+2019-12-23 11:37:41 | q
+2019-12-23 11:37:42 | ls
+2019-12-23 11:37:43 | ll
+2019-12-23 11:37:57 | l
+2019-12-23 11:37:57 | ll
+2019-12-23 11:38:53 | g st
+2019-12-23 11:39:00 | git add sky-llama-rdk.xml
+2019-12-23 11:39:01 | g st
+2019-12-23 11:39:08 | git commit 
+2019-12-23 11:39:22 | g st
+2019-12-23 11:39:32 | cd ..
+2019-12-23 11:39:33 | ls
+2019-12-23 11:39:36 | rm sky-llama-rdk.xml 
+2019-12-23 11:39:37 | ls
+2019-12-23 11:39:39 | ll
+2019-12-23 11:39:41 | rm -rf .repo/
+2019-12-23 11:39:45 | repo init -u ../manifest -m sky-llama-rdk.xml  -g all --no-repo-verify --repo-url=ssh://gerrit.teamccp.com:29418/rdk/tools/git-repo
+2019-12-23 11:40:56 | l
+2019-12-23 11:41:44 | repo help init
+2019-12-23 11:40:42 | repo sync -j4 --no-tags
+2019-12-23 11:46:59 | g st
+2019-12-23 11:47:00 | ll
+2019-12-23 11:47:25 | l
+2019-12-23 11:47:14 | git clone ssh://git@openlinux.amlogic.com/yocto/meta-meson -b rdkv-2019q3
+2019-12-23 11:47:46 | cdiff sky-llama-rdk.xml sky-llama-rdk.xml.xx 
+2019-12-23 11:47:55 | cdiff sky-llama-rdk.xml.xx sky-llama-rdk.xml
+2019-12-23 11:49:07 | git clone ssh://git@openlinux.amlogic.com/yocto/meta-rdk-bsp-amlogic -b rdkv-2019q3
+2019-12-23 11:49:17 | git clone ssh://git@openlinux.amlogic.com/yocto/meta-customer-sky -b rdkv-2019q3
+2019-12-23 11:49:28 | ls
+2019-12-23 11:49:32 | cp ../meta-rdk-oem-sky-amlogic.tar.bz2 
+2019-12-23 11:49:35 | cp ../meta-rdk-oem-sky-amlogic.tar.bz2 .
+2019-12-23 11:49:36 | ls
+2019-12-23 11:49:46 | tar xvf meta-rdk-oem-sky-amlogic.tar.bz2 
+2019-12-23 11:49:47 | ll
+2019-12-23 11:49:54 | source meta-rdk/setup-environment
+2019-12-23 12:08:08 | cd ..
+2019-12-23 12:08:09 | ls
+2019-12-23 12:08:10 | ls
+2019-12-23 12:08:19 | cp sky-llama-rdk.xml.xx sky-llama-rdk.xml
+2019-12-23 12:08:21 | g st
+2019-12-23 12:08:25 | git add sky-llama-rdk.xml
+2019-12-23 12:08:28 | git commit 
+2019-12-23 12:08:38 | git show
+2019-12-23 12:09:10 | git show
+2019-12-23 12:09:33 | rm -rf *
+2019-12-23 12:09:36 | ls
+2019-12-23 12:09:38 | rm -rf .repo/
+2019-12-23 12:09:44 | repo init -u ../manifest -m sky-llama-rdk.xml  -g all --no-repo-verify --repo-url=ssh://gerrit.teamccp.com:29418/rdk/tools/git-repo
+2019-12-23 12:09:50 | repo sync -j4 --no-tags
+2019-12-23 12:18:28 | source meta-rdk/setup-environment
+2019-12-23 12:18:52 | git clone ssh://git@openlinux.amlogic.com/yocto/meta-meson -b rdkv-2019q3
+2019-12-23 12:19:08 | git clone ssh://git@openlinux.amlogic.com/yocto/meta-rdk-bsp-amlogic -b rdkv-2019q3
+2019-12-23 12:19:18 | git clone ssh://git@openlinux.amlogic.com/yocto/meta-customer-sky -b rdkv-2019q3
+2019-12-23 12:19:38 | cp ../meta-rdk-oem-sky-amlogic.tar.bz2 .
+2019-12-23 12:19:50 | tar xvf meta-rdk-oem-sky-amlogic.tar.bz2 meta-rdk-oem-sky-amlogic/
+2019-12-23 12:19:53 | source meta-rdk/setup-environment
+2019-12-23 12:22:01 | l
+2019-12-23 12:22:03 | cd ..
+2019-12-23 12:22:03 | ls
+2019-12-23 12:22:05 | cd workspace/
+2019-12-23 12:22:06 | ls
+2019-12-23 12:22:48 | ls meta-rdk-ext/recipes-extended/wpe-webkit/wpe-webkit.inc
+2019-12-23 12:22:59 | bat meta-rdk-ext/recipes-extended/wpe-webkit/wpe-webkit.inc
+2019-12-23 12:23:11 | more meta-rdk-ext/recipes-extended/wpe-webkit/wpe-webkit.inc
+2019-12-23 12:23:25 | 
+2019-12-23 12:23:25 | l
+2019-12-23 12:32:33 | ls
+2019-12-23 12:33:01 | patch -p1 --dry-run < /media/keitee/ssd2/qemu.patch 
+2019-12-23 12:33:07 | patch -p1 < /media/keitee/ssd2/qemu.patch 
+2019-12-23 12:20:03 | bitbake comcast-mediaclient-vbn-image
+2019-12-23 12:47:53 | patch -p1 < /media/keitee/ssd2/breakpad.patch 
+2019-12-23 12:48:17 | patch -p1 < /media/keitee/ssd2/openssl.patch 
+2019-12-23 12:48:27 | patch -p1 < /media/keitee/ssd2/e2fsprogs.patch 
+2019-12-23 12:48:36 | patch -p1 < /media/keitee/ssd2/tigress.patch 
+2019-12-23 12:51:47 | gvim ../../ucontext_reader.cc.patch 
+2019-12-23 12:52:37 | gvim /media/keitee/ssd2/llama/workspace/build-sky_llama_adapter/tmp/work/x86_64-linux/breakpad-native/svn-r0/temp/log.do_compile.19616
+2019-12-23 12:53:40 | l
+2019-12-23 12:53:57 | cd build-sky_llama_adapter/
+2019-12-23 12:54:03 | pushd tmp/work/x86_64-linux/breakpad-native/svn-r0/trunk/src/client/linux/dump_writer_common
+2019-12-23 12:54:04 | ls
+2019-12-23 12:54:33 | patch -p1 --dry-run < /media/keitee/ssd2/ucontext_reader.cc.patch 
+2019-12-23 12:54:43 | patch -p1 < /media/keitee/ssd2/ucontext_reader.cc.patch 
+2019-12-23 12:54:48 | patch -p1 < /media/keitee/ssd2/ucontext_reader.h.patch 
+2019-12-23 12:55:37 | ls /media/keitee/ssd2/*.patch
+2019-12-23 12:55:55 | ls
+2019-12-23 12:55:56 | cd ..
+2019-12-23 12:55:57 | ls
+2019-12-23 12:56:01 | cd minidump_writer/
+2019-12-23 12:56:02 | ls
+2019-12-23 12:56:12 | patch -p1 < /media/keitee/ssd2/minidump_writer.patch 
+2019-12-23 12:56:14 | pwd
+2019-12-23 12:57:29 | popd
+2019-12-23 12:57:30 | ls
+2019-12-23 12:57:47 | v ../../../breakpad.patch 
+2019-12-23 12:56:35 | bitbake comcast-mediaclient-vbn-image
+2019-12-23 12:58:30 | v ../meta-openembedded/meta-oe/recipes-devtools/breakpad/files/breakpad-ucontext-fix.patch 
+2019-12-23 12:59:21 | v ../meta-openembedded/meta-oe/recipes-devtools/breakpad/breakpad_svn.bb
+2019-12-23 13:00:21 | v /media/keitee/ssd2/llama/workspace/build-sky_llama_adapter/tmp/work/x86_64-linux/breakpad-native/svn-r0/temp/log.do_compile.22835
+2019-12-23 13:02:45 | pushd ../../../
+2019-12-23 13:02:46 | ls
+2019-12-23 13:03:00 | gvim ucontext_reader.h.patch 
+2019-12-23 13:03:45 | l
+2019-12-23 13:04:19 | popd
+2019-12-23 13:04:24 | pushd tmp/work/x86_64-linux/breakpad-native/svn-r0/trunk/src/client/linux/dump_writer_common
+2019-12-23 13:04:29 | h
+2019-12-23 13:04:39 | l
+2019-12-23 13:04:43 | cd ..
+2019-12-23 13:04:44 | ls
+2019-12-23 13:04:51 | cd minidump_writer/
+2019-12-23 13:04:51 | l
+2019-12-23 13:05:11 | ls ../../../*.patch
+2019-12-23 13:05:26 | cd ..
+2019-12-23 13:05:26 | ls
+2019-12-23 13:05:30 | cd microdump_writer/
+2019-12-23 13:05:30 | ls
+2019-12-23 13:05:38 | patch -p1 < /media/keitee/ssd2/microdump_writer.patch 
+2019-12-23 13:05:52 | cd ..
+2019-12-23 13:05:53 | l
+2019-12-23 13:06:00 | cd handler/
+2019-12-23 13:06:00 | ls
+2019-12-23 13:06:14 | patch -p1 < /media/keitee/ssd2/exception_handler.patch 
+2019-12-23 13:20:52 | h
+2019-12-23 13:21:20 | hgrep
+2019-12-23 13:21:31 | popd
+2019-12-23 13:21:39 | patch -p1 < /media/keitee/ssd2/ucresolve.patch 
+2019-12-23 13:22:45 | more /media/keitee/ssd2/ucresolve.patch 
+2019-12-23 13:23:08 | #patch -p1 < /media/keitee/ssd2/ucresolve.patch 
+2019-12-23 13:23:09 | cd ..
+2019-12-23 13:23:13 | patch -p1 < /media/keitee/ssd2/ucresolve.patch 
+2019-12-23 13:23:29 | pwd
+2019-12-23 13:28:23 | l
+2019-12-23 13:28:30 | cd git/kb/code-sh
+2019-12-23 13:28:31 | l
+2019-12-23 13:28:36 | gvim function.sh 
+2019-12-23 13:31:09 | bash function.sh 
+2019-12-23 13:06:30 | bitbake comcast-mediaclient-vbn-image
+2019-12-23 13:34:45 | display
+2019-12-23 13:35:30 | declare
+2019-12-23 13:35:50 | declare -f fzf-file-widget
+2019-12-23 13:36:16 | declare -F fzf-file-widget
+2019-12-23 13:37:57 | declare -F fzf-file-widget2
+2019-12-23 13:38:36 | bash function.sh 
+2019-12-23 13:41:52 | declare -F fzf-file-widget
+2019-12-23 13:41:58 | declare -F fzf-file-widget > /dev/null
+2019-12-23 13:42:24 | echo $?
+2019-12-23 13:42:30 | declare -F fzf-file-widget2 > /dev/null
+2019-12-23 13:42:33 | echo $?
+2019-12-23 13:43:00 | echo "" 
+2019-12-23 13:43:11 | echo "" > /dev/null
+2019-12-23 13:43:14 | echo $?
+2019-12-23 13:43:32 | > /dev/null
+2019-12-23 13:43:34 | echo $?
+2019-12-23 13:46:01 | which ssh-copy-id
+2019-12-23 13:46:12 | which ssh-copy-id > /dev/null
+2019-12-23 13:46:24 | echo $?
+2019-12-23 13:46:30 | which ssh-copy-id-xxx > /dev/null
+2019-12-23 13:46:33 | echo $?
+2019-12-23 13:47:00 | v /media/keitee/ssd2/llama/workspace/build-sky_llama_adapter/tmp/work/armv7at2hf-neon-rdk-linux-gnueabi/rmfhalheaders/1.99+git${SRCPV}-r0/temp/log.do_configure.8735
+2019-12-23 13:47:36 | pushd /media/keitee/ssd2/llama/workspace/build-sky_llama_adapter/tmp/work/armv7at2hf-neon-rdk-linux-gnueabi/rmfhalheaders/1.99+git\$\{SRCPV\}-r0/
+2019-12-23 13:47:37 | ls
+2019-12-23 13:47:41 | cd temp/
+2019-12-23 13:47:42 | ls
+2019-12-23 13:47:52 | v log.do_configure.8735 
+2019-12-23 13:48:37 | l
+2019-12-23 13:48:38 | cd ..
+2019-12-23 13:48:39 | ls
+2019-12-23 13:48:42 | cd git/
+2019-12-23 13:48:43 | ls
+2019-12-23 13:48:45 | cd soc_qamsource/
+2019-12-23 13:48:45 | ls
+2019-12-23 13:48:49 | cd hal/hal_include/
+2019-12-23 13:48:49 | ls
+2019-12-23 13:48:51 | cd ..
+2019-12-23 13:48:51 | ls
+2019-12-23 13:48:53 | cd ..
+2019-12-23 13:48:53 | ls
+2019-12-23 13:48:55 | cd ..
+2019-12-23 13:48:56 | ls
+2019-12-23 13:48:59 | l
+2019-12-23 13:49:14 | cd ..
+2019-12-23 13:49:15 | ls
+2019-12-23 13:49:16 | cd temp/
+2019-12-23 13:49:17 | ls
+2019-12-23 13:49:25 | ./run.do_configure
+2019-12-23 13:51:26 | ls
+2019-12-23 13:51:40 | bat log.do_fetch
+2019-12-23 13:51:55 | gvim log.do_fetch
+2019-12-23 13:52:07 | gvim log.do_patch
+2019-12-23 13:52:12 | l
+2019-12-23 13:52:19 | gvim log.do_unpack
+2019-12-23 13:52:31 | cd ..
+2019-12-23 13:52:31 | ls
+2019-12-23 13:52:33 | ll
+2019-12-23 13:52:38 | find .
+2019-12-23 13:52:40 | ls
+2019-12-23 13:53:09 | ls -alR
+2019-12-23 13:53:16 | find .
+2019-12-23 13:59:39 | ls
+2019-12-23 13:59:56 | find . -name *.bb* | xargs ag rmfhalheaders
+2019-12-23 14:00:20 | v meta-rdk-video/recipes-extended/mediaframework/rmfgeneric_git.bb
+2019-12-23 14:02:12 | dirs
+2019-12-23 14:02:13 | popd
+2019-12-23 14:02:14 | ls
+2019-12-23 14:03:53 | bitbake -c listtasks rmfhalheaders
+2019-12-23 14:04:19 | bitbake -c fetch rmfhalheaders
+2019-12-23 14:04:32 | bitbake -vDDD -c fetch rmfhalheaders
+2019-12-23 14:22:45 | ls
+2019-12-23 14:22:46 | cd build-sky_llama_adapter/
+2019-12-23 14:22:46 | ls
+2019-12-23 14:22:47 | ll
+2019-12-23 14:22:52 | cd conf/
+2019-12-23 14:22:52 | ls
+2019-12-23 14:22:57 | cd ..
+2019-12-23 14:22:58 | ls
+2019-12-23 14:22:59 | cd ..
+2019-12-23 14:22:59 | ls
+2019-12-23 14:23:02 | cd build-sky_llama_adapter/
+2019-12-23 14:23:03 | ls
+2019-12-23 14:23:14 | ls
+2019-12-23 09:14:30 | man netrc
+2019-12-23 14:23:28 | cd /media/keitee/ssd2/direct_build
+2019-12-23 14:23:28 | ls
+2019-12-23 14:23:30 | cd build-arrisxi6-morty/
+2019-12-23 14:23:32 | cd ..
+2019-12-23 14:23:32 | ls
+2019-12-23 14:23:38 | cd ..
+2019-12-23 14:23:38 | ls
+2019-12-23 14:26:09 | hgrep 
+2019-12-23 14:26:21 | source meta-rdk/setup-environment
+2019-12-23 14:26:21 | source meta-rdk/setup-environment
+2019-12-23 14:26:57 | cd /media/keitee/ssd2/
+2019-12-23 14:26:58 | ls
+2019-12-23 14:26:59 | cd llama/
+2019-12-23 14:27:00 | ls
+2019-12-23 14:27:02 | cd workspace/
+2019-12-23 14:27:02 | ls
+2019-12-23 14:27:09 | hgrep 
+2019-12-23 14:27:36 | repo sync -j4 --no-tags
+2019-12-23 14:29:03 | source meta-rdk/setup-environment
+2019-12-23 14:26:21 | source meta-rdk/setup-environment
+2019-12-23 14:30:51 | !
+2019-12-23 14:30:52 | ls
+2019-12-23 14:30:56 | cd /media/keitee/ssd2/
+2019-12-23 14:30:56 | l
+2019-12-23 14:31:00 | cd llama/
+2019-12-23 14:31:00 | ls
+2019-12-23 14:31:02 | cd workspace/
+2019-12-23 14:31:03 | ll
+2019-12-23 14:31:04 | ls
+2019-12-23 14:31:19 | cat auto.conf 
+2019-12-23 14:29:15 | bitbake comcast-mediaclient-vbn-image
+2019-12-23 14:31:37 | bitbake -c clean rmfhalheaders
+2019-12-23 14:31:46 | bitbake comcast-mediaclient-vbn-image
+2019-12-23 14:32:57 | rm -rf /media/keitee/ssd2/llama/workspace/build-sky_llama_adapter/tmp/work/armv7at2hf-neon-rdk-linux-gnueabi/rmfhalheaders/
+2019-12-23 14:33:41 | v /media/keitee/ssd2/llama/workspace/build-sky_llama_adapter/tmp/work/armv7at2hf-neon-rdk-linux-gnueabi/iarmmgrs/1.99-r0/temp/log.do_compile.27483
+2019-12-23 14:32:59 | bitbake comcast-mediaclient-vbn-image
+2019-12-23 14:36:33 | bitbake -c clean iarmmgrs
+2019-12-23 14:36:43 | bitbake comcast-mediaclient-vbn-image
+2019-12-23 14:37:13 | ls
+2019-12-23 14:37:15 | rm -rf tmp/
+2019-12-23 14:37:32 | bitbake comcast-mediaclient-vbn-image
+2019-12-23 14:39:53 | ls
+2019-12-23 14:40:03 | rm -f cache/ tmp/
+2019-12-23 14:40:07 | rm -rf cache/ tmp/
+2019-12-23 14:43:01 | v /media/keitee/ssd2/llama/workspace/build-sky_llama_adapter/tmp/work/armv7at2hf-neon-rdk-linux-gnueabi/iarmmgrs/1.99-r0/temp/log.do_compile.16208
+2019-12-23 14:40:18 | bitbake comcast-mediaclient-vbn-image
+2019-12-23 14:44:30 | pushd /media/keitee/ssd2/llama/workspace/build-sky_llama_adapter/tmp/work/armv7at2hf-neon-rdk-linux-gnueabi/iarmmgrs/1.99-r0/t
+2019-12-23 14:44:32 | pushd /media/keitee/ssd2/llama/workspace/build-sky_llama_adapter/tmp/work/armv7at2hf-neon-rdk-linux-gnueabi/iarmmgrs/1.99-r0/
+2019-12-23 14:44:33 | ls
+2019-12-23 14:44:39 | ll
+2019-12-23 14:44:42 | more iarmmgrs_irMgr_resolve_compilation_error.patch 
+2019-12-23 14:45:11 | popd
+2019-12-23 14:45:31 | gvim meta-rdk-oem-sky-amlogic/meta-llama/conf/machine/include/sky_llama_common.inc 
+2019-12-23 14:48:32 | rm -rf tmp/
+2019-12-23 14:48:44 | bitbake comcast-mediaclient-vbn-image
+2019-12-23 15:07:09 | g st
+2019-12-23 15:07:13 | gc
+2019-12-23 15:07:30 | g st
+2019-12-23 15:07:48 | git reset 
+2019-12-23 15:07:49 | g st
+2019-12-23 15:07:58 | git reset --mixed
+2019-12-23 15:07:59 | g st
+2019-12-23 15:08:05 | git reset --soft
+2019-12-23 15:08:08 | g st
+2019-12-23 15:08:13 | git reflog 
+2019-12-23 15:08:35 | git reset 4886f4a
+2019-12-23 15:08:37 | g st
+2019-12-23 15:08:45 | git co -- man/bash.txt
+2019-12-23 15:08:46 | g st
+2019-12-23 15:08:47 | gc
+2019-12-23 15:08:48 | g st
+2019-12-23 15:08:50 | git push
+2019-12-23 15:08:56 | cd ..
+2019-12-23 15:08:57 | ls
+2019-12-23 15:08:59 | cd vim/
+2019-12-23 15:09:00 | l
+2019-12-23 15:09:01 | g st

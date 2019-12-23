@@ -409,6 +409,19 @@ bind '"\e[B": history-search-forward'
 #      completion specifications are printed in a way that allows them to be
 #      reused as input.
 #
+#      '-o COMP-OPTION'
+#           The COMP-OPTION controls several aspects of the compspec's
+#           behavior beyond the simple generation of completions.
+#           COMP-OPTION may be one of:
+# 
+#           'bashdefault'
+#                Perform the rest of the default Bash completions if the
+#                compspec generates no matches.
+# 
+#           'default'
+#                Use Readline's default filename completion if the
+#                compspec generates no matches.
+#
 #      '-A ACTION'
 #           The ACTION may be one of the following to generate a list of
 #           possible completions:
