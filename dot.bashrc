@@ -85,6 +85,11 @@ export EDITOR='gvim'
 
 
 #={===========================================================================
+# kb
+alias bkb="pushd ~/git/kb; bldtag.py; popd"
+
+
+#={===========================================================================
 # pager
 # 
 # https://leanpub.com/the-tao-of-tmux/read#leanpub-auto-example-powerline
@@ -117,9 +122,11 @@ export EDITOR='gvim'
 #     export PAGER="most"
 # fi
 
-if command -v most > /dev/null 2>&1; then
-  export PAGER="most"
-fi
+# NOTE: most do not handle colour chars so disable it
+
+# if command -v most > /dev/null 2>&1; then
+#   export PAGER="most"
+# fi
 
 
 #={===========================================================================
@@ -151,8 +158,8 @@ fi
 # export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 
 
-# FILE TYPES
-#
+# fzf: FILE TYPES
+#------------------------------------------------------------------------------
 # It is possible to restrict the types of files searched. For example, passing
 # --html will search only files with the extensions htm, html, shtml or xhtml.
 # For a list of supported types, run ag --list-file-types.
@@ -165,6 +172,19 @@ fi
 # --depth NUM: Search up to NUM directories deep, -1 for unlimited. Default is
 # 25.
 
+
+# .agignore
+# The .agignore file was removed in favor of .ignore as part of the 2.0.0 release.
+
+
+#       -t --all-text
+#              Search all text files. This doesn´t include hidden files.
+#
+# ag -t --depth -1 --nocolor --nogroup -g ''
+#
+# NOTE: `-t` do not respect .agignore
+ 
+
 # export FZF_DEFAULT_COMMAND="ag --depth -1 --nocolor --nogroup -g ''"
 
 export FZF_DEFAULT_COMMAND="ag --depth -1 --cc --cpp --nocolor --nogroup -g ''"
@@ -172,9 +192,13 @@ export FZF_DEFAULT_COMMAND="ag --depth -1 --cc --cpp --nocolor --nogroup -g ''"
 # export FZF_DEFAULT_OPTS="-m --layout=reverse --inline-info"
 export FZF_DEFAULT_OPTS="-m --inline-info"
 
+
+# fzf: completion
+#------------------------------------------------------------------------------
 # However, completion for bash do not seem to use above env settings.
 #
 # Fuzzy completion for bash and zsh
+#
 # Files and directories
 #
 # Fuzzy completion for files and directories can be triggered if the word before
@@ -191,6 +215,10 @@ export FZF_DEFAULT_OPTS="-m --inline-info"
 # # usage: _fzf_setup_completion path|dir COMMANDS...
 # _fzf_setup_completion path ag git kubectl
 # _fzf_setup_completion dir tree
+
+
+complete -F _fzf_path_completion gvim
+complete -o nospace -F _fzf_dir_completion cd
 
 
 # Using the finder
@@ -244,7 +272,7 @@ export FZF_DEFAULT_OPTS="-m --inline-info"
 # ignore feature in vim but see all files in command line.
 
 
-# [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 
 #={===========================================================================
@@ -273,7 +301,6 @@ alias ll='ls -alFrth'
 alias la='ls -A'
 alias l='ls -CFh'
 alias c=clear
-alias h=history
 
 alias cgrep='grep --color'
 
@@ -405,7 +432,7 @@ bind '"\e[B": history-search-forward'
 # 
 #      Specify `how arguments to each NAME should be completed.`
 #
-#      If the '-p' option is supplied, or if no options are supplied, existing
+#      If the '-p' option is supplied, or "if no options are supplied", existing
 #      completion specifications are printed in a way that allows them to be
 #      reused as input.
 #
@@ -461,6 +488,19 @@ bind '"\e[B": history-search-forward'
 # $ # Try again:
 # $ myfoo <TAB><TAB>
 # a.foo b.foo
+
+# when nothing is done
+# complete -p myfoo 
+# shows:
+# complete -F _minimal myfoo
+# which shows all
+
+# this do the same as the above
+# complete -o default myfoo
+
+# this do nothing
+# complete -o bashdefault myfoo
+
 
 # 5.2 Bash Variables
 # 
@@ -898,8 +938,35 @@ HISTFILESIZE=2000
 HISTCONTROL=erasedups
 HISTTIMEFORMAT='%F %T '
 
+
+# 5.2 Bash Variables
+# 
+# 'HISTTIMEFORMAT'
+#      If this variable is set and not null, its value is used as a format
+#      string for STRFTIME to print the time stamp associated with each
+#      history entry displayed by the 'history' builtin.  If this variable
+#      is set, time stamps are written to the history file so they may be
+#      preserved across shell sessions.  This uses the history comment
+#      character to distinguish timestamps from other history lines.
+
+
 # alias hgrep='cat ~/.`hostname`_persistent_history | grep --color'
-alias hgrep='cat ~/.`hostname`_persistent_history | fzf'
+# alias hgrep='cat ~/.`hostname`_persistent_history | fzf'
+
+# fzf shows items from the bottom to up where the first is the oldest
+#
+#       --layout=LAYOUT
+#              Choose the layout (default: default)
+#
+#              default       Display from the bottom of the screen
+#
+#        --tac  Reverse the order of the input
+#
+#              e.g. history | fzf --tac --no-sort
+#
+# so use `--tac` to have the newest as the first
+ 
+alias hgrep='fzf --tac < ~/.`hostname`_persistent_history'
 alias hlist='less -N +G ~/.`hostname`_persistent_history'
 
 
