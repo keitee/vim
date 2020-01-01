@@ -378,6 +378,10 @@ fi
 
 #={===========================================================================
 # bash-completion bash-readline
+
+# vi mode
+set -o vi
+
 # To set binding to up/down key to history search:
 bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
