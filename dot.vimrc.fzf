@@ -71,16 +71,38 @@ set autoread
 set autowriteall
 set nowrapscan
 set foldenable
-" for line wrapping and linebreak
+
+set smartindent
+set shiftwidth=2 
+set tabstop=2 
+set softtabstop=2
+set expandtab
+set textwidth=80
+set colorcolumn=80
+
+scriptencoding utf-8
+set encoding=utf-8
+
+" Every tab is displayed as ^I and a $ is displayed at the end of each line. To
+" change this:
+set listchars=tab:»\ ,eol:¬
+
+" set list to show invisibles by default
+set list
+
+
+" {===========================================================================
+" format settings
+
+" for line wrapping and linebreak. see *vim-wrap*
+" http://vimcasts.org/episodes/soft-wrapping-text/
 set nowrap linebreak nolist
+set showbreak=>>
 
 " *vim-word*
 " " remove _ from word sepeartor which enables to stop at _ as word boundary
 " set iskeyword-=_ 
 
-
-" vim-formatoptions
-"
 " l
 " Long lines are not broken in insert mode: When a line was longer than
 " 'textwidth' `when the insert command started`, Vim does not automatically
@@ -103,29 +125,7 @@ set formatoptions+=l
 " o
 " Automatically insert the current comment leader after hitting 'o' or 'O' in
 " Normal mode.
-
 set formatoptions-=cro
-
-set smartindent
-set shiftwidth=2 
-set tabstop=2 
-set softtabstop=2
-set expandtab
-set textwidth=80
-set colorcolumn=80
-
-scriptencoding utf-8
-set encoding=utf-8
-
-" Every tab is displayed as ^I and a $ is displayed at the end of each line. To
-" change this:
-set listchars=tab:»\ ,eol:¬
-
-" set list to show invisibles by default
-set list
-
-"set showbreak=«\ 
-set showbreak=<< 
 
 
 " {===========================================================================

@@ -271,7 +271,6 @@ complete -o nospace -F _fzf_dir_completion cd
 # However, use the default since CTRL-T do not respect .agignore. So can use
 # ignore feature in vim but see all files in command line.
 
-
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 
