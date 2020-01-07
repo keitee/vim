@@ -86,6 +86,8 @@ export EDITOR='gvim'
 
 #={===========================================================================
 # kb
+# note: bidtag.py is still necessary since FZF_DEFAULT_COMMAND do search
+# function in vim and bldtag.py builds tag files for tag search.
 alias bkb="pushd ~/git/kb; bldtag.py; popd"
 
 
@@ -307,6 +309,7 @@ alias vdiff=gvimdiff
 alias diff='diff -up'
 alias cdiff='colordiff -up'
 alias gl='global --color -x'
+
 
 #={===========================================================================
 # alias-ag
