@@ -279,9 +279,13 @@ complete -o nospace -F _fzf_dir_completion cd
 #={===========================================================================
 # vim
 # http://vimdoc.sourceforge.net/htmldoc/remote.html
-# alias gv="gvim --remote-silent"
-alias v="gvim --remote-tab-silent"
-alias vs="gvim --servername"
+# uses the default, "GVIM"
+# alias v="gvim --remote-tab-silent"
+
+alias vs="gvim --servername MAIN"
+alias v="gvim --servername MAIN --remote-tab-silent"
+alias vc="gvim --servername SUB"
+alias vc="gvim --servername SUB --remote-tab-silent"
 
 
 #={===========================================================================
