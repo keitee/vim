@@ -740,7 +740,8 @@ if s:is_windows != 1
     py3f ~/git/kb/bin/clang-format.py
   endfunction
 
-  " format enable/disable
+  " format enable/disable. enable it by default
+  autocmd BufWritePre *.h,*.cc,*.cpp call Formatonsave()<CR>
   nnoremap <silent> [unite]fe :autocmd BufWritePre *.h,*.cc,*.cpp call Formatonsave()<CR>
   nnoremap <silent> [unite]fd :autocmd! BufWritePre<CR>
 
