@@ -282,10 +282,11 @@ complete -o nospace -F _fzf_dir_completion cd
 # uses the default, "GVIM"
 # alias v="gvim --remote-tab-silent"
 
-alias vs="gvim --servername MAIN"
 alias v="gvim --servername MAIN --remote-tab-silent"
-alias vc="gvim --servername SUB"
-alias vc="gvim --servername SUB --remote-tab-silent"
+alias vr="gvim -R --servername MAIN --remote-tab-silent"
+
+alias vv="gvim --servername SUB --remote-tab-silent"
+alias vvr="gvim -R --servername SUB --remote-tab-silent"
 
 
 #={===========================================================================
