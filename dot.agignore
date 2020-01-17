@@ -26,7 +26,7 @@ airplay/
 # appinfrastructure/
 docs/
 epg/
-ethan-as-source/
+# ethan-as-source/
 exports/
 fusion/
 get_si/
@@ -116,6 +116,63 @@ xJenkins/
 XmlDSigSigner/
 XmlDSigVerifier/
 XmlParser/
+
+# mw/ethan-as-source
+xSubmoduleAppInfrastructure/
+WebRuntime/
+JenkinsCI/
+# Components
+xSubmoduleDarwinSDK/
+
+# mw/ethan-as-source/Components
+ToolchainDefs/
+AmsApi/
+MakeRules/
+SI/
+ASMongooseMemoryPoolWrapper/
+AS_Polipo/
+Gmock/
+Soundbox/
+AudioStreamer/
+Rdk/
+Registry/
+Math/
+StreamMetaData/
+# Bluetooth/
+Data/
+Async/
+MiddlewareServices/
+LinuxContainers/
+CppUnit/
+Http/
+ManagedObject/
+CUnit/
+TestApps/
+Platform/
+Android/
+Qt/
+Event/
+Main/
+Mock/
+DarwinQtIntegration/
+Flex/
+AppRestart/
+Wifi/
+ErrorStack/
+VoiceSearch/
+unitTestFramework/
+StateMachine/
+QWsSocket/
+HttpServer/
+Trace/
+MiddlewareIncludes/
+Mongoose/
+SocketServer/
+AS/
+Squish/
+Conviva/
+DarwinAppEngine/
+TimeDoctor/
 
 
 #{============================================================================

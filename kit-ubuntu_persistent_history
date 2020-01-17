@@ -3736,3 +3736,1044 @@
 2020-01-15 07:49:03 | g st
 2020-01-15 07:49:06 | git add -u
 2020-01-15 07:49:07 | g st
+2020-01-15 07:49:07 | gc
+2020-01-15 07:49:09 | g st
+2020-01-15 07:49:11 | git push
+2020-01-15 07:49:18 | git pull
+2020-01-15 07:49:21 | cd ..
+2020-01-15 07:49:21 | ls
+2020-01-15 07:49:23 | cd kb/
+2020-01-15 07:49:23 | ls
+2020-01-15 07:49:27 | git pull
+2020-01-15 07:49:30 | g st
+2020-01-15 07:49:36 | l
+2020-01-15 07:49:40 | cd ..
+2020-01-15 07:49:40 | ls
+2020-01-15 07:49:42 | cd ..
+2020-01-15 07:49:43 | ls
+2020-01-15 07:49:47 | cd qt-dbus-property/
+2020-01-15 07:49:48 | l
+2020-01-15 07:51:09 | which fromdos
+2020-01-15 07:51:41 | a
+2020-01-15 07:51:43 | s
+2020-01-15 07:51:43 | a
+2020-01-15 07:51:50 | l
+2020-01-15 07:52:07 | v sender.cpp 
+2020-01-15 07:59:21 | clang-format -i -style=file *.cpp
+2020-01-15 07:59:23 | clang-format -i -style=file *.h
+2020-01-15 08:05:56 | l
+2020-01-15 08:06:00 | cd code-cxx/
+2020-01-15 08:06:00 | l
+2020-01-15 08:06:07 | cd os-dbus/
+2020-01-15 08:06:07 | l
+2020-01-15 08:06:17 | cd qt-dbus-pingpong
+2020-01-15 08:06:18 | l
+2020-01-15 08:06:20 | ll
+2020-01-15 08:06:28 | vv ping.cpp 
+2020-01-15 08:06:30 | s
+2020-01-15 08:06:32 | vv ping.cpp 
+2020-01-15 08:10:12 | l
+2020-01-15 08:10:15 | cd ..
+2020-01-15 08:10:16 | l
+2020-01-15 08:10:28 | cd qt-dbus-chat/
+2020-01-15 08:10:28 | l
+2020-01-15 08:10:36 | vv chat.cpp 
+2020-01-15 08:11:32 | l
+2020-01-15 08:11:33 | cd ..
+2020-01-15 08:11:33 | l
+2020-01-15 08:11:41 | cd qt-dbus-pingpong-complex/
+2020-01-15 08:11:41 | l
+2020-01-15 08:11:47 | vv complexping.cpp 
+2020-01-15 08:15:08 | make
+2020-01-15 08:33:15 | cd
+2020-01-15 08:33:22 | cd /media/keitee/ssd2/
+2020-01-15 08:33:22 | l
+2020-01-15 08:33:30 | cd llama/
+2020-01-15 08:33:31 | ls
+2020-01-15 08:33:43 | git config
+2020-01-15 08:33:51 | git config --global
+2020-01-15 08:33:58 | git config --global -l
+2020-01-15 08:34:10 | l
+2020-01-15 08:34:20 | git clone git@skyswteam.com:rdk-llama-bwd-osterley-integration/meta-rdk-sky.git
+2020-01-15 08:34:25 | l
+2020-01-15 08:38:18 | git clone git@skyswteam.com:rdk-llama-bwd-osterley-integration/llama-bwd-osterley-integration.git
+2020-01-15 08:38:26 | ls
+2020-01-14 12:02:29 | c
+2020-01-15 08:48:10 | cd git/kb/code-cxx/os-dbus/qt-dbus-property/build/
+2020-01-15 08:48:11 | l
+2020-01-15 08:48:21 | l
+2020-01-15 08:52:28 | dbus-send --session --type=method_call --print-reply --dest='org.example.SenderExample' / org.example.sender.SendCommand string:'command'
+2020-01-15 08:48:32 | ./client1
+2020-01-15 08:48:25 | ./sender
+2020-01-15 08:55:24 | make
+2020-01-15 08:55:29 | ./sender
+2020-01-15 09:00:56 | l
+2020-01-15 09:00:57 | cd ..
+2020-01-15 09:00:58 | l
+2020-01-15 09:01:08 | cd qt-dbus-pingpong
+2020-01-15 09:01:09 | l
+2020-01-15 09:01:13 | vv pong.cpp 
+2020-01-15 09:02:03 | cd ..
+2020-01-15 09:02:04 | ls
+2020-01-15 09:02:10 | cd qt-dbus-chat/
+2020-01-15 09:02:11 | l
+2020-01-15 09:02:15 | vv chat.cpp 
+2020-01-15 09:09:42 | h
+2020-01-15 09:09:47 | l
+2020-01-15 09:11:00 | v client2.cpp 
+2020-01-15 09:34:19 | l
+2020-01-15 09:34:23 | cd llama-bwd-osterley-integration/
+2020-01-15 09:34:24 | ll
+2020-01-15 09:34:34 | more README.md 
+2020-01-15 09:34:45 | git ll
+2020-01-15 09:35:49 | v README.md 
+2020-01-15 09:37:14 | g st
+2020-01-15 09:37:57 | git commit -am "check-in test"
+2020-01-15 09:37:58 | g st
+2020-01-15 09:38:02 | git push
+2020-01-15 09:39:54 | l
+2020-01-15 09:39:57 | cd ..
+2020-01-15 09:39:57 | l
+2020-01-15 09:44:05 | l
+2020-01-15 09:44:09 | vv client1.cpp 
+2020-01-15 09:51:45 | l
+2020-01-15 09:51:51 | v client3.cpp 
+2020-01-15 09:53:10 | make
+2020-01-15 09:54:33 | a
+2020-01-15 09:54:43 | vdiff client2.cpp client3.cpp 
+2020-01-15 09:59:48 | l
+2020-01-15 10:05:24 | ag powerChanged
+2020-01-15 10:19:26 | vv client3.cpp 
+2020-01-15 10:20:30 | ls
+2020-01-15 10:20:32 | l
+2020-01-15 10:21:04 | c
+2020-01-15 10:21:06 | dbus-send --session --type=method_call --print-reply --dest='org.example.SenderExample' / org.example.sender.SendCommand string:'command'
+2020-01-15 10:38:46 | l
+2020-01-15 10:40:30 | vv appinfrastructure/AppInfrastructure/BluetoothRcu/daemon/source/blercu/adaptors/blercucontroller1_adaptor.cpp 
+2020-01-15 10:50:35 | vv appinfrastructure/AppInfrastructure/BluetoothRcu/daemon/source/main.cpp 
+2020-01-15 10:20:35 | ./sender
+2020-01-15 10:56:12 | make
+2020-01-15 10:57:45 | ls
+2020-01-15 10:57:51 | dbus-send --session --type=method_call --print-reply --dest='org.example.SenderExample' / org.example.sender.SendCommand string:'error' 
+2020-01-15 10:57:47 | ./sender
+2020-01-15 11:09:45 | l
+2020-01-15 11:10:02 | vv org.example.sender.xml 
+2020-01-15 11:15:05 | /home/keitee/Qt/5.12.6/gcc_64/bin/qdbusxml2cpp -p proxy.h:proxy.cpp org.example.sender.xml
+2020-01-15 11:15:06 | l
+2020-01-15 11:15:36 | vdiff proxy.h sender_interface.h 
+2020-01-15 11:16:21 | clang-format -i -style=file *.h
+2020-01-15 11:17:09 | clang-format -i -style=file *.cpp
+2020-01-15 11:17:10 | ls
+2020-01-15 11:23:29 | l
+2020-01-15 11:24:07 | vv client3_object.cpp 
+2020-01-15 11:29:11 | ls
+2020-01-15 11:29:19 | cd appinfrastructure/AppInfrastructure/BluetoothRcu/daemon/
+2020-01-15 11:29:19 | ls
+2020-01-15 11:29:24 | ag DBusAbstractInterface
+2020-01-15 13:48:12 | make
+2020-01-15 13:53:58 | dbus-send --session --type=method_call --print-reply --dest='org.example.SenderExample' / org.example.sender.SendCommand string:'changed' 
+2020-01-15 13:54:44 | cd build/
+2020-01-15 13:54:44 | ls
+2020-01-15 13:54:49 | ./client2
+2020-01-15 13:53:23 | ./sender
+2020-01-15 13:55:40 | cd ..
+2020-01-15 13:55:41 | l
+2020-01-15 13:55:46 | cd qt-dbus-property/
+2020-01-15 13:55:47 | ls
+2020-01-15 13:55:48 | ll
+2020-01-15 13:56:08 | vdiff proxy.h sender_interface.h 
+2020-01-15 13:58:39 | make
+2020-01-15 13:58:44 | ./sender
+2020-01-15 14:04:17 | dbus-send --session --type=method_call --print-reply --dest='org.example.SenderExample' / org.example.sender.SendCommand string:'command'
+2020-01-15 14:14:34 | l
+2020-01-15 14:14:35 | ll
+2020-01-15 14:14:53 | diff sender_interface.h  sender_interface_extended.h 
+2020-01-15 14:15:15 | cdiff sender_interface.h  sender_interface_extended.h 
+2020-01-15 14:15:37 | cdiff sender_interface.cpp  sender_interface_extended.cpp
+2020-01-15 14:15:55 | make
+2020-01-15 14:18:43 | c
+2020-01-15 14:18:45 | make
+2020-01-15 14:21:12 | dbus-send --session --type=method_call --print-reply --dest='org.example.SenderExample' / org.example.sender.SendCommand string:'changed' 
+2020-01-15 14:23:09 | dbus-send --session --type=method_call --print-reply --dest='org.example.SenderExample' / org.example.sender.SendCommand string:'command'
+2020-01-15 14:21:02 | ./client3
+2020-01-15 14:20:44 | ./sender
+2020-01-15 14:32:24 | make
+2020-01-15 14:32:31 | ./sender
+2020-01-15 14:34:24 | make
+2020-01-15 14:34:39 | dbus-send --session --type=method_call --print-reply --dest='org.example.SenderExample' / org.example.sender.SendCommand string:'error'
+2020-01-15 14:34:30 | ./sender
+2020-01-15 14:36:30 | ls
+2020-01-15 14:36:32 | rm readme.txt 
+2020-01-15 14:36:33 | ls
+2020-01-15 14:36:39 | clang-format -i -style=file *.cpp
+2020-01-15 14:36:41 | clang-format -i -style=file *.h
+2020-01-15 14:36:46 | make
+2020-01-15 14:36:54 | g st
+2020-01-15 14:36:59 | git add proxy.*
+2020-01-15 14:37:00 | g st
+2020-01-15 14:37:03 | git add -u
+2020-01-15 14:37:05 | g st
+2020-01-15 14:37:23 | cd ..
+2020-01-15 14:37:23 | ls
+2020-01-15 14:37:27 | cd qtxml/
+2020-01-15 14:37:27 | l
+2020-01-15 14:39:03 | vv appinfrastructure/AppInfrastructure/BluetoothRcu/daemon/source/blercu/adaptors/blercucontroller1_adaptor.cpp 
+2020-01-15 14:39:25 | vv source/blercu/adaptors/blercucontroller1_adaptor.cpp 
+2020-01-15 14:40:46 | l
+2020-01-15 14:40:55 | more chat_adaptor.h 
+2020-01-15 14:42:06 | cd ..
+2020-01-15 14:42:07 | l
+2020-01-15 14:43:05 | git mv qtxml/ qtdbus-adaptor
+2020-01-15 14:43:06 | ls
+2020-01-15 14:43:12 | cd qtdbus-adaptor/
+2020-01-15 14:43:13 | l
+2020-01-15 14:43:29 | ls ../qt-dbus-property/
+2020-01-15 14:44:22 | vv dbusabstractadaptor.h
+2020-01-15 14:44:32 | ;vv dbusabstractadaptor.h
+2020-01-15 14:44:33 | s
+2020-01-15 14:44:35 | vv dbusabstractadaptor.h
+2020-01-15 14:59:47 | ls
+2020-01-15 14:59:49 | cd
+2020-01-15 14:59:49 | ls
+2020-01-15 15:00:00 | cat x.txt 
+2020-01-15 15:00:09 | 
+2020-01-15 15:00:14 | ls
+2020-01-15 15:00:16 | cat y.txt 
+2020-01-15 15:00:18 | ls
+2020-01-15 15:00:21 | rm x.txt y.txt 
+2020-01-15 15:00:21 | ls
+2020-01-15 15:00:29 | gvim x.cpp
+2020-01-15 15:01:41 | ls
+2020-01-15 15:01:44 | cd git/vim/
+2020-01-15 15:01:44 | ls
+2020-01-15 15:01:45 | g st
+2020-01-15 15:01:49 | git add -u
+2020-01-15 15:01:50 | g st
+2020-01-15 15:01:52 | git push
+2020-01-15 15:01:57 | cd ..
+2020-01-15 15:01:57 | ls
+2020-01-15 15:01:59 | cd kb/
+2020-01-15 15:01:59 | ls
+2020-01-15 15:02:01 | g st
+2020-01-15 15:09:21 | ls
+2020-01-15 15:09:27 | touch dbusabstractadaptor.cpp
+2020-01-15 15:27:46 | cd ..
+2020-01-15 15:27:46 | ls
+2020-01-15 15:27:48 | cd ..
+2020-01-15 15:27:48 | l
+2020-01-15 15:28:09 | git mv qt-dbus-chat/ qtdbus-chat
+2020-01-15 15:28:10 | ls
+2020-01-15 15:28:14 | cd qtdbus-chat/
+2020-01-15 15:28:15 | l
+2020-01-15 15:28:19 | vv chat.cpp 
+2020-01-15 15:29:45 | l
+2020-01-15 15:29:48 | cd ..
+2020-01-15 15:29:50 | l
+2020-01-15 15:30:17 | git mv qt-dbus-pingpong qtdbus-pingpong
+2020-01-15 15:30:23 | l
+2020-01-15 15:30:28 | cd qtdbus-pingpong/
+2020-01-15 15:30:29 | l
+2020-01-15 15:30:36 | vv ping.cpp 
+2020-01-15 15:37:27 | ag connectFutureToDBusReply
+2020-01-15 15:38:10 | ag sendPropertyChangeNotification
+2020-01-15 15:39:06 | ls
+2020-01-15 15:39:07 | g st
+2020-01-15 15:39:17 | ls
+2020-01-15 15:39:19 | cd ..
+2020-01-15 15:39:20 | ls
+2020-01-15 15:39:28 | cd qtdbus-adaptor/
+2020-01-15 15:39:28 | ls
+2020-01-15 15:39:31 | g st
+2020-01-15 15:39:34 | git add dbusabstractadaptor.*
+2020-01-15 15:39:35 | g st
+2020-01-15 15:39:44 | git add -u
+2020-01-15 15:39:45 | g st
+2020-01-15 15:39:47 | gc
+2020-01-15 15:39:49 | git push
+2020-01-16 07:22:33 | git pull
+2020-01-16 07:34:35 | ls
+2020-01-16 07:34:38 | cd code-qt/
+2020-01-16 07:34:39 | ls
+2020-01-16 07:34:41 | cd qt
+2020-01-16 07:34:46 | cd qtest/
+2020-01-16 07:34:46 | ls
+2020-01-16 07:34:49 | cd build/
+2020-01-16 07:34:50 | make
+2020-01-16 07:34:52 | ls
+2020-01-16 07:34:55 | rm -rf *
+2020-01-16 07:35:23 | hgrep CMAKE
+2020-01-16 07:35:26 | a
+2020-01-16 07:35:33 | hgrep
+2020-01-16 07:35:45 | CMAKE_PREFIX_PATH=/home/keitee/Qt/5.12.6/gcc_64 cmake ..
+2020-01-16 07:36:27 | vv ../CMakeLists.txt 
+2020-01-15 14:34:39 | dbus-send --session --type=method_call --print-reply --dest='org.example.SenderExample' / org.example.sender.SendCommand string:'error'
+2020-01-16 07:41:20 | ls
+2020-01-16 07:41:34 | cd works/googletest/googlemock/
+2020-01-16 07:41:35 | ls
+2020-01-16 07:41:38 | ll
+2020-01-16 07:41:39 | g st
+2020-01-16 07:41:47 | git pull
+2020-01-16 07:42:06 | git ll CMakeLists.txt
+2020-01-16 07:42:19 | CMAKE_PREFIX_PATH=/home/keitee/Qt/5.12.6/gcc_64 cmake ..
+2020-01-16 07:42:47 | rm -rf *
+2020-01-16 07:42:49 | CMAKE_PREFIX_PATH=/home/keitee/Qt/5.12.6/gcc_64 cmake ..
+2020-01-16 07:42:53 | make
+2020-01-16 07:43:04 | rm -rf *
+2020-01-16 07:43:08 | CMAKE_PREFIX_PATH=/home/keitee/Qt/5.12.6/gcc_64 cmake ..
+2020-01-16 07:43:18 | vv CMakeLists.txt 
+2020-01-16 07:46:40 | ls ~/Qt/5.12.6/gcc_64/
+2020-01-16 07:47:37 | ls ~/Qt/5.12.6/gcc_64/lib/cmake/Qt5
+2020-01-16 07:48:14 | CMAKE_PREFIX_PATH=/home/keitee/Qt/5.12.6/gcc_64/lib/cmake cmake ..
+2020-01-16 07:48:40 | rm -rf *
+2020-01-16 07:48:42 | CMAKE_PREFIX_PATH=/home/keitee/Qt/5.12.6/gcc_64/lib/cmake cmake ..
+2020-01-16 08:00:27 | cmake --version
+2020-01-16 08:03:07 | CMAKE_PREFIX_PATH=/home/keitee/Qt/5.12.6/gcc_64/lib/cmake cmake ..
+2020-01-16 08:06:38 | cmake ..
+2020-01-16 08:07:31 | CMAKE_PREFIX_PATH=/home/keitee/Qt/5.12.6/gcc_64/lib/cmake cmake ..
+2020-01-16 08:07:51 | rm -rf *
+2020-01-16 08:07:52 | CMAKE_PREFIX_PATH=/home/keitee/Qt/5.12.6/gcc_64/lib/cmake cmake ..
+2020-01-16 08:08:52 | make
+2020-01-16 08:09:12 | rm -rf *
+2020-01-16 08:09:19 | CMAKE_PREFIX_PATH=/home/keitee/Qt/5.12.6/gcc_64 cmake ..
+2020-01-16 08:09:33 | make
+2020-01-16 08:09:52 | l
+2020-01-16 08:09:59 | rm -rf *
+2020-01-16 08:10:03 | cmake ..
+2020-01-16 08:10:35 | CMAKE_PREFIX_PATH=/home/keitee/Qt/5.12.6/gcc_64 cmake ..
+2020-01-16 08:10:38 | rm -rf *
+2020-01-16 08:10:40 | CMAKE_PREFIX_PATH=/home/keitee/Qt/5.12.6/gcc_64 cmake ..
+2020-01-16 08:10:43 | make
+2020-01-16 08:10:50 | ls
+2020-01-16 08:11:59 | CMAKE_PREFIX_PATH=/home/keitee/Qt/5.12.6/gcc_64 cmake ..
+2020-01-16 08:12:00 | make
+2020-01-16 08:12:07 | rm -rf *
+2020-01-16 08:12:09 | CMAKE_PREFIX_PATH=/home/keitee/Qt/5.12.6/gcc_64 cmake ..
+2020-01-16 08:12:13 | make
+2020-01-16 08:45:16 | l
+2020-01-16 08:45:17 | cd ..
+2020-01-16 08:45:18 | ls
+2020-01-16 08:45:33 | l
+2020-01-16 08:45:37 | cd ..
+2020-01-16 08:45:38 | l
+2020-01-16 08:45:40 | cd ..
+2020-01-16 08:45:41 | ls
+2020-01-16 08:45:47 | cd ethan-as-source/
+2020-01-16 08:45:48 | l
+2020-01-14 15:04:58 | bitbake comcast-mediaclient-vbn-image
+2020-01-16 08:46:00 | ls
+2020-01-16 08:46:02 | cd mw/
+2020-01-16 08:46:02 | ls
+2020-01-16 08:46:09 | cd xSubmoduleDarwinSDK/
+2020-01-16 08:46:09 | l
+2020-01-16 08:46:10 | ll
+2020-01-16 08:46:14 | cd eu-q-falconv2-uk/
+2020-01-16 08:46:15 | l
+2020-01-16 08:46:16 | ll
+2020-01-16 08:46:20 | cd SDK
+2020-01-16 08:46:20 | l
+2020-01-16 08:46:21 | ll
+2020-01-16 08:46:22 | l
+2020-01-16 08:46:30 | cd THIRD_PARTY_LIBRARIES/
+2020-01-16 08:46:31 | l
+2020-01-16 08:46:32 | ll
+2020-01-16 08:46:40 | cd BSKYB_GEN2_AMS/
+2020-01-16 08:46:41 | l
+2020-01-16 08:46:43 | cd Components_org/
+2020-01-16 08:46:46 | cd ..
+2020-01-16 08:46:46 | l
+2020-01-16 08:46:47 | ll
+2020-01-16 08:46:50 | cd Components
+2020-01-16 08:46:59 | ls Components
+2020-01-16 08:48:51 | cd -P Components
+2020-01-16 08:49:05 | ll
+2020-01-16 08:49:51 | cd Components
+2020-01-16 08:50:40 | cd /media/keitee/ssd2/mw
+2020-01-16 08:52:20 | cd ethan-as-source/
+2020-01-16 08:52:22 | l
+2020-01-16 08:52:28 | cd Components/
+2020-01-16 08:52:29 | ls
+2020-01-16 08:52:33 | l
+2020-01-16 08:52:39 | ls -al
+2020-01-16 08:52:44 | rm Components
+2020-01-16 08:52:59 | ln -s ~/mw/ethan-as-source/Components
+2020-01-16 08:53:00 | l
+2020-01-16 08:53:00 | ll
+2020-01-16 08:53:04 | cd Components
+2020-01-16 08:53:05 | ls
+2020-01-16 08:53:08 | cd ..
+2020-01-16 08:53:09 | ls
+2020-01-16 08:53:11 | ll
+2020-01-16 08:53:30 | l
+2020-01-16 08:53:32 | ll
+2020-01-16 08:53:42 | cd Bluetooth/
+2020-01-16 08:53:43 | ls
+2020-01-16 08:53:56 | cd reader/
+2020-01-16 08:53:56 | ls
+2020-01-16 08:54:07 | cd source/
+2020-01-16 08:54:08 | ls
+2020-01-16 08:54:14 | l
+2020-01-16 08:54:30 | cd 
+2020-01-07 10:42:02 | sudo putty
+2020-01-16 08:55:41 | dmesg | grep tty
+2020-01-16 08:55:54 | sudo dmesg | grep tty
+2020-01-16 08:56:07 | dmesg
+2020-01-16 08:56:14 | a
+2020-01-16 08:57:11 | cd
+2020-01-16 08:57:41 | sudo putty 
+2020-01-16 08:56:48 | sudo screen -S name -a -fn -l /dev/ttyUSB1 115200,cs8
+2020-01-16 09:01:03 | telnet 192.168.0.102
+2020-01-16 09:07:29 | cd ..
+2020-01-16 09:07:31 | ls
+2020-01-16 09:07:32 | cd ..
+2020-01-16 09:07:33 | ls
+2020-01-16 09:07:36 | cd eu-q-titan-uk/
+2020-01-16 09:07:36 | l
+2020-01-16 09:07:37 | ll
+2020-01-16 09:07:41 | cd SDK
+2020-01-16 09:07:42 | ls
+2020-01-16 09:07:46 | cd THIRD_PARTY_LIBRARIES/
+2020-01-16 09:07:46 | l
+2020-01-16 09:07:48 | ll
+2020-01-16 09:07:52 | cd BSKYB_GEN2_AMS/
+2020-01-16 09:07:53 | ll
+2020-01-16 09:14:16 | cd
+2020-01-16 09:14:26 | cd mw/exports/titan/flash0
+2020-01-16 09:14:27 | ls
+2020-01-16 09:14:28 | ll
+2020-01-16 09:14:47 | l
+2020-01-16 09:14:59 | vv LOG
+2020-01-16 09:17:43 | ag "KEY_PRESS|bleaudio" LOG > 1601.log
+2020-01-16 09:19:26 | cd mw/ethan-as-source/Components/
+2020-01-16 09:19:27 | l
+2020-01-16 09:19:30 | cd Bluetooth/
+2020-01-16 09:19:36 | l
+2020-01-16 09:19:40 | cd reader/
+2020-01-16 09:19:41 | ls
+2020-01-16 09:19:43 | cd source/
+2020-01-16 09:19:44 | ls
+2020-01-16 09:22:09 | vv ~/.agignore 
+2020-01-16 09:23:09 | pushd ~/mw
+2020-01-16 09:23:09 | ls
+2020-01-16 09:23:13 | cd ethan-as-source/
+2020-01-16 09:23:14 | ls
+2020-01-16 09:23:19 | cd Components/
+2020-01-16 09:23:20 | ls
+2020-01-16 09:23:56 | ll
+2020-01-16 09:24:46 | ls -1
+2020-01-16 09:24:58 | ls -1d
+2020-01-16 09:25:01 | man ls
+2020-01-16 09:25:33 | ls -d
+2020-01-16 09:25:40 | ls -1
+2020-01-16 09:25:43 | ls -1 -d
+2020-01-16 09:26:05 | ls -ld
+2020-01-16 09:26:12 | ls -ald
+2020-01-16 09:26:13 | ls -alF
+2020-01-16 09:26:15 | ls -alFd
+2020-01-16 09:28:33 | find . -type d -ls
+2020-01-16 09:28:57 | find . -maxdepth 1 -type d
+2020-01-16 09:29:11 | find . -maxdepth 1 -type d > out
+2020-01-16 09:29:14 | vv out 
+2020-01-16 09:33:05 | popd
+2020-01-16 09:33:10 | pushd ~/mw/
+2020-01-16 09:33:11 | ls
+2020-01-16 09:33:19 | bldtag.py 
+2020-01-16 09:33:35 | vv flist.out 
+2020-01-16 09:34:17 | bldtag.py 
+2020-01-16 09:34:48 | popd
+2020-01-16 09:34:49 | cd ..
+2020-01-16 09:34:51 | ls
+2020-01-16 09:34:52 | cd ..
+2020-01-16 09:34:53 | ls
+2020-01-16 09:34:54 | ll
+2020-01-16 09:35:20 | find . -maxdepth 1 -type d > out
+2020-01-16 09:35:22 | vv out 
+2020-01-16 09:35:47 | cd xSubmoduleAppInfrastructure/
+2020-01-16 09:35:48 | l
+2020-01-16 09:35:49 | ls -al
+2020-01-16 09:35:57 | cd AppInfrastructure/
+2020-01-16 09:35:58 | ls
+2020-01-16 09:37:10 | popd
+2020-01-16 09:37:15 | pushd ~/mw/
+2020-01-16 09:37:15 | ls
+2020-01-16 09:37:17 | bldtag.py 
+2020-01-16 09:38:05 | popd
+2020-01-16 09:38:06 | ls
+2020-01-16 09:38:15 | cd ..
+2020-01-16 09:38:16 | l
+2020-01-16 09:38:18 | cd ..
+2020-01-16 09:38:19 | l
+2020-01-16 09:38:20 | dirs
+2020-01-16 09:38:27 | cd Components/
+2020-01-16 09:38:28 | ls
+2020-01-16 09:38:31 | cd Bluetooth/
+2020-01-16 09:38:32 | ls
+2020-01-16 09:38:36 | g st
+2020-01-16 09:38:42 | git branch
+2020-01-16 09:25:48 | man ls
+2020-01-16 09:42:54 | v 1601.log 
+2020-01-16 09:49:56 | git branch --vv
+2020-01-16 09:50:01 | #
+2020-01-16 09:50:03 | git branch --v
+2020-01-16 09:50:07 | git branch -vv
+2020-01-16 09:50:14 | git branch -v
+2020-01-16 09:50:21 | git branch --v
+2020-01-16 09:50:23 | git branch --vv
+2020-01-16 09:50:26 | git branch -vv
+2020-01-16 09:52:42 | cd
+2020-01-16 09:52:43 | ls
+2020-01-16 09:52:47 | cd git/vim/
+2020-01-16 09:52:53 | g st
+2020-01-16 09:52:57 | git pull
+2020-01-16 09:53:02 | g st
+2020-01-16 09:53:08 | git add -u
+2020-01-16 09:53:09 | g st
+2020-01-16 09:54:03 | echo $PAGER
+2020-01-16 09:54:08 | s
+2020-01-16 09:54:13 | git branch -vv
+2020-01-16 09:54:22 | export $PAGER=
+2020-01-16 09:54:24 | git branch -vv
+2020-01-16 09:54:33 | export PAGER=
+2020-01-16 09:54:34 | git branch -vv
+2020-01-16 09:58:30 | git co -b NGDEV-155219_CODH-Bluetooth_Unable_to_re-launch_bluetooth_audio_after_disconnecting_via_RCU
+2020-01-16 09:58:33 | g st
+2020-01-16 10:03:56 | l
+2020-01-16 08:56:48 | sudo screen -S name -a -fn -l /dev/ttyUSB1 115200,cs8
+2020-01-16 10:04:12 | l
+2020-01-16 10:04:17 | cd mw/
+2020-01-16 10:04:18 | l
+2020-01-16 10:05:55 | cd ethan-as-source/
+2020-01-16 10:05:55 | l
+2020-01-16 10:06:08 | cd Components/
+2020-01-16 10:06:08 | l
+2020-01-16 10:06:18 | cd Bluetooth/
+2020-01-16 10:06:18 | l
+2020-01-16 10:06:30 | rm out/
+2020-01-16 10:06:31 | ls
+2020-01-16 10:06:35 | l
+2020-01-16 10:06:41 | cd out/
+2020-01-16 10:06:41 | ls
+2020-01-16 10:06:44 | cd ..
+2020-01-16 10:06:44 | ls
+2020-01-16 10:06:49 | cd reader/
+2020-01-16 10:06:50 | ls
+2020-01-16 10:06:54 | cd source/
+2020-01-16 10:06:55 | ls
+2020-01-16 10:06:56 | cd ..
+2020-01-16 10:06:57 | ls
+2020-01-16 10:06:58 | cd ..
+2020-01-16 10:06:59 | ls
+2020-01-16 10:07:00 | cd ..
+2020-01-16 10:07:01 | ls
+2020-01-16 10:07:08 | rm flist.out 
+2020-01-16 10:07:09 | ls
+2020-01-16 10:07:13 | rm out 
+2020-01-16 10:07:15 | rm tags 
+2020-01-16 10:07:15 | ls
+2020-01-16 10:07:18 | g st
+2020-01-16 10:07:24 | cd ..
+2020-01-16 10:07:25 | ls
+2020-01-16 10:07:27 | ll
+2020-01-16 10:07:31 | cd ..
+2020-01-16 10:07:31 | l
+2020-01-16 10:07:43 | cd ..
+2020-01-16 10:07:44 | l
+2020-01-16 10:07:58 | ll
+2020-01-16 10:08:04 | cd QtAgain/
+2020-01-16 10:08:04 | ls
+2020-01-16 10:08:07 | cd ..
+2020-01-16 10:08:07 | ls
+2020-01-16 10:08:15 | sudo rm -rf QtAgain/
+2020-01-16 10:08:29 | ls
+2020-01-16 10:08:37 | cd sky/
+2020-01-16 10:08:37 | ls
+2020-01-16 10:08:40 | cd btaudio/
+2020-01-16 10:08:40 | l
+2020-01-16 10:08:42 | cd Bluetooth/
+2020-01-16 10:08:43 | ls
+2020-01-16 10:08:55 | ll
+2020-01-16 10:08:59 | cd reader/
+2020-01-16 10:09:00 | l
+2020-01-16 10:09:01 | ll
+2020-01-16 10:09:03 | cd source/
+2020-01-16 10:09:03 | ls
+2020-01-16 10:09:06 | cd ..
+2020-01-16 10:09:08 | ls
+2020-01-16 10:09:18 | l
+2020-01-16 10:09:40 | cd ..
+2020-01-16 10:09:41 | l
+2020-01-16 10:09:43 | cd ..
+2020-01-16 10:09:43 | ls
+2020-01-16 10:09:53 | more x.cpp 
+2020-01-16 10:09:54 | ls
+2020-01-16 10:09:56 | rm x.cpp 
+2020-01-16 10:09:57 | ls
+2020-01-16 10:09:58 | cd works/
+2020-01-16 10:09:59 | ls
+2020-01-16 10:10:20 | cd x
+2020-01-16 10:10:20 | ls
+2020-01-16 10:10:23 | cd y/
+2020-01-16 10:10:23 | ls
+2020-01-16 10:10:25 | cd ..
+2020-01-16 10:10:27 | ls
+2020-01-16 10:10:31 | rm -rf x
+2020-01-16 10:10:31 | ls
+2020-01-16 10:10:32 | rm x.tar.gz 
+2020-01-16 10:10:33 | ls
+2020-01-16 10:10:38 | cd ..
+2020-01-16 10:10:38 | l
+2020-01-16 10:10:56 | git branch 
+2020-01-16 10:11:06 | g st
+2020-01-16 10:11:08 | git branch
+2020-01-16 10:11:14 | git co analysing_btaudio 
+2020-01-16 10:11:19 | ls
+2020-01-16 10:11:21 | cd reader/
+2020-01-16 10:11:22 | ls
+2020-01-16 10:11:24 | cd source/
+2020-01-16 10:11:24 | ls
+2020-01-16 10:11:34 | cd ..
+2020-01-16 10:11:35 | ls
+2020-01-16 10:11:58 | ls
+2020-01-16 10:12:00 | cd sky/
+2020-01-16 10:12:00 | ls
+2020-01-16 10:12:10 | cd btaudio/
+2020-01-16 10:12:11 | ls
+2020-01-16 10:12:15 | cd Bluetooth/
+2020-01-16 10:12:15 | ls
+2020-01-16 10:12:19 | cd ..
+2020-01-16 10:12:20 | ls
+2020-01-16 10:12:27 | pwd
+2020-01-16 10:12:28 | cd ..
+2020-01-16 10:12:29 | ls
+2020-01-16 10:12:30 | pwd
+2020-01-16 10:12:47 | cp -r /home/keitee/mw/ethan-as-source/Components/Bluetooth Bluetooth-old
+2020-01-16 10:12:48 | ls
+2020-01-16 10:12:53 | cd Bluetooth-old/
+2020-01-16 10:12:54 | ls
+2020-01-16 10:12:57 | cd reader/
+2020-01-16 10:12:57 | ls
+2020-01-16 10:12:59 | cd source/
+2020-01-16 10:13:00 | ls
+2020-01-16 10:13:49 | vv bluetooth_media.cpp 
+2020-01-16 10:17:36 | git branch
+2020-01-16 10:17:51 | cd ..
+2020-01-16 10:17:51 | l
+2020-01-16 10:17:52 | cd ..
+2020-01-16 10:17:53 | ls
+2020-01-16 10:17:54 | cd ..
+2020-01-16 10:17:55 | ls
+2020-01-16 10:18:01 | cd ..
+2020-01-16 10:18:02 | ls
+2020-01-16 10:19:13 | ./compile_sdkv2.0.sh eu-q-titan-uk /home/keitee/mw/ethan-as-source/ clean
+2020-01-16 10:19:29 | export LC_ALL=C
+2020-01-16 10:21:56 | l
+2020-01-16 10:21:59 | cd ..
+2020-01-16 10:21:59 | ls
+2020-01-16 10:22:00 | cd kb/
+2020-01-16 10:22:00 | ls
+2020-01-16 10:22:04 | cd code-qt/
+2020-01-16 10:22:04 | ls
+2020-01-16 10:22:12 | cd qt-gtest/
+2020-01-16 10:22:13 | ls
+2020-01-16 10:22:15 | cd ..
+2020-01-16 10:22:20 | rm -rf qt-gtest/
+2020-01-16 10:22:21 | ls
+2020-01-16 10:22:26 | cd qtest/
+2020-01-16 10:22:27 | ls
+2020-01-16 10:22:30 | v CMakeLists.txt 
+2020-01-16 10:25:19 | cd build/
+2020-01-16 10:25:21 | CMAKE_PREFIX_PATH=/home/keitee/Qt/5.12.6/gcc_64 cmake ..
+2020-01-16 10:25:26 | rm -rf *
+2020-01-16 10:25:28 | CMAKE_PREFIX_PATH=/home/keitee/Qt/5.12.6/gcc_64 cmake ..
+2020-01-16 10:25:32 | make
+2020-01-16 10:26:08 | cd ..
+2020-01-16 10:26:08 | ls
+2020-01-16 10:26:10 | l
+2020-01-16 10:26:12 | cd ..
+2020-01-16 10:26:12 | ls
+2020-01-16 10:26:17 | cd os-dbus/
+2020-01-16 10:26:17 | ls
+2020-01-16 10:26:29 | cd qtdbus-
+2020-01-16 10:26:33 | cd qtdbus-chat/
+2020-01-16 10:26:35 | ag set(CMAKE_AUTOMOC ON)
+2020-01-16 10:26:39 | ag "set(CMAKE_AUTOMOC ON)"
+2020-01-16 10:26:43 | ag "set(CMAKE_AUTOMOC"
+2020-01-16 10:26:49 | ag "CMAKE_AUTOMOC"
+2020-01-16 10:26:55 | vv CMakeLists.txt 
+2020-01-16 10:26:58 | s
+2020-01-16 10:27:00 | vv CMakeLists.txt 
+2020-01-16 10:28:55 | rm -rf *
+2020-01-16 10:28:56 | CMAKE_PREFIX_PATH=/home/keitee/Qt/5.12.6/gcc_64 cmake ..
+2020-01-16 10:28:59 | make
+2020-01-16 10:30:28 | ls
+2020-01-16 10:30:30 | cd build/
+2020-01-16 10:30:34 | rm -rf *
+2020-01-16 10:30:52 | CMAKE_PREFIX_PATH=/home/keitee/Qt/5.12.6/gcc_64 cmake ..
+2020-01-16 10:30:56 | make
+2020-01-16 10:19:34 | ./compile_sdkv2.0.sh eu-q-titan-uk /home/keitee/mw/ethan-as-source/ clean
+2020-01-16 10:31:09 | l
+2020-01-16 10:31:34 | v ../test_qt.cpp 
+2020-01-16 10:34:47 | CMAKE_PREFIX_PATH=/home/keitee/Qt/5.12.6/gcc_64 cmake ..
+2020-01-16 10:34:48 | make
+2020-01-16 10:35:16 | rm -rf *
+2020-01-16 10:35:18 | CMAKE_PREFIX_PATH=/home/keitee/Qt/5.12.6/gcc_64 cmake ..
+2020-01-16 10:35:22 | make
+2020-01-16 10:35:54 | rm -rf *
+2020-01-16 10:35:56 | CMAKE_PREFIX_PATH=/home/keitee/Qt/5.12.6/gcc_64 cmake ..
+2020-01-16 10:35:57 | make
+2020-01-16 10:37:23 | CMAKE_PREFIX_PATH=/home/keitee/Qt/5.12.6/gcc_64 cmake ..
+2020-01-16 10:37:24 | make
+2020-01-16 10:37:28 | rm -rf *
+2020-01-16 10:37:30 | CMAKE_PREFIX_PATH=/home/keitee/Qt/5.12.6/gcc_64 cmake ..
+2020-01-16 10:37:32 | make
+2020-01-16 10:40:38 | git branch -vv
+2020-01-16 10:40:56 | l
+2020-01-16 10:41:11 | git ll
+2020-01-16 10:41:16 | gitk &
+2020-01-16 10:41:37 | l
+2020-01-16 10:41:54 | pushdd eu-q-titan-uk/
+2020-01-16 10:41:57 | pushd eu-q-titan-uk/
+2020-01-16 10:41:59 | l
+2020-01-16 10:42:01 | ll
+2020-01-16 10:46:00 | rm SDK
+2020-01-16 10:46:08 | ln -s SDK_Q120.000.51.00_bskybgen2_SKY7278/
+2020-01-16 10:46:12 | ln -s SDK_Q120.000.51.00_bskybgen2_SKY7278 SDK
+2020-01-16 10:46:13 | ls
+2020-01-16 10:46:14 | ll
+2020-01-16 10:46:18 | cd SDK
+2020-01-16 10:46:19 | ls
+2020-01-16 10:46:27 | cd THIRD_PARTY_LIBRARIES/
+2020-01-16 10:46:28 | ls
+2020-01-16 10:46:34 | cd BSKYB_GEN2_AMS/
+2020-01-16 10:46:34 | ls
+2020-01-16 10:46:35 | ll
+2020-01-16 10:46:46 | mv Components/ Components_org
+2020-01-16 10:46:47 | ls
+2020-01-16 10:46:58 | ln ~/mw/ethan-as-source/Components/
+2020-01-16 10:46:58 | ls
+2020-01-16 10:47:06 | ln -s ~/mw/ethan-as-source/Components/
+2020-01-16 10:47:06 | ls
+2020-01-16 10:47:07 | ll
+2020-01-16 10:47:10 | popd
+2020-01-16 10:47:10 | ls
+2020-01-16 10:56:56 | cd ..
+2020-01-16 10:56:57 | l
+2020-01-16 10:56:58 | cd ..
+2020-01-16 10:56:59 | l
+2020-01-16 10:57:01 | cd ..
+2020-01-16 10:57:02 | l
+2020-01-16 10:57:05 | cd cxx
+2020-01-16 10:57:05 | ls
+2020-01-16 10:57:08 | v CMakeLists.txt 
+2020-01-16 10:58:20 | l
+2020-01-16 10:58:22 | cd ..
+2020-01-16 10:58:22 | ls
+2020-01-16 10:58:25 | ag "add_compile_options"
+2020-01-16 10:58:41 | cd os
+2020-01-16 10:58:42 | ls
+2020-01-16 10:58:47 | v CMakeLists.txt 
+2020-01-16 10:59:15 | l
+2020-01-16 10:59:18 | cd build/
+2020-01-16 10:59:19 | make
+2020-01-16 10:59:30 | l
+2020-01-16 10:47:13 | ./compile_sdkv2.0.sh eu-q-titan-uk /home/keitee/mw/ethan-as-source/ clean
+2020-01-16 11:00:21 | cmake ..
+2020-01-16 11:00:23 | make
+2020-01-16 11:00:25 | ls
+2020-01-16 11:00:28 | rm -rf *
+2020-01-16 11:00:31 | cmake ..
+2020-01-16 11:00:33 | make
+2020-01-16 11:01:54 | l
+2020-01-16 11:02:30 | pushd eu-q-titan-uk/
+2020-01-16 11:02:31 | ls
+2020-01-16 11:02:32 | ll
+2020-01-16 11:03:12 | l
+2020-01-16 11:03:16 | cd SDK
+2020-01-16 11:03:17 | ls
+2020-01-16 11:03:28 | cd THIRD_PARTY_LIBRARIES/
+2020-01-16 11:03:28 | ls
+2020-01-16 11:03:33 | cd BSKYB_GEN2_AMS/
+2020-01-16 11:03:34 | ls
+2020-01-16 11:03:37 | more BSKYB_GEN2_AMS_tag.txt 
+2020-01-16 11:05:20 | dirs
+2020-01-16 11:05:21 | popd
+2020-01-16 11:05:22 | ls
+2020-01-16 11:05:31 | cd eu-q-titan-uk/
+2020-01-16 11:05:31 | l
+2020-01-16 11:05:33 | ll
+2020-01-16 11:09:51 | mv ~/Downloads/Q__formal__Q000__Q000.022.74.00__SDK__eu-q-titan-uk__release_dbg__S__unsigned.tgz .
+2020-01-16 11:09:51 | ls
+2020-01-16 11:09:52 | ll
+2020-01-16 11:10:19 | tar xvf Q__formal__Q000__Q000.022.74.00__SDK__eu-q-titan-uk__release_dbg__S__unsigned.tgz 
+2020-01-16 11:10:57 | cd /media/keitee/hdd/
+2020-01-16 11:10:57 | ls
+2020-01-16 11:11:02 | cd keitee/
+2020-01-16 11:11:02 | ls
+2020-01-16 11:11:16 | cd Bluetooth_org/
+2020-01-16 11:11:16 | ls
+2020-01-16 11:11:21 | cd ..
+2020-01-16 11:11:22 | ls
+2020-01-16 11:11:24 | cd Downloads/
+2020-01-16 11:11:25 | ls
+2020-01-16 11:11:31 | ls *.pdf
+2020-01-16 08:56:48 | sudo screen -S name -a -fn -l /dev/ttyUSB1 115200,cs8
+2020-01-16 11:12:31 | cd Downloads/
+2020-01-16 11:12:32 | ls
+2020-01-16 11:13:03 | l
+2020-01-16 11:13:04 | cd ..
+2020-01-16 11:13:05 | ls
+2020-01-16 11:13:17 | cd ip
+2020-01-16 11:13:18 | ls
+2020-01-16 11:13:26 | cd ..
+2020-01-16 11:13:26 | ls
+2020-01-16 11:13:35 | l
+2020-01-16 11:13:37 | ll
+2020-01-16 11:13:40 | rm SDK
+2020-01-16 11:13:57 | ln -s SDK_Q000.022.74.00_bskybgen2_SKY7278/ SDK
+2020-01-16 11:13:57 | ls
+2020-01-16 11:13:59 | cd SDK
+2020-01-16 11:13:59 | ls
+2020-01-16 11:14:04 | cd THIRD_PARTY_LIBRARIES/
+2020-01-16 11:14:04 | ls
+2020-01-16 11:14:08 | cd BSKYB_GEN2_AMS/
+2020-01-16 11:14:08 | ls
+2020-01-16 11:14:09 | ll
+2020-01-16 11:14:12 | cat BSKYB_GEN2_AMS_tag.txt 
+2020-01-16 11:14:31 | l
+2020-01-16 11:14:37 | mv Components/ Components_org
+2020-01-16 11:14:41 | ln -s ~/mw/ethan-as-source/Components/
+2020-01-16 11:14:42 | ls
+2020-01-16 11:14:45 | popd
+2020-01-16 11:14:45 | ls
+2020-01-16 11:14:50 | dirs
+2020-01-16 11:14:52 | ls
+2020-01-16 11:15:03 | cd ..
+2020-01-16 11:15:04 | ls
+2020-01-16 11:15:12 | cd xSubmoduleDarwinSDK/
+2020-01-16 11:15:14 | ls
+2020-01-16 11:15:58 | make clean
+2020-01-16 11:16:10 | make VERBOSE=1 
+2020-01-16 11:16:55 | man make
+2020-01-16 11:18:41 | make --version
+2020-01-16 11:18:53 | make --debug
+2020-01-16 11:19:01 | make --debug=v
+2020-01-16 11:21:27 | make V=1
+2020-01-16 11:21:32 | make clean
+2020-01-16 11:21:34 | make V=1
+2020-01-16 11:22:16 | make VERBOSE=1 
+2020-01-16 11:15:17 | ./compile_sdkv2.0.sh eu-q-titan-uk /home/keitee/mw/ethan-as-source/ clean
+2020-01-16 11:31:32 | l
+2020-01-16 11:31:39 | pushd eu-q-titan-uk/
+2020-01-16 11:31:39 | ls
+2020-01-16 11:31:41 | ll
+2020-01-16 11:31:51 | mv ~/Downloads/Q__formal__Q000__Q000.022.37.00__SDK__eu-q-titan-uk__release_dbg__S__unsigned.tgz .
+2020-01-16 11:32:02 | tar xvf Q__formal__Q000__Q000.022.37.00__SDK__eu-q-titan-uk__release_dbg__S__unsigned.tgz 
+2020-01-16 11:33:23 | l
+2020-01-16 11:33:24 | ll
+2020-01-16 11:33:27 | rm SDK
+2020-01-16 11:33:51 | ln -s SDK_Q000.022.37.00_bskybgen2_SKY7278/ SDK
+2020-01-16 11:33:52 | ll
+2020-01-16 11:33:53 | cd SDK
+2020-01-16 11:33:54 | ls
+2020-01-16 11:33:59 | cd THIRD_PARTY_LIBRARIES/
+2020-01-16 11:34:00 | l
+2020-01-16 11:34:03 | cd BSKYB_GEN2_AMS/
+2020-01-16 11:34:04 | l
+2020-01-16 11:34:10 | cat BSKYB_GEN2_AMS_tag.txt 
+2020-01-16 11:34:17 | l
+2020-01-16 11:34:26 | mv Components/ Components_org
+2020-01-16 11:34:27 | ls
+2020-01-16 11:34:31 | ln -s ~/mw/ethan-as-source/Components/
+2020-01-16 11:34:32 | l
+2020-01-16 11:34:33 | popd
+2020-01-16 11:34:35 | ls
+2020-01-16 11:34:38 | ./compile_sdkv2.0.sh eu-q-titan-uk /home/keitee/mw/ethan-as-source/ clean
+2020-01-16 11:48:35 | ls
+2020-01-16 11:49:08 | cd ~/mw/
+2020-01-16 11:49:08 | l
+2020-01-16 11:49:13 | cd exports/
+2020-01-16 11:49:13 | ls
+2020-01-16 11:49:14 | cd titan/
+2020-01-16 11:49:15 | ls
+2020-01-16 11:49:37 | mv flash0 flash0-bleaudio-new
+2020-01-16 11:49:37 | ls
+2020-01-16 11:49:49 | sudo cp -r /home/keitee/mw/ethan-as-source/xSubmoduleDarwinSDK/eu-q-titan-uk/SDK/flash0 /home/keitee/mw/exports/titan
+2020-01-16 11:50:01 | l
+2020-01-16 11:50:03 | ll
+2020-01-16 12:11:16 | l
+2020-01-16 12:11:18 | cd flash0
+2020-01-16 12:11:18 | ls
+2020-01-16 12:11:20 | ll
+2020-01-16 12:11:47 | ag "KT::" LOG
+2020-01-16 12:12:01 | ag "KT::|KEY_PRESS" LOG
+2020-01-16 12:13:15 | ag "KT::|KEY_PRESS" LOG > old.log
+2020-01-16 12:13:23 | ls
+2020-01-16 12:13:25 | ll
+2020-01-16 12:13:42 | cd ..
+2020-01-16 12:13:42 | ls
+2020-01-16 12:13:51 | chmod 777 flash0
+2020-01-16 12:13:54 | sudo chmod 777 flash0
+2020-01-16 12:13:59 | ls
+2020-01-16 12:14:00 | cd flash0
+2020-01-16 12:14:01 | ls
+2020-01-16 12:14:02 | ag "KT::|KEY_PRESS" LOG > old.log
+2020-01-16 12:14:04 | ls
+2020-01-16 12:14:12 | v old.log 
+2020-01-16 13:23:47 | ./compile_sdkv2.0.sh eu-q-titan-uk /home/keitee/mw/ethan-as-source/ 
+2020-01-16 13:26:08 | sudo cp -r /home/keitee/mw/ethan-as-source/xSubmoduleDarwinSDK/eu-q-titan-uk/SDK/flash0 /home/keitee/mw/exports/titan
+2020-01-16 13:42:14 | l
+2020-01-16 13:42:21 | mv LOG LOG1
+2020-01-16 13:42:47 | l
+2020-01-16 13:43:03 | ag "KT::|KEY_PRESS" LOG > old2.log
+2020-01-16 13:43:12 | v old2.log 
+2020-01-16 13:45:05 | l
+2020-01-16 13:45:38 | diff -r reader/source/ ~/sky/btaudio/Bluetooth-old/reader/source/
+2020-01-16 13:46:14 | gdiff reader/source/bluetooth_media.cpp /home/keitee/sky/btaudio/Bluetooth-old/reader/source/bluetooth_media.cpp
+2020-01-16 13:46:29 | vdiff reader/source/bluetooth_media.cpp /home/keitee/sky/btaudio/Bluetooth-old/reader/source/bluetooth_media.cpp
+2020-01-16 13:48:12 | ./compile_sdkv2.0.sh eu-q-titan-uk /home/keitee/mw/ethan-as-source/ 
+2020-01-16 13:48:47 | vv reader/source/bluetooth_media.cpp 
+2020-01-16 13:51:36 | sudo cp -r /home/keitee/mw/ethan-as-source/xSubmoduleDarwinSDK/eu-q-titan-uk/SDK/flash0 /home/keitee/mw/exports/titan
+2020-01-16 14:03:39 | ag "KT::|KEY_PRESS" LOG > old2.log
+2020-01-16 14:03:41 | v old2.log 
+2020-01-16 14:09:40 | ./compile_sdkv2.0.sh eu-q-titan-uk /home/keitee/mw/ethan-as-source/ 
+2020-01-16 14:11:03 | sudo cp -r /home/keitee/mw/ethan-as-source/xSubmoduleDarwinSDK/eu-q-titan-uk/SDK/flash0 /home/keitee/mw/exports/titan
+2020-01-16 14:21:41 | ag "KT::|KEY_PRESS" LOG > old2.log
+2020-01-16 14:21:43 | v old2.log 
+2020-01-16 14:25:25 | v LOG
+2020-01-16 14:42:11 | ls
+2020-01-16 14:42:13 | g st
+2020-01-16 14:42:40 | git commit -am "add more debug"
+2020-01-16 14:42:41 | g st
+2020-01-16 14:42:45 | git branch -vv
+2020-01-16 14:42:59 | git co NGDEV-155219_CODH-Bluetooth_Unable_to_re-launch_bluetooth_audio_after_disconnecting_via_RCU 
+2020-01-16 14:43:01 | g st
+2020-01-16 14:47:07 | l
+2020-01-16 14:47:09 | cd ..
+2020-01-16 14:47:10 | ls
+2020-01-16 14:47:22 | mv flash0 flash0-bleaudio-old
+2020-01-16 14:47:22 | ls
+2020-01-16 14:47:48 | mv flash0-bleaudio-new/ flash0
+2020-01-16 14:47:49 | ls
+2020-01-16 14:44:40 | ./compile_sdkv2.0.sh eu-q-titan-uk /home/keitee/mw/ethan-as-source/ 
+2020-01-16 14:48:59 | ls
+2020-01-16 14:49:06 | pushd eu-q-titan-uk/
+2020-01-16 14:49:07 | l
+2020-01-16 14:49:08 | ll
+2020-01-16 14:49:20 | rm -rf SDK_Q000.022.37.00_bskybgen2_SKY7278/
+2020-01-16 14:49:23 | ls
+2020-01-16 14:49:24 | ll
+2020-01-16 14:49:44 | mv SDK SDK_FOR_OLD_BTAUDIO
+2020-01-16 14:49:45 | ls
+2020-01-16 14:49:47 | ll
+2020-01-16 14:51:36 | ln -s SDK_Q120.000.51.00_bskybgen2_SKY7278 SDK
+2020-01-16 14:51:37 | ls
+2020-01-16 14:51:42 | cd SDK
+2020-01-16 14:51:42 | ls
+2020-01-16 14:51:46 | cd THIRD_PARTY_LIBRARIES/
+2020-01-16 14:51:46 | l
+2020-01-16 14:51:49 | cd BSKYB_GEN2_AMS/
+2020-01-16 14:51:50 | l
+2020-01-16 14:51:51 | ll
+2020-01-16 14:51:56 | popd
+2020-01-16 14:53:51 | pushd 
+2020-01-16 14:54:08 | pushd ~/mw/ethan-as-source/xSubmoduleDarwinSDK/
+2020-01-16 14:54:09 | ls
+2020-01-16 14:54:13 | cd eu-q-titan-uk/
+2020-01-16 14:54:13 | ll
+2020-01-16 14:54:44 | rm -rf SDK_Q000.022.74.00_bskybgen2_SKY7278/
+2020-01-16 14:54:46 | l
+2020-01-16 14:54:47 | ll
+2020-01-16 14:55:00 | rm Q__formal__Q000__Q000.022.74.00__SDK__eu-q-titan-uk__release_dbg__S__unsigned.tgz
+2020-01-16 14:55:01 | ll
+2020-01-16 14:52:00 | ./compile_sdkv2.0.sh eu-q-titan-uk /home/keitee/mw/ethan-as-source/ 
+2020-01-16 14:56:09 | rm SDK
+2020-01-16 14:56:21 | ln -s SDK_Q000.023.66.00_bskybgen2_SKY7278/
+2020-01-16 14:56:26 | ln -s SDK_Q000.023.66.00_bskybgen2_SKY7278 SDK
+2020-01-16 14:56:26 | ls
+2020-01-16 14:56:33 | d S
+2020-01-16 14:57:01 | ll
+2020-01-16 15:01:40 | l
+2020-01-16 15:01:42 | cd flash0
+2020-01-16 15:01:43 | ls
+2020-01-16 15:03:03 | l
+2020-01-16 15:03:05 | cd ..
+2020-01-16 15:03:05 | ls
+2020-01-16 15:03:06 | cd ..
+2020-01-16 15:03:07 | ls
+2020-01-16 15:03:08 | cd ..
+2020-01-16 15:03:08 | ls
+2020-01-16 15:03:13 | cd code-make/
+2020-01-16 15:03:13 | ls
+2020-01-16 15:03:15 | cd cmake/
+2020-01-16 15:03:16 | ls
+2020-01-16 15:03:24 | cd tutorial/
+2020-01-16 15:03:25 | l
+2020-01-16 15:03:28 | cd step1
+2020-01-16 15:03:28 | l
+2020-01-16 15:03:32 | vv CMakeLists.txt 
+2020-01-16 15:03:50 | cd ..
+2020-01-16 15:03:51 | ls
+2020-01-16 15:03:54 | cd step2/
+2020-01-16 15:03:55 | ls
+2020-01-16 15:03:59 | vv CMakeLists.txt 
+2020-01-16 15:12:33 | l
+2020-01-16 15:12:42 | mkdir build
+2020-01-16 15:12:43 | cd build/
+2020-01-16 15:12:46 | cmake ..
+2020-01-16 15:16:10 | make
+2020-01-16 15:16:11 | ls
+2020-01-16 15:19:36 | l
+2020-01-16 15:19:39 | cd ..
+2020-01-16 15:19:39 | ls
+2020-01-16 15:19:41 | cd ..
+2020-01-16 15:19:41 | ls
+2020-01-16 15:19:45 | cd step3/
+2020-01-16 15:19:46 | l
+2020-01-16 15:19:55 | vv CMakeLists.txt 
+2020-01-16 15:20:24 | cd ..
+2020-01-16 15:20:24 | ls
+2020-01-16 15:20:27 | cd step5/
+2020-01-16 15:20:28 | l
+2020-01-16 15:20:30 | v CMakeLists.txt 
+2020-01-16 15:20:48 | vv CMakeLists.txt 
+2020-01-16 15:12:17 | ./compile_sdkv2.0.sh eu-q-titan-uk /home/keitee/mw/ethan-as-source/ clean
+2020-01-16 15:25:48 | sudo cp -r /home/keitee/mw/ethan-as-source/xSubmoduleDarwinSDK/eu-q-titan-uk/SDK/flash0 /home/keitee/mw/exports/titan
+2020-01-16 15:32:19 | l
+2020-01-16 15:32:28 | mv LOG LOG1
+2020-01-16 15:35:11 | ag "KT|KEY_PRESS" LOG > 1601-2.log
+2020-01-16 15:35:17 | v 1601-2.log 
+2020-01-16 15:35:46 | ag "bleaudio|KEY_PRESS" LOG > 1601-2.log
+2020-01-16 15:41:09 | l
+2020-01-16 15:41:16 | ls
+2020-01-16 15:41:22 | pushd eu-q-titan-uk/
+2020-01-16 15:41:23 | l
+2020-01-16 15:41:25 | cd SDK
+2020-01-16 15:41:26 | ls
+2020-01-16 15:41:34 | cd THIRD_PARTY_LIBRARIES/BSKYB_GEN2_AMS/
+2020-01-16 15:41:34 | l
+2020-01-16 15:41:35 | ll
+2020-01-16 15:41:44 | popd
+2020-01-16 15:41:45 | ls
+2020-01-16 15:41:49 | cd reader/
+2020-01-16 15:41:49 | ls
+2020-01-16 15:41:53 | cd source/
+2020-01-16 15:41:54 | ls
+2020-01-16 15:42:05 | ag "DO NOT" bleaudiostreamer.cpp 
+2020-01-16 15:42:33 | popd
+2020-01-16 15:42:48 | #./compile_sdkv2.0.sh eu-q-titan-uk /home/keitee/mw/ethan-as-source/ clean
+2020-01-16 15:42:49 | ls
+2020-01-16 15:42:50 | g st
+2020-01-16 15:43:09 | git diff
+2020-01-16 15:43:27 | export PAGER=
+2020-01-16 15:43:29 | git diff
+2020-01-16 15:44:00 | g st
+2020-01-16 15:44:02 | gc
+2020-01-16 15:44:03 | g st
+2020-01-16 15:44:06 | git push
+2020-01-16 15:43:44 | ./compile_sdkv2.0.sh eu-q-titan-uk /home/keitee/mw/ethan-as-source/ clean
+2020-01-17 06:55:44 | git pull
+2020-01-17 06:55:49 | cd 
+2020-01-17 06:55:52 | cd git/vim/
+2020-01-17 06:55:53 | g st
+2020-01-17 06:56:01 | git add -u
+2020-01-17 06:56:02 | ll
+2020-01-17 06:56:09 | g st
