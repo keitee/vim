@@ -102,7 +102,7 @@ Public/
 ReadLine/
 RuntimeManager/
 SACClient/
-Singletons/
+# Singletons/
 SkyDefinitions/
 SoftCat/
 SoftCatDataObjects/
