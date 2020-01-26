@@ -300,15 +300,20 @@ alias cf="clang-format -i -style=file"
 #={===========================================================================
 # alias
 alias a=alias
-alias th='tmuxinator start home'
-alias ta='tmuxinator start airplay'
-alias tb='tmuxinator start blue-titan'
-alias ta='tmux a'
 alias s='source ~/.bashrc'
 alias ll='ls -alFrth'
 alias la='ls -A'
 alias l='ls -CFh'
 alias c=clear
+
+#={===========================================================================
+# alias-rm
+alias rm='rm -I'
+
+#={===========================================================================
+# alias-tmux
+alias tb='tmuxinator start blue-titan'
+alias ta='tmux a'
 
 alias cgrep='grep --color'
 
