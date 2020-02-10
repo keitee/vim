@@ -389,6 +389,11 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+#={===========================================================================
+# bash-ssh
+alias skys="sudo openconnect skyremoteaccess.bskyb.com -g SKYCONNECT2.0 -u kit.park@sky.uk"
+alias skyc="ssh -X 10.184.131.22"
+
 
 #={===========================================================================
 # bash-completion bash-readline
