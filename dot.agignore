@@ -134,7 +134,7 @@ AS_Polipo/
 Gmock/
 Soundbox/
 AudioStreamer/
-Rdk/
+# Rdk/
 Registry/
 Math/
 StreamMetaData/
@@ -178,7 +178,7 @@ TimeDoctor/
 #{============================================================================
 # rdk
 # direct_build, $B$
-as-system-service/
+# as-system-service/
 downloads/
 generic/
 hooks/
