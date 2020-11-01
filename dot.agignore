@@ -1,7 +1,7 @@
 #{============================================================================
 # common
 *.o
-CMakeFiles/
+# CMakeFiles/
 
 # /usr/include/
 
@@ -24,6 +24,7 @@ The-Modern-Cpp-Challenge/
 # mw/
 airplay/
 # appinfrastructure/
+appinfrastructure_rdk/
 docs/
 epg/
 # ethan-as-source/
@@ -35,148 +36,165 @@ logs/
 tftproot/
 
 
-# mw/appinfrastructure/
-3rdPartySources/
-Android/
-# AppInfrastructure/
-Apps/
-AwsMqtt/
-.git/
-Mongoose/
-RunC/
-Tools/
-xSubmoduleAS/
-xSubmoduleDarwinSDK/
+# appinfrastructure/
+appinfrastructure/3rdPartySources/
+appinfrastructure/Android/
+# appinfrastructure/AppInfrastructure/
+appinfrastructure/AwsMqtt/
+appinfrastructure/.git/
+appinfrastructure/Mongoose/
+appinfrastructure/RunC/
+appinfrastructure/Tools/
+appinfrastructure/xSubmoduleAS/
+appinfrastructure/xSubmoduleDarwinSDK/
 
+# appinfrastructure/Apps
+appinfrastructure/Apps/AWSSDK
+appinfrastructure/Apps/Sqlite3
 
-# mw/appinfrastructure/AppInfrastructure
-3rdParty/
-AppInfrastructureTests/
-ApplicationLaunchPolicy/
-ApplicationManagerProxy/
-AppLogger/
-AppWebServer/
-ASAP/
-BasicVideoApp/
-# BluetoothRcu/
-Bootstrap/
-build/
-cmake/
-Common/
-CredentialsManager/
-CrlCache/
-Crypto/
-DaemonController/
-DbusServer/
-DebugSignaller/
-DesktopDebug/
-Diagnostics/
-DIAL/
-DmsWrappers/
-Dobby/
-FakeDMS/
-FileArchive/
-GestureRecogniser/
-GlesTracker/
-Hamiltron/
-HamiltronGlue/
-HamiltronQPA/
-HTTPClients/
-IdentityManager/
-InfraredRcu/
-InputHandler/
-IpcService/
-Jumper/
-LAE/
-Logger/
-MakeExtras/
-MiniDumper/
-MongooseWrapper/
-MongooseWrapperAS/
-MultiTapRecogniser/
-Netflix/
-PackageManager/
-Platform/
-ProxyServer/
-Public/
-ReadLine/
-RuntimeManager/
-SACClient/
-# Singletons/
-SkyDefinitions/
-SoftCat/
-SoftCatDataObjects/
-StartupAppLauncher/
-Telco/
-TestInfrastructure/
-UPnPDiscovery/
-WebSocketDbusBridge/
-WebSocketMediator/
-xJenkins/
-XmlDSigSigner/
-XmlDSigVerifier/
-XmlParser/
+# appinfrastructure/AppInfrastructure
+appinfrastructure/AppInfrastructure/3rdParty/
+appinfrastructure/AppInfrastructure/AppInfrastructureTests/
+appinfrastructure/AppInfrastructure/ApplicationLaunchPolicy/
+appinfrastructure/AppInfrastructure/ApplicationManagerProxy/
+appinfrastructure/AppInfrastructure/AppLogger/
+appinfrastructure/AppInfrastructure/AppWebServer/
+appinfrastructure/AppInfrastructure/ASAP/
+appinfrastructure/AppInfrastructure/BasicVideoApp/
+# appinfrastructure/AppInfrastructure/BluetoothRcu/
+appinfrastructure/AppInfrastructure/Bootstrap/
+appinfrastructure/AppInfrastructure/build/
+appinfrastructure/AppInfrastructure/cmake/
+# appinfrastructure/AppInfrastructure/Common/
+appinfrastructure/AppInfrastructure/CredentialsManager/
+appinfrastructure/AppInfrastructure/CrlCache/
+appinfrastructure/AppInfrastructure/Crypto/
+appinfrastructure/AppInfrastructure/DaemonController/
+appinfrastructure/AppInfrastructure/DbusServer/
+appinfrastructure/AppInfrastructure/DebugSignaller/
+appinfrastructure/AppInfrastructure/DesktopDebug/
+appinfrastructure/AppInfrastructure/Diagnostics/
+appinfrastructure/AppInfrastructure/DIAL/
+appinfrastructure/AppInfrastructure/DmsWrappers/
+appinfrastructure/AppInfrastructure/Dobby/
+appinfrastructure/AppInfrastructure/FakeDMS/
+appinfrastructure/AppInfrastructure/FileArchive/
+appinfrastructure/AppInfrastructure/GestureRecogniser/
+appinfrastructure/AppInfrastructure/GlesTracker/
+appinfrastructure/AppInfrastructure/Hamiltron/
+# appinfrastructure/AppInfrastructure/HamiltronGlue/
+appinfrastructure/AppInfrastructure/HamiltronQPA/
+appinfrastructure/AppInfrastructure/HTTPClients/
+appinfrastructure/AppInfrastructure/IdentityManager/
+appinfrastructure/AppInfrastructure/InfraredRcu/
+# appinfrastructure/AppInfrastructure/InputHandler/
+appinfrastructure/AppInfrastructure/IpcService/
+appinfrastructure/AppInfrastructure/Jumper/
+appinfrastructure/AppInfrastructure/LAE/
+# appinfrastructure/AppInfrastructure/Logger/
+appinfrastructure/AppInfrastructure/MakeExtras/
+appinfrastructure/AppInfrastructure/MiniDumper/
+appinfrastructure/AppInfrastructure/MongooseWrapper/
+appinfrastructure/AppInfrastructure/MongooseWrapperAS/
+appinfrastructure/AppInfrastructure/MultiTapRecogniser/
+appinfrastructure/AppInfrastructure/Netflix/
+appinfrastructure/AppInfrastructure/PackageManager/
+appinfrastructure/AppInfrastructure/Platform/
+appinfrastructure/AppInfrastructure/ProxyServer/
+# appinfrastructure/AppInfrastructure/Public/
+appinfrastructure/AppInfrastructure/ReadLine/
+appinfrastructure/AppInfrastructure/RuntimeManager/
+appinfrastructure/AppInfrastructure/SACClient/
+# appinfrastructure/AppInfrastructure/Singletons/
+appinfrastructure/AppInfrastructure/SkyDefinitions/
+appinfrastructure/AppInfrastructure/SoftCat/
+appinfrastructure/AppInfrastructure/SoftCatDataObjects/
+appinfrastructure/AppInfrastructure/StartupAppLauncher/
+# appinfrastructure/AppInfrastructure/# since duplicated as Apps/Telco
+# appinfrastructure/AppInfrastructure/Telco/
+appinfrastructure/AppInfrastructure/TestInfrastructure/
+appinfrastructure/AppInfrastructure/UPnPDiscovery/
+appinfrastructure/AppInfrastructure/WebSocketDbusBridge/
+appinfrastructure/AppInfrastructure/WebSocketMediator/
+appinfrastructure/AppInfrastructure/xJenkins/
+appinfrastructure/AppInfrastructure/XmlDSigSigner/
+appinfrastructure/AppInfrastructure/XmlDSigVerifier/
+appinfrastructure/AppInfrastructure/XmlParser/
 
-# mw/ethan-as-source
-xSubmoduleAppInfrastructure/
-WebRuntime/
-JenkinsCI/
-# Components
-xSubmoduleDarwinSDK/
+# appinfrastructure/AppInfrastructure/BluetoothRcu/daemon
+appinfrastructure/AppInfrastructure/BluetoothRcu/daemon/3rdparty/
 
-# mw/ethan-as-source/Components
-ToolchainDefs/
-AmsApi/
-MakeRules/
-SI/
-ASMongooseMemoryPoolWrapper/
-AS_Polipo/
-Gmock/
-Soundbox/
-AudioStreamer/
-# Rdk/
-Registry/
-Math/
-StreamMetaData/
-# Bluetooth/
-Data/
-Async/
-MiddlewareServices/
-LinuxContainers/
-CppUnit/
-Http/
-ManagedObject/
-CUnit/
-TestApps/
-Platform/
-Android/
-Qt/
-Event/
-Main/
-Mock/
-DarwinQtIntegration/
-Flex/
-AppRestart/
-Wifi/
-ErrorStack/
-VoiceSearch/
-unitTestFramework/
-StateMachine/
-QWsSocket/
-HttpServer/
-Trace/
-MiddlewareIncludes/
-Mongoose/
-SocketServer/
-AS/
-Squish/
-Conviva/
-DarwinAppEngine/
-TimeDoctor/
+# 
+xi1-gdb
+
+# ethan-as-source
+ethan-as-source/xSubmoduleAppInfrastructure/
+ethan-as-source/WebRuntime/
+ethan-as-source/JenkinsCI/
+# ethan-as-source/Components
+ethan-as-source/xSubmoduleDarwinSDK/
+
+# ethan-as-source/Components
+ethan-as-source/Components/ToolchainDefs/
+ethan-as-source/Components/AmsApi/
+ethan-as-source/Components/MakeRules/
+ethan-as-source/Components/SI/
+ethan-as-source/Components/ASMongooseMemoryPoolWrapper/
+ethan-as-source/Components/AS_Polipo/
+ethan-as-source/Components/Gmock/
+ethan-as-source/Components/Soundbox/
+ethan-as-source/Components/AudioStreamer/
+# ethan-as-source/Components/Rdk/
+ethan-as-source/Components/Registry/
+ethan-as-source/Components/Math/
+ethan-as-source/Components/StreamMetaData/
+# ethan-as-source/Components/Bluetooth/
+ethan-as-source/Components/Data/
+ethan-as-source/Components/Async/
+ethan-as-source/Components/MiddlewareServices/
+ethan-as-source/Components/LinuxContainers/
+# ethan-as-source/Components/CppUnit/
+ethan-as-source/Components/Http/
+ethan-as-source/Components/ManagedObject/
+ethan-as-source/Components/CUnit/
+ethan-as-source/Components/TestApps/
+ethan-as-source/Components/Platform/
+ethan-as-source/Components/Android/
+ethan-as-source/Components/Qt/
+ethan-as-source/Components/Event/
+ethan-as-source/Components/Ffmpeg/
+# ethan-as-source/Components/Main/
+# to have Fusion headers
+# ethan-as-source/Components/Mock/
+ethan-as-source/Components/DarwinQtIntegration/
+ethan-as-source/Components/Flex/
+ethan-as-source/Components/AppRestart/
+ethan-as-source/Components/Wifi/
+ethan-as-source/Components/ErrorStack/
+ethan-as-source/Components/VoiceSearch/
+ethan-as-source/Components/unitTestFramework/
+ethan-as-source/Components/StateMachine/
+ethan-as-source/Components/QWsSocket/
+ethan-as-source/Components/HttpServer/
+ethan-as-source/Components/Trace/
+ethan-as-source/Components/MiddlewareIncludes/
+ethan-as-source/Components/Mongoose/
+ethan-as-source/Components/SocketServer/
+# ethan-as-source/Components/AS/
+ethan-as-source/Components/Squish/
+ethan-as-source/Components/Conviva/
+ethan-as-source/Components/DarwinAppEngine/
+ethan-as-source/Components/TimeDoctor/
 
 
 #{============================================================================
-# rdk
+# as componets
+# asplayer
+asplayer-wip-*
+
+
+#{============================================================================
+# rdk bitbake folders
 # direct_build, $B$
 # as-system-service/
 downloads/
@@ -373,324 +391,377 @@ cortexa15t2hf-neon-rdk-linux-gnueabi/url/
 cortexa15t2hf-neon-rdk-linux-gnueabi/url-netflix/
 cortexa15t2hf-neon-rdk-linux-gnueabi/b/
 
-# since `dbus/` matches all and make it specific to match one 
-# dbus/
-cortexa15t2hf-neon-rdk-linux-gnueabi/dbus/
+# # since `dbus/` matches all and make it specific to match one 
+# # dbus/
+# cortexa15t2hf-neon-rdk-linux-gnueabi/dbus/
 
-dbus-glib/
-dca/
-defaultpkgname/
-# devicesettings-hal-brcm97268/
-# devicesettings-hal-headers/
-dial/
-dnsmasq/
-dropbear/
-dtcp-lib-dummy-arm/
-dtcp-lib-encrypted-arm/
-dtcpmgr/
-dvrgenericheaders/
-dvrmgr-hal-broadcom/
-e2fsprogs/
-ecfs-search/
-ecryptfs-utils/
-expat/
-fcgi/
-flac/
-flex/
-fog/
-fontconfig/
-freetype/
-gawk/
-gcc-runtime/
-gdb/
-gdbm/
-gdk-pixbuf/
-gettext/
-giflib/
-glib-2.0/
-glibc/
-glibc-initial/
-glibc-mtrace/
-glib-openssl/
-gnutls/
-gobject-introspection/
-graphite2/
-gssdp/
-gst-plugins-rdk/
-gst-plugins-rdk-aamp/
-gst-plugins-rdk-dvr/
-gstreamer1.0/
-gstreamer1.0-libav/
-gstreamer1.0-plugins-bad/
-gstreamer1.0-plugins-base/
-gstreamer1.0-plugins-good/
-gstreamer-plugins-soc/
-gupnp/
-gupnp-av/
-harfbuzz/
-hdmicec/
-hdmicec-hal-broadcom/
-hdmicecheader/
-iarmbus/
-iarm-event-sender/
-iarmmgrs/
-iarmmgrs-hal-broadcom/
-iarmmgrs-hal-headers/
-iarm-query-powerstate/
-iarm-set-powerstate/
-icu/
-iksemel/
-init-hal-broadcom/
-initramfs-boot-arris/
-injectedbundle/
-iperf3/
-iptables/
-ipv6calc/
-iw/
-jansson/
-jquery/
-jsoncpp/
-kbd/
-key-obfuscator-pbt/
-key-simulator/
-keyutils/
-kmod/
-lcms/
-ledmgr/
-ledmgr-extended-arrisxi6/
-ledmgr-headers/
-libarchive/
-libasservice/
-libbsd/
-libcap/
-libcgroup/
-libcheck/
-libdash/
-libev/
-libevdev/
-libffi/
-libgcc/
-libgcc-initial/
-libgcrypt/
-libgpg-error/
-libical/
-libinput/
-libjpeg-turbo/
-libmng/
-libnl/
-liboauth/
-libogg/
-liboil/
-libpam/
-libparodus/
-libpcap/
-libpcre/
-libpng/
-libproxy/
-libsndfile1/
-libsoup-2.4/
-libsyswrapper/
-libtasn1/
-libtheora/
-libtinyxml/
-libtinyxml2/
-libtool/
-libtool-cross/
-liburcu/
-libusb1/
-libusb-compat/
-libvorbis/
-libwebp/
-libxkbcommon/
-libxml2/
-libxslt/
-lighttpd/
-# linux-libc-headers/
-lnfcerts/
-log4c/
-logrotate/
-lostandfound/
-lsof/
-lttng-ust/
-lvm2/
-lxc/
-lxccpid/
-lzo/
-m4/
-media-utils-headers/
-media-utils-soc-broadcom/
-mfr-data/
-mfr-library/
-mfr-library-headers/
-mfr-utils/
-minizip/
-mongoose/
-mount-scripts-diskless/
-mountutils/
-mpg123/
-msgpack-c/
-mtdev/
-mtd-utils/
-nanomsg/
-ncurses/
-ndisc6/
-neon/
-netbase/
-netflix-plugin/
-netflix-src/
-netsrvmgr/
-network-hotplug/
-nghttp2/
-nlmonitor/
-nopoll/
-nrdplugin-src/
-nspr/
-nss/
-openssl/
-openssl-0.9/
-opkg/
-opkg-utils/
-orc/
-parodus/
-perl/
-pixman/
-playready-src/
-popt/
-prebuilts-realvnc-arm/
-procps/
-pxcore-libnode/
-pxcore-standalone/
-python/
-python3/
-python3-dbus/
-python3-pygobject/
-python3-setuptools/
-qemuwrapper-cross/
-qtbase/
-qtdeclarative/
-qtremoteobjects/
-qttools/
-qtwayland/
-qtwebrtc/
-qtwebsockets/
-qtxmlpatterns/
-rdkat/
-rdkbrowser2/
-rdkbrowser2-pbnj-utils/
-rdkbrowser2-pbnj-utils-test/
-rdk-diagnostics/
-rdklogctrl/
-rdk-logger/
-rdkmediaplayer/
-rdm/
-readline/
-rf4ce/
-rf4ce-device-update/
-rf4ce-headers/
-rfc/
-rmfapp/
-rmfgenericheaders/
-rmfhalheaders/
-rmfosal/
-rmfpodmgrheaders/
-rmfpodmgrheaders-priv/
-rmfstreamer/
-rogerscerts/
-rtcast/
-rt-headers/
-rtremote/
-rtrmfplayer/
-runc-sky/
-samhain/
-sbc/
-secapi-brcm/
-secapi-common-crypto/
-secapi-common-hw/
-secapi-crypto-brcm/
-secclient/
-servicemanager/
-servicemanagerfunctionaltest/
-shadow/
-shadow-sysroot/
-shared-mime-info/
-sky-asvoice/
-sky-bluetoothrcu/
-sky-dobby/
-sky-fixup/
-skyui/
-socat/
-socprovisioning/
-socprovisioning-crypto/
-spawn-fcgi/
-speedtest-client/
-speex/
-speexdsp/
-sqlite3/
-sqlite3see/
-sslcerts/
-storagemanager/
-strace/
-stunnel/
-sysfsutils/
-sysint/
-syslog-helper/
-cortexa15t2hf-neon-rdk-linux-gnueabi/systemd/
-cortexa15t2hf-neon-rdk-linux-gnueabi/systemd-compat-units/
-taglib/
-tcpdump/
-tcp-wrappers/
-test-scripts/
-tiff/
-token-scripts/
-tr69agent/
-tr69agent-headers/
-tr69hostif/
-tr69hostif-headers/
-tr69profiles/
-tremor/
-trh/
-trm-common/
-trower-base64/
-tslib/
-tts/
-ucresolv/
-usbutils/
-util-linux/
-util-macros/
-vala/
-vnc/
-# wayland/
-# wayland-egl-bnxs/
-# wayland-egl-native/
-# wayland-plugin-default/
-wdmp-c/
-# westeros/
-# westeros-render-nexus/
-# westeros-simplebuffer/
-# westeros-simpleshell/
-# westeros-sink/
-# westeros-soc/
-widevinecdmi/
-wifi-hal-generic/
-wifi-hal-headers/
-wireless-tools/
-wpa-supplicant/
-wpe-backend/
-wpe-backend-rdk/
-wpeframework/
-wpeframework-ocdm-playready/
-wpeframework-ocdm-widevine/
-wpeframework-plugins/
-wpe-webkit/
-wrp-c/
-xdial/
-xfsprogs/
-xkeyboard-config/
-xmlsec1/
-xre2-plugin-default/
-xre-receiver-default-headers/
-xupnp/
-xz/
-yajl/
-zlib/
+# dbus-glib/
+# dca/
+# defaultpkgname/
+# # devicesettings-hal-brcm97268/
+# # devicesettings-hal-headers/
+# dial/
+# dnsmasq/
+# dropbear/
+# dtcp-lib-dummy-arm/
+# dtcp-lib-encrypted-arm/
+# dtcpmgr/
+# dvrgenericheaders/
+# dvrmgr-hal-broadcom/
+# e2fsprogs/
+# ecfs-search/
+# ecryptfs-utils/
+# expat/
+# fcgi/
+# flac/
+# flex/
+# fog/
+# fontconfig/
+# freetype/
+# gawk/
+# gcc-runtime/
+# gdb/
+# gdbm/
+# gdk-pixbuf/
+# gettext/
+# giflib/
+# glib-2.0/
+# glibc/
+# glibc-initial/
+# glibc-mtrace/
+# glib-openssl/
+# gnutls/
+# gobject-introspection/
+# graphite2/
+# gssdp/
+# gst-plugins-rdk/
+# gst-plugins-rdk-aamp/
+# gst-plugins-rdk-dvr/
+# gstreamer1.0/
+# gstreamer1.0-libav/
+# gstreamer1.0-plugins-bad/
+# gstreamer1.0-plugins-base/
+# gstreamer1.0-plugins-good/
+# gstreamer-plugins-soc/
+# gupnp/
+# gupnp-av/
+# harfbuzz/
+# hdmicec/
+# hdmicec-hal-broadcom/
+# hdmicecheader/
+# iarmbus/
+# iarm-event-sender/
+# iarmmgrs/
+# iarmmgrs-hal-broadcom/
+# iarmmgrs-hal-headers/
+# iarm-query-powerstate/
+# iarm-set-powerstate/
+# icu/
+# iksemel/
+# init-hal-broadcom/
+# initramfs-boot-arris/
+# injectedbundle/
+# iperf3/
+# iptables/
+# ipv6calc/
+# iw/
+# jansson/
+# jquery/
+# jsoncpp/
+# kbd/
+# key-obfuscator-pbt/
+# key-simulator/
+# keyutils/
+# kmod/
+# lcms/
+# ledmgr/
+# ledmgr-extended-arrisxi6/
+# ledmgr-headers/
+# libarchive/
+# libasservice/
+# libbsd/
+# libcap/
+# libcgroup/
+# libcheck/
+# libdash/
+# libev/
+# libevdev/
+# libffi/
+# libgcc/
+# libgcc-initial/
+# libgcrypt/
+# libgpg-error/
+# libical/
+# libinput/
+# libjpeg-turbo/
+# libmng/
+# libnl/
+# liboauth/
+# libogg/
+# liboil/
+# libpam/
+# libparodus/
+# libpcap/
+# libpcre/
+# libpng/
+# libproxy/
+# libsndfile1/
+# libsoup-2.4/
+# libsyswrapper/
+# libtasn1/
+# libtheora/
+# libtinyxml/
+# libtinyxml2/
+# libtool/
+# libtool-cross/
+# liburcu/
+# libusb1/
+# libusb-compat/
+# libvorbis/
+# libwebp/
+# libxkbcommon/
+# libxml2/
+# libxslt/
+# lighttpd/
+# # linux-libc-headers/
+# lnfcerts/
+# log4c/
+# logrotate/
+# lostandfound/
+# lsof/
+# lttng-ust/
+# lvm2/
+# lxc/
+# lxccpid/
+# lzo/
+# m4/
+# media-utils-headers/
+# media-utils-soc-broadcom/
+# mfr-data/
+# mfr-library/
+# mfr-library-headers/
+# mfr-utils/
+# minizip/
+# mongoose/
+# mount-scripts-diskless/
+# mountutils/
+# mpg123/
+# msgpack-c/
+# mtdev/
+# mtd-utils/
+# nanomsg/
+# ncurses/
+# ndisc6/
+# neon/
+# netbase/
+# netflix-plugin/
+# netflix-src/
+# netsrvmgr/
+# network-hotplug/
+# nghttp2/
+# nlmonitor/
+# nopoll/
+# nrdplugin-src/
+# nspr/
+# nss/
+# openssl/
+# openssl-0.9/
+# opkg/
+# opkg-utils/
+# orc/
+# parodus/
+# perl/
+# pixman/
+# playready-src/
+# popt/
+# prebuilts-realvnc-arm/
+# procps/
+# pxcore-libnode/
+# pxcore-standalone/
+# python/
+# python3/
+# python3-dbus/
+# python3-pygobject/
+# python3-setuptools/
+# qemuwrapper-cross/
+# qtbase/
+# qtdeclarative/
+# qtremoteobjects/
+# qttools/
+# qtwayland/
+# qtwebrtc/
+# qtwebsockets/
+# qtxmlpatterns/
+# rdkat/
+# rdkbrowser2/
+# rdkbrowser2-pbnj-utils/
+# rdkbrowser2-pbnj-utils-test/
+# rdk-diagnostics/
+# rdklogctrl/
+# rdk-logger/
+# rdkmediaplayer/
+# rdm/
+# readline/
+# rf4ce/
+# rf4ce-device-update/
+# rf4ce-headers/
+# rfc/
+# rmfapp/
+# rmfgenericheaders/
+# rmfhalheaders/
+# rmfosal/
+# rmfpodmgrheaders/
+# rmfpodmgrheaders-priv/
+# rmfstreamer/
+# rogerscerts/
+# rtcast/
+# rt-headers/
+# rtremote/
+# rtrmfplayer/
+# runc-sky/
+# samhain/
+# sbc/
+# secapi-brcm/
+# secapi-common-crypto/
+# secapi-common-hw/
+# secapi-crypto-brcm/
+# secclient/
+# servicemanager/
+# servicemanagerfunctionaltest/
+# shadow/
+# shadow-sysroot/
+# shared-mime-info/
+# sky-asvoice/
+# sky-bluetoothrcu/
+# sky-dobby/
+# sky-fixup/
+# skyui/
+# socat/
+# socprovisioning/
+# socprovisioning-crypto/
+# spawn-fcgi/
+# speedtest-client/
+# speex/
+# speexdsp/
+# sqlite3/
+# sqlite3see/
+# sslcerts/
+# storagemanager/
+# strace/
+# stunnel/
+# sysfsutils/
+# sysint/
+# syslog-helper/
+# cortexa15t2hf-neon-rdk-linux-gnueabi/systemd/
+# cortexa15t2hf-neon-rdk-linux-gnueabi/systemd-compat-units/
+# taglib/
+# tcpdump/
+# tcp-wrappers/
+# test-scripts/
+# tiff/
+# token-scripts/
+# tr69agent/
+# tr69agent-headers/
+# tr69hostif/
+# tr69hostif-headers/
+# tr69profiles/
+# tremor/
+# trh/
+# trm-common/
+# trower-base64/
+# tslib/
+# tts/
+# ucresolv/
+# usbutils/
+# util-linux/
+# util-macros/
+# vala/
+# vnc/
+# # wayland/
+# # wayland-egl-bnxs/
+# # wayland-egl-native/
+# # wayland-plugin-default/
+# wdmp-c/
+# # westeros/
+# # westeros-render-nexus/
+# # westeros-simplebuffer/
+# # westeros-simpleshell/
+# # westeros-sink/
+# # westeros-soc/
+# widevinecdmi/
+# wifi-hal-generic/
+# wifi-hal-headers/
+# wireless-tools/
+# wpa-supplicant/
+# wpe-backend/
+# wpe-backend-rdk/
+# wpeframework/
+# wpeframework-ocdm-playready/
+# wpeframework-ocdm-widevine/
+# wpeframework-plugins/
+# wpe-webkit/
+# wrp-c/
+# xdial/
+# xfsprogs/
+# xkeyboard-config/
+# xmlsec1/
+# xre2-plugin-default/
+# xre-receiver-default-headers/
+# xupnp/
+# xz/
+# yajl/
+# zlib/
+
+
+# Qt/5.12.6/android_arm64_v8a/
+# seems have a problem to use "5.12.6"
+android_arm64_v8a/
+android_armv7/
+android_x86/
+gcc_64/
+Logs/
+
+# Qt/5.12.6/Src
+Src/coin
+Src/gnuwin32
+Src/qt3d
+Src/qtactiveqt
+Src/qtandroidextras
+# Src/qtbase
+Src/qtcanvas3d
+Src/qtcharts
+Src/qtconnectivity
+Src/qtdatavis3d
+Src/qtdeclarative
+Src/qtdoc
+Src/qtgamepad
+Src/qtgraphicaleffects
+Src/qtimageformats
+Src/qtlocation
+Src/qtmacextras
+Src/qtmultimedia
+Src/qtnetworkauth
+Src/qtpurchasing
+Src/qtquickcontrols
+Src/qtquickcontrols2
+Src/qtremoteobjects
+Src/qtscript/
+Src/qtscxml
+Src/qtsensors
+Src/qtserialbus
+Src/qtserialport
+Src/qtspeech
+Src/qtsvg
+Src/qttools
+Src/qttranslations
+Src/qtvirtualkeyboard
+Src/qtwayland
+Src/qtwebchannel
+Src/qtwebengine
+Src/qtwebglplugin
+Src/qtwebsockets
+Src/qtwebview
+Src/qtwinextras
+Src/qtx11extras
+Src/qtxmlpatterns
 

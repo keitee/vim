@@ -90,6 +90,9 @@ set listchars=tab:»\ ,eol:¬
 " set list to show invisibles by default
 set list
 
+set diffopt+=iwhite
+set diffexpr="diff -w"
+
 
 " {===========================================================================
 " format settings

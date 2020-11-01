@@ -356,7 +356,7 @@ alias gc='git commit -am "`date` `hostname`"'
 
 # for build
 alias bllt="git tag -l '*BLD_83*"
-alias con='sudo screen -S name -a -D -R -fn -l -L /dev/ttyUSB0 115200,cs8'
+alias con='sudo screen -S name -a -D -R -fn -l -L /dev/ttyUSB3 115200,cs8'
 
 
 # enable dir expansion

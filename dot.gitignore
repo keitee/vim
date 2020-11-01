@@ -1,5 +1,5 @@
-*.a
 *.o
+*.so
 *.swp
 *.swo
 *_test
@@ -13,3 +13,6 @@ tags
 GPATH
 GRTAGS
 GTAGS
+# clion
+.idea
+cmake-build-debug/
