@@ -63797,3 +63797,1289 @@ python -m framework suite.xi6.dtt_suite
 2020-11-01 19:20:00 | g st
 2020-11-01 19:20:03 | git add -u
 2020-11-01 19:20:04 | g st
+2020-11-01 19:20:10 | gc
+2020-11-01 19:20:11 | git push
+2020-11-01 19:20:18 | git ll
+2020-11-01 19:20:23 | cd ..
+2020-11-01 19:20:23 | ls
+2020-11-01 19:20:24 | cd kb/
+2020-11-01 19:20:25 | ls
+2020-11-01 19:20:28 | g st
+2020-11-01 19:20:35 | git add -u
+2020-11-01 19:20:36 | g st
+2020-11-01 19:20:37 | git push
+2020-11-01 19:20:44 | gc
+2020-11-01 19:20:46 | git push
+2020-11-01 19:20:52 | git ll
+2020-11-01 19:20:56 | ls
+2020-11-01 19:21:15 | cd git/kb/
+2020-11-01 19:21:16 | ls
+2020-11-01 19:21:18 | cd code-cxx/
+2020-11-01 19:21:19 | ls
+2020-11-01 19:21:23 | cd algo
+2020-11-01 19:21:23 | ls
+2020-11-01 19:21:33 | v test_algo_pad.cpp 
+2020-11-01 19:25:11 | man sudo
+2020-11-01 19:42:34 | ls
+2020-11-01 19:42:35 | cd git/kb/
+2020-11-01 19:42:36 | ls
+2020-11-01 19:42:41 | cd code-sh
+2020-11-01 19:42:42 | ls
+2020-11-01 19:42:47 | more for.sh 
+2020-11-01 19:43:17 | cp for.sh loop_2.sh
+2020-11-01 19:43:24 | mv for.sh loop_1.sh
+2020-11-01 19:43:24 | ls
+2020-11-01 19:43:30 | gvim loop_2.sh 
+2020-11-01 19:44:10 | bash loop_2.sh 
+2020-11-01 19:54:20 | bash loop_3.sh 
+2020-11-01 20:06:47 | bash loop_2.sh 
+2020-11-01 21:00:24 | sudo echo function > /sys/kernel/debug/tracing/current_tracer
+2020-11-01 21:00:53 | sudo 'echo function > /sys/kernel/debug/tracing/current_tracer'
+2020-11-01 21:01:18 | echo function > /sys/kernel/debug/tracing/current_tracer
+2020-11-01 21:07:09 | which echo
+2020-11-01 21:10:22 | sudo echo function
+2020-11-01 21:20:29 | cd
+2020-11-01 21:20:33 | cd
+2020-11-01 21:20:36 | sky
+2020-11-01 21:20:37 | skys
+2020-11-01 21:50:26 | which trace-cmd
+2020-11-01 21:54:45 | man trace-cmd
+2020-11-01 21:55:18 | man trace-cmd-start
+2020-11-01 21:55:33 | man trace-cmd-record
+2020-11-01 22:00:41 | sudo chmod 777 /sys/kernel/debug/
+2020-11-01 22:00:46 | ls
+2020-11-01 22:01:08 | cat /sys/kernel/debug/tracing/current_tracer
+2020-11-01 22:01:25 | ls -al /sys/kernel/debug/
+2020-11-01 22:08:46 | which uftrace
+2020-11-01 22:09:44 | cd ~/works/
+2020-11-01 22:09:45 | ls
+2020-11-01 22:09:54 | git clone https://github.com/namhyung/uftrace
+2020-11-01 22:10:01 | cd uftrace/
+2020-11-01 22:10:02 | git ll
+2020-11-01 22:10:10 | ls
+2020-11-01 22:10:31 | sudo misc/install-deps.sh 
+2020-11-01 22:11:40 | ls
+2020-11-01 22:11:46 | mkdir build
+2020-11-01 22:11:47 | cd build/
+2020-11-01 22:11:51 | ../configure 
+2020-11-01 22:11:56 | make
+2020-11-01 22:12:15 | sudo make install
+2020-11-01 22:12:17 | ls
+2020-11-01 22:12:25 | cd
+2020-11-01 22:12:26 | ls
+2020-11-01 22:12:28 | cd git/kb/
+2020-11-01 22:12:28 | ls
+2020-11-01 22:12:33 | which uftrace
+2020-11-01 22:12:34 | ls
+2020-11-01 22:12:42 | cd code-cxx/
+2020-11-01 22:12:42 | ls
+2020-11-01 22:12:50 | cd os-dbus/
+2020-11-01 22:12:50 | ls
+2020-11-01 22:12:57 | cd sdbus-case/
+2020-11-01 22:12:58 | ls
+2020-11-01 22:13:05 | cd build/
+2020-11-01 22:13:06 | ls
+2020-11-01 22:15:47 | cd git/kb/code-cxx/os-dbus/sdbus-case/
+2020-11-01 22:15:48 | ls
+2020-11-01 22:15:56 | v test_sdbus_server.cpp 
+2020-11-01 22:17:33 | ls
+2020-11-01 22:17:35 | cd ..
+2020-11-01 22:17:36 | ls
+2020-11-01 22:17:39 | cd sdbus
+2020-11-01 22:17:39 | ls
+2020-11-01 22:17:42 | cd build/
+2020-11-01 22:17:42 | ls
+2020-11-01 22:17:54 | uftrace sdbus_server_1 
+2020-11-01 22:18:04 | cd ..
+2020-11-01 22:18:13 | cd sdbus
+2020-11-01 22:18:14 | ls
+2020-11-01 22:18:19 | v CMakeLists.txt 
+2020-11-01 22:18:54 | make clean
+2020-11-01 22:18:55 | make
+2020-11-01 22:19:14 | ls
+2020-11-01 22:19:15 | cd build/
+2020-11-01 22:19:16 | ls
+2020-11-01 22:19:23 | cd ..
+2020-11-01 22:19:23 | ls
+2020-11-01 22:19:32 | v sdbus_client_1.cpp 
+2020-11-01 22:20:48 | busctl --user call net.poettering.Calculator /net/poettering/Calculator net.poettering.Calculator Multiply xx 5 7
+2020-11-01 22:20:48 | x 35
+2020-11-01 22:19:04 | uftrace sdbus_server_1 
+2020-11-01 22:21:09 | ls
+2020-11-01 22:22:51 | make
+2020-11-01 22:23:00 | busctl --user call net.poettering.Calculator /net/poettering/Calculator net.poettering.Calculator Multiply xx 5 7
+2020-11-01 22:22:56 | ./sdbus_server_1 
+2020-11-01 22:23:27 | make
+2020-11-01 22:23:28 | ./sdbus_server_1 
+2020-11-01 22:23:51 | ls
+2020-11-01 22:23:54 | cd git/kb/
+2020-11-01 22:23:54 | ls
+2020-11-01 22:23:57 | cd code-cxx/
+2020-11-01 22:23:58 | ls
+2020-11-01 22:24:02 | cd uftrace/
+2020-11-01 22:24:03 | ls
+2020-11-01 22:24:12 | more hello.cpp 
+2020-11-01 22:24:15 | more trace.cpp 
+2020-11-01 22:24:29 | ls
+2020-11-01 22:24:33 | more makefile 
+2020-11-01 22:24:36 | ls
+2020-11-01 22:24:40 | mkdir build
+2020-11-01 22:24:40 | ls
+2020-11-01 22:24:41 | cd build/
+2020-11-01 22:24:46 | ls
+2020-11-01 22:24:51 | make ..
+2020-11-01 22:24:53 | ls
+2020-11-01 22:24:58 | cd ..
+2020-11-01 22:24:59 | ls
+2020-11-01 22:24:59 | make
+2020-11-01 22:25:04 | ls
+2020-11-01 22:25:14 | uftrace hello_out 
+2020-11-01 22:26:35 | ls
+2020-11-01 22:27:12 | uftrace record hello_out 
+2020-11-01 22:27:19 | ll
+2020-11-01 22:27:33 | uftrace replay 
+2020-11-01 22:28:04 | cat hello.cpp 
+2020-11-01 22:29:12 | ls
+2020-11-01 22:29:18 | ls -al uftrace.data/
+2020-11-01 22:32:10 | uftrace graph
+2020-11-01 22:37:15 | which ltrace
+2020-11-01 22:37:40 | ltrace ./hello_out 
+2020-11-01 22:39:02 | uftrace record sdbus_server_1 
+2020-11-01 22:39:12 | ls
+2020-11-01 22:39:20 | uftrace replay sdbus_server_1 
+2020-11-01 22:40:34 | sudo uftrace record sdbus_server_1 
+2020-11-01 22:40:59 | sudo uftrace sdbus_server_1 
+2020-11-01 22:41:09 | uftrace sdbus_server_1 
+2020-11-01 22:41:56 | ls
+2020-11-01 22:42:00 | cd build/
+2020-11-01 22:42:01 | ls
+2020-11-01 22:42:08 | ./sdbus_client_1 --list_tests
+2020-11-01 22:42:34 | ./sdbus_client_1 --gtest_filter=*check_2*
+2020-11-01 22:42:42 | uftrace ./sdbus_client_1 --gtest_filter=*check_2*
+2020-11-01 22:43:46 | ls
+2020-11-01 22:43:51 | cd ..
+2020-11-01 22:43:52 | ls
+2020-11-01 22:44:03 | v test_sdbus.cpp 
+2020-11-01 22:44:43 | ls
+2020-11-01 22:44:52 | v CMakeLists.txt 
+2020-11-01 22:46:04 | ls
+2020-11-01 22:46:19 | cp sdbus_client_1.cpp test_client_1.cpp
+2020-11-01 22:46:19 | ls
+2020-11-01 22:49:02 | cd build/
+2020-11-01 22:49:03 | make
+2020-11-01 22:49:05 | ls
+2020-11-01 22:49:12 | ./sdbus_client_1 
+2020-11-01 22:49:25 | uftrace ./sdbus_client_1
+2020-11-01 22:49:36 | uftrace -k ./sdbus_client_1
+2020-11-01 22:49:42 | sudo uftrace -k ./sdbus_client_1
+2020-11-01 22:50:32 | ls
+2020-11-01 22:50:37 | sudo ./sdbus_client_1 
+2020-11-01 22:51:47 | make
+2020-11-01 22:51:49 | sudo ./sdbus_client_1 
+2020-11-01 22:41:54 | ./sdbus_server_1 
+2020-11-01 22:52:34 | make
+2020-11-01 22:52:36 | ./sdbus_server_1 
+2020-11-01 22:52:39 | sudo ./sdbus_server_1 
+2020-11-01 22:54:19 | make
+2020-11-01 22:54:22 | make
+2020-11-01 22:56:18 | ./sdbus_client_1 
+2020-11-01 22:56:22 | strace ./sdbus_client_1 
+2020-11-01 22:58:08 | uftrace ./sdbus_client_1 
+2020-11-01 22:56:13 | ./sdbus_server_1 
+2020-11-02 09:54:27 | cd /media/keitee/ssd2/
+2020-11-02 09:54:27 | ls
+2020-11-02 09:54:31 | cd as-sky-repo
+2020-11-02 09:54:32 | ls
+2020-11-02 09:54:35 | cd asplayer/
+2020-11-02 09:54:36 | ls
+2020-11-02 09:54:39 | curl -v -X GET http://192.168.0.12:9005/as/services/0/0
+2020-11-02 09:55:10 | curl -v -X GET http://192.168.0.12:9005/as/services/0/0 > dtt_list_2.log
+2020-11-02 09:55:17 | gvim dtt_list_2.log 
+2020-11-02 10:07:59 | wget http://10.184.136.138:8081/job/tools/job/dtt-analyzer-uk/46/consoleText
+2020-11-02 10:08:04 | ls
+2020-11-02 10:08:12 | gvim consoleText 
+2020-11-02 10:21:08 | cd ..
+2020-11-02 10:21:08 | ls
+2020-11-02 10:21:11 | s
+2020-11-02 10:21:12 | a
+2020-11-02 10:21:20 | vn
+2020-11-02 10:23:23 | l
+2020-11-02 10:23:28 | cd asplayer/
+2020-11-02 10:23:29 | l
+2020-11-02 10:23:36 | gvim consoleText 
+2020-11-02 10:29:49 | g st
+2020-11-02 10:29:58 | ls
+2020-11-02 10:30:00 | cd ..
+2020-11-02 10:30:00 | ls
+2020-11-02 10:30:02 | cd /media/
+2020-11-02 10:30:03 | ls
+2020-11-02 10:30:04 | cd keitee/
+2020-11-02 10:30:04 | ls
+2020-11-02 10:30:28 | cd ssd2/
+2020-11-02 10:30:29 | ls
+2020-11-02 10:31:06 | cd dtt/
+2020-11-02 10:31:06 | ls
+2020-11-02 10:31:13 | cd cli
+2020-11-02 10:31:13 | ls
+2020-11-02 10:31:15 | cd build/
+2020-11-02 10:31:16 | ls
+2020-11-02 10:31:18 | ll
+2020-11-02 10:31:35 | cd /media/keitee/ssd2/dtt/
+2020-11-02 10:31:35 | ls
+2020-11-02 10:31:39 | cd cli
+2020-11-02 10:31:39 | ls
+2020-11-02 10:31:42 | v console.cpp 
+2020-11-02 10:31:25 | ./test_mapi
+2020-11-02 10:35:18 | make
+2020-11-02 11:18:20 | cd ..
+2020-11-02 11:18:20 | ls
+2020-11-02 11:18:21 | a
+2020-11-02 11:18:25 | vv
+2020-11-02 11:18:37 | vvn
+2020-11-02 11:20:20 | ls
+2020-11-02 11:20:38 | rm list_xi1.out 
+2020-11-02 11:20:39 | ls
+2020-11-02 11:20:44 | cd asplayer/
+2020-11-02 11:20:44 | ls
+2020-11-02 11:20:53 | cd ..
+2020-11-02 11:20:53 | ls
+2020-11-02 11:20:57 | ls ~
+2020-11-02 11:21:10 | a
+2020-11-02 11:21:24 | vv ~/proxy.log 
+2020-11-02 11:33:18 | cd /media/keitee/ssd2/as-sky-repo
+2020-11-02 11:33:19 | ls
+2020-11-02 11:33:24 | cd ethan-as-source/
+2020-11-02 11:33:24 | ls
+2020-11-02 11:33:26 | git branch
+2020-11-02 10:35:24 | ./test_mapi
+2020-11-02 11:45:22 | make
+2020-11-02 12:59:58 | ls
+2020-11-02 13:00:01 | cd Components/
+2020-11-02 13:00:02 | ls
+2020-11-02 13:00:04 | cd Rdk/
+2020-11-02 13:00:04 | ls
+2020-11-02 13:00:06 | cd AS
+2020-11-02 13:00:08 | cd ASProxy/
+2020-11-02 13:00:08 | ls
+2020-11-02 13:00:11 | cd build/
+2020-11-02 13:00:11 | ls
+2020-11-02 13:00:12 | make
+2020-11-02 13:04:10 | scp -r -P 10022 ./asproxy root@192.168.0.12:/opt
+2020-11-02 13:39:38 | ls
+2020-11-02 13:39:40 | cd asplayer/
+2020-11-02 13:39:41 | ls
+2020-11-02 13:39:46 | cd player/
+2020-11-02 13:39:46 | ls
+2020-11-02 13:39:48 | cd Executors/
+2020-11-02 13:39:49 | ls
+2020-11-02 13:39:50 | ag find
+2020-11-02 13:43:10 | ls
+2020-11-02 13:43:12 | cd git/kb/
+2020-11-02 13:43:12 | ls
+2020-11-02 13:43:15 | cd code-cxx/
+2020-11-02 13:43:15 | ls
+2020-11-02 13:43:19 | cd cxx
+2020-11-02 13:43:20 | ls
+2020-11-02 13:43:26 | v test_cxx_1.cpp 
+2020-11-02 13:45:17 | cd /media/keitee/ssd2/
+2020-11-02 13:45:17 | ls
+2020-11-02 13:45:25 | cd as-sky-repo
+2020-11-02 13:45:26 | ls
+2020-11-02 13:45:27 | cd appinfrastructure
+2020-11-02 13:45:29 | g st
+2020-11-02 13:45:31 | git branch
+2020-11-02 13:45:36 | git pull
+2020-11-02 13:45:54 | git diff
+2020-11-02 13:46:06 | git branch
+2020-11-02 13:46:32 | git branch "debug key input handler"
+2020-11-02 13:46:48 | git branch debug_key_input_handler"
+2020-11-02 13:46:51 | git branch debug_key_input_handler
+2020-11-02 13:46:54 | git co debug_key_input_handler
+2020-11-02 13:46:57 | git add -u
+2020-11-02 13:46:58 | g st
+2020-11-02 13:47:11 | git commit -m "add debug logging"
+2020-11-02 13:47:13 | git ll
+2020-11-02 13:47:16 | git co develop 
+2020-11-02 13:47:17 | git pull
+2020-11-02 13:47:20 | g st
+2020-11-02 13:47:37 | git co feature/NGDEV-166676_whix_support
+2020-11-02 13:47:40 | git ll
+2020-11-02 13:48:03 | git difftool --stat NGDEV-170325_Delivered_Develop_25092020_1935
+2020-11-02 13:48:26 | gvim --servername RV
+2020-11-02 15:12:02 | cd build/
+2020-11-02 15:12:03 | make
+2020-11-02 15:15:19 | ./test_cxx_1 --gtest_filter=*Regex.match*
+2020-11-02 15:29:00 | cd git/kb/code-cxx/cxx
+2020-11-02 15:29:03 | clang-format -i -style=file *.cpp
+2020-11-02 15:46:42 | make
+2020-11-02 15:47:06 | ./test_cxx_1 --gtest_filter=*Regex.*
+2020-11-02 16:42:52 | make
+2020-11-02 16:43:07 | ./test_cxx_1 --gtest_filter=*Regex.*
+2020-11-02 16:45:33 | make
+2020-11-02 16:45:47 | ./test_cxx_1 --gtest_filter=*Regex.*
+2020-11-02 16:46:20 | make
+2020-11-02 16:46:26 | ./test_cxx_1 --gtest_filter=*Regex.gr*
+2020-11-02 16:46:33 | ./test_cxx_1 --gtest_filter=*Regex.match_gr*
+2020-11-02 16:47:11 | make
+2020-11-02 16:47:24 | ./test_cxx_1 --gtest_filter=*Regex.match_gr*
+2020-11-02 16:47:58 | make
+2020-11-02 16:48:11 | ./test_cxx_1 --gtest_filter=*Regex.match_gr*
+2020-11-02 17:04:07 | make
+2020-11-02 17:07:58 | ./test_cxx_1 --gtest_filter=*Regex.match_gr*
+2020-11-02 19:38:08 | make
+2020-11-02 19:38:27 | ./test_cxx_1 --gtest_filter=*Regex.match_class*
+2020-11-02 19:39:10 | make
+2020-11-02 19:39:23 | ./test_cxx_1 --gtest_filter=*Regex.match_class*
+2020-11-02 19:40:10 | make
+2020-11-02 19:40:31 | ./test_cxx_1 --gtest_filter=*Regex.match_class*
+2020-11-02 19:43:01 | make
+2020-11-02 19:43:15 | ./test_cxx_1 --gtest_filter=*Regex.match_class*
+2020-11-02 19:44:30 | make
+2020-11-02 19:44:42 | ./test_cxx_1 --gtest_filter=*Regex.match_class*
+2020-11-02 19:48:10 | make
+2020-11-02 20:00:24 | ./test_cxx_1 --gtest_filter=*Regex.match_and*
+2020-11-02 20:00:46 | make
+2020-11-02 20:01:05 | ./test_cxx_1 --gtest_filter=*Regex.match_and*
+2020-11-02 20:03:03 | make
+2020-11-02 20:03:16 | ./test_cxx_1 --gtest_filter=*Regex.match_and*
+2020-11-02 20:04:31 | make
+2020-11-02 20:04:44 | ./test_cxx_1 --gtest_filter=*Regex.match_and*
+2020-11-02 20:07:38 | make
+2020-11-02 20:08:01 | ./test_cxx_1 --gtest_filter=*Regex.match_and*
+2020-11-02 20:10:05 | make
+2020-11-02 20:10:50 | ./test_cxx_1 --gtest_filter=*Regex.match_and*
+2020-11-02 20:11:58 | make
+2020-11-02 20:12:14 | ./test_cxx_1 --gtest_filter=*Regex.match_and*
+2020-11-02 20:13:15 | make
+2020-11-02 20:13:40 | ./test_cxx_1 --gtest_filter=*Regex.match_and*
+2020-11-02 20:16:41 | make
+2020-11-02 20:16:54 | ./test_cxx_1 --gtest_filter=*Regex.match_and*
+2020-11-02 20:19:17 | cd ..
+2020-11-02 20:19:18 | ls
+2020-11-02 20:19:21 | git branch
+2020-11-02 20:19:31 | g st
+2020-11-02 20:19:36 | git pull
+2020-11-02 20:19:44 | git ll
+2020-11-02 20:19:48 | git branch
+2020-11-02 20:25:48 | git branch LLDEV-1983_AS_DEV_RDK_/services/<b>/<sb>
+2020-11-02 20:27:25 | git branch LLDEV-1983_AS_DEV_RDK_handle_services/b/sb
+2020-11-02 20:27:33 | git co LLDEV-1983_AS_DEV_RDK_handle_services/b/sb
+2020-11-02 20:27:35 | git ll
+2020-11-02 13:04:20 | ssh -p 10022 root@192.168.0.12
+2020-11-02 13:02:39 | ssh -p 10022 root@192.168.0.12
+2020-11-02 09:10:59 | skys
+2020-11-03 08:40:47 | git pull
+2020-11-03 08:41:19 | git branch
+2020-11-03 08:41:30 | git co LLDEV-2021_SupportFrontPanelKeys
+2020-11-03 08:41:35 | git ll
+2020-11-03 08:42:11 | git difftool origin/feature/NOJIRA_rdk_appinfra
+2020-11-03 10:32:03 | git branch
+2020-11-03 10:32:11 | git co NGDEV-170772_AS_RDK_DTT_some_fields_in_IDLE_state_are_extra
+2020-11-03 10:32:14 | git ll
+2020-11-03 10:32:43 | git co develop
+2020-11-03 10:32:45 | git pull
+2020-11-03 10:32:52 | git co NGDEV-170772_AS_RDK_DTT_some_fields_in_IDLE_state_are_extra
+2020-11-03 10:32:55 | git ll
+2020-11-03 10:33:04 | git pull --rebase origin develop
+2020-11-03 10:33:08 | git ll
+2020-11-03 10:39:25 | g st
+2020-11-03 10:39:29 | git diff
+2020-11-03 10:39:31 | ls
+2020-11-03 10:39:34 | git branch
+2020-11-03 10:39:43 | git ll debug_player_fsm 
+2020-11-03 10:40:04 | git show 818a9d2
+2020-11-03 10:40:49 | ls
+2020-11-03 10:41:01 | git cherry-pick 818a9d2
+2020-11-03 10:41:12 | git add -u
+2020-11-03 10:42:01 | git commit -m "NGDEV-170772_AS_RDK_DTT_some_fields_in_IDLE_state_are_extra"
+2020-11-03 10:42:04 | git cherry-pick 818a9d2
+2020-11-03 10:42:12 | g st
+2020-11-03 10:44:20 | git add -u
+2020-11-03 10:44:21 | g st
+2020-11-03 10:44:33 | git cherry-pick --continue
+2020-11-03 10:44:40 | git ll
+2020-11-03 10:44:52 | git diff develop 
+2020-11-03 10:48:21 | ls
+2020-11-03 10:48:29 | cd mrp/
+2020-11-03 10:48:30 | ls
+2020-11-03 10:48:32 | clang-format -i -style=file *.cpp
+2020-11-03 10:48:34 | cd ..
+2020-11-03 10:48:35 | ls
+2020-11-03 10:48:40 | g st
+2020-11-03 10:48:43 | git diff
+2020-11-03 10:48:46 | ls
+2020-11-03 10:49:20 | cd services/Controller/ServicesScanController/
+2020-11-03 10:49:20 | ls
+2020-11-03 10:49:22 | clang-format -i -style=file *.cpp
+2020-11-03 10:49:24 | cd ..
+2020-11-03 10:49:25 | ls
+2020-11-03 10:49:26 | cd ..
+2020-11-03 10:49:27 | ls
+2020-11-03 10:49:28 | cd build/
+2020-11-03 10:49:29 | ls
+2020-11-03 10:49:32 | cd ..
+2020-11-03 10:49:32 | ls
+2020-11-03 10:49:34 | g st
+2020-11-03 10:49:40 | git add -u
+2020-11-03 10:49:41 | g st
+2020-11-03 10:49:44 | git ll
+2020-11-03 10:49:47 | git commit --amend 
+2020-11-03 10:49:52 | git ll
+2020-11-03 10:50:12 | git rebase -i HEAD~2
+2020-11-03 10:50:49 | git ll
+2020-11-03 10:50:56 | git diff develop 
+2020-11-03 10:51:56 | ls
+2020-11-03 10:52:05 | cd build/
+2020-11-03 10:52:06 | ls
+2020-11-03 10:52:07 | make
+2020-11-03 10:54:07 | scp -r -P 10022 ./asrdkplayer root@192.168.0.12:/opt
+2020-11-03 10:58:52 | ls
+2020-11-03 10:58:56 | cd /media/keitee/ssd2/
+2020-11-03 10:58:57 | ls
+2020-11-03 10:59:15 | cd rdk/
+2020-11-03 10:59:15 | ls
+2020-11-03 10:59:16 | ll
+2020-11-03 10:59:35 | cd 2.0
+2020-11-03 10:59:36 | ls
+2020-11-03 10:59:52 | ls sysroots/armv7ahf-neon-rdk-linux-gnueabi/usr/lib/mediarite/
+2020-11-03 10:59:58 | ls
+2020-11-03 11:00:00 | cd ..
+2020-11-03 11:00:00 | ls
+2020-11-03 11:00:03 | ll
+2020-11-03 11:00:06 | mkdir xx
+2020-11-03 11:00:08 | cd xx/
+2020-11-03 11:00:09 | ls
+2020-11-03 11:00:40 | mv ~/Downloads/skyxione-RNE-SDK-2.0-bundle.tgz .
+2020-11-03 11:00:41 | ls
+2020-11-03 11:00:44 | tar xvf skyxione-RNE-SDK-2.0-bundle.tgz 
+2020-11-03 11:00:46 | ls
+2020-11-03 11:01:10 | cd ..
+2020-11-03 11:01:11 | ls
+2020-11-03 11:01:14 | ll
+2020-11-03 11:01:19 | cd 2.0_000150.4.11.0.0_REFLAB/
+2020-11-03 11:01:19 | ls
+2020-11-03 11:01:45 | rm 2.0
+2020-11-03 11:01:48 | ls
+2020-11-03 11:01:49 | cd ..
+2020-11-03 11:01:50 | ls
+2020-11-03 11:01:52 | rm 2.0
+2020-11-03 11:01:52 | ls
+2020-11-03 11:01:54 | cd xx
+2020-11-03 11:01:54 | ls
+2020-11-03 11:01:56 | ./skyxione-RNE-SDK-2.0.sh 
+2020-11-03 11:02:41 | ls
+2020-11-03 11:02:43 | cd ..
+2020-11-03 11:02:43 | ls
+2020-11-03 11:02:45 | ls -al
+2020-11-03 11:02:49 | cd 2.0
+2020-11-03 11:02:50 | ls
+2020-11-03 11:02:59 | ls -al sysroots/armv7at2hf-neon-rdk-linux-gnueabi/usr/lib
+2020-11-03 11:03:04 | ls -al sysroots/armv7at2hf-neon-rdk-linux-gnueabi/usr/lib/mediarite/
+2020-11-03 11:03:10 | ls
+2020-11-03 11:03:12 | cd ..
+2020-11-03 11:03:12 | ls
+2020-11-03 11:03:13 | ll
+2020-11-03 11:03:20 | cd xx
+2020-11-03 11:03:21 | ls
+2020-11-03 11:03:24 | more README.md 
+2020-11-03 11:03:33 | ls
+2020-11-03 11:03:37 | cd ..
+2020-11-03 11:03:38 | ls
+2020-11-03 11:03:42 | make clean
+2020-11-03 11:03:43 | make
+2020-11-03 11:04:39 | ls -al
+2020-11-03 11:04:41 | cd 2.0
+2020-11-03 11:04:42 | pwd
+2020-11-03 11:05:01 | hgrep
+2020-11-03 11:05:14 | rm -rf *
+2020-11-03 11:05:21 | cmake -D RDK_SDK=/media/keitee/ssd2/rdk/2.0 -DTARGET_PLATFORM=XI1 -DTARGET_REGION=SKY-UK ..
+2020-11-03 11:06:32 | ls
+2020-11-03 11:06:35 | cd ..
+2020-11-03 11:06:35 | ls
+2020-11-03 11:06:48 | rm -rf 2.0
+2020-11-03 11:06:49 | ls
+2020-11-03 11:06:50 | cd xx/
+2020-11-03 11:06:50 | ls
+2020-11-03 11:06:54 | ./skyxione-RNE-SDK-2.0.sh 
+2020-11-03 11:08:43 | . /media/keitee/ssd2/rdk/2.0/environment-setup-armv7at2hf-neon-rdk-linux-gnueabi
+2020-11-03 11:08:45 | cmake -D RDK_SDK=/media/keitee/ssd2/rdk/2.0 -DTARGET_PLATFORM=XI1 -DTARGET_REGION=SKY-UK ..
+2020-11-03 11:11:32 | make
+2020-11-03 11:15:33 | rm -rf *
+2020-11-03 11:15:37 | cmake -D RDK_SDK=/media/keitee/ssd2/rdk/2.0 -DTARGET_PLATFORM=XI1 -DTARGET_REGION=SKY-UK ..
+2020-11-03 11:16:29 | make
+2020-11-03 11:17:48 | gvim /media/keitee/ssd2/rdk/2.0/sysroots/armv7at2hf-neon-rdk-linux-gnueabi/usr/include/c++/6.4.0/cstdlib
+2020-11-03 11:42:11 | which cmake
+2020-11-03 11:42:25 | cmake --version
+2020-11-03 11:42:38 | which cmake
+2020-11-03 11:42:42 | cmake --version
+2020-11-03 11:53:47 | find /media/keitee/ssd2/rdk/2.0/sysroots/x86_64-rdksdk-linux/ -name CMakeCCompiler.cmake.in
+2020-11-03 11:54:27 | gvim /media/keitee/ssd2/rdk/2.0/sysroots/x86_64-rdksdk-linux/usr/share/cmake-3.10/Modules/CMakeCCompiler.cmake.in
+2020-11-03 12:00:01 | gvim /media/keitee/ssd2/rdk/2.0/sysroots/x86_64-rdksdk-linux/usr/share/cmake-3.10/Modules/CMakeParseImplicitIncludeInfo.cmake
+2020-11-03 12:00:32 | cmake -D RDK_SDK=/media/keitee/ssd2/rdk/2.0 -DTARGET_PLATFORM=XI1 -DTARGET_REGION=SKY-UK ..
+2020-11-03 12:00:39 | rm rf *
+2020-11-03 12:00:45 | rm -rf *
+2020-11-03 12:00:46 | ls
+2020-11-03 12:00:48 | cmake -D RDK_SDK=/media/keitee/ssd2/rdk/2.0 -DTARGET_PLATFORM=XI1 -DTARGET_REGION=SKY-UK ..
+2020-11-03 12:00:50 | make
+2020-11-03 12:16:08 | sudo putty
+2020-11-02 11:45:40 | ./test_mapi
+2020-11-03 12:21:24 | ls
+2020-11-03 12:21:26 | cd ..
+2020-11-03 12:21:26 | ls
+2020-11-03 12:21:43 | mv 2.0 2.0_NOV_03
+2020-11-03 12:21:45 | ls
+2020-11-03 12:21:48 | ll
+2020-11-03 12:22:01 | ln -s 2.0_000150.4.11.0.0_REFLAB 2.0
+2020-11-03 12:22:02 | ls
+2020-11-03 12:22:03 | ll
+2020-11-03 12:22:08 | rm -rf *
+2020-11-03 12:22:10 | cmake -D RDK_SDK=/media/keitee/ssd2/rdk/2.0 -DTARGET_PLATFORM=XI1 -DTARGET_REGION=SKY-UK ..
+2020-11-03 12:22:10 | cmake -D RDK_SDK=/media/keitee/ssd2/rdk/2.0 -DTARGET_PLATFORM=XI1 -DTARGET_REGION=SKY-UK ..
+2020-11-03 12:22:30 | cd /media/keitee/ssd2/as-sky-repo/
+2020-11-03 12:22:31 | ls
+2020-11-03 12:22:33 | cd asplayer/
+2020-11-03 12:22:33 | ls
+2020-11-03 12:22:35 | cd build/
+2020-11-03 12:22:39 | cmake -D RDK_SDK=/media/keitee/ssd2/rdk/2.0 -DTARGET_PLATFORM=XI1 -DTARGET_REGION=SKY-UK ..
+2020-11-03 12:22:59 | ls
+2020-11-03 12:22:59 | ll
+2020-11-03 12:23:01 | rm -rf *
+2020-11-03 12:23:02 | ls
+2020-11-03 12:23:03 | ll
+2020-11-03 12:23:06 | cmake -D RDK_SDK=/media/keitee/ssd2/rdk/2.0 -DTARGET_PLATFORM=XI1 -DTARGET_REGION=SKY-UK ..
+2020-11-03 12:23:29 | cd ..
+2020-11-03 12:23:32 | ls
+2020-11-03 12:23:33 | cd ..
+2020-11-03 12:23:34 | ls
+2020-11-03 12:23:37 | cd asplayer/
+2020-11-03 12:23:37 | ls
+2020-11-03 12:23:40 | git branch
+2020-11-03 12:23:11 | make
+2020-11-03 12:25:53 | scp -r -P 10022 ./asrdkplayer root@192.168.0.12:/opt
+2020-11-03 12:25:58 | ls
+2020-11-03 12:39:11 | ls
+2020-11-03 12:39:14 | curl -v -X GET http://192.168.0.12:9005/as/services/0/0 > dtt_list.out
+2020-11-03 12:39:18 | gvim dtt_list.out 
+2020-11-03 12:41:47 | git ll
+2020-11-03 12:41:49 | g st
+2020-11-03 12:41:55 | git diff
+2020-11-03 12:42:19 | ls
+2020-11-03 12:42:30 | g st
+2020-11-03 12:42:34 | git co -- main.cpp
+2020-11-03 12:42:35 | g st
+2020-11-03 12:42:37 | git ll
+2020-11-03 12:42:40 | make
+2020-11-03 12:43:26 | ls
+2020-11-03 12:43:29 | g st
+2020-11-03 12:43:30 | git ll
+2020-11-03 12:43:48 | git co LLDEV-1983_AS_DEV_RDK_handle_services/b/sb
+2020-11-03 12:43:50 | git ll
+2020-11-03 12:56:53 | make
+2020-11-03 12:59:09 | scp -r -P 10022 ./asrdkplayer root@192.168.0.12:/opt
+2020-11-03 13:00:00 | curl -v -X GET http://192.168.0.12:9005/as/services/0/0
+2020-11-03 13:01:43 | make
+2020-11-03 13:02:02 | scp -r -P 10022 ./asrdkplayer root@192.168.0.12:/opt
+2020-11-03 13:02:49 | curl -v -X GET http://192.168.0.12:9005/as/services/110/1110
+2020-11-03 13:05:53 | make
+2020-11-03 13:06:12 | make#
+2020-11-03 13:06:14 | make
+2020-11-03 13:06:15 | scp -r -P 10022 ./asrdkplayer root@192.168.0.12:/opt
+2020-11-03 13:09:35 | make
+2020-11-03 13:10:13 | scp -r -P 10022 ./asrdkplayer root@192.168.0.12:/opt
+2020-11-03 13:20:23 | make
+2020-11-03 13:20:28 | ./test_mapi
+2020-11-03 13:27:23 | make
+2020-11-03 13:27:28 | scp -r -P 10022 ./asrdkplayer root@192.168.0.12:/opt
+2020-11-03 13:28:02 | curl -v -X GET http://192.168.0.12:9005/as/services/1/0
+2020-11-03 13:28:05 | curl -v -X GET http://192.168.0.12:9005/as/services/0/0
+2020-11-03 13:35:40 | make
+2020-11-03 13:36:00 | ./test_cxx_1 --gtest_filter=*Regex.ex*
+2020-11-03 13:37:25 | make
+2020-11-03 13:37:51 | ./test_cxx_1 --gtest_filter=*Regex.ex*
+2020-11-03 13:38:28 | make
+2020-11-03 13:38:41 | ./test_cxx_1 --gtest_filter=*Regex.ex*
+2020-11-03 13:43:38 | g st
+2020-11-03 13:43:40 | git diff
+2020-11-03 13:43:49 | ls
+2020-11-03 13:45:01 | ag "sky::Context"
+2020-11-03 13:46:14 | g st
+2020-11-03 13:46:17 | git add -u
+2020-11-03 13:46:18 | g st
+2020-11-03 13:46:20 | git ll
+2020-11-03 13:46:33 | git commit 
+2020-11-03 13:46:39 | git ll
+2020-11-03 13:48:13 | git branch
+2020-11-03 13:48:20 | git co NGDEV-170772_AS_RDK_DTT_some_fields_in_IDLE_state_are_extra
+2020-11-03 13:48:24 | git branch
+2020-11-03 13:48:26 | git ll
+2020-11-03 13:48:34 | rbt post --tracking-branch=origin/develop --repository=asplayer --username=kyoupark --password=tegI3301 --branch=NGDEV-170772_AS_RDK_DTT_some_fields_in_IDLE_state_are_extra
+2020-11-03 13:49:35 | git branch
+2020-11-03 13:57:50 | git branch -m NGDEV-170772_AS_RDK_DTT_some_fields_in_IDLE_state_are_extra NGDEV-170772_AS_RDK_DTT_some_fields_in_IDLE_state_are_extra_reopen
+2020-11-03 13:57:54 | git st
+2020-11-03 13:57:57 | git branch
+2020-11-03 14:00:31 | git push origin NGDEV-170772_AS_RDK_DTT_some_fields_in_IDLE_state_are_extra_reopen
+2020-11-03 15:56:38 | cd ..
+2020-11-03 15:56:39 | ls
+2020-11-03 15:56:42 | cd ethan-as-source/
+2020-11-03 15:56:43 | git pull
+2020-11-03 15:56:49 | git co NGDEV-167562_UHD_MR
+2020-11-03 15:56:52 | g st
+2020-11-03 15:56:54 | git diff
+2020-11-03 15:57:00 | cd ..
+2020-11-03 15:57:00 | ls
+2020-11-03 15:57:02 | cd ..
+2020-11-03 15:57:02 | ls
+2020-11-03 15:57:06 | cd as-sky-repo-track/
+2020-11-03 15:57:06 | ls
+2020-11-03 15:57:09 | cd ethan-as-source/
+2020-11-03 15:57:10 | git pull
+2020-11-03 15:57:16 | git co NGDEV-167562_UHD_MR
+2020-11-03 15:57:18 | git ll
+2020-11-03 15:57:34 | git difftool --stat NGDEV-171492_DTH_27102020_1122, tag: NGDEV-171434_DTH_27102020_1122
+2020-11-03 15:57:48 | git difftool --stat NGDEV-171492_DTH_27102020_1122
+2020-11-03 15:58:21 | gvim --servername RV
+2020-11-03 16:12:42 | git difftool --stat NGDEV-171492_DTH_27102020_1122 -- 
+2020-11-03 16:12:53 | git difftool NGDEV-171492_DTH_27102020_1122 -- Components/AS/Services/Controllers/PlayerController/source/AS_PLAYER_DMSPlayerSessionState.cpp
+2020-11-03 16:27:13 | cd ..
+2020-11-03 16:27:14 | ls
+2020-11-03 16:27:22 | cd direct_build_stable2_sky/
+2020-11-03 16:27:22 | ls
+2020-11-03 16:28:41 | repo sync -j4 --no-tags --verify
+2020-11-03 16:46:39 | l
+2020-11-03 16:46:42 | gvim auto.conf 
+2020-11-03 16:47:29 | ls
+2020-11-03 16:47:46 | rm -rf build-skyxione/
+2020-11-03 16:48:10 | source meta-rdk/setup-environment
+2020-11-03 16:48:15 | ls
+2020-11-03 16:49:53 | export PATH=/media/keitee/ssd2/direct_build_stabke2_sky/openembedded-core/scripts:/media/keitee/ssd2/direct_build_stable2_sky/openembedded-core/bitbake/bin:/home/keitee/works/bitbake-1.40/bin:/home/keitee/bin:/home/keitee/vim/bin:/home/keitee/git/kb/bin:/home/keitee/.cargo/bin:/home/keitee/Downloads/git-repo:/home/keitee/.local/bin:/home/keitee/bin:/home/keitee/works/bitbake-1.40/bin:/home/keitee/bin:/home/keitee/vim/bin:/home/keitee/git/kb/bin:/home/keitee/.cargo/bin:/home/keitee/Downloads/git-repo:/home/keitee/works/bitbake-1.40/bin:/home/keitee/bin:/home/keitee/vim/bin:/home/keitee/git/kb/bin:/home/keitee/.cargo/bin:/home/keitee/Downloads/git-repo:/home/keitee/.local/bin:/home/keitee/bin:/home/keitee/works/bitbake-1.40/bin:/home/keitee/bin:/home/keitee/vim/bin:/home/keitee/git/kb/bin:/home/keitee/.cargo/bin:/home/keitee/Downloads/git-repo:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/keitee/.fzf/bin
+2020-11-03 16:49:58 | bitbake comcast-mediaclient-vbn-image
+2020-11-03 17:03:07 | cd ..
+2020-11-03 17:03:08 | patch -p1 < /media/keitee/ssd2/qemu.patch
+2020-11-03 17:03:29 | ls
+2020-11-03 17:03:33 | ls ../qemu.patch 
+2020-11-03 17:03:37 | patch -p1 < /media/keitee/ssd2/qemu.patch
+2020-11-03 17:04:12 | popd
+2020-11-03 17:04:23 | ls
+2020-11-03 17:04:25 | cd build-skyxione/
+2020-11-03 17:04:29 | bitbake comcast-mediaclient-vbn-image
+2020-11-03 17:22:28 | pushd ..
+2020-11-03 17:22:34 | patch -p1 < /media/keitee/ssd2/breakpad-from-ben.patch
+2020-11-03 17:22:49 | popd
+2020-11-03 17:22:51 | bitbake comcast-mediaclient-vbn-image
+2020-11-03 17:25:03 | cd ..
+2020-11-03 17:25:03 | patch -p1 < /media/keitee/ssd2/e2fsprogs.patch
+2020-11-03 17:25:09 | cd build-skyxione/
+2020-11-03 17:25:10 | patch -p1 < /media/keitee/ssd2/e2fsprogs.patch
+2020-11-03 17:25:14 | cd build-skyxione/
+2020-11-03 17:25:16 | ls
+2020-11-03 17:25:55 | cd ..
+2020-11-03 17:25:56 | ls
+2020-11-03 17:25:59 | cd algo
+2020-11-03 17:26:00 | ls
+2020-11-03 17:26:07 | v test_algo_pad.cpp 
+2020-11-03 17:25:18 | bitbake comcast-mediaclient-vbn-image
+2020-11-03 17:49:57 | cd ..
+2020-11-03 17:49:57 | patch -p1 < /media/keitee/ssd2/breakpad-from-ben.patch
+2020-11-03 17:50:03 | cd build-skyxione/
+2020-11-03 17:50:06 | bitbake comcast-mediaclient-vbn-image
+2020-11-03 19:51:45 | cd ..
+2020-11-03 19:51:46 | g st
+2020-11-03 19:51:48 | ls
+2020-11-03 19:52:19 | ll
+2020-11-03 19:52:31 | rm -rf *
+2020-11-03 19:53:26 | repo init -u ssh://gerrit.teamccp.com:29418/rdk/yocto_oe/manifests/sky-realtek-manifest -b stable2_sky -m skyxione.xml --repo-url=ssh://gerrit.teamccp.com:29418/rdk/tools/git-repo --no-repo-verify -g all
+2020-11-03 19:53:43 | repo sync -j4 --no-tags --verify
+2020-11-03 20:07:44 | l
+2020-11-03 20:07:53 | gvim auto.conf 
+2020-11-03 20:08:35 | source meta-rdk/setup-environment
+2020-11-03 20:08:43 | bitbake comcast-mediaclient-vbn-image
+2020-11-03 22:09:30 | cd build/
+2020-11-03 22:09:31 | make
+2020-11-03 22:09:57 | ./test_pad 
+2020-11-03 22:10:41 | make
+2020-11-03 22:10:43 | ./test_pad 
+2020-11-03 22:11:14 | make
+2020-11-03 22:11:16 | ./test_pad 
+2020-11-03 22:15:29 | man ceil
+2020-11-03 22:21:28 | make
+2020-11-03 22:23:25 | cd ..
+2020-11-03 22:23:25 | ls
+2020-11-03 22:23:28 | clang-format -i -style=file *.cpp
+2020-11-03 22:23:30 | cd build/
+2020-11-03 22:23:31 | make
+2020-11-03 22:23:43 | g st
+2020-11-03 22:23:47 | git add -u
+2020-11-03 22:23:47 | g st
+2020-11-03 22:24:24 | cd ..
+2020-11-03 22:24:25 | ls
+2020-11-03 22:24:29 | cd ..
+2020-11-03 22:24:29 | ls
+2020-11-03 22:24:31 | cd code-sh/
+2020-11-03 22:24:32 | ls
+2020-11-03 22:24:34 | git st .
+2020-11-03 22:24:45 | gvim loop_1.sh 
+2020-11-03 22:25:43 | ls
+2020-11-03 22:25:48 | rm loop_3.sh 
+2020-11-03 22:25:49 | ls
+2020-11-03 22:25:51 | g st
+2020-11-03 22:25:56 | git add *.sh
+2020-11-03 22:25:58 | g st
+2020-11-03 22:26:07 | cd ..
+2020-11-03 22:26:08 | ls
+2020-11-03 22:26:10 | cd code-cxx/
+2020-11-03 22:26:11 | ls
+2020-11-04 09:04:46 | cd cxx
+2020-11-04 09:04:47 | cd build/
+2020-11-04 09:04:48 | make
+2020-11-04 09:05:55 | ./test_cxx_2 --gtest_filter=*Iterator.adaptor_*
+2020-11-04 09:09:55 | make
+2020-11-04 09:10:52 | ./test_cxx_2 --gtest_filter=*Iterator.adaptor_*
+2020-11-04 09:10:54 | make
+2020-11-04 09:11:11 | ./test_cxx_2 --gtest_filter=*Iterator.adaptor_*
+2020-11-04 09:13:54 | make
+2020-11-04 09:14:02 | ./test_cxx_2 --gtest_filter=*Iterator.adaptor_*
+2020-11-03 12:22:10 | cmake -D RDK_SDK=/media/keitee/ssd2/rdk/2.0 -DTARGET_PLATFORM=XI1 -DTARGET_REGION=SKY-UK ..
+2020-11-04 10:19:19 | ls
+2020-11-04 10:19:21 | cd Downloads/
+2020-11-04 10:19:21 | ls
+2020-11-04 10:19:30 | gvim consoleText 
+2020-11-04 10:19:49 | ls
+2020-11-04 10:19:51 | cd
+2020-11-04 10:20:46 | cd /media/keitee/ssd2/
+2020-11-04 10:20:47 | ls
+2020-11-04 10:20:58 | cd as-sky-repo
+2020-11-04 10:20:59 | ls
+2020-11-04 10:21:04 | cd asplayer/
+2020-11-04 10:21:05 | ls
+2020-11-04 10:21:11 | gvim consoleText 
+2020-11-04 10:29:31 | l
+2020-11-04 10:29:35 | gvim dtt_list.out 
+2020-11-04 12:00:45 | cd ..
+2020-11-04 12:00:46 | ls
+2020-11-04 12:00:51 | cd ..
+2020-11-04 12:00:51 | ls
+2020-11-04 12:00:53 | cd as-sky-repo
+2020-11-04 12:00:54 | ls
+2020-11-04 15:53:37 | cd ..
+2020-11-04 15:55:17 | cd as-sky-repo-track/
+2020-11-04 15:55:17 | ls
+2020-11-04 15:55:21 | cd ethan-as-source/
+2020-11-04 15:55:21 | ls
+2020-11-04 15:55:25 | git pull
+2020-11-04 15:55:43 | git branch -r | ag Add
+2020-11-04 15:55:54 | git branch -r | ag textto
+2020-11-04 15:56:19 | git branch -r | ag NGDEV-170741
+2020-11-04 15:56:42 | git show origin/NGDEV-170741_Add_new_attributes_in_system_setting_API_for_TTS
+2020-11-04 15:57:09 | git co NGDEV-170741_Add_new_attributes_in_system_setting_API_for_TTS
+2020-11-04 15:57:11 | git ll
+2020-11-04 23:00:26 | ./test_pad 
+2020-11-04 23:02:07 | make
+2020-11-04 23:02:09 | ./test_pad 
+2020-11-04 23:03:41 | make
+2020-11-04 23:04:52 | ./test_pad 
+2020-11-04 23:09:02 | make
+2020-11-04 23:09:13 | ./test_pad 
+2020-11-04 23:10:35 | make
+2020-11-04 23:10:36 | ./test_pad 
+2020-11-04 23:11:02 | make
+2020-11-04 23:11:04 | ./test_pad 
+2020-11-04 23:12:00 | make
+2020-11-04 23:12:02 | ./test_pad 
+2020-11-04 23:22:31 | cd ..
+2020-11-04 23:22:32 | ls
+2020-11-04 23:22:34 | cd ..
+2020-11-04 23:22:34 | ls
+2020-11-04 23:22:38 | ag clion
+2020-11-04 23:40:39 | ls
+2020-11-04 23:40:41 | ll
+2020-11-04 23:40:45 | cd ..
+2020-11-04 23:40:46 | ls
+2020-11-04 23:40:47 | ll
+2020-11-04 23:40:59 | rm -rf cmake-build-debug/
+2020-11-04 23:41:02 | rm -rf .idea/
+2020-11-04 23:44:22 | cd build/
+2020-11-04 23:44:23 | make
+2020-11-04 23:44:25 | ls
+2020-11-04 23:44:54 | gvim ~/.gdbinit 
+2020-11-04 23:45:23 | mv ~/.gdbinit gdbinit
+2020-11-04 23:44:33 | gdb test_pad 
+2020-11-04 23:51:29 | make
+2020-11-04 23:51:32 | ./test_pad 
+2020-11-04 23:52:10 | make
+2020-11-04 23:52:12 | ./test_pad 
+2020-11-04 23:52:23 | make
+2020-11-04 23:52:24 | ./test_pad 
+2020-11-04 23:59:30 | python
+2020-11-05 00:00:07 | make
+2020-11-05 00:00:10 | ./test_pad 
+2020-11-05 00:02:53 | make
+2020-11-05 00:02:55 | ./test_pad 
+2020-11-05 00:03:13 | make
+2020-11-05 00:03:16 | ./test_pad 
+2020-11-05 00:48:11 | g st
+2020-11-05 00:48:15 | git add -u
+2020-11-05 00:48:16 | g st
+2020-11-01 18:21:58 | tmux
+2020-11-05 19:10:52 | scp -r -P 10022 ./asrdkplayer root@192.168.0.12:/opt
+2020-11-05 21:56:26 | gvim
+2020-11-05 22:40:30 | l
+2020-11-05 22:40:34 | cd git/kb/
+2020-11-05 22:40:34 | ls
+2020-11-05 22:40:44 | ls
+2020-11-05 22:40:48 | cd /media/keitee/HDD/
+2020-11-05 22:40:49 | ls
+2020-11-05 22:40:50 | ll
+2020-11-05 22:40:59 | chmod -r 755 SKIT_Recorded_Streams/
+2020-11-05 22:41:04 | chmod -R 755 SKIT_Recorded_Streams/
+2020-11-05 22:41:05 | ll
+2020-11-05 22:41:18 | cd SKIT_Recorded_Streams/
+2020-11-05 22:41:19 | ll
+2020-11-05 22:41:29 | cd ..
+2020-11-05 22:41:29 | l
+2020-11-05 22:41:49 | cd code-cxx/
+2020-11-05 22:41:50 | l
+2020-11-05 22:41:52 | cd algo
+2020-11-05 22:41:52 | l
+2020-11-05 22:41:58 | a
+2020-11-05 22:42:15 | v test_algo.cpp 
+2020-11-05 23:07:58 | cd git/kb/code-cxx/algo/build/
+2020-11-05 23:07:58 | make
+2020-11-05 23:08:10 | ./test_pad 
+2020-11-05 23:09:09 | make
+2020-11-05 23:09:10 | ./test_pad 
+2020-11-05 23:15:44 | make
+2020-11-05 23:15:47 | ./test_pad 
+2020-11-05 23:16:13 | make
+2020-11-05 23:16:14 | ./test_pad 
+2020-11-05 23:16:37 | make
+2020-11-05 23:16:39 | ./test_pad 
+2020-11-05 23:42:22 | make
+2020-11-05 23:43:54 | ./test_pad 
+2020-11-05 23:45:08 | make
+2020-11-05 23:45:10 | ./test_pad 
+2020-11-05 19:10:55 | skys
+2020-11-06 09:30:56 | cd
+2020-11-06 09:30:59 | ssh -p 10022 root@192.168.0.12
+2020-11-06 10:44:09 | cd /media/keitee/ssd2/
+2020-11-06 10:44:10 | ls
+2020-11-06 10:44:13 | cd as-sky-repo
+2020-11-06 10:44:14 | ls
+2020-11-06 10:44:15 | cd asplayer/
+2020-11-06 10:44:16 | ls
+2020-11-06 10:44:18 | git branch
+2020-11-06 10:44:20 | git ll
+2020-11-06 10:44:24 | a
+2020-11-06 10:44:34 | vv
+2020-11-06 10:44:37 | vvn
+2020-11-06 11:16:30 | git branch
+2020-11-06 11:16:38 | git ll
+2020-11-06 11:17:02 | git difftool -p develop 
+2020-11-06 11:20:40 | cd /media/keitee/ssd2/as-sky-repo
+2020-11-06 11:20:41 | ls
+2020-11-06 11:20:42 | cd asplayer/
+2020-11-06 11:20:43 | ls
+2020-11-06 11:20:45 | cd build/
+2020-11-06 11:20:46 | ls
+2020-11-06 11:20:48 | make
+2020-11-06 11:20:57 | ll
+2020-11-06 11:22:09 | scp -r -P 10022 ./asrdkplayer root@192.168.0.12:/opt
+2020-11-06 11:22:16 | ls
+2020-11-06 11:22:43 | ssh -p 10022 root@192.168.0.17
+2020-11-06 11:27:54 | ssh -p 10022 root@192.168.0.12
+2020-11-06 11:22:44 | ssh -p 10022 root@192.168.0.12
+2020-11-06 11:28:16 | sudo putty
+2020-11-06 11:38:02 | git diff
+2020-11-06 11:38:10 | g st
+2020-11-06 11:38:13 | git add -u
+2020-11-06 11:38:14 | g st
+2020-11-06 11:38:19 | git commit 
+2020-11-06 11:38:36 | git ll
+2020-11-06 11:40:32 | rbt post --tracking-branch=origin/develop -r 1255 --branch=NGDEV-170772_AS_RDK_DTT_some_fields_in_IDLE_state_are_extra_reopen
+2020-11-06 12:55:07 | curl -v -X GET http://192.168.0.12:9005/as/services/0/0 > dtt_list_streamer.log
+2020-11-06 12:55:13 | gvim dtt_list_streamer.log 
+2020-11-06 13:30:37 | python
+2020-11-06 16:55:31 | ag "AS_ERROR|AS Requset" x.log 
+2020-11-06 16:55:51 | ag "AS_ERROR|AS Request" x.log 
+2020-11-06 17:14:28 | ag "did not translate into an AS call"
+2020-11-06 17:14:33 | cd ..
+2020-11-06 17:14:34 | ls
+2020-11-06 17:14:37 | cd ethan-as-source/
+2020-11-06 17:14:39 | ag "did not translate into an AS call"
+2020-11-06 17:27:58 | curl -vLN -X POST http://192.168.0.12:9005/as/services/scan/action/start?scantype=OFTA
+2020-11-06 22:24:14 | cd ..
+2020-11-06 22:24:15 | ls
+2020-11-06 22:24:17 | cd cxx
+2020-11-06 22:24:18 | ls
+2020-11-06 22:24:28 | v test_cxx_2.cpp 
+2020-11-06 22:36:27 | cd build/
+2020-11-06 22:36:28 | make
+2020-11-06 22:37:38 | ./test_cxx
+2020-11-06 22:44:57 | ls
+2020-11-06 22:45:29 | ./test_cxx_2 --gtest_filter=*SortedRange.include*
+2020-11-06 22:51:08 | make
+2020-11-06 22:51:10 | ./test_pad 
+2020-11-06 22:51:50 | make
+2020-11-06 22:51:52 | ./test_pad 
+2020-11-06 23:09:49 | make
+2020-11-06 23:10:02 | make
+2020-11-06 23:10:39 | ./test_cxx_2 --gtest_filter=*SortedRange.low*
+2020-11-06 23:11:25 | ./test_cxx_2 --gtest_filter=*CxxSet.low*
+2020-11-06 23:11:28 | ./test_cxx_2 --gtest_filter=*CxxSet.eq*
+2020-11-06 23:13:37 | cd ..
+2020-11-06 23:13:38 | ls
+2020-11-06 23:13:42 | git diff
+2020-11-06 23:13:48 | g st
+2020-11-06 23:14:02 | git diff -- test_cxx_2.cpp
+2020-11-06 23:32:52 | cd build/
+2020-11-06 23:32:52 | ls
+2020-11-06 23:32:54 | make
+2020-11-06 23:33:21 | ./test_cxx_2 --gtest_filter=*SortedRange.low*
+2020-11-06 23:38:04 | make
+2020-11-06 23:38:12 | ./test_cxx_2 --gtest_filter=*SortedRange.low*
+2020-11-07 16:13:42 | python
+2020-11-08 17:09:52 | make
+2020-11-08 17:10:18 | ./test_cxx_2 --gtest_filter=*SortedRange.low*
+2020-11-08 17:12:24 | make
+2020-11-08 17:13:09 | ./test_cxx_2 --gtest_filter=*SortedRange.low*
+2020-11-08 17:16:23 | make
+2020-11-08 17:21:18 | ./test_cxx_2 --gtest_filter=*SortedRange.low*
+2020-11-08 17:26:18 | make
+2020-11-08 17:26:26 | ./test_cxx_2 --gtest_filter=*SortedRange.low*
+2020-11-08 17:29:06 | make
+2020-11-08 17:29:14 | ./test_cxx_2 --gtest_filter=*SortedRange.low*
+2020-11-08 17:46:01 | make
+2020-11-08 17:46:45 | ./test_cxx_2 --gtest_filter=*rator.dis*
+2020-11-08 17:51:05 | make
+2020-11-08 17:51:13 | ./test_cxx_2 --gtest_filter=*rator.dis*
+2020-11-08 21:49:17 | ./test_algo --gtest_filter=*Search_bi*
+2020-11-08 21:49:42 | ./test_algo --gtest_filter=*Search.bi*
+2020-11-08 21:50:18 | make
+2020-11-08 21:50:27 | ./test_algo --gtest_filter=*Search.bi*
+2020-11-08 21:59:36 | make
+2020-11-08 22:01:43 | ./test_algo --gtest_filter=*Search.bi*
+2020-11-08 22:04:28 | make
+2020-11-08 22:04:55 | ./test_algo --gtest_filter=*Search.bi*
+2020-11-08 22:09:59 | make
+2020-11-08 22:10:09 | ./test_algo --gtest_filter=*Search.bi*
+2020-11-08 22:15:50 | make
+2020-11-08 22:15:59 | ./test_algo --gtest_filter=*Search.bi*
+2020-11-08 22:23:17 | make
+2020-11-08 22:24:01 | ./test_algo --gtest_filter=*Search.bi*
+2020-11-08 22:24:15 | make
+2020-11-08 22:24:25 | ./test_algo --gtest_filter=*Search.bi*
+2020-11-08 22:25:20 | make
+2020-11-08 22:34:53 | ./test_algo --gtest_filter=*Search.bi*
+2020-11-08 22:52:51 | make
+2020-11-08 22:53:33 | ls
+2020-11-08 22:53:35 | ./test_pad 
+2020-11-08 22:58:29 | make
+2020-11-08 22:58:43 | git add -u
+2020-11-08 22:58:44 | g st
+2020-11-08 22:58:46 | git ll
+2020-11-09 09:07:35 | more ~/.bashrc 
+2020-11-09 09:15:04 | l
+2020-11-09 09:15:10 | cd ..
+2020-11-09 09:15:11 | l
+2020-11-09 09:17:42 | curl -v -X GET http://192.168.0.12:9005/as/services/0/0 > dtt_list_streamer.log 
+2020-11-09 09:25:53 | ls
+2020-11-09 09:25:55 | git branch
+2020-11-09 09:26:06 | git co develop
+2020-11-09 09:26:08 | git pull
+2020-11-09 09:26:18 | git co NGDEV-170776_AS_RDK_DTT_documentId_in_/services/status_is_empty
+2020-11-09 09:26:24 | git ll
+2020-11-09 09:26:31 | git pull --rebase origin develop
+2020-11-09 09:30:23 | git add -u
+2020-11-09 09:30:31 | git rebase --continue 
+2020-11-09 09:30:35 | git ll
+2020-11-09 09:30:43 | git difftool develop 
+2020-11-09 09:32:16 | ls
+2020-11-09 09:32:19 | cd build/
+2020-11-09 09:32:20 | ls
+2020-11-09 09:32:22 | make
+2020-11-09 09:32:48 | ls
+2020-11-09 09:49:59 | cd /media/keitee/ssd2/
+2020-11-09 09:49:59 | ls
+2020-11-09 09:50:07 | cd rdk/
+2020-11-09 09:50:08 | ls
+2020-11-09 09:50:09 | ll
+2020-11-09 09:50:14 | cd xx/
+2020-11-09 09:50:14 | ls
+2020-11-09 09:50:20 | cd ..
+2020-11-09 09:50:21 | ls
+2020-11-09 09:50:31 | mkdir nov_09
+2020-11-09 09:50:34 | cd nov_09
+2020-11-09 09:50:53 | mv ~/Downloads/skyxione-RNE-SDK-2.0-bundle.tgz .
+2020-11-09 09:50:54 | ls
+2020-11-09 09:51:01 | tar xvf skyxione-RNE-SDK-2.0-bundle.tgz 
+2020-11-09 09:51:03 | ls
+2020-11-09 09:51:04 | ll
+2020-11-09 09:51:13 | more README.md 
+2020-11-09 09:51:16 | ls
+2020-11-09 09:51:28 | cd /media/keitee/ssd2/rdk/
+2020-11-09 09:51:28 | ls
+2020-11-09 09:51:29 | ll
+2020-11-09 09:51:30 | cd xx
+2020-11-09 09:51:30 | ls
+2020-11-09 09:51:32 | ll
+2020-11-09 09:51:38 | cd ..
+2020-11-09 09:51:39 | ls
+2020-11-09 09:51:40 | ll
+2020-11-09 09:51:43 | rm 2.0
+2020-11-09 09:51:44 | ls
+2020-11-09 09:51:48 | ./skyxione-RNE-SDK-2.0.sh 
+2020-11-09 09:52:34 | ll
+2020-11-09 09:52:41 | l
+2020-11-09 09:52:43 | cd xx
+2020-11-09 09:52:43 | ls
+2020-11-09 09:52:44 | ll
+2020-11-09 09:52:59 | make clean
+2020-11-09 09:53:01 | make
+2020-11-09 09:53:11 | rm -rf *
+2020-11-09 09:53:11 | ls
+2020-11-09 09:53:14 | cmake -D RDK_SDK=/media/keitee/ssd2/rdk/2.0 -DTARGET_PLATFORM=XI1 -DTARGET_REGION=SKY-UK ..
+2020-11-09 09:53:21 | ls
+2020-11-09 09:53:23 | ls -al
+2020-11-09 09:53:25 | rm -rf *
+2020-11-09 09:53:25 | ls
+2020-11-09 09:53:29 | ll
+2020-11-09 09:53:32 | cmake -D RDK_SDK=/media/keitee/ssd2/rdk/2.0 -DTARGET_PLATFORM=XI1 -DTARGET_REGION=SKY-UK ..
+2020-11-09 09:54:06 | . /media/keitee/ssd2/rdk/2.0/environment-setup-armv7at2hf-neon-rdk-linux-gnueabi
+2020-11-09 09:54:08 | cmake -D RDK_SDK=/media/keitee/ssd2/rdk/2.0 -DTARGET_PLATFORM=XI1 -DTARGET_REGION=SKY-UK ..
+2020-11-09 09:54:11 | make
+2020-11-09 10:21:49 | cd ..
+2020-11-09 10:21:49 | ls
+2020-11-09 10:21:55 | cd asplayer/
+2020-11-09 10:21:55 | ls
+2020-11-09 10:21:57 | cd build/
+2020-11-09 10:21:58 | ls
+2020-11-09 10:22:00 | make clean
+2020-11-09 10:22:02 | make
+2020-11-09 10:22:06 | rm -rf *
+2020-11-09 10:22:07 | ls
+2020-11-09 10:22:08 | ll
+2020-11-09 10:22:14 | cmake -D RDK_SDK=/media/keitee/ssd2/rdk/2.0 -DTARGET_PLATFORM=XI1 -DTARGET_REGION=SKY-UK ..
+2020-11-09 09:54:11 | make
+2020-11-09 10:22:40 | cd /media/keitee/ssd2/as-sky-repo
+2020-11-09 10:22:40 | ls
+2020-11-09 10:22:42 | cd asplayer/
+2020-11-09 10:22:42 | ls
+2020-11-09 10:22:50 | cd cmake
+2020-11-09 10:22:50 | ls
+2020-11-09 10:22:55 | cd ..
+2020-11-09 10:24:13 | make
+2020-11-09 10:28:07 | ssh -p 10022 root@192.168.0.12
+2020-11-09 10:41:01 | ls
+2020-11-09 10:41:08 | cd ..
+2020-11-09 10:41:09 | ls
+2020-11-09 10:41:10 | ll
+2020-11-09 10:41:43 | cd 2.0_000150.4.11.0.0_REFLAB
+2020-11-09 10:41:44 | ls
+2020-11-09 10:41:50 | cd ..
+2020-11-09 10:41:51 | ls
+2020-11-09 10:41:57 | rm -rf 2.0
+2020-11-09 10:41:58 | ls
+2020-11-09 10:42:00 | ls
+2020-11-09 10:42:06 | ll
+2020-11-09 10:42:37 | ll
+2020-11-09 10:42:40 | cd nov_09/
+2020-11-09 10:42:40 | ls
+2020-11-09 10:42:58 | cd ..
+2020-11-09 10:42:59 | ls
+2020-11-09 10:42:09 | ./skyxione-RNE-SDK-2.0.sh 
+2020-11-09 10:43:01 | rm -rf xx
+2020-11-09 10:43:01 | ls
+2020-11-09 10:43:02 | ll
+2020-11-09 10:43:07 | ln -s NOV_09/ 2.0
+2020-11-09 10:43:08 | ls
+2020-11-09 10:43:15 | make clean
+2020-11-09 10:43:30 | ll
+2020-11-09 10:43:50 | mv nov_09/ sdk_nov_09
+2020-11-09 10:43:50 | ls
+2020-11-09 10:43:52 | ll
+2020-11-09 10:43:16 | make
+2020-11-09 09:54:11 | make
+2020-11-09 11:05:26 | python
+2020-11-09 11:13:16 | cd ..
+2020-11-09 11:20:20 | curl -v -X GET http://192.168.0.12:9005/as/services/0/0 > dtt_list_streamer.log
+2020-11-09 11:26:16 | cd ..
+2020-11-09 11:26:18 | ls
+2020-11-09 11:26:19 | cd ssd2/
+2020-11-09 11:26:19 | ls
+2020-11-09 11:26:23 | cd dtt/
+2020-11-09 11:26:23 | ls
+2020-11-09 11:26:32 | cd cli
+2020-11-09 11:26:32 | ls
+2020-11-09 11:26:36 | cd build/
+2020-11-09 11:26:36 | ls
+2020-11-09 11:37:16 | git branch
+2020-11-09 11:37:20 | g st
+2020-11-09 11:37:25 | git co develop
+2020-11-09 11:37:27 | git pull
+2020-11-09 11:38:57 | git 
+2020-11-09 11:38:58 | git branch NGDEV-155156_AS_DEV_RDK_implement_vtrack_and_atrack
+2020-11-09 11:39:08 | git co NGDEV-155156_AS_DEV_RDK_implement_vtrack_and_atrack
+2020-11-09 11:39:09 | ls
+2020-11-09 11:39:11 | ll
+2020-11-09 11:26:40 | ./test_mapi
+2020-11-09 11:58:31 | make
+2020-11-09 11:58:36 | ./test_mapi
+2020-11-09 11:59:58 | make
+2020-11-09 12:00:02 | ./test_mapi
+2020-11-09 12:03:48 | make
+2020-11-09 12:03:54 | ./test_mapi
+2020-11-09 12:16:04 | make
+2020-11-09 12:55:48 | cd build/
+2020-11-09 12:55:48 | make
+2020-11-09 12:57:51 | l
+2020-11-09 13:08:51 | make
+2020-11-09 12:16:08 | ./test_mapi
+2020-11-09 13:24:03 | make
+2020-11-09 13:25:35 | ./test_mapi
+2020-11-09 13:45:21 | ls
+2020-11-09 13:46:44 | make
+2020-11-09 13:47:19 | scp -r -P 10022 ./asrdkplayer root@192.168.0.12:/opt
+2020-11-09 13:47:27 | mount-copybind /opt/asrdkplayer /usr/sbin/asrdkplayer
+2020-11-09 14:01:26 | make
+2020-11-09 14:02:03 | scp -r -P 10022 ./asrdkplayer root@192.168.0.12:/opt
+2020-11-09 14:44:32 | make
+2020-11-09 14:45:07 | scp -r -P 10022 ./asrdkplayer root@192.168.0.12:/opt
+2020-11-09 14:48:10 | make
+2020-11-09 14:48:20 | scp -r -P 10022 ./asrdkplayer root@192.168.0.12:/opt
+2020-11-09 15:41:13 | make
+2020-11-09 15:42:38 | scp -r -P 10022 ./asrdkplayer root@192.168.0.12:/opt
+2020-11-09 15:47:33 | ls
+2020-11-09 15:47:35 | cd Downloads/
+2020-11-09 15:47:38 | wget http://10.184.136.138:8081/view/MW-INT/job/MW_TEST_XIONE_IT/3/artifact/MW_TEST_XIONE_IT-3.LOG
+2020-11-09 15:47:44 | gvim MW_TEST_XIONE_IT-3.LOG 
+2020-11-09 15:50:03 | ag scan MW_TEST_XIONE_IT-3.LOG 
+2020-11-09 15:51:07 | 
+2020-11-09 15:51:26 | h
+2020-11-09 15:51:28 | history
+2020-11-09 15:51:41 | ag scan MW_TEST_XIONE_IT-3.LOG 
+2020-11-09 15:51:52 | ag scan MW_TEST_XIONE_IT-3.LOG | ag as.player
+2020-11-09 16:18:57 | ag -A 5 scan MW_TEST_XIONE_IT-3.LOG | ag as.player
+2020-11-09 16:19:08 | ag -A 5 scan MW_TEST_XIONE_IT-3.LOG | ag -A 5 as.player
+2020-11-09 16:30:14 | ag -A 5 "ASTEST|scan" MW_TEST_XIONE_IT-3.LOG | ag -A 5 as.player
+2020-11-09 16:30:45 | ag "ASTEST|scan" MW_TEST_XIONE_IT-3.LOG | ag as.player
+2020-11-09 16:30:55 | ag "ASTEST|scan" MW_TEST_XIONE_IT-3.LOG | less
+2020-11-09 16:31:35 | ag -A 5 "ASTEST|scan" MW_TEST_XIONE_IT-3.LOG | 
+2020-11-09 16:31:40 | ag -A 5 "ASTEST|scan" MW_TEST_XIONE_IT-3.LOG 
+2020-11-09 16:32:02 | ag -A 5 "ASTEST|scan" MW_TEST_XIONE_IT-3.LOG | ag -A 5 as.asplayer
+2020-11-09 16:32:05 | ag -A 5 "ASTEST|scan" MW_TEST_XIONE_IT-3.LOG | ag -A 5 as.player
+2020-11-09 16:32:13 | ag -A 5 "ASTEST|scan" MW_TEST_XIONE_IT-3.LOG | ag -A 5 as.player > x.out
+2020-11-09 16:33:32 | ag -A 5 "ASTEST" MW_TEST_XIONE_IT-3.LOG 
+2020-11-09 16:33:59 | ag -A 5 "ASTEST|scan" MW_TEST_XIONE_IT-3.LOG > x.out
+2020-11-09 16:34:41 | ag -A 5 "ASTEST|scan|as.player" MW_TEST_XIONE_IT-3.LOG > x.out
+2020-11-09 16:55:23 | ag -A 5 "ASTEST|scan|as.player|Logs begin at" MW_TEST_XIONE_IT-3.LOG > x.out
+2020-11-09 16:58:30 | ag -A 5 "ASTEST|scan|Logs begin at" MW_TEST_XIONE_IT-3.LOG > x.out
+2020-11-09 17:00:24 | ag -A 5 "ASTEST|scan status|services/scan|Logs begin at" MW_TEST_XIONE_IT-3.LOG > x.out
+2020-11-09 17:03:09 | ag -A 5 "ASTEST|scan status|services/scan|Logs begin at|Internal error|MediaRite" MW_TEST_XIONE_IT-3.LOG > x.out
+2020-11-09 17:04:58 | mv x.out MW_TEST_XIONE_IT-3.out
+2020-11-09 17:05:21 | wget http://10.184.136.138:8081/job/AS_TEST_XIONE_IT/18/artifact/AS_TEST_XIONE_IT-18.LOG
+2020-11-09 17:05:56 | ag -A 5 "ASTEST|scan status|services/scan|Logs begin at|Internal error|MediaRite" AS_TEST_XIONE_IT-18.LOG > AS_TEST_XIONE_IT-18.out
+2020-11-09 17:06:06 | gvim AS_TEST_XIONE_IT-18.out 
+2020-11-09 17:28:38 | g st
+2020-11-09 17:28:41 | git branch
+2020-11-09 17:28:43 | git diff
+2020-11-09 17:28:52 | git add -u
+2020-11-09 17:28:54 | g st
+2020-11-09 17:29:10 | git commit -m "NGDEV-155156_AS_DEV_RDK_implement_vtrack_and_atrack
+"
+2020-11-09 17:29:13 | git ll
+2020-11-09 17:29:16 | git branch
+2020-11-09 17:29:31 | git NGDEV-170772_AS_RDK_DTT_some_fields_in_IDLE_state_are_extra_reopen
+2020-11-09 17:29:33 | git ll
+2020-11-09 17:29:41 | git pull --rebase origin develop
+2020-11-09 17:29:43 | git ll
+2020-11-09 17:29:55 | git branch
+2020-11-09 17:30:01 | git co NGDEV-170772_AS_RDK_DTT_some_fields_in_IDLE_state_are_extra_reopen
+2020-11-09 17:30:05 | git branch
+2020-11-09 17:30:08 | git ll
+2020-11-09 17:30:29 | git pull --rebase origin develop
+2020-11-09 17:30:32 | git ll
+2020-11-09 17:30:48 | git push origin NGDEV-170772_AS_RDK_DTT_some_fields_in_IDLE_state_are_extra_reopen
+2020-11-09 17:30:51 | git ll
+2020-11-09 17:31:02 | git difftool develop 
+2020-11-09 17:31:53 | git ll
+2020-11-09 21:44:01 | g st
+2020-11-09 21:44:03 | git branch
+2020-11-09 21:44:25 | git co NGDEV-155156_AS_DEV_RDK_implement_vtrack_and_atrack
+2020-11-09 21:44:28 | git ll
+2020-11-09 22:01:24 | make
+2020-11-09 22:01:26 | ls
+2020-11-09 22:01:28 | ./test_pad 
+2020-11-09 22:08:26 | ls
+2020-11-09 22:08:28 | make
+2020-11-09 22:08:31 | ./test_pad 
+2020-11-09 22:17:33 | make
+2020-11-09 22:25:54 | ./test_pad 
+2020-11-09 22:28:01 | make
+2020-11-09 22:28:03 | ./test_pad 
+2020-11-09 22:28:14 | make
+2020-11-09 22:28:15 | ./test_pad 
+2020-11-09 22:38:06 | make
+2020-11-09 22:38:26 | ./test_pad 
+2020-11-09 22:38:40 | make
+2020-11-09 22:38:42 | ./test_pad 
+2020-11-10 09:04:51 | git branch
+2020-11-10 09:04:55 | make
+2020-11-10 09:05:19 | scp -r -P 10022 ./asrdkplayer root@192.168.0.12:/opt
+2020-11-10 09:08:21 | curl -vLN -X GET http://192.168.0.12:9005/as/players/1/tracks
+2020-11-10 09:16:52 | make
+2020-11-10 09:20:22 | scp
+2020-11-10 09:20:25 | scp -r -P 10022 ./asrdkplayer root@192.168.0.12:/opt
+2020-11-10 09:28:47 | make
+2020-11-10 09:28:51 | s
+2020-11-10 09:28:53 | scp -r -P 10022 ./asrdkplayer root@192.168.0.12:/opt
+2020-11-10 09:30:49 | g st
+2020-11-10 09:30:53 | git add -u
+2020-11-10 09:30:53 | g st
+2020-11-10 09:30:56 | git ll
+2020-11-10 09:31:01 | git commit --amend 
+2020-11-10 09:31:04 | git ll
+2020-11-10 09:31:09 | git co develop
+2020-11-10 09:31:12 | git pull
+2020-11-10 09:31:16 | ls
+2020-11-10 09:31:20 | git branch
+2020-11-10 09:31:23 | git co NGDEV-155156_AS_DEV_RDK_implement_vtrack_and_atrack
+2020-11-10 09:31:29 | git pull --rebase origin develop
+2020-11-10 09:31:33 | git ll
+2020-11-10 09:31:44 | git difftool --stat develop 
+2020-11-10 09:32:07 | git difftool develop -- cmake
+2020-11-10 09:32:35 | git ll develop 
+2020-11-10 09:34:52 | git branch
+2020-11-10 09:35:02 | git co LLDEV-1983_AS_DEV_RDK_handle_services/b/sb
+2020-11-10 09:35:07 | git ll
+2020-11-10 09:35:15 | git pull --rebase origin develop
+2020-11-10 09:35:18 | git ll
+2020-11-10 09:35:25 | git difftool 
+2020-11-10 09:35:28 | git difftool develop 
+2020-11-10 09:35:56 | git ll
+2020-11-10 09:36:51 | rbt post --tracking-branch=origin/develop --repository=asplayer --username=kyoupark --password=tegI3301 --branch=LLDEV-1983_AS_DEV_RDK_/services/<b>/<sb>
+2020-11-10 09:37:34 | git branch
+2020-11-10 09:37:57 | git branch LLDEV-1983_AS_DEV_RDK_handle_services/b/sb LLDEV-1983_AS_DEV_RDK_handle_services_b_sb
+2020-11-10 09:38:03 | git branch -m LLDEV-1983_AS_DEV_RDK_handle_services/b/sb LLDEV-1983_AS_DEV_RDK_handle_services_b_sb
+2020-11-10 09:38:06 | git branch
+2020-11-10 09:39:11 | git branch -m LLDEV-1983_AS_DEV_RDK_handle_services_b_sb
+2020-11-10 09:39:17 | git branch -m LLDEV-1983_AS_DEV_RDK_handle_services_b_sb LLDEV-1983_AS_DEV_RDK_handle_services/b/sb
+2020-11-10 09:39:19 | git branch
+2020-11-10 09:39:37 | rbt post --tracking-branch=origin/develop --repository=asplayer --username=kyoupark --password=tegI3301 --branch=LLDEV-1983_AS_DEV_RDK_handle_services/b/sb
+2020-11-10 09:40:13 | git push origin LLDEV-1983_AS_DEV_RDK_handle_services/b/sb
+2020-11-10 09:47:45 | git ll
+2020-11-10 09:47:48 | git branch
+2020-11-10 09:48:03 | git co NGDEV-155156_AS_DEV_RDK_implement_vtrack_and_atrack
+2020-11-10 09:48:04 | git ll
+2020-11-10 09:52:08 | g st
+2020-11-10 09:52:40 | git add -u
+2020-11-10 09:52:42 | git commit --amend 
+2020-11-10 09:52:48 | make
+2020-11-10 10:39:35 | cd
+2020-11-10 10:39:35 | ls
+2020-11-10 10:39:38 | cd git/
+2020-11-10 10:39:38 | ls
+2020-11-10 10:39:40 | cd vim/
+2020-11-10 10:39:40 | ls
+2020-11-10 10:39:41 | g st
+2020-11-10 10:39:46 | git add -u
+2020-11-10 10:39:48 | git ll
+2020-11-10 10:39:55 | g st
