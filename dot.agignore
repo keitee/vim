@@ -28,6 +28,7 @@ appinfrastructure_rdk/
 docs/
 epg/
 # ethan-as-source/
+ethan-as-source-before-lldev-1843/ 
 exports/
 fusion/
 get_si/
@@ -151,7 +152,7 @@ ethan-as-source/Components/StreamMetaData/
 # ethan-as-source/Components/Bluetooth/
 ethan-as-source/Components/Data/
 ethan-as-source/Components/Async/
-ethan-as-source/Components/MiddlewareServices/
+# ethan-as-source/Components/MiddlewareServices/
 ethan-as-source/Components/LinuxContainers/
 # ethan-as-source/Components/CppUnit/
 ethan-as-source/Components/Http/

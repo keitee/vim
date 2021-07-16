@@ -4,11 +4,16 @@
   let s:is_macvim = has('gui_macvim')
 "}}}
 
+"  please check your Vim supports signs by running 
+"  :echo has('signs')
+"  1 means you're all set; 0 means you need to install a Vim with signs
+"  support. 
+
 if has("gui_running")
-  if has("gui_gtk2")
+  if has("gui_gtk3")
     " set guifont=FreeMono\ 12    " for ubuntu
     " set guifont=DroidSansMono   " for debian
-    set guifont=Hack              " for debian
+    set guifont=Hack\ 10              " for debian
     " set guifont=D2Coding              " for debian
   endif
 endif

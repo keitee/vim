@@ -1,7 +1,8 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
-export PATH=~/works/bitbake-1.40/bin:~/Downloads/clang+llvm-9.0.0-x86_64-linux-gnu-ubuntu-18.04/bin:~/bin:~/vim/bin:~/git/kb/bin:~/.cargo/bin:~/Downloads/git-repo:$PATH
+# export PATH=~/works/bitbake-1.40/bin:~/Downloads/clang+llvm-9.0.0-x86_64-linux-gnu-ubuntu-18.04/bin:~/bin:~/vim/bin:~/git/kb/bin:~/.cargo/bin:~/Downloads/git-repo:$PATH
+export PATH=~/works/bitbake-1.40/bin:~/Downloads/clang+llvm-12.0.0-x86_64-linux-gnu-ubuntu-16.04/bin:~/bin:~/vim/bin:~/git/kb/bin:~/.cargo/bin:~/Downloads/git-repo:$PATH
 
 # If not running interactively, don't do anything
 case $- in
@@ -294,7 +295,7 @@ alias vvr="gvim -R --servername SUB --remote-tab-silent"
 #={===========================================================================
 # clang
 # clang-format -i -style=file bleaudioreader.cpp
-alias cf="clang-format -i -style=file"
+alias cf="clang-format -i -style=file *.h *.cpp"
 
 
 #={===========================================================================
@@ -362,20 +363,6 @@ alias con='sudo screen -S name -a -D -R -fn -l -L /dev/ttyUSB3 115200,cs8'
 # enable dir expansion
 shopt -s direxpand
 
-alias sh2='ssh uk2'
-alias sho='ssh -X 10.209.60.101'
-alias mmo='sudo mount -o nfsvers=4 10.209.60.101:/home/kyoupark/ /mnt/'
-alias umo='sudo umount /mnt/'
-
-# humax and com serial
-#alias hlog="sudo grabserial -v -d /dev/ttyS0 | tee 2>&1 ~/logs/`date | awk '{print "log-com-"$1"-"$2"-"$3"-"$4}'`"
-#alias hcom='sudo grabserial -v -d /dev/ttyS0'
-#alias hcpt='scp libnexusMgr.so root@172.20.35.27:/usr/local/lib'
-#alias hcpf='scp root@172.20.35.27:'
-#alias hbld='ZB_CFG="humax.1000" zb-make Polonium/Polonium.NexusInspect'
-#alias hscr='sudo screen -a -D -R -fn -l -L /dev/ttyS0 115200,cs8'
-#alias hscr='sudo minicom -C=hmax.log -c on hmax'
-
 # only for linux hosts but not vm on windows host
 alias xmap="xmodmap ~/.xmodmap"
 xmodmap ~/.xmodmap
@@ -394,14 +381,90 @@ fi
 alias skys="sudo openconnect skyremoteaccess.bskyb.com -g SKYCONNECT2.0 -u kit.park@sky.uk"
 alias skyc="ssh -X 10.184.131.22"
 
+# xione uk
+alias sshx="ssh -p 10022 root@192.168.0.22"
+
+# llama
+alias sshl="ssh -p 10022 root@192.168.0.14"
+# llama player
+alias plcpl="scp -r -P 10022 ./asrdkplayer root@192.168.0.14:/opt"
+# llama system
+alias sycpl="scp -r -P 10022 ./ASSystemService root@192.168.0.14:/opt"
+
+# xione 4gb ita
+alias sshi="ssh -p 10022 root@192.168.0.17"
+
+# copy plyaer to xione
+alias plcpx="scp -r -P 10022 ./asrdkplayer root@192.168.0.22:/opt"
+alias xcph="scp -r -P 10022 root@192.168.0.22:/opt/asrdkplayer ."
+
+alias mycomp="scp -r -P 10022 /media/keitee/ssd2/as-sky-repo/mycomp.sh root@192.168.0.14:/opt"
+
 
 #={===========================================================================
 # bash-completion bash-readline
 
+# https://www.gnu.org/software/bash/manual/html_node/Readline-vi-Mode.html#Readline-vi-Mode
+
+# 8.5 Readline vi Mode
+
+# While the Readline library does not have a full set of vi editing functions,
+# it does contain enough to allow simple editing of the line. The Readline vi
+# mode behaves as specified in the POSIX standard.
+
+# In order to switch interactively between emacs and vi editing modes, use the
+# ‘set -o emacs’ and ‘set -o vi’ commands (see The Set Builtin). The Readline
+# default is emacs mode.
+
+# When you enter a line in vi mode, you are already placed in ‘insertion’ mode,
+# as if you had typed an ‘i’. Pressing ESC switches you into ‘command’ mode,
+# where you can edit the text of the line with the standard vi movement keys,
+# move to previous history lines with ‘k’ and subsequent lines with ‘j’, and so
+# forth.
+
 # vi mode
 set -o vi
 
+# To get the escape codes for the arrow keys you can do the following:
+#
+# Start cat in a terminal (just cat, no further arguments).
+#
+# Type keys on keyboard, you will get things like ^[[A for up arrow 
+# and ^[[B for down arrow.
+#
+# Replace ^[ with \e.
+
+# https://www.gnu.org/software/bash/manual/html_node/Readline-Init-File-Syntax.html#Readline-Init-File-Syntax
+
+# "keyseq": function-name or macro
+#
+# keyseq differs from keyname above in that strings denoting an entire key
+# sequence can be specified, by placing the key sequence in double quotes. Some
+# GNU Emacs style key escapes can be used, as in the following example, but the
+# special character names are not recognized.
+
+# "\C-u": universal-argument
+# "\C-x\C-r": re-read-init-file
+# "\e[11~": "Function Key 1"
+
+# In the above example, C-u is again bound to the function universal-argument
+# (just as it was in the first example), ‘C-x C-r’ is bound to the function
+# re-read-init-file, and ‘ESC [ 1 1 ~’ is bound to insert the text ‘Function Key
+# 1’.
+
+# The following GNU Emacs style escape sequences are available when specifying
+# key sequences:
+#
+# \e
+# an escape character
+
 # To set binding to up/down key to history search:
+#
+# ~/.inputrc
+# "\e[A": history-search-backward
+# "\e[B": history-search-forward
+#
+# or equivalently, ~/.bashrc
 bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
 
@@ -416,13 +479,14 @@ bind '"\e[B": history-search-forward'
 
 
 # https://www.linuxjournal.com/content/more-using-bash-complete-command
+
+# https://www.gnu.org/software/bash/manual/html_node/Programmable-Completion.html#Programmable-Completion
 #
 # 8.6 Programmable Completion
 # 
 # When word completion is attempted for an argument to a command for which a
-# *completion specification* (a COMPSPEC) has been defined using the 'complete'
-# builtin (*note Programmable Completion Builtins::), the programmable
-# completion facilities are invoked.
+# *completion specification* (a compspec) has been defined using the 'complete'
+# builtin, the programmable completion facilities are invoked.
 
 
 # 8.7 Programmable Completion Builtins
@@ -472,58 +536,68 @@ bind '"\e[B": history-search-forward'
 #                Use Readline's default filename completion if the
 #                compspec generates no matches.
 #
-#      '-A ACTION'
-#           The ACTION may be one of the following to generate a list of
-#           possible completions:
-# 
-#           'file'
-#                File names.  May also be specified as '-f'.
-# 
-#           'directory'
-#                Directory names.  May also be specified as '-d'.
-# 
-#      '-X FILTERPAT'
-#           FILTERPAT is a pattern as used for filename expansion.  It is
-#           applied to the list of possible completions generated by the
-#           preceding options and arguments, and each completion matching
-#           FILTERPAT is *removed from the list.* A leading '!' in
-#           FILTERPAT negates the pattern; in this case, any completion
-#           not matching FILTERPAT is removed.
+# -A action
+# The action may be one of the following to generate a list of possible
+# completions:
+#
+# directory
+# Directory names. May also be specified as -d.
+#
+# file
+# File names. May also be specified as -f.
+#
+# -X filterpat
+# filterpat is a pattern as used for filename expansion. It is applied to the
+# list of possible completions generated by the preceding options and arguments,
+# and each completion matching filterpat is removed from the list. A leading ‘!’
+# in filterpat negates the pattern; in this case, any completion not matching
+# filterpat is removed.
+#
+# -W wordlist
+# The wordlist is split using the characters in the IFS special variable as
+# delimiters, and each resultant word is expanded. The possible completions are
+# the members of the resultant list which match the word being completed.
 
-# $ # Create a dummy command:
+# Create a dummy command:
 # $ touch ~/bin/myfoo
 # $ chmod +x ~/bin/myfoo
 # 
-# $ # Create some files:
+# Create some files:
+#
 # $ touch a.bar a.foo b.bar b.foo
 # 
-# $ # Use the command and try auto-completion.
-# $ # Note that all files are displayed:
+# Use the command and try auto-completion.
+# Note that all files are displayed:
+#
 # $ myfoo <TAB><TAB>
 # a.bar a.foo b.bar b.foo
 # 
-# $ # Now tell bash that we only want foo files.
-# $ # This command tells bash args to myfoo are completed
-# $ # by generating a list of files and then excluding
-# $ # everything # that doesn't match *.foo:
+# Now tell bash that we only want foo files.
+# This command tells bash args to myfoo are completed
+# by generating a list of files and then excluding
+# everything that doesn't match *.foo:
+#
 # $ complete -f -X '!*.foo' myfoo
 # 
-# $ # Try again:
+# Try again:
+#
 # $ myfoo <TAB><TAB>
 # a.foo b.foo
 
-# when nothing is done
-# complete -p myfoo 
-# shows:
+# $ complete | ag myfoo
 # complete -F _minimal myfoo
-# which shows all
-
-# this do the same as the above
+#
+# $ complete -p myfoo
+# complete -F _minimal myfoo
+#
+# $ complete -f -X '!*.sh' myfoo
+# $ complete -p myfoo
+# complete -f -X '!*.sh' myfoo
+#
+# this do the same when "$ complete -f -X '!*.foo' myfoo"
 # complete -o default myfoo
 
-# this do nothing
-# complete -o bashdefault myfoo
-
+complete -d -X '.[^./]*' -f -X '!*.foo' myfoo
 
 # 5.2 Bash Variables
 # 
@@ -546,11 +620,17 @@ bind '"\e[B": history-search-forward'
 #      completion facility (*note Programmable Completion::).  Each array
 #      element contains one possible completion.
 
-# When the function or command is invoked, the first argument ($1) is the name
-# of the command whose arguments are being completed, the second argument ($2)
-# is the word being completed, and the third argument ($3) is the word preceding
-# the word being completed on the current command line.
-# 
+# -F function
+# The shell function `function` is executed in the current shell environment.
+# When it is executed, $1 is the name of the command whose arguments are being
+# completed, $2 is the word being completed, and $3 is the word preceding the
+# word being completed, as described above (see Programmable Completion). 
+#
+# When it finishes, "the possible completions" are retrieved from the value of
+# the COMPREPLY array variable.
+
+# copy and paste this function in the current shell.
+#
 # function _mycomplete_()
 # {
 #   echo "{"
@@ -566,34 +646,33 @@ bind '"\e[B": history-search-forward'
 #   echo "}"
 # }
 # 
+# $ complete -F _mycomplete_ myfoo
+# $ complete -p myfoo
 # complete -F _mycomplete_ myfoo
 # 
-# myfoo<TAB>
+# myfoo <TAB>
 # 1 = myfoo
 # 2 =
 # 3 = myfoo
 # cmd=myfoo
 # word=
 # line=myfoo
-#
 # 
 # myfoo --init<TAB>
 # 1 = myfoo
-# 2 = -init
+# 2 = --init
 # 3 = myfoo
 # cmd = myfoo
 # word = --init
 # line = myfoo --init
 #
-#
-# myfoo --int arg<TAB>
+# myfoo --init arg<TAB>
 # 1 = myfoo
 # 2 = arg
-# 3 = --int
+# 3 = --init
 # cmd = myfoo
 # word = arg
-# line = myfoo --i arg
-
+# line = myfoo --init arg
 
 # For more complex cases where you need more control over how things are
 # completed you can tell bash to call a function for doing the completion work.
@@ -628,13 +707,14 @@ bind '"\e[B": history-search-forward'
 # variables.
 
 # The only real code in the function is the last line that sets the variable
-# COMPREPLY, which is our reply to bash's request to expand something. 
+# COMPREPLY, which is our "reply" to bash's request to expand something. 
 
-# This line uses compgen to generate the expansion. The `compgen` command accepts
-# most of the same options that complete does but it generates results rather
-# than just storing the rules for future use. Here we tell compgen to create a
-# list of files with -f. Then we tell it to exclude all the files that match our
-# exclusion pattern with -X "$xpat". 
+# *sh-output-from-command*
+# This line uses compgen to generate the array using the expansion. 
+# The `compgen` command accepts most of the same options that complete does but
+# it generates results rather than just storing the rules for future use. Here
+# we tell compgen to create a list of files with -f. Then we tell it to exclude
+# all the files that match our exclusion pattern with -X "$xpat". 
 
 # And finally, we pass in the word being completed so that only items that match
 # it are returned.
@@ -643,12 +723,15 @@ bind '"\e[B": history-search-forward'
 # a.foo
 # b.foo
 
+# from compgen
+#      If WORD is specified, only those completions matching WORD will be
+#      displayed.
+
 # keitee@kit-hdebi:~/x$ compgen -f -X '!*foo' -- a
 # a.foo
 
 # keitee@kit-hdebi:~/x$ compgen -f -X '!*foo' -- b
 # b.foo
-
 
 # NOTE: do different things depending on `arguments`
 #
@@ -677,8 +760,8 @@ bind '"\e[B": history-search-forward'
 # we use the line variable to see if the command line includes the -f or -u
 # option for determining whether we should exclude or include foo files.
 
-# To include directories in our output we simply modify the complete command that
-# installs our function by including the arguments -d -X '.[^./]*', which
+# To include directories in our output we simply modify the complete command
+# that installs our function by including the arguments -d -X '.[^./]*', which
 # generates a list of directories and then excludes ./ and ../ (the current
 # directory and the parent directory). The directory list is then added to the
 # result returned by calling our completion funtion. 
@@ -729,6 +812,7 @@ bind '"\e[B": history-search-forward'
 # line variable to see if the command line includes the -f or -u option for
 # determining whether we should exclude or include foo files.
 #
+# NOTE: this part do not seem to work
 # To include directories in our output we simply modify the complete command
 # that installs our function by including the arguments -d -X '.[^./]*', which
 # generates a list of directories and then excludes ./ and ../ (the current
@@ -736,7 +820,10 @@ bind '"\e[B": history-search-forward'
 # result returned by calling our completion funtion. We also add our second
 # command mybar to the commands handled by our function.
 #
-# Once you've digested all of this, check the file /etc/profile.d/complete.bash
+# Once you've digested all of this, check the file 
+#
+# /etc/profile.d/complete.bash
+#
 # to see the default completions that come with bash. You'll notice in that file
 # that there are numerous complications that we've ignored here, such as what
 # happens when somebody is trying to complete a word such as ${ABC or $(ca. In
@@ -887,6 +974,9 @@ bind '"\e[B": history-search-forward'
 
 
 # /usr/share/bash-completion/bash_completion defines _completion_loader()
+#
+# /usr/share/bash-completion/completions directory has all completion files like
+# git.
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile

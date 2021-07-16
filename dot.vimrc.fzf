@@ -9,14 +9,19 @@ let s:is_windows = has('win32') || has('win64')
 let s:is_cygwin = has('win32unix')
 let s:is_macvim = has('gui_macvim')
 
+"  please check your Vim supports signs by running 
+"  :echo has('signs')
+"  1 means you're all set; 0 means you need to install a Vim with signs
+"  support. 
+
 " set font and size
 if has("gui_running")
   if has("gui_gtk3")
     " set guifont=FreeMono\ 12    " for ubuntu
     " set guifont=DroidSansMono   " for debian
-    " set guifont=Hack            " for debian
-    " set guifont=D2Coding\ 11    " for debian
-    set guifont=D2Coding          " for debian
+    " set guifont=Hack\ 10 " size param doesn't seem to work
+    " set guifont=D2Coding\ 10    " for debian
+    set guifont=D2Coding          " same as 10 size
   endif
 endif
 
@@ -276,7 +281,7 @@ if s:is_windows != 1
   " :Se   :Sexplore   in split at directory of current file
   " :Vex  :Vexplore   in vertical split at directory of current file
   "
-  "
+  
   " Manipulating the filesystem
   "
   " The file explorer includes commands for creating new files and directories,
@@ -291,16 +296,50 @@ if s:is_windows != 1
   " Press i to toggle the appearance of the file tree. By default, explorer mode
   " will only show the contents of the current directory.
   "
+  " A preferred view type can be made permanent by setting it in a .vimrc file.
+  " 3 is tree list view
+  let g:netrw_liststyle=3
+
+  " The directory banner is mostly useless. To remove it temporarily press
+  " I. To remove it permanently add the following to your .vimrc.
+  let g:netrw_banner = 0
+  
+  " Changing how files are opened
+  " By default files will be opened in the same window as the netrw
+  " directory browser. To change this behaviour the netrw_browse_split
+  " option may be set. The options are as follows
+  "
+  " 1 - open files in a new horizontal split
+  " 2 - open files in a new vertical split
+  " 3 - open files in a new tab
+  " 4 - open in previous window
+  "
+  " To make the selection permanent add the following to your .vimrc.
+  " NOTE option 4 makes; netrw on left side and views on the right
+  " let g:netrw_browse_split = 4
+  "
+  " However, commented it out for:
+  "
+  " 1. use ":E" and open it up in the current window since :vsp or :newtab
+  " uses current working directory which may be differnt from one of current
+  " window.
+  "
+  " 2. Use "%" to open file in the same direcotry as a current window
+
+
+  " Set the width of the directory explorer
+  " The width of the directory explorer can be fixed with the
+  " netrw_browse_split option. The following sets the width to 25% of the
+  " page.
+  let g:netrw_winsize = 25
+
+
   " http://vimdoc.sourceforge.net/htmldoc/pi_netrw.html
   "
   " GOING UP *netrw--* {{{2
   "
   " To go up a directory, press "-" or press the <cr> when atop the ../ directory
   " entry in the listing.
-  "
-  "
-  " ~/.vimrc
-  " let g:netrw_liststyle=3
   "
   " vim 80 has an issue to use netrw
   " https://github.com/vim/vim/issues/1069
@@ -344,7 +383,15 @@ if s:is_windows != 1
   " https://github.com/fedorenchik/qt-support.vim
   " Qt support for vim
   " Simple Qt support for Qt-based projects.
-  Plug 'fedorenchik/qt-support.vim'
+  " Plug 'fedorenchik/qt-support.vim'
+  " }}}
+
+  " {{{
+  " "plugin-diffconflicts"
+  " https://github.com/whiteinge/diffconflicts
+  " Qt support for vim
+  " Simple Qt support for Qt-based projects.
+  Plug 'whiteinge/diffconflicts'
   " }}}
 
   " {{{
@@ -522,15 +569,15 @@ if s:is_windows != 1
   " }}}
   
 
-  " {{{
-  " "plugin-cxx-complete" 
-  " commentary.vim
-  Plug 'Valloric/YouCompleteMe'
-  let g:ycm_complete_in_comments_and_strings=1
-  "let g:ycm_key_list_select_completion=['<C-n>', '<Down>']
-  "let g:ycm_key_list_previous_completion=['<C-p>', '<Up>']
-  let g:ycm_filetype_blacklist={'unite': 1}
-  " }}}
+  " " {{{
+  " " "plugin-cxx-complete" 
+  " " commentary.vim
+  " Plug 'Valloric/YouCompleteMe'
+  " let g:ycm_complete_in_comments_and_strings=1
+  " "let g:ycm_key_list_select_completion=['<C-n>', '<Down>']
+  " "let g:ycm_key_list_previous_completion=['<C-p>', '<Up>']
+  " let g:ycm_filetype_blacklist={'unite': 1}
+  " " }}}
 
 
   " {{{
@@ -539,7 +586,7 @@ if s:is_windows != 1
   " The row length should be limited to 72 columns. It can be automated by
   " adding this line to .vimrc:
   " Limit line length of git commits to 72 cols
-  au FileType gitcommit set tw=80
+  au FileType gitcommit set tw=78
   
   " https://github.com/tpope/vim-fugitive
   Plug 'tpope/vim-fugitive'

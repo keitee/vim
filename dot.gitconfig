@@ -1,3 +1,14 @@
+# https://git-scm.com/docs/git-config
+#
+# core.commentChar
+# Commands such as commit and tag that let you edit messages consider a
+# line that begins with this character commented, and removes them after
+# the editor returns (default #).
+#
+# To list config values:
+#
+# $ git config --global -l
+
 [alias]
 	add = 'add -u'
 	conf = config --global -l
@@ -27,15 +38,19 @@
   tool = gvimdiff
 [difftool]
 	prompt = false
-[merge]
-	tool = diffconflicts
-[mergetool "diffconflicts"]
-	cmd = diffconflicts gvim $BASE $LOCAL $REMOTE $MERGED
-	trustExitCode = true
-	keepBackup = false
+# [merge]
+# 	tool = diffconflicts
+# [mergetool "diffconflicts"]
+# 	cmd = diffconflicts gvim $BASE $LOCAL $REMOTE $MERGED
+# 	trustExitCode = true
+# 	keepBackup = false
 [color]
 	ui = auto
 [gitreview]
 	username = bp-kpark257
 [http]
 	postBuffer = 100000000
+
+# git config --global mergetool.keepBackup false
+[mergetool]
+	keepBackup = false

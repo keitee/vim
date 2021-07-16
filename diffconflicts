@@ -3,15 +3,16 @@
 #
 # NOTE: Now also an installable Vim plugin:
 # https://github.com/whiteinge/diffconflicts
-#
-# Git does a great job resolving merge conflicts automatically but there are
-# times when human intervention is still needed. Git resolves all the conflicts
-# that it is able to and finally wraps each conflict it cannot resolve within
-# special markers which must be resolved by a human.
+
+# Git does a great job resolving merge conflicts automatically but there
+# are times when human intervention is still needed. Git resolves all the
+# conflicts that it is able to and finally wraps each conflict it cannot
+# resolve within special markers which must be resolved by a human.
 #
 # The vertical format and lack of syntax highlighting in the plain conflict
 # marker layout makes it difficult to spot subtle conflicts such as
 # single-character changes and this is where a two-way diff really shines!
+#
 # To see this explained using screenshots, see:
 # http://vim.wikia.com/wiki/A_better_Vimdiff_Git_mergetool
 #
@@ -24,6 +25,7 @@
 #
 # git config --global merge.tool diffconflicts
 # git config --global mergetool.diffconflicts.cmd 'diffconflicts vim $BASE $LOCAL $REMOTE $MERGED'
+# git config --global mergetool.diffconflicts.cmd 'diffconflicts gvim $BASE $LOCAL $REMOTE $MERGED'
 # git config --global mergetool.diffconflicts.trustExitCode true
 # git config --global mergetool.diffconflicts.keepBackup false
 # 
@@ -43,6 +45,7 @@
 # This tool can open three tabs in Vim that each provide a different way to
 # view the conflicts. You can resolve the conflicts in the first tab and save
 # and exit the file. This will also mark the conflict as resolved in Git.
+#
 # Only the first tab is opened by default so Vim loads more quickly and also
 # because the other tabs are only occasionally useful for tough merges. To open
 # Tab2 and Tab3 use the mapping <leader>D.
@@ -52,15 +55,18 @@
 #       +--------------------------------+
 #       |    LCONFL     |    RCONFL      |
 #       +--------------------------------+
-#   Tab2 is a three-way diff of the original files and the merge base. This is
-#   the traditional three-way diff. Although noisy, it is occasionally useful
-#   to view the three original states of the conflicting file before the merge.
+#
+#   Tab2 is a three-way diff of the original files and the merge base,
+#   "BASE". This is the traditional three-way diff. Although noisy, it is
+#   occasionally useful to view the three original states of the
+#   conflicting file before the merge.
 #       +--------------------------------+
 #       |  LOCAL   |   BASE   |  REMOTE  |
 #       +--------------------------------+
-#   Tab3 is the in-progress merge that Git has written to the filesystem
-#   containing the conflict markers. I.e., the file you would normally edit by
-#   hand when not using a mergetool.
+#
+#   Tab3 is the in-progress merge, "MERGE" that Git has written to the
+#   filesystem containing the conflict markers. I.e., the file you would
+#   normally edit by hand when not using a mergetool.
 #       +--------------------------------+
 #       |       <<<<<<< HEAD             |
 #       |        LCONFL                  |
